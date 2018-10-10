@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pharmaR website</title>
+    <link>/</link>
+    <description>Recent content on pharmaR website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>/refs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/refs/</guid>
+      <description>FDA:  Statistical Software Clarifying Statement Statistical Computing Challenges @ FDA Delivering Software Programs   &amp;ldquo;Sponsors should provide the software programs used to create all ADaM datasets and generate tables and figures associated with primary and secondary efficacy analyses. Furthermore, sponsors should submit software programs used to generate additional information included in Section 14 CLINICAL STUDIES of the Prescribing Information (PI)26 if applicable. The specific software utilized should be specified in the ADRG.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>A consortium to define a R validation hub was constituted in October 2018. Participants were
+ Abbvie Amgen Biogen Eli Lilly FDA GSK J&amp;amp;J Merck Merck KGaA Novartis PPD PRA Pfizer Roche / Genentech Syne qua non  </description>
+    </item>
+    
+  </channel>
+</rss>

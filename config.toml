@@ -1,0 +1,42 @@
+baseurl = "/"
+languageCode = "en-us"
+title = "pharmaR website"
+theme = "hugo-lithium"
+googleAnalytics = ""
+disqusShortname = ""
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+
+[permalinks]
+    post = "/:year/:month/:day/:slug/"
+
+[[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 1
+[[menu.main]]
+    name = "References"
+    url = "/refs/"
+    weight = 2
+[[menu.main]]
+    name = "GitHub"
+    url = "https://github.com/pharmaR"
+    weight = 3
+
+[params]
+    description = "A website built through Hugo and blogdown."
+
+    # options for highlight.js (version, additional languages, and theme)
+    highlightjsVersion = "9.12.0"
+    highlightjsCDN = "//cdnjs.cloudflare.com/ajax/libs"
+    highlightjsLang = ["r", "yaml"]
+    highlightjsTheme = "github"
+
+    MathJaxCDN = "//cdnjs.cloudflare.com/ajax/libs"
+    MathJaxVersion = "2.7.5"
+
+    [params.logo]
+    url = "pharmaRlogo.png"
+    width = 70
+    height = 50
+    alt = "Logo"
+
