@@ -18,8 +18,8 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     url = "/refs/"
     weight = 2
 [[menu.main]]
-    name = "GitHub"
-    url = "https://github.com/pharmaR"
+    name = "Minutes"
+    url = "/minutes/"
     weight = 3
 
 [params]
