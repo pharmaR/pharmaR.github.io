@@ -1,4 +1,16 @@
-## FDA:
+# References
+
+This page contains some useful information and references for anyone working in the pharmaceutical industry and looking to use R in a regulatory context.
+
+## R Foundation
+
+In March 2018, the R Foundation re-released a document entitle [R: Regulatory Compliance and Validation Issues A Guidance Document for the Use of R in Regulated Clinical Trial Environments](https://www.r-project.org/doc/R-FDA.pdf).  This document describes the R Foundation's response to ICH and FDA guidelines with regards to the 'Base' and 'Recommended' R packages.
+
+Accompanying the guidance document the R Foundation have also released details of the R Development Core Team's [Software Development Lifecycle](https://www.r-project.org/doc/R-SDLC.pdf).
+
+## FDA
+
+As described in the R Foundation's guidance document, there are several import documents / statements available form the FDA:
 
 * [Statistical Software Clarifying Statement](https://www.fda.gov/downloads/forindustry/datastandards/studydatastandards/ucm587506.pdf)
 * [Statistical Computing Challenges @ FDA](http://www.copafs.org/UserFiles/file/2016FCSM/6_4_Final_Schuette.pdf)
