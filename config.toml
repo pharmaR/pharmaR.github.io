@@ -18,9 +18,13 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     url = "/refs/"
     weight = 2
 [[menu.main]]
+    name = "Presentations"
+    url = "/present/"
+    weight = 3
+[[menu.main]]
     name = "Minutes"
     url = "/minutes/"
-    weight = 3
+    weight = 4
 
 [params]
     description = "A website built through Hugo and blogdown."
