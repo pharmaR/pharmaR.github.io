@@ -7,7 +7,15 @@
   </url>
   
   <url>
+    <loc>/present/</loc>
+  </url>
+  
+  <url>
     <loc>/refs/</loc>
+  </url>
+  
+  <url>
+    <loc>/risk_assess/</loc>
   </url>
   
   <url>

@@ -20,4 +20,4 @@ In June 2018 the R Consortium granted funding for a PSI AIMS SIG initiative to c
 * Roche / Genentech
 * Syne qua non
 
-IF your organisation is not listed above and you are interested in getting involved please contact XXXXXXX.
+If your organisation is not listed above and you are interested in getting involved please contact XXXXXXX.
