@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pharmaR website</title>
+    <link>/</link>
+    <description>Recent content on pharmaR website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>/present/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/present/</guid>
+      <description> Presentations Over time, this page will be used to collate important presentations on the topic of validation.
+ R in Pharma workshop slides  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/refs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/refs/</guid>
+      <description>References This page contains some useful information and references for anyone working in the pharmaceutical industry and looking to use R in a regulatory context.
+R Foundation In March 2018, the R Foundation re-released a document entitle R: Regulatory Compliance and Validation Issues A Guidance Document for the Use of R in Regulated Clinical Trial Environments. This document describes the R Foundation&amp;rsquo;s response to ICH and FDA guidelines with regards to the &amp;lsquo;Base&amp;rsquo; and &amp;lsquo;Recommended&amp;rsquo; R packages.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/risk_assess/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/risk_assess/</guid>
+      <description>Risk Assessment This page will contain information relating to the risk assessment of R packages.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>In June 2018 the R Consortium granted funding for a PSI AIMS SIG initiative to create an &amp;lsquo;online R package validation repository&amp;rsquo;. Following the R in Pharma Conference in August 2018, membership of the group was expanded and as of October 2018, the group includes participants from:
+ Abbvie Amgen Biogen Eli Lilly FDA GSK J&amp;amp;J Merck Merck KGaA Novartis PPD PRA Pfizer Roche / Genentech Syne qua non  If your organisation is not listed above and you are interested in getting involved please contact XXXXXXX.</description>
+    </item>
+    
+  </channel>
+</rss>
