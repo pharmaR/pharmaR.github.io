@@ -5,7 +5,6 @@ theme = "hugo-lithium"
 googleAnalytics = ""
 disqusShortname = ""
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
-publishDir = "pharmaR.github.io"
 
 [permalinks]
     post = "/:year/:month/:day/:slug/"
@@ -44,4 +43,3 @@ publishDir = "pharmaR.github.io"
     width = 70
     height = 50
     alt = "Logo"
-
