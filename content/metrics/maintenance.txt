@@ -6,5 +6,6 @@ Formal bug tracking	"Bugs can be logged by emails, but the better practice is to
 News	"A news feed is good practice as it makes users aware of updates to the package, thereby highlighting the areas of greatest risk."
 Release rate (18 months)	"A stable but continuing release pattern is a sign of active maintenance.  Active maintenance reduces the risk of bugs/errors and so a higher frequency indicates a reduced risk.  However, it should be noted that as a package stabilises over time, the release rate may slow.  When interpreting this metric it is therefore also important to consider the package maturity."
 Number of dependencies	"Reusing code means less new code and hence less potential for error.  The higher the number of dependencies, the lower the risk."
+Size of codebase (lines of code)	"The larger the code base, the greater the risk of error"
 License?	x
-Size of codebase	x
+Author reputation?	[Need to think about how we'd measure this - number of packages authored?]
