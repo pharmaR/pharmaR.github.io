@@ -1,3 +1,5 @@
+**THE FOLLOWING TEXT IS DRAFT ONLY**
+
 # Base R and Recommended R Packages
 
 The R Foundation’s "…Guidance Document for the Use of R in Regulated Clinical Trial Environments" relates specifically to Base R and Recommended R Packages.  It is the opinion of this author, and of many colleagues from across industry, that this document adequately addresses the question of R validation with respect to Base R and Recommended packages.  Some of the key points are highlighted below.
