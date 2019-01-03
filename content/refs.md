@@ -1,4 +1,6 @@
-# References
+---
+title: "References"
+---
 
 This page contains some useful information and references for anyone working in the pharmaceutical industry and looking to use R in a regulatory context.
 
