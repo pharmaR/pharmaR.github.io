@@ -1,7 +1,7 @@
 baseurl = "/"
 languageCode = "en-us"
 title = "pharmaR website"
-theme = "hugo-lithium"
+theme = "hugo-universal-theme"
 googleAnalytics = ""
 disqusShortname = ""
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
@@ -19,17 +19,28 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     url = "/present/"
     weight = 3
 [[menu.main]]
-    name = "Base R"
-    url = "/base/"
+    identifier = "valid"
+		name = "Validation"
+    url = "/valid/"
     weight = 4
 [[menu.main]]
+    parent = "valid"
+		name = "Base R"
+    url = "/base/"
+    weight = 14
+[[menu.main]]
+    parent = "valid"
     name = "R Packages"
     url = "/packages/"
-    weight = 5
+    weight = 15
 [[menu.main]]
     name = "Minutes"
     url = "/minutes/"
     weight = 6
+[[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 8
 
 [params]
     description = "A website built through Hugo and blogdown."
@@ -43,8 +54,21 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     MathJaxCDN = "//cdnjs.cloudflare.com/ajax/libs"
     MathJaxVersion = "2.7.5"
 
-    [params.logo]
-    url = "pharmaRlogo.png"
-    width = 70
-    height = 50
-    alt = "Logo"
+		logo = "img/pharmaRlogo.png"
+		
+		email = "psi.aims.r.validation@gmail.com"
+		
+		about_us = "<p>The R-Consortium in June 2018 awarded funding to create an online repository for R package validation in accordance with regulatory standards. Since the main hurdle for widespread use of R in late phase trials is ensuring adequate validation documentation, we are now focused on designing a framework which will specify a set of requirements, including metadata and examples of tests, which together would form evidence of the quality of an R package.</p>"
+		
+[params.carousel]
+    enable = true
+		
+[params.clients]
+    enable = true
+    title = "Supporting Organisations"
+    subtitle = "This Hub is supported by the following organisations"
+		
+[params.widgets]
+    search = true
+    categories = true
+    tags = true
