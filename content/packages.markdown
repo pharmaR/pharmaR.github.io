@@ -1,4 +1,7 @@
-+++ title = "R Packages" parent = "valid" +++
+---
+title: "R Packages"
+parent: "valid"
+---
 
 **THE FOLLOWING TEXT IS DRAFT ONLY**
 
