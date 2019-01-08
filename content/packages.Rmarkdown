@@ -1,7 +1,8 @@
-+++
-title = "R Packages"
-parent = "valid"
-+++
+---
+title: "R Packages"
+parent: "valid"
+output: md_document
+---
 
 **THE FOLLOWING TEXT IS DRAFT ONLY**
 
