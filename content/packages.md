@@ -1,3 +1,5 @@
++++ title: “R Packages” parent: “valid” +++
+
 **THE FOLLOWING TEXT IS DRAFT ONLY**
 
 The value of R lies not within the official distribution but within the
