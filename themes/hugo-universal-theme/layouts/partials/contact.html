@@ -17,13 +17,24 @@
 
 								
                 <form method="POST" action="https://formspree.io/{{ .Site.Params.email }}">
-								  
-									<label for="email">{{ i18n "contactMail" }}</label>
-                  <input type="email" name="email" placeholder="Your email">
+
+                  <div class="col-sm-6">
+                    <div class="form-group">
+									    <label for="email">{{ i18n "contactMail" }}</label>
+                      <input type="email" name="email" placeholder="Your email">
+									  </div>
+									</div>
 									
-									<label for="message">{{ i18n "contactMessage" }}</label>
-                  <textarea name="message" placeholder="Test Message"></textarea>
-                  <button type="submit">Send Test</button>
+									<div class="col-sm-12">
+                    <div class="form-group">
+									    <label for="message">{{ i18n "contactMessage" }}</label>
+                      <textarea name="message" placeholder="Test Message"></textarea>
+									  </div>
+									</div>
+									
+									<div class="col-sm-12 text-center">
+                    <button type="submit">Send Test</button>
+									</div>
                 </form>
 
                 {{ end }}
