@@ -16,7 +16,7 @@
                 <div id="contact-message"></div>
 
 								
-                <form method="POST" action="https://formspree.io/psi.aims.r.validation@gmail.com">
+                <form method="POST" action="https://formspree.io/{{ .Site.Params.email }}">
                   <input type="email" name="email" placeholder="Your email">
                   <textarea name="message" placeholder="Test Message"></textarea>
                   <button type="submit">Send Test</button>
