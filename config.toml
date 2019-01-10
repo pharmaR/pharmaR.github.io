@@ -55,6 +55,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     MathJaxVersion = "2.7.5"
 
 		logo = "img/pharmaRlogo.png"
+		logo_small = "img/pharmaRlogo.png"
 		
 		email = "psi.aims.r.validation@gmail.com"
 		
@@ -72,3 +73,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     search = true
     categories = true
     tags = true
+		
+[params.topbar]
+    enable = true
+    text = "<p>Contact us at psi.aims.r.validation@gmail.com.</p>"
