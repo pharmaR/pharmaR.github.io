@@ -16,29 +16,10 @@
                 <div id="contact-message"></div>
 
 								
-                <form class="contact-form" method="POST" action="https://formspree.io/{{ .Site.Params.email }}">
-                  <div class="row">
-									
-                    <div class="col-sm-12">
-                      <div class="form-group">
-									      <label for="email">{{ i18n "contactMail" }}</label>
-                        <input id="email" type="email" class="form-control" name="email" placeholder="Your email">
-									    </div>
-									  </div>
-									
-									  <div class="col-sm-12">
-                      <div class="form-group">
-									      <label for="message">{{ i18n "contactMessage" }}</label>
-                        <textarea id="message" class="form-control" name="message" placeholder="Test Message"></textarea>
-									    </div>
-									  </div>
-									
-									  <div class="col-sm-12 text-center">
-                      <button type="submit" class="btn btn-template-main"><i class="fa fa-envelope-o"></i>{{ i18n "contactSend" }}</button>
-									  </div>
-										
-									</div>
-									<!-- /.row -->
+                <form method="POST" action="https://formspree.io/psi.aims.r.validation@gmail.com">
+                  <input type="email" name="email" placeholder="Your email">
+                  <textarea name="message" placeholder="Test Message"></textarea>
+                  <button type="submit">Send Test</button>
                 </form>
 
                 {{ end }}
