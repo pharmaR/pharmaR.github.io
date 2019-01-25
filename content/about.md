@@ -7,17 +7,30 @@ In June 2018 the R Consortium granted funding for a PSI AIMS SIG initiative to c
 * Abbvie
 * Amgen
 * Biogen
+* Boehringer-Ingelheim
 * Eli Lilly
 * FDA
+* Genentech
 * GSK
-* J&J
+* IQVIA
+* InModelia
+* Johnson & Johnson
+* Linux Foundation
 * Merck
-* Merck KGaA
+* Merck Serono
 * Novartis
-* PPD
-* PRA
+* Novonordisk
 * Pfizer
-* Roche / Genentech
+* Phastar
+* PPD
+* Quanticate
+* RCPE
+* RHO world
+* Roche 
+* RStudio
+* R-consortium
+* Sanofi
+* Servier
 * Syne qua non
 
 If your organisation is not listed above and you are interested in getting involved please contact <psi.aims.r.validation@gmail.com>.
