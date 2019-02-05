@@ -16,7 +16,7 @@ In June 2018 the R Consortium granted funding for a PSI AIMS SIG initiative to c
 * InModelia
 * Johnson & Johnson
 * Linux Foundation
-* Merck & Co./MSD
+* MSD
 * Merck KGaA/EMD Serono
 * Novartis
 * Novonordisk
