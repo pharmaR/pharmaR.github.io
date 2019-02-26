@@ -25,7 +25,7 @@ In June 2018 the R Consortium granted funding for a PSI AIMS SIG initiative to c
 * PPD
 * Quanticate
 * RCPE
-* RHO world
+* Rho, Inc.
 * Roche 
 * RStudio
 * R-consortium
