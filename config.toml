@@ -11,7 +11,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     url = "/about/"
     weight = 1
 [[menu.main]]
-    name = "References"
+    name = "Background"
     url = "/refs/"
     weight = 2
 [[menu.main]]
@@ -25,14 +25,19 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     weight = 4
 [[menu.main]]
     parent = "valid"
+		name = "Overview"
+    url = "/overview/"
+    weight = 41
+[[menu.main]]
+    parent = "valid"
 		name = "Base R"
     url = "/base/"
-    weight = 14
+    weight = 42
 [[menu.main]]
     parent = "valid"
     name = "R Packages"
     url = "/packages/"
-    weight = 15
+    weight = 43
 [[menu.main]]
     name = "Minutes"
     url = "/minutes/"
