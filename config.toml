@@ -52,6 +52,11 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     url = "/packages/"
     weight = 23
 [[menu.main]]
+    parent = "valid"
+    name = "Examples"
+    url = "/examples/"
+    weight = 24
+[[menu.main]]
     name = "Contact"
     url = "/contact/"
     weight = 8
