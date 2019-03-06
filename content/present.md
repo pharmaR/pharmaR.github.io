@@ -1,7 +1,11 @@
 ---
-title: "Presentations"
+title: "Presentations and Communication"
 ---
 
-Over time, this page will be used to collate important presentations on the topic of validation.
+## Public Presentations
 
 * [R in Pharma workshop slides](/presentations/R_Validation_Workshop.pdf)
+
+## News Articles
+
+**Coming soon - PSI SPIN article**
