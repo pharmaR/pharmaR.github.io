@@ -7,41 +7,50 @@ disqusShortname = ""
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [[menu.main]]
+    identifier = "about"
     name = "About"
     url = "/about/"
     weight = 1
 [[menu.main]]
+    parent = "about"
+    name = "Who are we"
+    url = "/who/"
+    weight = 11
+[[menu.main]]
+    parent = "about"
     name = "Background"
     url = "/refs/"
-    weight = 2
+    weight = 12
 [[menu.main]]
+    parent = "about"
     name = "Presentations"
     url = "/present/"
-    weight = 3
+    weight = 13
+[[menu.main]]
+    parent = "about"
+    name = "Minutes"
+    url = "/minutes/"
+    weight = 14
 [[menu.main]]
     identifier = "valid"
 		name = "Validation"
     url = "/valid/"
-    weight = 4
+    weight = 2
 [[menu.main]]
     parent = "valid"
 		name = "Overview"
     url = "/overview/"
-    weight = 41
+    weight = 21
 [[menu.main]]
     parent = "valid"
 		name = "Base R"
     url = "/base/"
-    weight = 42
+    weight = 22
 [[menu.main]]
     parent = "valid"
     name = "R Packages"
     url = "/packages/"
-    weight = 43
-[[menu.main]]
-    name = "Minutes"
-    url = "/minutes/"
-    weight = 6
+    weight = 23
 [[menu.main]]
     name = "Contact"
     url = "/contact/"
@@ -71,8 +80,8 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 		
 [params.clients]
     enable = true
-    title = "Supporting Organisations"
-    subtitle = "This Hub is supported by the following organisations"
+    title = "Participating Organisations"
+    subtitle = "Members of the following organisations are participating in this project"
 		
 [params.widgets]
     search = true
