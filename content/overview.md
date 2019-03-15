@@ -33,7 +33,7 @@ After careful consideration various points, it can be concluded that there is mi
 
 ## Contributed Packages
 
-Any contributed package on CRAN must pass a series of technical checks, including an “R CMD check”. These checks are designed to ensure that examples run successfully, tests pass and that packages on CRAN are compatible with each other. However, further requirements are necessary to ensure the accuracy of an package. These can be differentiated into two categories
+Any contributed package on CRAN must pass a series of technical checks, including an “R CMD check”. These checks are designed to ensure that examples run successfully, tests pass and that packages on CRAN are compatible with each other. However, these checks do not guarantee the accuracy of a package and a risk assessment is often necessary.  The risk assessment proposed by the R Validation Hub covers two main areas:
 
 1.	Package Maintenance, e.g. release rate, size of code base, formal bug tracking
 2.	Community Usage and Testing, e.g. average downloads during in the last 12 months and code coverage by formal testing framework. 
