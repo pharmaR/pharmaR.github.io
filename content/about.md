@@ -6,6 +6,7 @@ In June 2018 the R Consortium granted funding for a PSI AIMS SIG initiative to c
 
 * Abbvie
 * Amgen
+* Astellas
 * Biogen
 * Boehringer-Ingelheim
 * Eli Lilly
