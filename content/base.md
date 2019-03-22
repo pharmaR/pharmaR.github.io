@@ -3,8 +3,6 @@ title = "Base R and Recommended R Packages"
 parent = "valid"
 +++
 
-**THE FOLLOWING TEXT IS DRAFT ONLY**
-
 The R Foundation’s [R: Regulatory Compliance and Validation Issues. A Guidance Document for the Use of R in Regulated Clinical Trial Environments](https://www.r-project.org/doc/R-FDA.pdf) relates specifically to Base R and Recommended R Packages. It is the opinion of this author, and of many colleagues from across industry, that this document adequately addresses the question of R validation with respect to Base R and Recommended packages. Some of the key points are highlighted below.
 
 ## R Validation Responsibility
