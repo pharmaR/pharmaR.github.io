@@ -15,7 +15,7 @@ In June 2018 the R Consortium granted funding for a PSI AIMS SIG initiative to c
 * Eli Lilly - *Eric Nantz*
 * FDA - *Tomas Drgon, Paul Schuette, Mat Soukup*
 * Galapagos NV - *Paul Meyvisch*
-* Genentech - *Douglas Kelkhoff*
+* Genentech - *Doug Kelkhoff*
 * GSK - *Tilo Blenk, Andy Nicholls, Alexander Lock-Achilleos*
 * IQVIA - *Thomas Brechenmacher, Jack Elkes*
 * InModelia - *Patrice Kiener*
