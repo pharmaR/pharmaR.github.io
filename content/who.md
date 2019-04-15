@@ -21,8 +21,9 @@ In June 2018 the R Consortium granted funding for a PSI AIMS SIG initiative to c
 * InModelia - *Patrice Kiener*
 * Johnson & Johnson - *Paulo Bargo, Mark Bynens, Satish Murthy, Karma Tarap*
 * Linux Foundation - *John Mertic*
-* MSD - *Keaven Anderson, Rinki Jajoo, Edward Lauzier, Yilong Zhang*
 * Merck KGaA/EMD Serono - *Martin Gregory, Juliane Manitz*
+* MSD - *Keaven Anderson, Rinki Jajoo, Edward Lauzier, Yilong Zhang*
+* MRC-BSU - *Kevin Kunzmann*
 * Novartis - *Xiao Ni, Huilei Xu*
 * Novonordisk - *Claus Dethlefsen*
 * Pfizer - *John Sims*
