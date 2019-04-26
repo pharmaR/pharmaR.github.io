@@ -19,7 +19,7 @@ In June 2018 the R Consortium granted funding for a PSI AIMS SIG initiative to c
 * GSK - *Tilo Blenk, Andy Nicholls, Alexander Lock-Achilleos*
 * IQVIA - *Thomas Brechenmacher, Jack Elkes*
 * InModelia - *Patrice Kiener*
-* Johnson & Johnson - *Paulo Bargo, Mark Bynens, Satish Murthy, Karma Tarap*
+* Johnson & Johnson - *Paulo Bargo, Mark Bynens, Satish Murthy, Karma Tarap, Rajeshwar Malathker*
 * Linux Foundation - *John Mertic*
 * Merck KGaA/EMD Serono - *Martin Gregory, Juliane Manitz*
 * MSD - *Keaven Anderson, Rinki Jajoo, Edward Lauzier, Yilong Zhang*
