@@ -39,4 +39,8 @@ In June 2018 the R Consortium granted funding for a PSI AIMS SIG initiative to c
 * Servier - *Mickael Guedj, Yann Robert*
 * SQN Clinical - *Chris Toffis*
 
+**Independent Consultants:**
+
+* *Parker Sims*
+
 If your organisation is not listed above and you are interested in getting involved please contact <psi.aims.r.validation@gmail.com>.
