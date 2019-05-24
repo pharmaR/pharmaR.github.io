@@ -2,7 +2,19 @@
 title: "Who we are"
 ---
 
-In June 2018 the R Consortium granted funding for a PSI AIMS SIG initiative to create an 'online R package validation repository'.  Following the R in Pharma Conference in August 2018, membership of the group was expanded and as of October 2018, the group includes participants from:
+As of May 2019, the *R Validation Hub* is governed by an executive committee.  In addition, we have participants from across the pharmaceutical contributing to the effort through the various workstreams that make up the project.  If you are interested in getting involved please contact <psi.aims.r.validation@gmail.com>.
+
+## Executive Committee
+
+* Andy Nicholls (GSK)
+* Lyn Taylor (Phastar)
+* Joe Rickert (RStudio and R Consortium)
+* Min Lee (Amgen)
+* Yilong Zhang (MSD)
+* Keaven Anderson (MSD)
+
+
+## Participating Organisations
 
 * Abbvie - *Greg Cicconetti*
 * Amgen - *Bella Feng, Min Lee*
@@ -39,8 +51,7 @@ In June 2018 the R Consortium granted funding for a PSI AIMS SIG initiative to c
 * Servier - *Mickael Guedj, Yann Robert*
 * SQN Clinical - *Chris Toffis*
 
-**Independent Consultants:**
+## Independent Consultants
 
 * *Parker Sims*
 
-If your organisation is not listed above and you are interested in getting involved please contact <psi.aims.r.validation@gmail.com>.
