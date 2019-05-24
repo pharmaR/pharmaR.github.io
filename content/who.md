@@ -2,19 +2,23 @@
 title: "Who we are"
 ---
 
-As of May 2019, the *R Validation Hub* is governed by an executive committee.  In addition, we have participants from across the pharmaceutical contributing to the effort through the various workstreams that make up the project.  If you are interested in getting involved please contact <psi.aims.r.validation@gmail.com>.
+
 
 ## Executive Committee
 
-* Andy Nicholls (GSK)
-* Lyn Taylor (Phastar)
-* Joe Rickert (RStudio and R Consortium)
-* Min Lee (Amgen)
-* Yilong Zhang (MSD)
-* Keaven Anderson (MSD)
+As of May 2019, the *R Validation Hub* is governed by an executive committee. 
+
+* Andy Nicholls (Chair)
+* Lyn Taylor (Secretary)
+* Joe Rickert (R Consortium)
+* Min Lee (Link to Transcelerate)
+* Yilong Zhang (Package Metrics Stream Lead)
+* Keaven Anderson (Testing Stream Lead)
 
 
 ## Participating Organisations
+
+The *R Validation Hub* comprises of participants from across the pharmaceutical industry.  Participants contribute to the effort through our regular group meetings, as well as the various workstreams that make up the project.  If you are interested in getting involved please contact <psi.aims.r.validation@gmail.com>.
 
 * Abbvie - *Greg Cicconetti*
 * Amgen - *Bella Feng, Min Lee*
@@ -51,7 +55,7 @@ As of May 2019, the *R Validation Hub* is governed by an executive committee.  I
 * Servier - *Mickael Guedj, Yann Robert*
 * SQN Clinical - *Chris Toffis*
 
-## Independent Consultants
+**Independent consultants**
 
 * *Parker Sims*
 
