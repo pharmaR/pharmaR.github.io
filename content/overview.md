@@ -66,7 +66,7 @@ For more information about Package Maintenance and Community Usage and Testing, 
 
 ### Tidyverse
 
-According to (https://www.tidyverse.org/):
+According to [https://www.tidyverse.org/](https://www.tidyverse.org/):
 
 > The tidyverse is an opinionated [collection of R packages](https://www.tidyverse.org/packages) designed for data science. All packages share an underlying design philosophy, grammar, and data structures.
 
