@@ -5,58 +5,88 @@ parent = "valid"
 
 **THE FOLLOWING TEXT IS DRAFT ONLY**
 
-# Description
+For statistical analyses, the process of validation ensures quality output.
 
-The FDA’s definition of validation specifies the need for high degree of assurance (*accuracy*) that a process consistently (*reproducibility*)  meets predetermined specifications (*traceability*) (see FDA's [Glossary of Computer System Software Development Terminology](https://www.fda.gov/iceci/inspections/inspectionguides/ucm074875.htm) for more details).  This site focuses on the accuracy of the validation of R. However, in order to validate R, a framework should be developed to incorporate all three of these elements to show that an installation of R is maintained in a controlled environment and that any outputs from it will be accurate, reproducible and traceable. 
+According to the FDA's [Glossary of Computer System Software Development Terminology](https://www.fda.gov/iceci/inspections/inspectionguides/ucm074875.htm):
 
-# Accuracy
+**Validation:** Establishing documented evidence which provides a high degree of assurance (*accuracy*) that a specific process consistently (*reproducibility*) produces a product meeting its predetermined specifications (*traceability*) and quality attributes.
 
-For the assessment of the validation of R in terms of accuracy, we differentiate different kinds of R packages (see German et al, 2013[^1]): 
+Since the [FDA does not require use of any specific software for statistical analyses](https://www.fda.gov/media/109552/download), the programming language R can be used if the R installation incorporates all of the following elements:
+1. Accuracy 
+2. Reproducibility
+3. Traceability
 
-* base and recommended packages, which are shipped with the basic installation
-* contributed packages, which may differ in their popularity and/or accuracy
+R Validation Hub outlines how to assess the **accuracy** of R packages, and how to ensure the **reproducibility** and **traceability** of R installations.
+
+## Accuracy of R packages
+
+When assessing the accuracy of R packages, the R Validation Hub differentiates R packages by the following types (see German et al, 2013[^1]): 
+
+* base and recommended (core) packages - developed by the R Foundation and shipped with the basic installation
+* contributed (open source) packages - developed by anyone, and may differ in popularity and accuracy
 
 ![source: German et al (2013): The Evolution of the R Software Ecosystem](/img/overview/German-et-al.png)
 
-The process to manage base, recommended, and open source community packages varies so that different requirements are needed to ensure that the use of these packages will reliably produce accurate results.  
+Core packages and contributed packages are managed by different processes. Therefore, different requirements are needed to ensure that both types of packages reliably produces accurate results. 
 
-## Base R and Recommended Packages
+### Base R and Recommended Packages
 
-The R Foundation follows many good practices during the development of Base R and the Recommended Packages, which ensure accuracy. Some practices are highlighted:
+The R Foundation develops both the base and recommended packages, and follows practices that ensures the accuracy of each. These practices include:
 
-* The R source code is properly maintained, and releases are controlled
-* The extensive R community plays an important role in testing the software and formally identifying bugs for the Core Team to address
-* The R Core Team consists of highly qualified individuals
-* Any R release can be qualified using the tests provided with each release
+* Proper maintenance of the R source code, and control of releases
+* Testing the software and identifying issues for the Core Team to address
+* The R Core Team hiring highly qualified individuals
+* Validation testing each R release against known data and known results, and resolving all errors prior to release
 
-After careful consideration various points, it can be concluded that there is minimal risk in using Base R and Recommended Packages for regulatory analysis and reporting. For more details see [Base R](../base).
+After careful consideration, the R Validation Hub concludes that there is minimal risk using these core packages for regulatory analysis and reporting. For more information, see [Base R and Recommended R Packages](../base).
 
-## Contributed Packages
+### Contributed Packages
 
-Any contributed package on CRAN must pass a series of technical checks, including an “R CMD check”. These checks are designed to ensure that examples run successfully, tests pass and that packages on CRAN are compatible with each other. However, these checks do not guarantee the accuracy of a package and a risk assessment is often necessary.  The risk assessment proposed by the R Validation Hub covers two main areas:
+Since R is Open Source, contributed packages can be developed by anyone. Therefore, ensuring the accuracy of each contributed package is necessary.
 
-1.	Package Maintenance, e.g. release rate, size of code base, formal bug tracking
-2.	Community Usage and Testing, e.g. average downloads during in the last 12 months and code coverage by formal testing framework. 
+R Validation Hub focuses on contributed packages on The Comprehensive R Archive Network (CRAN). All packages available on CRAN must pass a series of technical checks including an “R CMD” check. An “R CMD” check ensures that all submitted code’s:
+* examples run successfully
+* tests pass
+* packages are compatible with other packages on CRAN
 
-Additional details are already discussed on the [R Packages](../packages) page. 
+However, these checks do not guarantee the accuracy of a package and a risk assessment is necessary. The risk assessment proposed by the R Validation Hub includes:
+
+1. Package Maintenance
+* release rate
+* size of code base
+* formal bug tracking
+2. Community Usage and Testing 
+* average downloads during in the last 12 months 
+* the amount of code that is tested by a formal testing framework
+
+For more information about Package Maintenance and Community Usage and Testing, see
+ [R Packages](../packages) page. 
 
 ### Tidyverse
 
-The tidyverse is a "collection of R packages, which share an underlying design philosophy, grammar, and data structures" (https://www.tidyverse.org/).  
+According to (https://www.tidyverse.org/):
 
-In particular, the tidyverse is governed by a set of publically available [Design Principles](https://principles.tidyverse.org/) that are "used by the tidyverse team to promote consistency across packages in the core tidyverse".
+*The tidyverse is an opinionated [collection of R packages](https://www.tidyverse.org/packages) designed for data science. All packages share an underlying design philosophy, grammar, and data structures.*
 
-Based on higher standards and large user community many would conclude that there is minimal risk in using the tidyverse collection for regulatory analysis and reporting.  The point is currently tabled for discussion by the R Validation Hub members.
+Furthermore, the tidyverse is governed by a set of [Design Principles](https://principles.tidyverse.org/) that are used by the tidyverse team for consistency and to write better code.
 
-# Reproducibility
+Since tidyverse is held to such high standards and has a large user community, the R Validation Hub members are discussing if tidyverse can be labelled as minimal risk for regularly analysis and reporting.
 
-## Creating and Maintaining Environments
 
-Docker containers and other tools like RStudio Package manager can be used to create and maintain R environments to ensure that R outputs can be recreated.  This becomes more complex as R versions and package versions change over time so a process needs to be implemented that checks and tests package integrity with dependencies as versions are updated.  
+## Reproducibility of R installations
 
-# Traceability
+To ensure that R outputs can be reproducible, create and maintain R installations by using Docker containers and tools such as RStudio Package Manager.
 
-System and process controls can be developed to automatically document the R packages and environment dependencies that goes into any particular R analyses.
+As R versions and package versions change over time, creating and maintaining R installations becomes more complex. As versions are updated, define a process that checks and tests package integrity with dependencies.
+
+**Please note that investigation of reproducability is ongoing.**
+
+
+## Traceability of R installations
+
+Develop system and process controls to automatically document the R packages and installation dependencies that are used in R analyses.
+
+**Please note that investigation of traceability is ongoing.**
 
 
 [^1]: German, D.M. & Adams, Bram & Hassan, Ahmed E.. (2013). The Evolution of the R Software Ecosystem. Proceedings of the Euromicro Conference on Software Maintenance and Reengineering, CSMR. 243-252. 10.1109/CSMR.2013.33. 
