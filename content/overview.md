@@ -9,7 +9,7 @@ For statistical analyses, the process of validation ensures quality output.
 
 According to the FDA's [Glossary of Computer System Software Development Terminology](https://www.fda.gov/iceci/inspections/inspectionguides/ucm074875.htm):
 
-**Validation:** Establishing documented evidence which provides a high degree of assurance (*accuracy*) that a specific process consistently (*reproducibility*) produces a product meeting its predetermined specifications (*traceability*) and quality attributes.
+> >**Validation:** Establishing documented evidence which provides a high degree of assurance (*accuracy*) that a specific process consistently (*reproducibility*) produces a product meeting its predetermined specifications (*traceability*) and quality attributes.
 
 Since the [FDA does not require use of any specific software for statistical analyses](https://www.fda.gov/media/109552/download), the programming language R can be used if the R installation incorporates all of the following elements:
 
@@ -68,7 +68,7 @@ For more information about Package Maintenance and Community Usage and Testing, 
 
 According to (https://www.tidyverse.org/):
 
-*The tidyverse is an opinionated [collection of R packages](https://www.tidyverse.org/packages) designed for data science. All packages share an underlying design philosophy, grammar, and data structures.*
+> >The tidyverse is an opinionated [collection of R packages](https://www.tidyverse.org/packages) designed for data science. All packages share an underlying design philosophy, grammar, and data structures.
 
 Furthermore, the tidyverse is governed by a set of [Design Principles](https://principles.tidyverse.org/) that are used by the tidyverse team for consistency and to write better code.
 
