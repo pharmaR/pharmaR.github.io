@@ -3,7 +3,6 @@ title = "Validation Overview"
 parent = "valid"
 +++
 
-**THE FOLLOWING TEXT IS DRAFT ONLY**
 
 For statistical analyses, the process of validation ensures quality output.
 
