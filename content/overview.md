@@ -12,6 +12,7 @@ According to the FDA's [Glossary of Computer System Software Development Termino
 **Validation:** Establishing documented evidence which provides a high degree of assurance (*accuracy*) that a specific process consistently (*reproducibility*) produces a product meeting its predetermined specifications (*traceability*) and quality attributes.
 
 Since the [FDA does not require use of any specific software for statistical analyses](https://www.fda.gov/media/109552/download), the programming language R can be used if the R installation incorporates all of the following elements:
+
 1. Accuracy 
 2. Reproducibility
 3. Traceability
@@ -45,6 +46,7 @@ After careful consideration, the R Validation Hub concludes that there is minima
 Since R is Open Source, contributed packages can be developed by anyone. Therefore, ensuring the accuracy of each contributed package is necessary.
 
 R Validation Hub focuses on contributed packages on The Comprehensive R Archive Network (CRAN). All packages available on CRAN must pass a series of technical checks including an “R CMD” check. An “R CMD” check ensures that all submitted code’s:
+
 * examples run successfully
 * tests pass
 * packages are compatible with other packages on CRAN
@@ -52,12 +54,12 @@ R Validation Hub focuses on contributed packages on The Comprehensive R Archive 
 However, these checks do not guarantee the accuracy of a package and a risk assessment is necessary. The risk assessment proposed by the R Validation Hub includes:
 
 1. Package Maintenance
-* release rate
-* size of code base
-* formal bug tracking
+   * release rate
+   * size of code base
+   * formal bug tracking
 2. Community Usage and Testing 
-* average downloads during in the last 12 months 
-* the amount of code that is tested by a formal testing framework
+   * average downloads during in the last 12 months 
+   * the amount of code that is tested by a formal testing framework
 
 For more information about Package Maintenance and Community Usage and Testing, see
  [R Packages](../packages) page. 
