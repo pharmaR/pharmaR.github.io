@@ -41,21 +41,26 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 		name = "Overview"
     url = "/overview/"
     weight = 21
+    [[menu.main]]
+    parent = "valid"
+		name = "Regulations"
+    url = "/regulations/"
+    weight = 22
 [[menu.main]]
     parent = "valid"
-		name = "Base R"
+		name = "R"
     url = "/base/"
-    weight = 22
+    weight = 23
 [[menu.main]]
     parent = "valid"
     name = "R Packages"
     url = "/packages/"
-    weight = 23
+    weight = 24
 [[menu.main]]
     parent = "valid"
     name = "Examples"
     url = "/examples/"
-    weight = 24
+    weight = 25
 [[menu.main]]
     name = "Contact"
     url = "/contact/"

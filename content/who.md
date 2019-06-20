@@ -2,10 +2,26 @@
 title: "Who we are"
 ---
 
-In June 2018 the R Consortium granted funding for a PSI AIMS SIG initiative to create an 'online R package validation repository'.  Following the R in Pharma Conference in August 2018, membership of the group was expanded and as of October 2018, the group includes participants from:
+
+
+## Executive Committee
+
+As of May 2019, the *R Validation Hub* is governed by an executive committee. 
+
+* Andy Nicholls (Chair)
+* Lyn Taylor (Secretary)
+* Joe Rickert (R Consortium)
+* Min Lee (Link to Transcelerate)
+* Yilong Zhang (Package Metrics Stream Lead)
+* Keaven Anderson (Testing Stream Lead)
+
+
+## Participating Organisations
+
+The *R Validation Hub* comprises of participants from across the pharmaceutical industry.  Participants contribute to the effort through our regular group meetings, as well as the various workstreams that make up the project.  If you are interested in getting involved please contact <psi.aims.r.validation@gmail.com>.
 
 * Abbvie - *Greg Cicconetti*
-* Amgen - *Bella Feng, Min Lee*
+* Amgen - *Min Lee*
 * Astellas - *Michael Carniello*
 * Bayer - *Karl Brand*
 * Biogen - *Dan Boisvert, Bob Engle, Eric Milliman, Nate Mockler*
@@ -19,7 +35,8 @@ In June 2018 the R Consortium granted funding for a PSI AIMS SIG initiative to c
 * GSK - *Tilo Blenk, Andy Nicholls, Alexander Lock-Achilleos*
 * IQVIA - *Thomas Brechenmacher, Jack Elkes*
 * InModelia - *Patrice Kiener*
-* Johnson & Johnson - *Paulo Bargo, Mark Bynens, Satish Murthy, Karma Tarap*
+* Johnson & Johnson - *Paulo Bargo, Mark Bynens, Satish Murthy, Karma Tarap, Rajeshwar Malathker*
+* Kite Pharma - *Bella Feng*
 * Linux Foundation - *John Mertic*
 * Merck KGaA/EMD Serono - *Martin Gregory, Juliane Manitz*
 * MSD - *Keaven Anderson, Rinki Jajoo, Edward Lauzier, Yilong Zhang*
@@ -39,4 +56,7 @@ In June 2018 the R Consortium granted funding for a PSI AIMS SIG initiative to c
 * Servier - *Mickael Guedj, Yann Robert*
 * SQN Clinical - *Chris Toffis*
 
-If your organisation is not listed above and you are interested in getting involved please contact <psi.aims.r.validation@gmail.com>.
+**Independent consultants**
+
+* *Parker Sims*
+

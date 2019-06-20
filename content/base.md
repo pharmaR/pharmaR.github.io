@@ -1,57 +1,109 @@
 +++
-title = "Base R and Recommended R Packages"
+title = "R"
 parent = "valid"
 +++
 
-The R Foundation’s [R: Regulatory Compliance and Validation Issues. A Guidance Document for the Use of R in Regulated Clinical Trial Environments](https://www.r-project.org/doc/R-FDA.pdf) relates specifically to Base R and Recommended R Packages. It is the opinion of this author, and of many colleagues from across industry, that this document adequately addresses the question of R validation with respect to Base R and Recommended packages. Some of the key points are highlighted below.
+R is a free programming language and software environment that is used for statistical computing. R was first created in 1993, and is now supported by the R Foundation for Statistical Computing.
 
-## R Validation Responsibility
+For more information, see [What is R?](https://www.r-project.org/about.html)
 
-The responsibility for the organisation installing R to ensure that their SOPs "define appropriate and reasonable quality control processes to manage end-user related risk".
+### Base R
+As of May 31, 2019, Base R is comprised of 14 packages, with an additional 15 packages included as “Recommended Packages.” These 29 packages compose the core of R and are included with basic R installations. Functionalities of this basic installation include:
 
-## 21 CFR Part 11 
+-   statistics
+-   graphics
+-   file handling
+-   matrix handling
+    
 
-The R Foundation do not believe "that 21 CFR Part 11 is appropriate to data analysis software systems that are
-not primarily intended for storage and transmission of electronic medical records" (p. 11). In this context, they highlight the following text from the FDA’s revised definition of Part 11 records, "a record that is *not itself submitted*, but is used in *generating a submission*, is not a part 11 record unless it is otherwise required to be maintained under a predicate rule and it is maintained in electronic format".
+### R Development Core Team
+The Base R packages are developed and maintained by the R Development Core Team (R Core), through their controlled Software Development Life Cycle (SDLC).
 
-On this basis, the R Foundation provides a "high degree of confidence that R can comply with these and other validation
-regulations." (p. 12)
+All source code is available for review under the Free Software Foundation’s GNU Public License (GPL). As such, peer review of R development is done by both the R Core team and the community.
 
-## Definition: Validation
+### R is Open Source
+As open source software, the source code is provided for free under the (GPL) license.
 
-The R Foundation focus on the FDA definition of validation, "Establishing documented evidence which provides a high degree of assurance that a specific process will consistently produce a product meeting its predetermined specifications and quality attributes" ([Glossary Of Computerized System and Software Development Terminology](https://www.fda.gov/iceci/inspections/inspectionguides/ucm074875.htm)). It is also highlighted that R is "a component in an overall data management, analysis and presentation process" (p. 12).
+**Note:** Although R is open source, its updates, maintenance and releases are tightly controlled by the R Core Team to ensure stable development.
 
-## System Development Life Cycle (SDLC)
+## Using R for Regulatory Analyses and Reporting
+In response to [federal regulations](../regulations), the R Foundation released [R: Regulatory Compliance and Validation Issues. A Guidance Document for the Use of R in Regulated Clinical Trial Environments](https://www.r-project.org/doc/R-FDA.pdf). This document relates to both Base R and recommended R packages. The R Foundation addresses the validation of R, and includes the following information:
 
-### Operational Overview
+-   Relevance of 21 CFR Part 11 to R
+-   R’s definition of validation
+-   Organizations are responsible for validating their R installations
+-   R Foundation’s System Development Life Cycle (SDLC)
+-   Responses to various sections of 21 CFR Part 11
+   
+### Relevance of 21 CFR Part 11 to R
+The R Foundation summarizes takeaways from 21 CFR Part 11. Most importantly:
 
-The development and maintenance of R is handled by the R Development Core Team.  Members of the team represent "multiple statistical disciplines and are based at academic, not-for-profit and industry-affiliated institutions on multiple continents" (p. 13).
+>If there are predicate rules that require records to be maintained, and these records are managed electronically, then Part 11 controls apply to those records.
 
-"Reasonable software development and testing methodologies are employed by R Core in order to maximize the accuracy, reliability and consistency of R's performance" (p. 13)
+>If there are predicate rules that require a signature to be applied, and this signature is applied electronically or digitally, then Part 11 controls apply.
 
-The Foundation also point out that as an open source language, "… all of the functionality embodied within R is subject to continuous critique and improvement relative to its accuracy, reliability and consistency".  And the size of the community is "estimated as being in the tens of thousands, with some independent estimates in the hundreds of thousands" (p.13).
+Part 11 records are records submitted to the FDA. Any records that are not submitted, but are used in generating a submission, are not considered to be relevant to Part 11.
 
-In a summary statement, they state, "In conjunction with detailed documentation and references provided to end users, the size of the R user community, all having full access to the source code, enables a superior ability to anticipate and verify R's performance and the results produced by R." (p.13)
+Therefore, the R Foundation concludes that Part 11 does not apply to data analysis software systems that are not used in record transmission or storage.
 
-### Source Code Management
+However, elements of Part 11 may still apply when R is used as part of a validated system. GxP regulations may also drive a requirement for validation. Ultimately, it is the responsibility of the organisation to identify how a system relates to current legislation.
 
-The R code is managed in a Subversion (SVN) repository with write access limited to the R Core team. There is a clearly defined approach to releases and this is reflected in the R version number. All changes and updates to the source are publicly available and shared via a news feed.
+### Definition of validation
+The R Foundation uses the FDA’s [Glossary of Computer System Software Development Terminology](https://www.fda.gov/iceci/inspections/inspectionguides/ucm074875.htm) definition of validation:
 
-### Testing and Validation
+> **Validation:** Establishing documented evidence which provides a high degree of assurance (*accuracy*) that a specific process consistently (*reproducibility*) produces a product meeting its predetermined specifications (*traceability*) and quality attributes.
 
-The most significant statement on testing and validation is that, "A set of validation tests are maintained and upgraded by R Core to enable the testing of source code against known data and known results. Any errors noted during this testing are resolved prior to release" (p. 15). In other words there are a standard set of tests that can be accessed and executed in order to assist with the qualification of an R installation.
+For more information about validation, see [Validation Overview](https://www.pharmar.org/overview/).
 
-## Further Information
+The R Foundation identifies the scope of R. That is, R may be a *part* of data analysis and other technologies may exist.
 
-In addition to the points highlighted above, the R Foundation’s documentation: describes the release cycle; provides details on the maintenance, support and retirement of R versions; highlights the relative qualifications of R Core Team members; and briefly describes the Foundation’s approach to disaster recovery.  Further, despite the Foundation’s thoughts on the applicability of 21 CFR Part 11, a response is provided to various sections of the FDA’s Regulation.
+### Organizations are responsible for validating their R installations
+The R Foundation states that organizations are responsible for validating their R installations. They recommend creating Standard Operating Procedures (SOPs). These SOPs should manage risk and define quality control for R installations.
+
+### R Foundation’s System Development Life Cycle (SDLC)
+
+#### Operational Overview
+The R Core team develop, release, and maintain R code. R Core members come from many statistical backgrounds, and are located all over the world.
+
+Since R is open source, all of the source code is available to be reviewed by members of the user community. The user community is estimated between the tens and hundreds of thousands. Therefore, the functionality is subject to constant evaluation and improvements. This amount of testing in the real world is unique, and lends itself to a high-quality product.
+
+#### Source Code Management
+R’s source code is managed in a Subversion (SVN) [repository](https://svn.r-project.org/R/) with write access limited to the R Core team. R Core defines procedures to protect the source code and the hosting server including:
+
+-   Maintaining separate source code branches for the Release Branch and the Development Version
+-   Logging code changes daily within the SVN repository
+-   Maintaining a “NEWS” file that allows users to track all changes made to R
+    
+
+#### Testing and validation
+R Core maintains and updates a set of validation tests. These tests test source code against known data and known results. All errors found while testing are fixed before release.
+
+These tests are available to end users to ensure the validation of their R installation.
+
+R Foundation monitors feedback from users by the [r-devel e-mail list](https://stat.ethz.ch/mailman/listinfo/r-devel) and the [R Bug Tracking System](http://bugs.r-project.org/). This process allows for more extensive testing, and increases the likelihood that bugs are fixed before releases.
+
+#### More information
+The R Foundation provides more information in their documentation, including:
+
+-   Release cycle description
+-   Maintenance, support, and retirement details of R
+-   Qualifications of R Core members
+-   Physical security
+-   IT security
+-   Disaster recovery plans
+-   Responses to various sections of 21 CFR Part 11
+    
+For more detailed information, see [R: Regulatory Compliance and Validation Issues. A Guidance Document for the Use of R in Regulated Clinical Trial Environments](https://www.r-project.org/doc/R-FDA.pdf).
 
 ## Conclusion
+R Foundation documents practices in the development of Base R and the Recommended Packages, including:
 
-The R Foundation’s document highlights the many good practices that are followed in the development of Base R and the Recommended Packages. In particular:
+-   R Foundation maintains source code and controls releases
+-   The R community is between the tens and hundreds of thousands
+-   The R community tests software in the real world and identifies bugs that the Core Team addresses
+-   The R Core Team consists of qualified individuals
+-   Users can verify installations with tests provided in each release
+    
+The size of the user community leads to unique and extensive community testing. Using R is arguably lower risk than using proprietary software that is not as user-tested before release.
 
-* The R source code is properly maintained, and releases are controlled
-* The extensive R community plays an important role in testing the software and formally identifying bugs for the Core Team to address
-* The R Core Team consists of highly qualified individuals
-* Any R release can be qualified using the tests provided with each release
-
-Given these points, there is minimal risk in using Base R and Recommended Packages for regulatory analysis and reporting. Considering the size of the user community and the extent of community testing that the R distribution is subjected to, this risk is arguably lower than the risk an organisation takes in using proprietary software that would not be subjected to such extensive user testing before release.
+R Validation Hub concludes that there is minimal risk in using Base R and Recommended Packages as a component in a validated system for regulatory analysis and reporting.
