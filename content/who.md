@@ -21,18 +21,21 @@ As of May 2019, the *R Validation Hub* is governed by an executive committee.
 The *R Validation Hub* comprises of participants from across the pharmaceutical industry.  Participants contribute to the effort through our regular group meetings, as well as the various workstreams that make up the project.  If you are interested in getting involved please contact <psi.aims.r.validation@gmail.com>.
 
 * Abbvie - *Greg Cicconetti*
+* Acerta Pharma - *Prabhakara Burma*
 * Amgen - *Min Lee*
 * Astellas - *Michael Carniello*
 * Bayer - *Karl Brand*
 * Biogen - *Dan Boisvert, Bob Engle, Eric Milliman, Nate Mockler*
 * BioMarin Pharmaceutical Inc. - *Dharmesh Desai*
 * Boehringer-Ingelheim - *Matthias Trampisch*
+* BresMed - *Rose Hart*
 * Cognigen Corporation - *Nash Delcamp*
 * Eli Lilly - *Eric Nantz*
 * FDA - *Tomas Drgon, Paul Schuette, Mat Soukup*
 * Galapagos NV - *Paul Meyvisch*
 * Genentech - *Doug Kelkhoff*
 * GSK - *Tilo Blenk, Andy Nicholls, Alexander Lock-Achilleos*
+* HMS Analytical Software - *Elvira Erhardt*
 * IQVIA - *Thomas Brechenmacher, Jack Elkes*
 * InModelia - *Patrice Kiener*
 * Johnson & Johnson - *Paulo Bargo, Mark Bynens, Satish Murthy, Karma Tarap, Rajeshwar Malathker*
@@ -55,6 +58,7 @@ The *R Validation Hub* comprises of participants from across the pharmaceutical 
 * Scharp - *Anthony Williams*
 * Servier - *Mickael Guedj, Yann Robert*
 * SQN Clinical - *Chris Toffis*
+* University of Sheffield - *Anna Krystalli*
 
 **Independent consultants**
 
