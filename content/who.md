@@ -32,7 +32,7 @@ The *R Validation Hub* comprises of participants from across the pharmaceutical 
 * Cognigen Corporation - *Nash Delcamp*
 * Eli Lilly - *Eric Nantz*
 * FDA - *Tomas Drgon, Paul Schuette, Mat Soukup*
-* Galapagos NV - *Paul Meyvisch*
+* Galapagos NV - *Paul Meyvisch*, *Pieter-Jan Stiers*
 * Genentech - *Doug Kelkhoff*
 * GSK - *Tilo Blenk, Andy Nicholls, Alexander Lock-Achilleos*
 * HMS Analytical Software - *Elvira Erhardt*
