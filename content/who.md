@@ -2,7 +2,9 @@
 title: "Who we are"
 ---
 
+## R Validation Hub: Mission 
 
+R Validation Hub is a cross-industry initiative whose mission is to enable the use of R by the Bio-Pharmaceutical Industry in a regulatory setting, where the output may be used in submissions to regulatory agencies.
 
 ## Executive Committee
 
