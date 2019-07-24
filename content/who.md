@@ -61,6 +61,7 @@ The *R Validation Hub* comprises of participants from across the pharmaceutical 
 * Scharp - *Anthony Williams*
 * Servier - *Mickael Guedj, Yann Robert*
 * SQN Clinical - *Chris Toffis*
+* Teva Pharmaceutical Industries Ltd. - *Evelyn Du*
 * University of Sheffield - *Anna Krystalli*
 
 **Independent consultants**
