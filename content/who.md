@@ -37,7 +37,7 @@ The *R Validation Hub* comprises of participants from across the pharmaceutical 
 * Galapagos NV - *Paul Meyvisch*, *Pieter-Jan Stiers*
 * Genentech - *Doug Kelkhoff*
 * Gilead - *Neby Bekele*
-* GSK - *Tilo Blenk, Andy Nicholls, Alexander Lock-Achilleos*
+* GSK - *Tilo Blenk, Andy Nicholls, Alexander Lock-Achilleos, Lin Taft*
 * HMS Analytical Software - *Elvira Erhardt*
 * IQVIA - *Thomas Brechenmacher, Jack Elkes*
 * InModelia - *Patrice Kiener*
