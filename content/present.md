@@ -6,7 +6,11 @@ title: "Presentations and Communication"
 
 ### 2018
 
-* [R in Pharma workshop slides](/presentations/R_Validation_Workshop.pdf)
+* [R in Pharma workshop](/presentations/R_Validation_Workshop.pdf)
+
+### 2019
+
+* [PSI Conference - progress update](/presentations/validation_hub.pdf)
 
 ## News Articles
 

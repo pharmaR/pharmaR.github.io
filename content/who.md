@@ -2,7 +2,9 @@
 title: "Who we are"
 ---
 
+## R Validation Hub: Mission 
 
+R Validation Hub is a cross-industry initiative whose mission is to enable the use of R by the Bio-Pharmaceutical Industry in a regulatory setting, where the output may be used in submissions to regulatory agencies.
 
 ## Executive Committee
 
@@ -21,18 +23,22 @@ As of May 2019, the *R Validation Hub* is governed by an executive committee.
 The *R Validation Hub* comprises of participants from across the pharmaceutical industry.  Participants contribute to the effort through our regular group meetings, as well as the various workstreams that make up the project.  If you are interested in getting involved please contact <psi.aims.r.validation@gmail.com>.
 
 * Abbvie - *Greg Cicconetti*
+* Acerta Pharma - *Prabhakara Burma*
 * Amgen - *Min Lee*
 * Astellas - *Michael Carniello*
 * Bayer - *Karl Brand*
 * Biogen - *Dan Boisvert, Bob Engle, Eric Milliman, Nate Mockler*
 * BioMarin Pharmaceutical Inc. - *Dharmesh Desai*
 * Boehringer-Ingelheim - *Matthias Trampisch*
+* BresMed - *Rose Hart*
 * Cognigen Corporation - *Nash Delcamp*
 * Eli Lilly - *Eric Nantz*
 * FDA - *Tomas Drgon, Paul Schuette, Mat Soukup*
-* Galapagos NV - *Paul Meyvisch*
+* Galapagos NV - *Paul Meyvisch*, *Pieter-Jan Stiers*
 * Genentech - *Doug Kelkhoff*
-* GSK - *Tilo Blenk, Andy Nicholls, Alexander Lock-Achilleos*
+* Gilead - *Neby Bekele*
+* GSK - *Tilo Blenk, Andy Nicholls, Alexander Lock-Achilleos, Lin Taft*
+* HMS Analytical Software - *Elvira Erhardt*
 * IQVIA - *Thomas Brechenmacher, Jack Elkes*
 * InModelia - *Patrice Kiener*
 * Johnson & Johnson - *Paulo Bargo, Mark Bynens, Satish Murthy, Karma Tarap, Rajeshwar Malathker*
@@ -55,6 +61,8 @@ The *R Validation Hub* comprises of participants from across the pharmaceutical 
 * Scharp - *Anthony Williams*
 * Servier - *Mickael Guedj, Yann Robert*
 * SQN Clinical - *Chris Toffis*
+* Teva Pharmaceutical Industries Ltd. - *Evelyn Du*
+* University of Sheffield - *Anna Krystalli*
 
 **Independent consultants**
 

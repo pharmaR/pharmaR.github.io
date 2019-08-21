@@ -8,11 +8,16 @@ The R Validation Hub operates in the public domain and all meeting minutes are m
  
 library(dplyr)
 library(stringr)
+library(lubridate)
 
 mins <- sort(list.files("minutes"), decreasing = TRUE)
-mins_see <- mins %>%
+mins_see_base <- mins %>%
   str_replace("R_Validation_Hub_Meeting_minutes_", "") %>%
-  str_replace("\\.pdf$", "") %>%
+  str_replace("\\.pdf$", "") 
+
+mins_see <- mins_see_base %>%
+  ymd() %>%
+  format("%d %b %Y") %>%
   str_c("[", ., "]")
 
 mins <- mins %>%
