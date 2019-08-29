@@ -49,6 +49,7 @@ The *R Validation Hub* comprises of participants from across the pharmaceutical 
 * MRC-BSU - *Kevin Kunzmann*
 * Novartis - *Xiao Ni, Huilei Xu*
 * Novonordisk - *Claus Dethlefsen*
+* Nuventra -*Jessica Higgins*
 * Pfizer - *John Sims*
 * Phastar - *Lyn Taylor*
 * PPD - *Craig McIlloney*
