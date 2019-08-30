@@ -11,6 +11,7 @@ title: "Presentations and Communication"
 ### 2019
 
 * [PSI Conference - progress update](/presentations/validation_hub.pdf)
+* [R in Pharma workshop](/presentations/rpharma_2019.pdf)
 
 ## News Articles
 
