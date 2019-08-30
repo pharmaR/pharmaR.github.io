@@ -27,6 +27,7 @@ The *R Validation Hub* comprises of participants from across the pharmaceutical 
 * Amgen - *Min Lee*
 * Astellas - *Michael Carniello*
 * Bayer - *Karl Brand*
+* BeiGene - *Michael Blanks*
 * Biogen - *Dan Boisvert, Bob Engle, Eric Milliman, Nate Mockler*
 * BioMarin Pharmaceutical Inc. - *Dharmesh Desai*
 * Boehringer-Ingelheim - *Matthias Trampisch*
