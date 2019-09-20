@@ -1,5 +1,5 @@
 ---
-title: "Presentations and Communication"
+title: "Presentations"
 ---
 
 ## Public Presentations

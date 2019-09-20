@@ -1,6 +1,10 @@
 ---
-title: "Who we are"
+title: "About Us"
 ---
+
+The main challenge of using R in late-phase trials is ensuring validation documentation. In June 2018, the R-Consortium awarded funding to create an online repository for R package validation in accordance with regulatory standards.
+
+We focus on designing a framework that assesses the quality of an R package.
 
 ## R Validation Hub: Mission 
 
@@ -68,4 +72,5 @@ The *R Validation Hub* comprises of participants from across the pharmaceutical 
 **Independent consultants**
 
 * *Parker Sims*
+
 
