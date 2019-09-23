@@ -1,6 +1,6 @@
 +++
 title = "Regulations"
-parent = "valid"
+parent = "regulations"
 +++
 
 ## Part 11 of Title 21 of the Code of Federal Regulations (21 CFR Part 11)
@@ -12,6 +12,12 @@ In 1997, the United States Food and Drug Administration (FDA) issued [21 CFR Par
 
  
 In 2015, the FDA released a [Statistical Software Clarifying Statement](https://www.fda.gov/media/109552/download). This document states that they do not require the use of any specific software for statistical analyses. But, the FDA requests that software package(s) be documented upon submission. This documentation must include version and build identification.
+
+## Study Data Technical Conformance Guide
+In March 2018, the FDA released the [Study Data Technical Conformance Guide](https://www.fda.gov/media/88173/download). *Delivering Software Programs*, paragraph 4.1.2.10 states:
+
+>"Sponsors should provide the software programs used to create all ADaM datasets and generate tables and figures associated with primary and secondary efficacy analyses. Furthermore, sponsors should submit software programs used to generate additional information included in Section 14 CLINICAL STUDIES of the Prescribing Information (PI)26 if applicable. The specific software utilized should be specified in the ADRG.  The main purpose of requesting the submission of these programs is to understand the process by which the variables for the respective analyses were created and to confirm the analysis algorithms. Sponsors should submit software programs in ASCII text format; however, executable file extensions should not be used.
+
 
 ## Conclusion
 21 CFR Part 11 is not relevant or mandatory in the context of statistical analysis software itself.

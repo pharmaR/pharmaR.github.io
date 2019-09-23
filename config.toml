@@ -8,61 +8,66 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [[menu.main]]
     identifier = "about"
-    name = "About"
+    name = "About Us"
     url = "/about/"
     weight = 1
 [[menu.main]]
     parent = "about"
-    name = "Who are we"
-    url = "/who/"
-    weight = 11
-[[menu.main]]
-    parent = "about"
-    name = "Background"
-    url = "/refs/"
+		name = "About Us"
+    url = "/about/"
     weight = 12
 [[menu.main]]
     parent = "about"
-    name = "Presentations"
-    url = "/present/"
+		name = "Roadmap"
+    url = "/roadmap/"
     weight = 13
 [[menu.main]]
-    parent = "about"
-    name = "Minutes"
-    url = "/minutes/"
-    weight = 14
+    identifier = "regulations"
+		name = "Regulations"
+    url = "/regulations/"
+    weight = 2
 [[menu.main]]
     identifier = "valid"
 		name = "Validation"
     url = "/valid/"
-    weight = 2
+    weight = 3
 [[menu.main]]
     parent = "valid"
 		name = "Overview"
     url = "/overview/"
-    weight = 21
-    [[menu.main]]
-    parent = "valid"
-		name = "Regulations"
-    url = "/regulations/"
-    weight = 22
+    weight = 31
 [[menu.main]]
     parent = "valid"
 		name = "R"
-    url = "/base/"
-    weight = 23
+    url = "/r/"
+    weight = 32
 [[menu.main]]
     parent = "valid"
-    name = "R Packages"
-    url = "/packages/"
-    weight = 24
+    name = "Risk Assessment"
+    url = "/risk/"
+    weight = 33
 [[menu.main]]
     parent = "valid"
     name = "Examples"
     url = "/examples/"
-    weight = 25
+    weight = 34
 [[menu.main]]
-    name = "Contact"
+    identifier = "resources"
+    name = "Resources"
+    url = "/resources/"
+    weight = 4
+[[menu.main]]
+    parent = "resources"
+    name = "Minutes"
+    url = "/minutes/"
+    weight = 41
+[[menu.main]]
+    parent = "resources"
+    name = "Presentations"
+    url = "/present/"
+    weight = 42
+[[menu.main]]
+    name = "Contact Us"
     url = "/contact/"
     weight = 8
 
@@ -82,8 +87,6 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 		logo_small = "img/pharmaRlogo.png"
 		
 		email = "psi.aims.r.validation@gmail.com"
-		
-		about_us = "<p>The R-Consortium in June 2018 awarded funding to create an online repository for R package validation in accordance with regulatory standards. Since the main hurdle for widespread use of R in late phase trials is ensuring adequate validation documentation, we are now focused on designing a framework which will specify a set of requirements, including metadata and examples of tests, which together would form evidence of the quality of an R package.</p>"
 		
 [params.carousel]
     enable = true
