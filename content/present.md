@@ -4,14 +4,18 @@ title: "Presentations"
 
 ## Public Presentations
 
-### 2018
-
-* [R in Pharma workshop](/presentations/R_Validation_Workshop.pdf)
-
 ### 2019
 
-* [PSI Conference - progress update](/presentations/validation_hub.pdf)
-* [R in Pharma workshop](/presentations/rpharma_2019.pdf)
+* [R in Pharma workshop](/presentations/rpharma_2019.pdf), August
+    - [Course materials](https://github.com/pharmaR/rpharma2019)
+* [PSI Conference - progress update](/presentations/validation_hub.pdf), June
+
+
+### 2018
+
+* [R in Pharma workshop](/presentations/R_Validation_Workshop.pdf), August
+
+
 
 ## News Articles
 
