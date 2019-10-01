@@ -36,6 +36,7 @@ The *R Validation Hub* comprises of participants from across the pharmaceutical 
 * BioMarin Pharmaceutical Inc. - *Dharmesh Desai*
 * Boehringer-Ingelheim - *Matthias Trampisch*
 * BresMed - *Rose Hart*
+* Celgene - *Iain Wallace*
 * Cognigen Corporation - *Nash Delcamp*
 * Eli Lilly - *Eric Nantz*
 * FDA - *Tomas Drgon, Paul Schuette, Mat Soukup*
