@@ -1,6 +1,10 @@
 ---
-title: "Who we are"
+title: "About Us"
 ---
+
+The main challenge of using R in late-phase trials is ensuring validation documentation. In June 2018, the R-Consortium awarded funding to create an online repository for R package validation in accordance with regulatory standards.
+
+We focus on designing a framework that assesses the quality of an R package.
 
 ## R Validation Hub: Mission 
 
@@ -27,10 +31,12 @@ The *R Validation Hub* comprises of participants from across the pharmaceutical 
 * Amgen - *Min Lee*
 * Astellas - *Michael Carniello*
 * Bayer - *Karl Brand*
+* BeiGene - *Michael Blanks*
 * Biogen - *Dan Boisvert, Bob Engle, Eric Milliman, Nate Mockler*
 * BioMarin Pharmaceutical Inc. - *Dharmesh Desai*
 * Boehringer-Ingelheim - *Matthias Trampisch*
 * BresMed - *Rose Hart*
+* Celgene - *Iain Wallace*
 * Cognigen Corporation - *Nash Delcamp*
 * Eli Lilly - *Eric Nantz*
 * FDA - *Tomas Drgon, Paul Schuette, Mat Soukup*
@@ -49,6 +55,7 @@ The *R Validation Hub* comprises of participants from across the pharmaceutical 
 * MRC-BSU - *Kevin Kunzmann*
 * Novartis - *Xiao Ni, Huilei Xu*
 * Novonordisk - *Claus Dethlefsen*
+* Nuventra -*Jessica Higgins*
 * Pfizer - *John Sims*
 * Phastar - *Lyn Taylor*
 * PPD - *Craig McIlloney*
@@ -67,4 +74,5 @@ The *R Validation Hub* comprises of participants from across the pharmaceutical 
 **Independent consultants**
 
 * *Parker Sims*
+
 
