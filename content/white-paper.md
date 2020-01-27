@@ -3,13 +3,13 @@ title: "A Risk-based Approach for Assessing R package Accuracy within a Validate
 ---
 # A Risk-based Approach for Assessing R package Accuracy within a Validated Infrastructure
 
-***Andy Nicholls**, Statistics Director, Head of Statistical Data Sciences, GSK*
+_**Andy Nicholls**, Statistics Director, Head of Statistical Data Sciences, GSK_
 
-***Paulo R. Bargo**, Director Scientific Computing, Statistics & Decision Sciences, Janssen R&D*
+_**Paulo R. Bargo**, Director Scientific Computing, Statistics & Decision Sciences, Janssen R&D_
 
-***John Sims**, Director, Analytical Systems Architect & Data Science - Pfizer Vaccine Research*
+_**John Sims**, Director, Analytical Systems Architect & Data Science - Pfizer Vaccine Research_
 
-*On behalf of the **R Validation Hub**, an R Consortium-funded ISC Working Group*
+_On behalf of the **R Validation Hub**, an R Consortium-funded ISC Working Group_
 
 *January 23, 2020*
 
