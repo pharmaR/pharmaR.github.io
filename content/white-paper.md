@@ -3,13 +3,13 @@ title: "A Risk-based Approach for Assessing R package Accuracy within a Validate
 ---
 # A Risk-based Approach for Assessing R package Accuracy within a Validated Infrastructure
 
-**Andy Nicholls**, Statistics Director, Head of Statistical Data Sciences, GSK
+***Andy Nicholls**, Statistics Director, Head of Statistical Data Sciences, GSK*
 
-**Paulo R. Bargo**, Director Scientific Computing, Statistics & Decision Sciences, Janssen R&D
+***Paulo R. Bargo**, Director Scientific Computing, Statistics & Decision Sciences, Janssen R&D*
 
-**John Sims**, Director, Analytical Systems Architect & Data Science - Pfizer Vaccine Research
+***John Sims**, Director, Analytical Systems Architect & Data Science - Pfizer Vaccine Research*
 
-On behalf of the **R Validation Hub**, an R Consortium-funded ISC Working Group
+*On behalf of the **R Validation Hub**, an R Consortium-funded ISC Working Group*
 
 *January 23, 2020*
 
@@ -39,11 +39,13 @@ Beyond official R distribution, users in the open source community can submit th
 
 ## 3.	Regulations Governing the use of Statistical Software
 In 1997, the United States Food and Drug Administration (FDA) issued [21 CFR Part 11](http://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfCFR/CFRSearch.cfm?CFRPart=11&showFR=1) to provide regulations for electronic records and signatures. This final ruling states that:
+
 > “[Electronic records and signatures] be trustworthy, reliable, and generally equivalent to paper records and handwritten signatures executed on paper.”
 
 Then in 2003, the FDA released the [Guidance for Industry: Part 11, Electronic Records; Electronic Signatures – Scope and Application](https://www.fda.gov/media/75414/download). This guidance clarifies how Part 11 should be enforced, and the intended scope.
 
 Broadly, there are two types of applications:
+
 * Transactional – applications that collect data and often require electronic signature
 * Non-transactional - used for decision support and/or reporting
 
@@ -53,10 +55,13 @@ In conclusion, 21 CFR Part 11 is not relevant or mandatory in the context of sta
 The rest of this paper focuses on R package validation and its dependency.
 
 ## 4.	R Packages and Validation
+
 According to the FDA’s Glossary of Computer System Software Development Terminology:
+
 > “**Validation**: Establishing documented evidence which provides a high degree of assurance (accuracy) that a specific process consistently (reproducibility) produces a product meeting its predetermined specifications (traceability) and quality attributes.”
 
 In pharmaceutical development, validation typically refers to systems validation. The system validation should incorporate all of the following elements:
+
 1. Accuracy
 2. Reproducibility
 3. Traceability
@@ -67,6 +72,7 @@ This paper outlines how to ensure the accuracy of R packages when used as part o
 
 ### 4.1.	Accuracy
 When assessing the accuracy of R packages, the R Validation Hub differentiates R packages by the following types (see German et al, 2013i):
+
 * base and recommended (core) packages - developed by the R Foundation and shipped with the basic installation
 * contributed (open source) packages - developed by anyone, and may differ in accuracy
 
@@ -78,6 +84,7 @@ Core packages and contributed packages are managed by different processes. There
 
 #### 4.1.1.	Base R and Recommended Packages
 The R Foundation develops both the base and recommended packages and follows a software development life-cycle that ensures the accuracy of each. These practices include:
+
 * Proper maintenance of the R source code, and control of releases
 * Testing the software and identifying issues for the Core Team to address
 * The R Core Team hiring highly qualified individuals
@@ -93,6 +100,7 @@ In conclusion, there is minimal risk in using base and recommended (core) packag
 Since R is Open Source, contributed packages can be developed by anyone and may depends on other R package and softwares. Therefore, ensuring the accuracy of each contributed package and its dependency is necessary.
 
 R Validation Hub focuses on contributed packages on The Comprehensive R Archive Network (CRAN). All packages available on CRAN have passed a series of technical checks, as outlined in the [checklist for CRAN submission](https://cran.r-project.org/web/packages/submission_checklist.html). The technical checks for an R package ensure that:
+
 * all the code examples run successfully
 * all the package tests pass
 * the package is compatible with other packages on CRAN
@@ -119,15 +127,20 @@ Some packages may already contain tests. All such tests are suitable for a syste
 ## 6.	A Proposed R Package Risk Assessment Framework
 ### 6.1.	Classifying R Packages within an Installation
 Users typically ‘load’ a package to access the functions and other objects stored within it. Some of the functions within the loaded package may, in turn, call functions within other packages. But a user would not load, nor call the functions within these packages directly[^2].
+
 Within an installation, two classifications of R packages are proposed:
+
 1. **Intended for Use**. These will be loaded directly by a user during an R session.
 2. **Imports**. These packages are required to be installed in order to use the Intended for Use packages. They are comparable to a system dependency, or the ‘back-end’ code supporting a user interface.
 
 An *Intended for Use* package may also be an *Import* for another package. In such cases a conservative approach should be adopted and the package should be classified as *Intended for Use*. Imports are identified within a package’s ‘DESCRIPTION’ file using the ‘Imports’ field. This field differs from the ‘Depends’ field for which dependencies are imported into the name space. This allows the end user to use the functions contained within the package. Packages specified in the depends field should therefore be classified as *Intended for Use* packages.
 
 A risk-based approach should focus on the way that components of the system will be used. From a reproducibility perspective, it is important that the Imports are managed appropriately. But, the accuracy of these packages only needs to be verified by assessing the Intended for Use packages. This approach can be extended to system qualification. During which, the operational focus should be on the Intended for Use packages and not the Imports. It is also important to make this distinction when considering the maintenance of a system over time
+
 ### 6.2.	Components of a Risk Assessment Framework
+
 A risk assessment framework should evaluate R packages based on four criteria:
+
 1. Purpose
 2. Maintenance Good Practice (Software Development Life Cycle)
 3. Community Usage
@@ -143,7 +156,9 @@ It is recommended that the risk assessment be collated via individual package re
 
 #### 6.2.1.	Purpose
 The purpose of an R package and its intended use greatly impacts the level of risk presented by the package.
+
 For simplicity, two classifications are proposed:
+
 1. Statistical
 2. Non-statistical
 
@@ -152,6 +167,7 @@ The ‘Statistical’ classification refers to any package that implements stati
 Statistical packages present a greater degree of risk than non-statistical packages. This is because the primary or secondary statistical analysis for a study might be based upon statistical models. Also, the complexities of the algorithms underpinning the main routines can make bugs difficult to detect. A package aimed at, say, data manipulation may have just as big an impact but errors would be much easier to identify and therefore more likely to be detected when the package has been exposed to extensive community testing.
 
 Non-statistical packages could be divided into further categories, for example:
+
 * Data wrangling / Transformation / Manipulation
 * Data Input / Output (file systems, external documents (e.g. excel), databases (e.g. RDBMS’ such as Oracle, PostgreSQL, and MySQL
 * Communication (knitr, rmarkdown)
@@ -163,7 +179,7 @@ Organisations may choose to further adapt their approach to risk assessment and 
 #### 6.2.2.	Maintenance Good Practice
 Adopting best practices to manage the software development life-cycle can significantly reduce the potential for bugs / errors. Package maintainers are not obliged to share their practices (and rarely do). However, the open source community provides several ways of measuring best practice. The R Validation Hub website proposes some metrics to consider along with a rationale for why the metric is important in assessing package quality and risk.
 
-MEtrics may include whether the package has a vignette, website, news feed or formal mechanism for bug tracking, whether the source code is publicly maintained, the release rate for new versions; the size of the code base; author reputation and type of license.
+Metrics may include whether the package has a vignette, website, news feed or formal mechanism for bug tracking, whether the source code is publicly maintained, the release rate for new versions; the size of the code base; author reputation and type of license.
 
 #### 6.2.3.	Community Usage
 The user community plays an important role in open source software development. The more exposure a package has had to the user community, the more ad-hoc testing it has been exposed to. Over time the better packages tend to rise to the top of the pack, leading to more downloads and increased exposure.
@@ -180,6 +196,7 @@ Each of the four criteria should be assessed separately before combining for an 
 
 ### 6.4.	Responding to Risk
 The risk classification can be used to determine:
+
 * Whether the package is included as part of the R installation within the validated system
 * The extent of additional remediation / testing required to mitigate any risk
 
@@ -206,6 +223,7 @@ There are several popular packages / collections of R packages that could be con
 
 #### 6.5.2.	An Example of a Possible Trusted Resource: The tidyverse
 The tidyverse is a commercially supported collection of contributed R packages. According to https://www.tidyverse.org/:
+
 > “The tidyverse is an opinionated [collection of R packages](https://www.tidyverse.org/packages) designed for data science. All packages share an underlying design philosophy, grammar, and data structures.”
 
 The tidyverse is primarily developed by a team at RStudio who have publicly shared the set of [Design Principles](https://principles.tidyverse.org/) via an online book. These are used by the tidyverse team to “promote consistency across packages in the core tidyverse”. The same team have also published a [tidyverse style guide](http://style.tidyverse.org/).
@@ -216,6 +234,7 @@ Given the available documentation, the consistency and popularity of the tidyver
 When using R as part of a validated system, elements of 21 CFR Part 11 do apply, although the regulation is not directly applicable to programming languages. Systems validation focuses on accuracy, reproducibility and traceability of the system. For R the primary challenge is in ensuring the accuracy of results.
 
 A risk-based approach to the adoption of R packages is highly recommended. This should focus on *Intended for Use* packages and not Imports. It is important to assess individual packages based on:
+
 1. Purpose
 2. Maintenance Good Practice
 3. Community Usage
