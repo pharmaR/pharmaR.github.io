@@ -13,6 +13,8 @@ _On behalf of the **R Validation Hub**, an R Consortium-funded ISC Working Group
 
 *January 23, 2020*
 
+Download the PDF version of this white paper [here](/presentations/r_packages-white_paper.pdf).
+
 ## 1.	Scope and Background
 This white paper addresses concerns raised by statisticians, statistical programmers, informatics teams, executive leadership, quality assurance teams and others within the pharmaceutical industry about the use of R and selected R packages as a primary tool for statistical analysis for regulatory submission work.
 When discussing validation of software systems two areas should be considered:
