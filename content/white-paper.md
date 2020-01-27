@@ -8,7 +8,7 @@
 
 On behalf of the **R Validation Hub**, an R Consortium-funded ISC Working Group
 
-23-Jan-2020
+*January 23, 2020*
 
 ## 1.	Scope and Background
 This white paper addresses concerns raised by statisticians, statistical programmers, informatics teams, executive leadership, quality assurance teams and others within the pharmaceutical industry about the use of R and selected R packages as a primary tool for statistical analysis for regulatory submission work.
@@ -24,6 +24,7 @@ The aim of this paper is to propose a possible risk-based approach for assessing
 Many of the thoughts and ideas addressed in this paper are extracted, verbatim, from the [R Validation Hub](https://www.pharmar.org/), a cross-industry initiative whose mission is to enable the use of R by the bio-pharmaceutical industry in a regulatory setting.
 
 The paper reflects the current thinking of the R Validation Hub working group and may evolve over time. Additional detail will be provided via the website and future papers.
+
 ## 2.	What is R?
 As stated on the [R-Project website](https://www.r-project.org/about.html) and the [guidance for the use of R in regulated clinical trial environments](https://www.r-project.org/doc/R-FDA.pdf), “R is a language and environment for statistical computing and graphics… It is available as Free Software under the terms of the Free Software Foundation’s GNU General Public License in source code form.”
 The official R distribution consists of ‘Base R’ and ‘Recommended Packages’. Each of these is a collection of R packages (code libraries) that can be defined as follows:
@@ -36,6 +37,7 @@ Beyond official R distribution, users in the open source community can submit th
 ## 3.	Regulations Governing the use of Statistical Software
 In 1997, the United States Food and Drug Administration (FDA) issued [21 CFR Part 11](http://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfCFR/CFRSearch.cfm?CFRPart=11&showFR=1) to provide regulations for electronic records and signatures. This final ruling states that:
 > “[Electronic records and signatures] be trustworthy, reliable, and generally equivalent to paper records and handwritten signatures executed on paper.”
+
 Then in 2003, the FDA released the [Guidance for Industry: Part 11, Electronic Records; Electronic Signatures – Scope and Application](https://www.fda.gov/media/75414/download). This guidance clarifies how Part 11 should be enforced, and the intended scope.
 
 Broadly, there are two types of applications:
@@ -129,8 +131,10 @@ A risk assessment framework should evaluate R packages based on four criteria:
 4. Testing
 
 The criteria are described in more detail in the following subsections and additional information on the proposed metrics, the rationale for their use and how these are being implemented can be found in the [R Validation Hub website](https://www.pharmar.org/packages/). An overview of the proposed process is provided in Figure 2.
- 
-Figure 2 - Proposed Validation Workflow
+
+![source: Assessing Package Accuracy](/img/overview/Assessing-package-accuracy.png)
+
+*Figure 2 - Proposed Validation Workflow*
 
 It is recommended that the risk assessment be collated via individual package reports. These reports should detail the level of risk that each package presents. Justification for these scores should be based on the metrics obtained for the package. These reports may serve as documented evidence of the accuracy assessment for R.
 
