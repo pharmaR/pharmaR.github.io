@@ -10,7 +10,7 @@ title: "A Risk-based Approach for Assessing R package Accuracy within a Validate
 
 <p style="font-size: 16px; text-align: center;"><em>On behalf of the <strong>R Validation Hub</strong>, an R Consortium-funded ISC Working Group</em></p>
 
-<p style="text-align: center;">January 23, 2020</em></p>
+<p style="text-align: center;"><em>January 23, 2020</em></p>
 
 Download the PDF version of this white paper [here](/presentations/r_packages-white_paper.pdf).
 
