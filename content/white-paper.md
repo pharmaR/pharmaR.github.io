@@ -12,6 +12,7 @@ _On behalf of the **R Validation Hub**, an R Consortium-funded ISC Working Group
 
 *January 23, 2020*
 
+
 Download the PDF version of this white paper [here](/presentations/r_packages-white_paper.pdf).
 
 ## 1.	Scope and Background
