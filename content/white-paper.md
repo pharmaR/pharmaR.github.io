@@ -1,7 +1,6 @@
 ---
 title: "A Risk-based Approach for Assessing R package Accuracy within a Validated Infrastructure"
 ---
-# A Risk-based Approach for Assessing R package Accuracy within a Validated Infrastructure
 
 _**Andy Nicholls**, Statistics Director, Head of Statistical Data Sciences, GSK_
 
