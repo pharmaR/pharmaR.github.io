@@ -2,16 +2,15 @@
 title: "A Risk-based Approach for Assessing R package Accuracy within a Validated Infrastructure"
 ---
 
-_**Andy Nicholls**, Statistics Director, Head of Statistical Data Sciences, GSK_
+<p style="font-size: 16px; text-align: center;"><em><strong>Andy Nicholls</strong>, Statistics Director, Head of Statistical Data Sciences, GSK</em></p>
 
-_**Paulo R. Bargo**, Director Scientific Computing, Statistics & Decision Sciences, Janssen R&D_
+<p style="font-size: 16px; text-align: center;"><em><strong>Paulo R. Bargo</strong>, Director Scientific Computing, Statistics & Decision Sciences, Janssen R&D</em></p>
 
-_**John Sims**, Director, Analytical Systems Architect & Data Science - Pfizer Vaccine Research_
+<p style="font-size: 16px; text-align: center;"><em><strong>John Sims</strong>, Director, Analytical Systems Architect & Data Science - Pfizer Vaccine Research</em></p>
 
-_On behalf of the **R Validation Hub**, an R Consortium-funded ISC Working Group_
+<p style="font-size: 16px; text-align: center;"><em>On behalf of the <strong>R Validation Hub</strong>, an R Consortium-funded ISC Working Group</em></p>
 
-*January 23, 2020*
-
+<p style="text-align: center;">January 23, 2020</em></p>
 
 Download the PDF version of this white paper [here](/presentations/r_packages-white_paper.pdf).
 
