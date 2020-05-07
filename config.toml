@@ -22,7 +22,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     url = "/roadmap/"
     weight = 13
 [[menu.main]]
-    name = "News"
+    name = "Blog"
     url  = "/blog/"
     weight = 2
 [[menu.main]]
