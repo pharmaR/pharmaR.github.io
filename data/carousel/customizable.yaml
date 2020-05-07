@@ -5,3 +5,11 @@ description: >
     <li>R Validation Hub is a cross-industry initiative whose mission is to enable the use of R by the Bio-Pharmaceutical Industry in a regulatory setting, where the output may be used in submissions to regulatory agencies.</li>
   </ul>
 image: "img/carousel/R_logo.png"
+
+weight: 5
+title: "White paper"
+description: >
+  <ul class="list-style-none">
+    <li>Please see our white paper, titled "<a style="color:white;" href="/white-paper/">A Risk-based Approach for Assessing R package Accuracy within a Validated Infrastructure</a>."</li>
+  </ul>
+image: "img/carousel/R_logo.png"
