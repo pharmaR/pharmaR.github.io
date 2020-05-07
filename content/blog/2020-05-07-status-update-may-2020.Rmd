@@ -6,6 +6,7 @@ slug: status-update-may-2020
 categories: [news]
 tags:
   - riskmetric
+banner: 'img/banners/news.png'
 ---
 
 In these uncertain times, we would like to provide you with some good news and update you on the progress from the R validation hub. It has been a little while since you heard from us, but that doesn’t mean we were less active. 
@@ -19,4 +20,5 @@ Moreover, development has started on an interactive interface for riskmetric. Th
 Some good and bad news regarding useR! 2020: Our abstract was accepted as oral presentation, which was fantastic news for a couple of days. Unfortunately, shortly after that the conference was cancelled. We are waiting patiently for status updates from the conference organizers on possible virtual replacements. 
 
 Stay tuned for more updates and stay healthy,
+
 The R validation hub executive committee
