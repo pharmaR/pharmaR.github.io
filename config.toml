@@ -22,50 +22,54 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     url = "/roadmap/"
     weight = 13
 [[menu.main]]
+    name = "Blog"
+    url  = "/blog/"
+    weight = 2
+[[menu.main]]
     identifier = "regulations"
 		name = "Regulations"
     url = "/regulations/"
-    weight = 2
+    weight = 3
 [[menu.main]]
     identifier = "valid"
 		name = "Validation"
     url = "/valid/"
-    weight = 3
+    weight = 4
 [[menu.main]]
     parent = "valid"
 		name = "Overview"
     url = "/overview/"
-    weight = 31
+    weight = 41
 [[menu.main]]
     parent = "valid"
 		name = "R"
     url = "/r/"
-    weight = 32
+    weight = 42
 [[menu.main]]
     parent = "valid"
     name = "Risk Assessment"
     url = "/risk/"
-    weight = 33
+    weight = 43
 [[menu.main]]
     parent = "valid"
     name = "Examples"
     url = "/examples/"
-    weight = 34
+    weight = 44
 [[menu.main]]
     identifier = "resources"
     name = "Resources"
     url = "/resources/"
-    weight = 4
+    weight = 5
 [[menu.main]]
     parent = "resources"
     name = "Minutes"
     url = "/minutes/"
-    weight = 41
+    weight = 51
 [[menu.main]]
     parent = "resources"
     name = "Presentations"
     url = "/present/"
-    weight = 42
+    weight = 52
 [[menu.main]]
     name = "Contact Us"
     url = "/contact/"
@@ -95,7 +99,12 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     enable = true
     title = "Participating Organisations"
     subtitle = "Members of the following organisations are participating in this project"
-		
+
+[params.recent_posts]
+    enable = true
+    title = "From our blog"
+    subtitle = "Recent blog posts"
+    
 [params.widgets]
     search = true
     categories = true
@@ -104,3 +113,5 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 [params.topbar]
     enable = true
     text = "<p>Contact us at psi.aims.r.validation@gmail.com.</p>"
+    
+
