@@ -92,6 +92,8 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     MathJaxCDN = "//cdnjs.cloudflare.com/ajax/libs"
     MathJaxVersion = "2.7.5"
 
+    style = "blue"
+
     # Format dates with Go's time formatting
     date_format = "January 2, 2006"
 
