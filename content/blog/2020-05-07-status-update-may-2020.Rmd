@@ -1,0 +1,24 @@
+---
+title: Status Update MAy 2020
+author: Juliane Manitz
+date: '2020-05-07'
+slug: status-update-may-2020
+categories: [news]
+tags:
+  - riskmetric
+banner: 'img/banners/news.png'
+---
+
+In these uncertain times, we would like to provide you with some good news and update you on the progress from the R validation hub. It has been a little while since you heard from us, but that doesn’t mean we were less active. 
+
+Communication: You may have realized that there are no further re-occurring meetings scheduled for the R validation hub since February. Following previous discussions, we are planning regular update releases via the website and newsletters instead. Meetings for the validation hub will be scheduled less frequently as needed. However, we are dependent on your input and continue to encourage volunteers to collaborate on all the different parts of the project.
+
+The riskmetric R package is steadily growing. Shout-out to Mark Pagham from ROpenSci, who is helping with non-industry contributions. However, your input and support is more than welcome! Whether you want to contribute your own implementation of a riskmetric into the existing package framework, or have ideas how to quantify certain metrics, don’t hesitate to visit the [riskmetric github page](https://urldefense.com/v3/__https:/github.com/pharmaR/riskmetric__;!!AoaiBx6H!jo1MpjpGUIe2P4W6dcEjhIdy4OZDatYz0h29FH_4Fri4z0PpIxukkYUE6x17Gjneesg$) or directly contact Doug or Yilong. 
+
+Moreover, development has started on an interactive interface for riskmetric. The risk assessment app is developed by a vendor FISSION using the funding by the R-consortium. The initial build will include the following metrics: Number of downloads in the past 12 months, months since first release, number of vignettes, availability of a news feed and website, and test coverage. Anyone available to do some testing, please let Andy know you would like to be involved during the testing phase expected in July 2020. After the end of the contract, maintaining the app becomes a “community effort”.
+
+Some good and bad news regarding useR! 2020: Our abstract was accepted as oral presentation, which was fantastic news for a couple of days. Unfortunately, shortly after that the conference was cancelled. We are waiting patiently for status updates from the conference organizers on possible virtual replacements. 
+
+Stay tuned for more updates and stay healthy,
+
+The R validation hub executive committee
