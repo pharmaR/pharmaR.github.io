@@ -1,0 +1,119 @@
+---
+title: Introduction to the R Package `riskmetric`
+author: Juliane Manitz
+date: '2020-06-02'
+slug: riskmetric-intro-jun-2020
+categories: [news]
+tags:
+  - riskmetric
+banner: 'img/banners/news.png'
+---
+
+``` {r setup, include = FALSE}
+library(dplyr)
+require(devtools)
+require(pander)
+```
+
+<!--## Introduction -->
+
+In context of the R Validation Hub the R package `riskmetric` has been developed. It provides metrics to evaluate the risk of R packages. A corresponding Shiny app, that can be used to generate package reports using `riskmetric`, is under development. 
+
+In this blog post, we want to illustrate the capabilities and usage of `riskmetric`. 
+
+<!-- ### Installation --> 
+
+The `riskmetric` is not yet on CRAN. Until it is, it can be installed using `devtools` directly from github:
+
+``` {r, eval=FALSE}
+devtools::install_github("pharmaR/riskmetric")
+library(riskmetric)
+```
+
+``` {r, echo=FALSE, message=FALSE, eval=TRUE}
+load_all("../../../../../01_tools/Rpkgs/riskmetric-dev")
+#document("../../../../../01_tools/Rpkgs/riskmetric-dev")
+
+#library(riskmetric)
+```
+
+To illustrate how `riskmetric` works, a few packages with a wide range of popularity have been selected. 
+
+* `riskmetric` (Metrics to evaluate the risk of R packages):  Not on CRAN yet
+* `utils` (R utility functions): R core package
+* `ggplot2` (Create Elegant Data Visualisations Using the Grammar of Graphics): very popular package
+* `Hmisc` (Harrell Miscellaneous functions): something more old school
+* `survminer` (Drawing Survival Curves using `ggplot2`): less popular, but established package
+* `coxrobust` (Robust Estimation in Cox Model): oldest R package on CRAN
+
+*Add updated flow chart*
+
+<!--img src="/img/overview/riskmetric-core-workflow.svg" alt="source: Riskmetric Core Workflow"-->
+
+For risk assessment of these packages, `riskmetric` first scrapes metadata locally or remotely by creating a package reference: 
+
+``` {r, message=FALSE}
+package_tbl <- pkg_ref(c("riskmetric", "utils", "ggplot2", "Hmisc", "survminer", "coxrobust")) 
+package_tbl$survminer
+```
+
+Note that many fields have a trailing `...` indicating that they haven't yet been computed. 
+
+In a second step, that necessary package metadata is assessed and an atomic value is added for each assessment and package.
+Then, the information is scored in order to estimate associated risk. This final score converts the assessment value into a single numeric score between `0` (poor) and `1` (great). 
+Finally each package's risk is summarized as a weigthed sum of assessment scores. 
+For more information, check out the `riskmetric` vignette. 
+
+``` {r, message=FALSE, warning=FALSE}
+res <- package_tbl %>%
+  pkg_assess() %>%
+  pkg_score() %>%
+  mutate(risk = summarize_scores(.))
+```
+
+The function `summarize_scores()` serves as an example for how a risk score might be derived. Each organization should decide independently how to weight different assessments. 
+
+``` {r, output="asis", echo=FALSE}
+pander(res[,c(1:2, 9,10,6, 7, 8,14 )])
+```
+
+<!--TODO> describe each of the metrics and their relevance for package quality -->
+
+Risk metrics referring to assess the maintenance of good practice include for instance whether a package has a vignette, news feed, and/or formal mechanism for bug tracking:
+
+* `has_vignettes`: number of discovered vignettes files 
+* `has_news`: number of discovered NEWS files
+* `has_bug_reports_url`: presence of a bug reports url in repository
+
+The community usage can be assessed for instance with the number of downloads measuring the extend of the user community and as consequence exposure of ad-hoc testing:
+
+* `downloads_1yr`: number of downloads in the past year
+
+Finally, the test coverage of a package can provide well established insights on the stability of the package over time
+
+* `covr_coverage`: Package unit test coverage
+
+
+<!-- ## Create a Package Risk Assessment Report -->
+
+In addition, `riskmetric` can also assess a single metric for a specific package, e.g. last years downloads for `survminer`:
+
+``` {r}
+pkg_ref("survminer") %>%
+  assess_downloads_1yr() %>% 
+  metric_score()
+```
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
+pkg_example <- pkg_ref("survminer") 
+pkg_data <- pkg_example %>% pkg_assess()
+pkg_score <- pkg_data %>% pkg_score()
+```
+
+Finally, this information can be used to create a package risk assessment report:
+<!-- ### `r pkg_example$name` (v`r pkg_example$version`)-->
+Package `r pkg_example$name` (v`r pkg_example$version`)
+has `r sprintf("%.f", pkg_data$downloads_1yr)` downloads in
+the past year, which `riskmetric` scores at 
+`r sprintf("%2.f", pkg_score$downloads_1yr * 100)`%.
+
