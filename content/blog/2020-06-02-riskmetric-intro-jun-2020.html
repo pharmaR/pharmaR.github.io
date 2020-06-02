@@ -371,8 +371,9 @@ summary {
 
 
 <!--## Introduction -->
-<p>In context of the R Validation Hub the R package riskmetric has been developed. It provides a framework for retrieving package metadata, assessing package metrics, and summarizing the risk that the package might not provide accurate results. A corresponding Shiny app, that can be used to generate package reports using riskmetric, is under development.</p>
-<p>In this blog post, we want to illustrate the capabilities and usage of riskmetric and demonstrate how it could fit into an orginizations validation process or its qualified environments.</p>
+<p>There are several contexts where package metadata and risk metrics are useful within pharma and other regulated industries. Generally, R packages lack the documentation expected in software qualification, which is required within pharma and other regulated industries. For pharma, 21 CFR Part 11 requires documentation that demonstrates software is used approperiately and works as expected. The industry needs to establish requirements for suitable R packages.</p>
+<p>In context of the R Validation Hub the R package <code>riskmetric</code> has been developed, which seeks to take the first steps in identifing metrics and best practices for a risk assessment for R package accuracy. It provides a framework for retrieving package metadata, assessing package metrics, and summarizing the risk that the package might not provide accurate results. A corresponding Shiny app, that can be used to generate package reports using riskmetric, is under development.</p>
+<p>In this blog post, we want to illustrate the capabilities and usage of <code>riskmetric</code> and demonstrate how it could fit into an orginizations validation process or its qualified environments.</p>
 <!-- ### Installation -->
 <p>The <code>riskmetric</code> is not yet on CRAN. Until it is, it can be installed using <code>devtools</code> directly from github:</p>
 <pre class="r"><code>devtools::install_github(&quot;pharmaR/riskmetric&quot;)
@@ -386,8 +387,10 @@ library(riskmetric)</code></pre>
 <li><code>survminer</code> (Drawing Survival Curves using <code>ggplot2</code>): less popular, but established package</li>
 <li><code>coxrobust</code> (Robust Estimation in Cox Model): oldest R package on CRAN</li>
 </ul>
-<p><em>Add updated flow chart</em></p>
-<!--img src="/img/overview/riskmetric-core-workflow.svg" alt="source: Riskmetric Core Workflow"-->
+<!--
+*Add updated flow chart*
+<img src="/img/overview/riskmetric-core-workflow.svg" alt="source: Riskmetric Core Workflow">
+-->
 <p>When referencing a package, riskmetric first looks for installed packages but can also assess packages that have not been installed:</p>
 <pre class="r"><code>package_tbl &lt;- pkg_ref(c(&quot;riskmetric&quot;, &quot;utils&quot;, &quot;ggplot2&quot;, &quot;Hmisc&quot;, &quot;survminer&quot;, &quot;coxrobust&quot;)) 
 package_tbl$survminer</code></pre>
@@ -411,8 +414,8 @@ package_tbl$survminer</code></pre>
 ## $pkg_websites...
 ## $release_date...
 ## $vignettes...</code></pre>
-<p>Note that many fields have a trailing …, riskmetric will evaluate and cashe the results of the queries as they are called. When we call the pkg_assess function on each reference, the metrics will be stored and available.</p>
-<p>In a second step, that necessary package metadata is assessed and an atomic value is added for each assessment and package. Then, the information is scored in order to estimate associated risk. This final score converts the assessment value into a single numeric score between 0 (poor) and 1 (great). Finally each package’s risk is summarized as a weigthed sum of assessment scores. For more information, check out the <code>riskmetric</code> vignette.</p>
+<p>Note that many fields have a trailing <code>...</code>, riskmetric will evaluate and cache the results of the queries lateron. When we call the <code>pkg_assess()</code> function on each reference, the metrics will be stored and become available. In other words, the necessary package metadata is assessed and an atomic value is added for each assessment and package.</p>
+<p>Then, the information is scored in order to estimate associated risk. This final score converts the assessment value into a single numeric score between 0 (poor) and 1 (great). Finally each package’s risk is summarized as a weigthed sum of assessment scores. For more information, check out the <code>riskmetric</code> vignette.</p>
 <pre class="r"><code>res &lt;- package_tbl %&gt;%
   pkg_assess() %&gt;%
   pkg_score() %&gt;%
@@ -498,7 +501,7 @@ package_tbl$survminer</code></pre>
 <tr class="odd">
 <td align="center">0</td>
 <td align="center">0</td>
-<td align="center">0.7889</td>
+<td align="center">0.8333</td>
 </tr>
 <tr class="even">
 <td align="center">0</td>
@@ -508,7 +511,7 @@ package_tbl$survminer</code></pre>
 <tr class="odd">
 <td align="center">0.9885</td>
 <td align="center">0</td>
-<td align="center">0.2944</td>
+<td align="center">0.3333</td>
 </tr>
 <tr class="even">
 <td align="center">0.9647</td>
@@ -518,7 +521,7 @@ package_tbl$survminer</code></pre>
 <tr class="odd">
 <td align="center">0.5992</td>
 <td align="center">0</td>
-<td align="center">0.3167</td>
+<td align="center">0.3333</td>
 </tr>
 <tr class="even">
 <td align="center">0.04846</td>
@@ -528,24 +531,27 @@ package_tbl$survminer</code></pre>
 </tbody>
 </table>
 <!--TODO> describe each of the metrics and their relevance for package quality -->
-<p>There are many good programming and package development practices that establish a package is well made.</p>
+<p>There are many good programming and package development practices that establish a package is well made and maintained:</p>
 <ul>
-<li>has_vignettes - Number of published vignettes</li>
-<li>has_news - Number of releases with a NEWS update</li>
-<li>has_bug_reports_url - Presence of a url for users to report issues and bugs found in the package.</li>
+<li><code>has_vignettes</code> - Number of published vignettes</li>
+<li><code>has_news</code> - Number of releases with a NEWS update</li>
+<li><code>has_bug_reports_url</code> - Presence of a url for users to report issues and bugs found in the package.</li>
 </ul>
-<p>Community usage is determined based on the number of downloads. This is a useful proxy for community support and testing done by other developers.</p>
+<p>Community usage is determined based on the number of downloads. This is a useful proxy for community support and adhoc testing done by other developers.</p>
 <ul>
-<li>downloads_1yr – Number of downloads from CRAN, Bioconductor, and github in the past year.</li>
+<li><code>downloads_1yr</code> – Number of downloads from CRAN, Bioconductor, and github in the past year.</li>
 </ul>
-<p>Several metrics are under active development that can interrogate package stability and complexity.</p>
+<p>Furthermore, the test coverage of a package can provide well established insights on the package accuracy</p>
 <ul>
-<li>covr_coverage – Package unit test coverage percentage</li>
+<li><code>covr_coverage</code> – Package unit test coverage percentage</li>
+</ul>
+<p>Several other metrics are under active development that can interrogate package stability and complexity, e.g.</p>
+<ul>
 <li>Maturity – Package version and overall maturity</li>
 <li>Cyclomatic Complexity – Complexity of the codebase itself</li>
 </ul>
 <!-- ## Create a Package Risk Assessment Report -->
-<p>In addition to assessing the set of packages used to develop a project, riskmetric can also be used to assess a package before you introduce it into your development environment. Here is an example reviewing the number of downloads for the survminer package:</p>
+<p>In addition to assessing the set of packages used to develop a project, <code>riskmetric</code> can also be used to assess a package before you introduce it into your development environment. Here is an example reviewing the number of downloads for the <code>survminer</code> package:</p>
 <pre class="r"><code>pkg_ref(&quot;survminer&quot;) %&gt;%
   assess_downloads_1yr() %&gt;% 
   metric_score()</code></pre>
@@ -553,9 +559,11 @@ package_tbl$survminer</code></pre>
 ## attr(,&quot;class&quot;)
 ## [1] &quot;pkg_metric_downloads_1yr&quot; &quot;pkg_metric&quot;              
 ## [3] &quot;numeric&quot;</code></pre>
-<p>Finally, this information can be used to create a package risk assessment report: <!-- ### survminer (v0.4.6)--> Package survminer (v0.4.6) has 224253 downloads in the past year, which <code>riskmetric</code> scores at 60%.</p>
-<p>This information can be used by a system administrator when evaluating the suitability of a package, or when writing a validation report: Package survminer (v0.4.7) has 224631 downloads in the past year, which riskmetric scores at 60%.</p>
-<p>There are several contexts where package metadata and metrics would be useful within the pharma industry. Generally, R package lack the documentation expected in software qualification. 21 CFR Part 11 requires documentation that demonstrates software is used approperiately and works as expected. The industry needs to establish the requirements a suitable R package and this package seeks to take the first steps in identifing metrics and best practices.</p>
+<p>Finally, this information can be used by a system administrator when evaluating the suitability of a package, or when writing a validation report:</p>
+<blockquote>
+<p><strong>survminer (v0.4.6)</strong></p>
+<p>Package survminer (v0.4.6) has 224253 downloads in the past year, which <code>riskmetric</code> scores at 60%.</p>
+</blockquote>
 <p>If you are interested in helping with development or the direction of the package, we are active on GitHub and welcome any contriubutions.</p>
 
 
