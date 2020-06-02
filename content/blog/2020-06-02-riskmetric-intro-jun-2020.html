@@ -9,7 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<meta name="author" content="Juliane Manitz" />
+<meta name="author" content="Juliane Manitz, Douglas Kelkhoff, Eli Miller, and Yilong Zhang" />
 
 <meta name="date" content="2020-06-02" />
 
@@ -364,15 +364,15 @@ summary {
 
 
 <h1 class="title toc-ignore">Introduction to the R Package <code>riskmetric</code></h1>
-<h4 class="author">Juliane Manitz</h4>
+<h4 class="author">Juliane Manitz, Douglas Kelkhoff, Eli Miller, and Yilong Zhang</h4>
 <h4 class="date">2020-06-02</h4>
 
 </div>
 
 
 <!--## Introduction -->
-<p>In context of the R Validation Hub the R package <code>riskmetric</code> has been developed. It provides metrics to evaluate the risk of R packages. A corresponding Shiny app, that can be used to generate package reports using <code>riskmetric</code>, is under development.</p>
-<p>In this blog post, we want to illustrate the capabilities and usage of <code>riskmetric</code>.</p>
+<p>In context of the R Validation Hub the R package riskmetric has been developed. It provides a framework for retrieving package metadata, assessing package metrics, and summarizing the risk that the package might not provide accurate results. A corresponding Shiny app, that can be used to generate package reports using riskmetric, is under development.</p>
+<p>In this blog post, we want to illustrate the capabilities and usage of riskmetric and demonstrate how it could fit into an orginizations validation process or its qualified environments.</p>
 <!-- ### Installation -->
 <p>The <code>riskmetric</code> is not yet on CRAN. Until it is, it can be installed using <code>devtools</code> directly from github:</p>
 <pre class="r"><code>devtools::install_github(&quot;pharmaR/riskmetric&quot;)
@@ -388,7 +388,7 @@ library(riskmetric)</code></pre>
 </ul>
 <p><em>Add updated flow chart</em></p>
 <!--img src="/img/overview/riskmetric-core-workflow.svg" alt="source: Riskmetric Core Workflow"-->
-<p>For risk assessment of these packages, <code>riskmetric</code> first scrapes metadata locally or remotely by creating a package reference:</p>
+<p>When referencing a package, riskmetric first looks for installed packages but can also assess packages that have not been installed:</p>
 <pre class="r"><code>package_tbl &lt;- pkg_ref(c(&quot;riskmetric&quot;, &quot;utils&quot;, &quot;ggplot2&quot;, &quot;Hmisc&quot;, &quot;survminer&quot;, &quot;coxrobust&quot;)) 
 package_tbl$survminer</code></pre>
 <pre><code>## &lt;pkg_install, pkg_ref&gt; survminer v0.4.6
@@ -411,8 +411,8 @@ package_tbl$survminer</code></pre>
 ## $pkg_websites...
 ## $release_date...
 ## $vignettes...</code></pre>
-<p>Note that many fields have a trailing <code>...</code> indicating that they haven’t yet been computed.</p>
-<p>In a second step, that necessary package metadata is assessed and an atomic value is added for each assessment and package. Then, the information is scored in order to estimate associated risk. This final score converts the assessment value into a single numeric score between <code>0</code> (poor) and <code>1</code> (great). Finally each package’s risk is summarized as a weigthed sum of assessment scores. For more information, check out the <code>riskmetric</code> vignette.</p>
+<p>Note that many fields have a trailing …, riskmetric will evaluate and cashe the results of the queries as they are called. When we call the pkg_assess function on each reference, the metrics will be stored and available.</p>
+<p>In a second step, that necessary package metadata is assessed and an atomic value is added for each assessment and package. Then, the information is scored in order to estimate associated risk. This final score converts the assessment value into a single numeric score between 0 (poor) and 1 (great). Finally each package’s risk is summarized as a weigthed sum of assessment scores. For more information, check out the <code>riskmetric</code> vignette.</p>
 <pre class="r"><code>res &lt;- package_tbl %&gt;%
   pkg_assess() %&gt;%
   pkg_score() %&gt;%
@@ -528,22 +528,24 @@ package_tbl$survminer</code></pre>
 </tbody>
 </table>
 <!--TODO> describe each of the metrics and their relevance for package quality -->
-<p>Risk metrics referring to assess the maintenance of good practice include for instance whether a package has a vignette, news feed, and/or formal mechanism for bug tracking:</p>
+<p>There are many good programming and package development practices that establish a package is well made.</p>
 <ul>
-<li><code>has_vignettes</code>: number of discovered vignettes files</li>
-<li><code>has_news</code>: number of discovered NEWS files</li>
-<li><code>has_bug_reports_url</code>: presence of a bug reports url in repository</li>
+<li>has_vignettes - Number of published vignettes</li>
+<li>has_news - Number of releases with a NEWS update</li>
+<li>has_bug_reports_url - Presence of a url for users to report issues and bugs found in the package.</li>
 </ul>
-<p>The community usage can be assessed for instance with the number of downloads measuring the extend of the user community and as consequence exposure of ad-hoc testing:</p>
+<p>Community usage is determined based on the number of downloads. This is a useful proxy for community support and testing done by other developers.</p>
 <ul>
-<li><code>downloads_1yr</code>: number of downloads in the past year</li>
+<li>downloads_1yr – Number of downloads from CRAN, Bioconductor, and github in the past year.</li>
 </ul>
-<p>Finally, the test coverage of a package can provide well established insights on the stability of the package over time</p>
+<p>Several metrics are under active development that can interrogate package stability and complexity.</p>
 <ul>
-<li><code>covr_coverage</code>: Package unit test coverage</li>
+<li>covr_coverage – Package unit test coverage percentage</li>
+<li>Maturity – Package version and overall maturity</li>
+<li>Cyclomatic Complexity – Complexity of the codebase itself</li>
 </ul>
 <!-- ## Create a Package Risk Assessment Report -->
-<p>In addition, <code>riskmetric</code> can also assess a single metric for a specific package, e.g. last years downloads for <code>survminer</code>:</p>
+<p>In addition to assessing the set of packages used to develop a project, riskmetric can also be used to assess a package before you introduce it into your development environment. Here is an example reviewing the number of downloads for the survminer package:</p>
 <pre class="r"><code>pkg_ref(&quot;survminer&quot;) %&gt;%
   assess_downloads_1yr() %&gt;% 
   metric_score()</code></pre>
@@ -552,6 +554,9 @@ package_tbl$survminer</code></pre>
 ## [1] &quot;pkg_metric_downloads_1yr&quot; &quot;pkg_metric&quot;              
 ## [3] &quot;numeric&quot;</code></pre>
 <p>Finally, this information can be used to create a package risk assessment report: <!-- ### survminer (v0.4.6)--> Package survminer (v0.4.6) has 224253 downloads in the past year, which <code>riskmetric</code> scores at 60%.</p>
+<p>This information can be used by a system administrator when evaluating the suitability of a package, or when writing a validation report: Package survminer (v0.4.7) has 224631 downloads in the past year, which riskmetric scores at 60%.</p>
+<p>There are several contexts where package metadata and metrics would be useful within the pharma industry. Generally, R package lack the documentation expected in software qualification. 21 CFR Part 11 requires documentation that demonstrates software is used approperiately and works as expected. The industry needs to establish the requirements a suitable R package and this package seeks to take the first steps in identifing metrics and best practices.</p>
+<p>If you are interested in helping with development or the direction of the package, we are active on GitHub and welcome any contriubutions.</p>
 
 
 

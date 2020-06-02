@@ -1,6 +1,6 @@
 ---
 title: Introduction to the R Package `riskmetric`
-author: Juliane Manitz
+author: Juliane Manitz, Douglas Kelkhoff, Eli Miller, and Yilong Zhang
 date: '2020-06-02'
 slug: riskmetric-intro-jun-2020
 categories: [news]
@@ -17,9 +17,9 @@ require(pander)
 
 <!--## Introduction -->
 
-In context of the R Validation Hub the R package `riskmetric` has been developed. It provides metrics to evaluate the risk of R packages. A corresponding Shiny app, that can be used to generate package reports using `riskmetric`, is under development. 
+In context of the R Validation Hub the R package riskmetric has been developed. It provides a framework for retrieving package metadata, assessing package metrics, and summarizing the risk that the package might not provide accurate results. A corresponding Shiny app, that can be used to generate package reports using riskmetric, is under development.
 
-In this blog post, we want to illustrate the capabilities and usage of `riskmetric`. 
+In this blog post, we want to illustrate the capabilities and usage of riskmetric and demonstrate how it could fit into an orginizations validation process or its qualified environments.
 
 <!-- ### Installation --> 
 
@@ -50,18 +50,16 @@ To illustrate how `riskmetric` works, a few packages with a wide range of popula
 
 <!--img src="/img/overview/riskmetric-core-workflow.svg" alt="source: Riskmetric Core Workflow"-->
 
-For risk assessment of these packages, `riskmetric` first scrapes metadata locally or remotely by creating a package reference: 
+When referencing a package, riskmetric first looks for installed packages but can also assess packages that have not been installed:
 
 ``` {r, message=FALSE}
 package_tbl <- pkg_ref(c("riskmetric", "utils", "ggplot2", "Hmisc", "survminer", "coxrobust")) 
 package_tbl$survminer
 ```
 
-Note that many fields have a trailing `...` indicating that they haven't yet been computed. 
+Note that many fields have a trailing …, riskmetric will evaluate and cashe the results of the queries as they are called. When we call the pkg_assess function on each reference, the metrics will be stored and available.
 
-In a second step, that necessary package metadata is assessed and an atomic value is added for each assessment and package.
-Then, the information is scored in order to estimate associated risk. This final score converts the assessment value into a single numeric score between `0` (poor) and `1` (great). 
-Finally each package's risk is summarized as a weigthed sum of assessment scores. 
+In a second step, that necessary package metadata is assessed and an atomic value is added for each assessment and package. Then, the information is scored in order to estimate associated risk. This final score converts the assessment value into a single numeric score between 0 (poor) and 1 (great). Finally each package’s risk is summarized as a weigthed sum of assessment scores.
 For more information, check out the `riskmetric` vignette. 
 
 ``` {r, message=FALSE, warning=FALSE}
@@ -79,24 +77,26 @@ pander(res[,c(1:2, 9,10,6, 7, 8,14 )])
 
 <!--TODO> describe each of the metrics and their relevance for package quality -->
 
-Risk metrics referring to assess the maintenance of good practice include for instance whether a package has a vignette, news feed, and/or formal mechanism for bug tracking:
+There are many good programming and package development practices that establish a package is well made.
 
-* `has_vignettes`: number of discovered vignettes files 
-* `has_news`: number of discovered NEWS files
-* `has_bug_reports_url`: presence of a bug reports url in repository
+* has_vignettes - Number of published vignettes
+* has_news - Number of releases with a NEWS update
+* has_bug_reports_url - Presence of a url for users to report issues and bugs found in the package.
 
-The community usage can be assessed for instance with the number of downloads measuring the extend of the user community and as consequence exposure of ad-hoc testing:
+Community usage is determined based on the number of downloads. This is a useful proxy for community support and testing done by other developers.
 
-* `downloads_1yr`: number of downloads in the past year
+* downloads_1yr – Number of downloads from CRAN, Bioconductor, and github in the past year.
 
-Finally, the test coverage of a package can provide well established insights on the stability of the package over time
+Several metrics are under active development that can interrogate package stability and complexity.
 
-* `covr_coverage`: Package unit test coverage
+* covr_coverage – Package unit test coverage percentage
+* Maturity – Package version and overall maturity
+* Cyclomatic Complexity – Complexity of the codebase itself
 
 
 <!-- ## Create a Package Risk Assessment Report -->
 
-In addition, `riskmetric` can also assess a single metric for a specific package, e.g. last years downloads for `survminer`:
+In addition to assessing the set of packages used to develop a project, riskmetric can also be used to assess a package before you introduce it into your development environment. Here is an example reviewing the number of downloads for the survminer package:
 
 ``` {r}
 pkg_ref("survminer") %>%
@@ -117,3 +117,8 @@ has `r sprintf("%.f", pkg_data$downloads_1yr)` downloads in
 the past year, which `riskmetric` scores at 
 `r sprintf("%2.f", pkg_score$downloads_1yr * 100)`%.
 
+This information can be used by a system administrator when evaluating the suitability of a package, or when writing a validation report: Package survminer (v0.4.7) has 224631 downloads in the past year, which riskmetric scores at 60%.
+
+There are several contexts where package metadata and metrics would be useful within the pharma industry. Generally, R package lack the documentation expected in software qualification. 21 CFR Part 11 requires documentation that demonstrates software is used approperiately and works as expected. The industry needs to establish the requirements a suitable R package and this package seeks to take the first steps in identifing metrics and best practices.
+
+If you are interested in helping with development or the direction of the package, we are active on GitHub and welcome any contriubutions.
