@@ -371,7 +371,7 @@ summary {
 
 
 <!--## Introduction -->
-<p>There are several contexts where package metadata and risk metrics are useful within pharma and other regulated industries. Generally, R packages lack the documentation expected in software qualification, which is required within pharma and other regulated industries. For pharma, 21 CFR Part 11 requires documentation that demonstrates software is used approperiately and works as expected. The industry needs to establish requirements for suitable R packages.</p>
+<p>Contributed R packages generally lack the documentation expected in software qualification, which is required within pharma and other regulated industries. For pharma, FDA issued regulations (21 CFR Part 11), which require documentation that demonstrates software is used approperiately and works as expected. Thus, industry needs to establish appropriate requirements for R packages using selected metadata and useful risk metrics.</p>
 <p>In context of the R Validation Hub the R package <code>riskmetric</code> has been developed, which seeks to take the first steps in identifing metrics and best practices for a risk assessment for R package accuracy. It provides a framework for retrieving package metadata, assessing package metrics, and summarizing the risk that the package might not provide accurate results. A corresponding Shiny app, that can be used to generate package reports using riskmetric, is under development.</p>
 <p>In this blog post, we want to illustrate the capabilities and usage of <code>riskmetric</code> and demonstrate how it could fit into an orginizations validation process or its qualified environments.</p>
 <!-- ### Installation -->
@@ -421,14 +421,16 @@ package_tbl$survminer</code></pre>
   pkg_score() %&gt;%
   mutate(risk = summarize_scores(.))</code></pre>
 <p>The function <code>summarize_scores()</code> serves as an example for how a risk score might be derived. Each organization should decide independently how to weight different assessments.</p>
-<table>
-<caption>Table continues below</caption>
+<table style="width:100%;">
 <colgroup>
-<col width="17%"></col>
-<col width="17%"></col>
-<col width="21%"></col>
-<col width="14%"></col>
-<col width="29%"></col>
+<col width="11%"></col>
+<col width="11%"></col>
+<col width="13%"></col>
+<col width="9%"></col>
+<col width="18%"></col>
+<col width="13%"></col>
+<col width="13%"></col>
+<col width="7%"></col>
 </colgroup>
 <thead>
 <tr class="header">
@@ -437,6 +439,9 @@ package_tbl$survminer</code></pre>
 <th align="center">has_vignettes</th>
 <th align="center">has_news</th>
 <th align="center">has_bug_reports_url</th>
+<th align="center">downloads_1yr</th>
+<th align="center">covr_coverage</th>
+<th align="center">risk</th>
 </tr>
 </thead>
 <tbody>
@@ -446,6 +451,9 @@ package_tbl$survminer</code></pre>
 <td align="center">0</td>
 <td align="center">0</td>
 <td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0.8333</td>
 </tr>
 <tr class="even">
 <td align="center">utils</td>
@@ -453,6 +461,9 @@ package_tbl$survminer</code></pre>
 <td align="center">1</td>
 <td align="center">0</td>
 <td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0.6673</td>
 </tr>
 <tr class="odd">
 <td align="center">ggplot2</td>
@@ -460,6 +471,9 @@ package_tbl$survminer</code></pre>
 <td align="center">1</td>
 <td align="center">1</td>
 <td align="center">1</td>
+<td align="center">0.9886</td>
+<td align="center">0</td>
+<td align="center">0.3333</td>
 </tr>
 <tr class="even">
 <td align="center">Hmisc</td>
@@ -467,6 +481,9 @@ package_tbl$survminer</code></pre>
 <td align="center">0</td>
 <td align="center">0</td>
 <td align="center">0</td>
+<td align="center">0.9654</td>
+<td align="center">0</td>
+<td align="center">0.8333</td>
 </tr>
 <tr class="odd">
 <td align="center">survminer</td>
@@ -474,6 +491,9 @@ package_tbl$survminer</code></pre>
 <td align="center">1</td>
 <td align="center">1</td>
 <td align="center">1</td>
+<td align="center">0.6003</td>
+<td align="center">0</td>
+<td align="center">0.3333</td>
 </tr>
 <tr class="even">
 <td align="center">coxrobust</td>
@@ -481,50 +501,7 @@ package_tbl$survminer</code></pre>
 <td align="center">0</td>
 <td align="center">0</td>
 <td align="center">0</td>
-</tr>
-</tbody>
-</table>
-<table style="width:57%;">
-<colgroup>
-<col width="22%"></col>
-<col width="22%"></col>
-<col width="12%"></col>
-</colgroup>
-<thead>
-<tr class="header">
-<th align="center">downloads_1yr</th>
-<th align="center">covr_coverage</th>
-<th align="center">risk</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center">0.8333</td>
-</tr>
-<tr class="even">
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center">0.6673</td>
-</tr>
-<tr class="odd">
-<td align="center">0.9885</td>
-<td align="center">0</td>
-<td align="center">0.3333</td>
-</tr>
-<tr class="even">
-<td align="center">0.9647</td>
-<td align="center">0</td>
-<td align="center">0.8333</td>
-</tr>
-<tr class="odd">
-<td align="center">0.5992</td>
-<td align="center">0</td>
-<td align="center">0.3333</td>
-</tr>
-<tr class="even">
-<td align="center">0.04846</td>
+<td align="center">0.04872</td>
 <td align="center">0</td>
 <td align="center">1</td>
 </tr>
@@ -555,14 +532,14 @@ package_tbl$survminer</code></pre>
 <pre class="r"><code>pkg_ref(&quot;survminer&quot;) %&gt;%
   assess_downloads_1yr() %&gt;% 
   metric_score()</code></pre>
-<pre><code>## [1] 0.5992016
+<pre><code>## [1] 0.6002995
 ## attr(,&quot;class&quot;)
 ## [1] &quot;pkg_metric_downloads_1yr&quot; &quot;pkg_metric&quot;              
 ## [3] &quot;numeric&quot;</code></pre>
 <p>Finally, this information can be used by a system administrator when evaluating the suitability of a package, or when writing a validation report:</p>
 <blockquote>
 <p><strong>survminer (v0.4.6)</strong></p>
-<p>Package survminer (v0.4.6) has 224253 downloads in the past year, which <code>riskmetric</code> scores at 60%.</p>
+<p>Package survminer (v0.4.6) has 225281 downloads in the past year, which converts to a <code>riskmetric</code> score of 60.03%.</p>
 </blockquote>
 <p>If you are interested in helping with development or the direction of the package, we are active on GitHub and welcome any contriubutions.</p>
 

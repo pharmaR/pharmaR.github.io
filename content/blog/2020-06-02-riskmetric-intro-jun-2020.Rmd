@@ -17,10 +17,10 @@ require(pander)
 
 <!--## Introduction -->
 
-There are several contexts where package metadata and risk metrics are useful within pharma and other regulated industries. 
-Generally, R packages lack the documentation expected in software qualification, which is required within pharma and other regulated industries. For pharma, 21 CFR Part 11 requires documentation that demonstrates software is used approperiately and works as expected. The industry needs to establish requirements for suitable R packages. 
 
-In context of the R Validation Hub the R package `riskmetric` has been developed, which seeks to take the first steps in identifing metrics and best practices for a risk assessment for R package accuracy. It provides a framework for retrieving package metadata, assessing package metrics, and summarizing the risk that the package might not provide accurate results. A corresponding Shiny app, that can be used to generate package reports using riskmetric, is under development.
+Contributed R packages generally lack the documentation expected in software qualification, which is required within pharma and other regulated industries. For pharma, FDA issued regulations (21 CFR Part 11), which require documentation that demonstrates software is used approperiately and works as expected. Thus, industry needs to establish appropriate requirements for R packages using selected metadata and useful risk metrics. 
+
+In context of the R Validation Hub, the R package `riskmetric` has been developed, which seeks to take the first steps in identifing metrics and best practices for a risk assessment for R package accuracy. It provides a framework for retrieving package metadata, assessing package metrics, and summarizing the risk that the package might not provide accurate results. A corresponding Shiny app, that can be used to generate package reports using riskmetric, is under development.
 
 In this blog post, we want to illustrate the capabilities and usage of `riskmetric` and demonstrate how it could fit into an orginizations validation process or its qualified environments.
 
@@ -59,7 +59,7 @@ package_tbl <- pkg_ref(c("riskmetric", "utils", "ggplot2", "Hmisc", "survminer",
 package_tbl$survminer
 ```
 
-Note that many fields have a trailing `...`, riskmetric will evaluate and cache the results of the queries lateron. When we call the `pkg_assess()` function on each reference, the metrics will be stored and become available. In other words, the necessary package metadata is assessed and an atomic value is added for each assessment and package. 
+Note that many fields have a trailing `...`; riskmetric will evaluate and cache the results of the queries lateron. When we call the `pkg_assess()` function on each reference, the metrics will be stored and become available. In other words, the necessary package metadata is assessed and an atomic value is added for each assessment and package. 
 
 Then, the information is scored in order to estimate associated risk. This final score converts the assessment value into a single numeric score between 0 (poor) and 1 (great). Finally each package’s risk is summarized as a weigthed sum of assessment scores.
 For more information, check out the `riskmetric` vignette. 
@@ -74,7 +74,7 @@ res <- package_tbl %>%
 The function `summarize_scores()` serves as an example for how a risk score might be derived. Each organization should decide independently how to weight different assessments. 
 
 ``` {r, output="asis", echo=FALSE}
-pander(res[,c(1:2, 9,10,6, 7, 8,14 )])
+pander(res[,c(1:2, 9,10,6, 7, 8,14 )], split.table=Inf)
 ```
 
 <!--TODO> describe each of the metrics and their relevance for package quality -->
@@ -118,7 +118,7 @@ Finally, this information can be used by a system administrator when evaluating 
 
 > **`r pkg_example$name` (v`r pkg_example$version`)**
 >
-> Package `r pkg_example$name` (v`r pkg_example$version`) has `r sprintf("%.f", pkg_data$downloads_1yr)` downloads in the past year, which `riskmetric` scores at 
-`r sprintf("%2.f", pkg_score$downloads_1yr * 100)`%.
+> Package `r pkg_example$name` (v`r pkg_example$version`) has `r sprintf("%.f", pkg_data$downloads_1yr)` downloads in the past year, which converts to a `riskmetric` score of 
+`r sprintf("%2.2f", pkg_score$downloads_1yr * 100)`%.
 
 If you are interested in helping with development or the direction of the package, we are active on GitHub and welcome any contriubutions.
