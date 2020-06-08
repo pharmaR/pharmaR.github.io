@@ -29,10 +29,11 @@ In this blog post, we want to illustrate the capabilities and usage of `riskmetr
 The `riskmetric` is not yet on CRAN. Until it is, it can be installed using `devtools` directly from github:
 
 ``` {r, eval=FALSE}
-devtools::install_github("pharmaR/riskmetric")
+devtools::install_github("pharmaR/riskmetric", force = TRUE)
 library(riskmetric)
 ```
 
+<!-- As long master branch of riskmetric dont include namespace changes -->
 ``` {r, echo=FALSE, message=FALSE, eval=TRUE}
 load_all("../../../../Rpkgs/riskmetric-dev")
 ```
