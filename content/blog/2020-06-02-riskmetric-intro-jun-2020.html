@@ -372,7 +372,7 @@ summary {
 
 <!--## Introduction -->
 <p>Many contributed R packages lack documentation expected in software qualification, which is required within pharma and other regulated industries. For pharma, FDA issued regulations (21 CFR Part 11), which require documentation that demonstrates software is used approperiately and works as expected. Thus, industry needs to establish appropriate requirements for R packages using selected metadata and useful risk metrics.</p>
-<p>In context of the R Validation Hub, the R package <code>riskmetric</code> has been developed, which seeks to take the first steps in identifing metrics and best practices for a risk assessment for R package accuracy. It provides a framework for retrieving package metadata, assessing package metrics, and summarizing the risk that the package might not provide accurate results. A corresponding Shiny app, that can be used to generate package reports using riskmetric, is under development.</p>
+<p>In context of the R Validation Hub, the R package <a href="https://github.com/pharmaR/riskmetric"><code>riskmetric</code></a> has been developed, which seeks to take the first steps in identifing metrics and best practices to quantify the quality of R packages. It provides a framework for retrieving package metadata, assessing package metrics, and summarizing the risk that the package might not provide accurate results. A corresponding Shiny app, that can be used to generate package reports using riskmetric, is under development.</p>
 <p>In this blog post, we want to illustrate the capabilities and usage of <code>riskmetric</code> and demonstrate how it could fit into an orginizations validation process or its qualified environments.</p>
 <!-- ### Installation -->
 <p>The <code>riskmetric</code> is not yet on CRAN. Until it is, it can be installed using <code>devtools</code> directly from github:</p>
@@ -415,8 +415,8 @@ package_tbl$survminer</code></pre>
 ## $pkg_websites...
 ## $release_date...
 ## $vignettes...</code></pre>
-<p>Note that many fields have a trailing <code>...</code>; riskmetric will evaluate and cache the results of the queries lateron. When we call the <code>pkg_assess()</code> function on each reference, the metrics will be stored and become available. In other words, the necessary package metadata is assessed and an atomic value is added for each assessment and package.</p>
-<p>Then, the information is scored in order to estimate associated risk. This final score converts the assessment value into a single numeric score between 0 (poor) and 1 (great). Finally each package’s risk is summarized as a weigthed sum of assessment scores. For more information, check out the <code>riskmetric</code> vignette.</p>
+<p>Note that many fields have a trailing <code>...</code>; riskmetric will evaluate and cache the results of the queries later on. When we call the <code>pkg_assess()</code> function on each reference, the metrics will be stored and become available. In other words, the necessary package metadata is assessed and an atomic value is added for each assessment and package.</p>
+<p>Then, the information is scored in order to estimate associated risk. This final score converts the assessment value into a single numeric score between 0 (poor) and 1 (great). Finally each package’s risk is summarized as a weigthed sum of assessment scores. For more information, check out the <a href="https://pharmar.github.io/riskmetric/articles/riskmetric.html"><code>riskmetric</code> vignette</a>.</p>
 <pre class="r"><code>res &lt;- package_tbl %&gt;%
   pkg_assess() %&gt;%
   pkg_score() %&gt;%
@@ -542,7 +542,7 @@ package_tbl$survminer</code></pre>
 <p><strong>survminer (v0.4.6)</strong></p>
 <p>Package survminer (v0.4.6) has 226718 downloads in the past year, which converts to a <code>riskmetric</code> score of 60.18%.</p>
 </blockquote>
-<p>If you are interested in helping with development or the direction of the package, we are active on GitHub and welcome any contriubutions.</p>
+<p>If you are interested in helping with development or the direction of the package, we are active on GitHub and welcome any contributions. More details can be found in the &quot;Get Involved<code>section of the readme file for [</code>riskmetric` github page](<a href="https://github.com/pharmaR/riskmetric" class="uri">https://github.com/pharmaR/riskmetric</a>).</p>
 
 
 
