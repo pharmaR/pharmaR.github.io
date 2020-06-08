@@ -20,7 +20,7 @@ require(pander)
 
 Many contributed R packages lack documentation expected in software qualification, which is required within pharma and other regulated industries. For pharma, FDA issued regulations (21 CFR Part 11), which require documentation that demonstrates software is used approperiately and works as expected. Thus, industry needs to establish appropriate requirements for R packages using selected metadata and useful risk metrics. 
 
-In context of the R Validation Hub, the R package `riskmetric` has been developed, which seeks to take the first steps in identifing metrics and best practices for a risk assessment for R package accuracy. It provides a framework for retrieving package metadata, assessing package metrics, and summarizing the risk that the package might not provide accurate results. A corresponding Shiny app, that can be used to generate package reports using riskmetric, is under development.
+In context of the R Validation Hub, the R package [`riskmetric`](https://github.com/pharmaR/riskmetric) has been developed, which seeks to take the first steps in identifing metrics and best practices to quantify the quality of R packages. It provides a framework for retrieving package metadata, assessing package metrics, and summarizing the risk that the package might not provide accurate results. A corresponding Shiny app, that can be used to generate package reports using riskmetric, is under development.
 
 In this blog post, we want to illustrate the capabilities and usage of `riskmetric` and demonstrate how it could fit into an orginizations validation process or its qualified environments.
 
@@ -60,10 +60,10 @@ package_tbl <- pkg_ref(c("riskmetric", "utils", "ggplot2", "Hmisc", "survminer",
 package_tbl$survminer
 ```
 
-Note that many fields have a trailing `...`; riskmetric will evaluate and cache the results of the queries lateron. When we call the `pkg_assess()` function on each reference, the metrics will be stored and become available. In other words, the necessary package metadata is assessed and an atomic value is added for each assessment and package. 
+Note that many fields have a trailing `...`; riskmetric will evaluate and cache the results of the queries later on. When we call the `pkg_assess()` function on each reference, the metrics will be stored and become available. In other words, the necessary package metadata is assessed and an atomic value is added for each assessment and package. 
 
 Then, the information is scored in order to estimate associated risk. This final score converts the assessment value into a single numeric score between 0 (poor) and 1 (great). Finally each package’s risk is summarized as a weigthed sum of assessment scores.
-For more information, check out the `riskmetric` vignette. 
+For more information, check out the [`riskmetric` vignette](https://pharmar.github.io/riskmetric/articles/riskmetric.html). 
 
 ``` {r, message=FALSE, warning=FALSE}
 res <- package_tbl %>%
@@ -122,4 +122,4 @@ Finally, this information can be used by a system administrator when evaluating 
 > Package `r pkg_example$name` (v`r pkg_example$version`) has `r sprintf("%.f", pkg_data$downloads_1yr)` downloads in the past year, which converts to a `riskmetric` score of 
 `r sprintf("%2.2f", pkg_score$downloads_1yr * 100)`%.
 
-If you are interested in helping with development or the direction of the package, we are active on GitHub and welcome any contriubutions.
+If you are interested in helping with development or the direction of the package, we are active on GitHub and welcome any contributions. More details can be found in the "Get Involved` section of the readme file for [`riskmetric` github page](https://github.com/pharmaR/riskmetric). 
