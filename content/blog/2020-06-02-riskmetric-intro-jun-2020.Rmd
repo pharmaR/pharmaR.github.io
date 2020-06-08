@@ -18,7 +18,7 @@ require(pander)
 <!--## Introduction -->
 
 
-Contributed R packages generally lack the documentation expected in software qualification, which is required within pharma and other regulated industries. For pharma, FDA issued regulations (21 CFR Part 11), which require documentation that demonstrates software is used approperiately and works as expected. Thus, industry needs to establish appropriate requirements for R packages using selected metadata and useful risk metrics. 
+Many contributed R packages lack documentation expected in software qualification, which is required within pharma and other regulated industries. For pharma, FDA issued regulations (21 CFR Part 11), which require documentation that demonstrates software is used approperiately and works as expected. Thus, industry needs to establish appropriate requirements for R packages using selected metadata and useful risk metrics. 
 
 In context of the R Validation Hub, the R package `riskmetric` has been developed, which seeks to take the first steps in identifing metrics and best practices for a risk assessment for R package accuracy. It provides a framework for retrieving package metadata, assessing package metrics, and summarizing the risk that the package might not provide accurate results. A corresponding Shiny app, that can be used to generate package reports using riskmetric, is under development.
 
