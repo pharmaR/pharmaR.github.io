@@ -63,6 +63,7 @@ package_tbl$survminer
 Note that many fields have a trailing `...`; riskmetric will evaluate and cache the results of the queries later on. When we call the `pkg_assess()` function on each reference, the metrics will be stored and become available. In other words, the necessary package metadata is assessed and an atomic value is added for each assessment and package. 
 
 Then, the information is scored in order to estimate associated risk. This final score converts the assessment value into a single numeric score between 0 (poor) and 1 (great). Finally each package’s risk is summarized as a weigthed sum of assessment scores.
+
 For more information, check out the [`riskmetric` vignette](https://pharmar.github.io/riskmetric/articles/riskmetric.html). 
 
 ``` {r, message=FALSE, warning=FALSE}
