@@ -26,7 +26,7 @@ In this blog post, we want to illustrate the capabilities and usage of `riskmetr
 
 <!-- ### Installation --> 
 
-The `riskmetric` is not yet on CRAN. Until it is, it can be installed using `devtools` directly from github:
+The `riskmetric` package is not yet on CRAN. Until it is, it can be installed using `devtools` directly from github:
 
 ``` {r, eval=FALSE}
 devtools::install_github("pharmaR/riskmetric", force = TRUE)
@@ -62,7 +62,12 @@ package_tbl$survminer
 
 Note that many fields have a trailing `...`; riskmetric will evaluate and cache the results of the queries later on. When we call the `pkg_assess()` function on each reference, the metrics will be stored and become available. In other words, the necessary package metadata is assessed and an atomic value is added for each assessment and package. 
 
+<<<<<<< HEAD
 Then, the information is scored in order to estimate associated risk. This final score converts the assessment value into a single numeric score between 0 (poor) and 1 (great). Finally each package’s risk is summarized as a weighted sum of assessment scores.
+=======
+Then, the information is scored in order to estimate associated risk. This final score converts the assessment value into a single numeric score between 0 (poor) and 1 (great). Finally each package’s risk is summarized as a weigthed sum of assessment scores.
+
+>>>>>>> cced8db059a91c3cdad965abd95458d79daaa70f
 For more information, check out the [`riskmetric` vignette](https://pharmar.github.io/riskmetric/articles/riskmetric.html). 
 
 ``` {r, message=FALSE, warning=FALSE}
