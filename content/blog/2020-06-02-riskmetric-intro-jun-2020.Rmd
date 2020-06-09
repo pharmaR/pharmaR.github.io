@@ -1,7 +1,7 @@
 ---
 title: Introduction to the R Package `riskmetric`
 author: Juliane Manitz, Douglas Kelkhoff, Eli Miller, and Yilong Zhang
-date: '2020-06-02'
+date: '2020-06-09'
 slug: riskmetric-intro-jun-2020
 categories: [news]
 tags:
@@ -26,7 +26,7 @@ In this blog post, we want to illustrate the capabilities and usage of `riskmetr
 
 <!-- ### Installation --> 
 
-The `riskmetric` package is not yet on CRAN. Until it is, it can be installed using `devtools` directly from github:
+The `riskmetric` package is not yet on CRAN. Until it is, it can be installed using `devtools` directly from GitHub:
 
 ``` {r, eval=FALSE}
 devtools::install_github("pharmaR/riskmetric", force = TRUE)
@@ -62,12 +62,8 @@ package_tbl$survminer
 
 Note that many fields have a trailing `...`; riskmetric will evaluate and cache the results of the queries later on. When we call the `pkg_assess()` function on each reference, the metrics will be stored and become available. In other words, the necessary package metadata is assessed and an atomic value is added for each assessment and package. 
 
-<<<<<<< HEAD
-Then, the information is scored in order to estimate associated risk. This final score converts the assessment value into a single numeric score between 0 (poor) and 1 (great). Finally each package’s risk is summarized as a weighted sum of assessment scores.
-=======
 Then, the information is scored in order to estimate associated risk. This final score converts the assessment value into a single numeric score between 0 (poor) and 1 (great). Finally each package’s risk is summarized as a weigthed sum of assessment scores.
 
->>>>>>> cced8db059a91c3cdad965abd95458d79daaa70f
 For more information, check out the [`riskmetric` vignette](https://pharmar.github.io/riskmetric/articles/riskmetric.html). 
 
 ``` {r, message=FALSE, warning=FALSE}
@@ -93,7 +89,7 @@ There are many good programming and package development practices that establish
 
 Community usage is determined based on the number of downloads. This is a useful proxy for community support and adhoc testing done by other developers.
 
-* `downloads_1yr` – Number of downloads from CRAN, Bioconductor, and github in the past year.
+* `downloads_1yr` – Number of downloads from CRAN, Bioconductor, and GitHub in the past year.
 
 Furthermore, the test coverage of a package can provide well established insights on the package accuracy
 
@@ -127,4 +123,4 @@ Finally, this information can be used by a system administrator when evaluating 
 > Package `r pkg_example$name` (v`r pkg_example$version`) has `r sprintf("%.f", pkg_data$downloads_1yr)` downloads in the past year, which converts to a `riskmetric` score of 
 `r sprintf("%2.2f", pkg_score$downloads_1yr * 100)`%.
 
-If you are interested in helping with development or the direction of the package, we are active on GitHub and welcome any contributions. More details can be found in the "Get Involved` section of the readme file for [`riskmetric` github page](https://github.com/pharmaR/riskmetric). 
+If you are interested in helping with development or the direction of the package, we are active on GitHub and welcome any contributions. More details can be found in the "Get Involved" section of the readme file for [`riskmetric` GitHub page](https://github.com/pharmaR/riskmetric). 
