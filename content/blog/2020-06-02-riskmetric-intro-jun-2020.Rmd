@@ -18,11 +18,11 @@ require(pander)
 <!--## Introduction -->
 
 
-Many contributed R packages lack documentation expected in software qualification, which is required within pharma and other regulated industries. For pharma, FDA issued regulations (21 CFR Part 11), which require documentation that demonstrates software is used approperiately and works as expected. Thus, industry needs to establish appropriate requirements for R packages using selected metadata and useful risk metrics. 
+Many contributed R packages lack documentation expected in software qualification, which is required within pharma and other regulated industries. For pharma, there are various regulations, which require documentation that demonstrates software is used appropriately and works as expected. Thus, industry needs to establish appropriate requirements for R packages using selected metadata and useful risk metrics. 
 
-In context of the R Validation Hub, the R package [`riskmetric`](https://github.com/pharmaR/riskmetric) has been developed, which seeks to take the first steps in identifing metrics and best practices to quantify the quality of R packages. It provides a framework for retrieving package metadata, assessing package metrics, and summarizing the risk that the package might not provide accurate results. A corresponding Shiny app, that can be used to generate package reports using riskmetric, is under development.
+In context of the R Validation Hub, the R package [`riskmetric`](https://github.com/pharmaR/riskmetric) has been developed, which seeks to take the first steps in identifying metrics and best practices to quantify the quality of R packages. It provides a framework for retrieving package metadata, assessing package metrics, and summarizing the risk that the package might not provide accurate results. A corresponding Shiny app, that can be used to generate package reports using riskmetric, is under development.
 
-In this blog post, we want to illustrate the capabilities and usage of `riskmetric` and demonstrate how it could fit into an orginizations validation process or its qualified environments.
+In this blog post, we want to illustrate the capabilities and usage of `riskmetric` and demonstrate how it could fit into an organizations validation process or its qualified environments.
 
 <!-- ### Installation --> 
 
@@ -62,7 +62,7 @@ package_tbl$survminer
 
 Note that many fields have a trailing `...`; riskmetric will evaluate and cache the results of the queries later on. When we call the `pkg_assess()` function on each reference, the metrics will be stored and become available. In other words, the necessary package metadata is assessed and an atomic value is added for each assessment and package. 
 
-Then, the information is scored in order to estimate associated risk. This final score converts the assessment value into a single numeric score between 0 (poor) and 1 (great). Finally each package’s risk is summarized as a weigthed sum of assessment scores.
+Then, the information is scored in order to estimate associated risk. This final score converts the assessment value into a single numeric score between 0 (poor) and 1 (great). Finally each package’s risk is summarized as a weighted sum of assessment scores.
 For more information, check out the [`riskmetric` vignette](https://pharmar.github.io/riskmetric/articles/riskmetric.html). 
 
 ``` {r, message=FALSE, warning=FALSE}
@@ -84,7 +84,7 @@ There are many good programming and package development practices that establish
 
 * `has_vignettes` - Number of published vignettes
 * `has_news` - Number of releases with a NEWS update
-* `has_bug_reports_url` - Presence of a url for users to report issues and bugs found in the package.
+* `has_bug_reports_url` - Presence of a URL for users to report issues and bugs found in the package.
 
 Community usage is determined based on the number of downloads. This is a useful proxy for community support and adhoc testing done by other developers.
 
@@ -97,7 +97,7 @@ Furthermore, the test coverage of a package can provide well established insight
 Several other metrics are under active development that can interrogate package stability and complexity, e.g.
 
 * Maturity – Package version and overall maturity
-* Cyclomatic Complexity – Complexity of the codebase itself
+* Cyclomatic Complexity – Complexity of the code base itself
 
 <!-- ## Create a Package Risk Assessment Report -->
 
