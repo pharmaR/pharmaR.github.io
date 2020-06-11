@@ -59,6 +59,7 @@ If you are a member and your organisation does not appear on this list, please l
 * Novartis 
 * Novonordisk 
 * Nuventra 
+* Parexel
 * Pfizer 
 * Phastar 
 * PPD
