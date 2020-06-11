@@ -33,6 +33,7 @@ If you are a member and your organisation does not appear on this list, please l
 * Acerta Pharma 
 * Amgen 
 * Astellas 
+* Atorus Research
 * Bayer 
 * BeiGene 
 * Biogen
@@ -78,5 +79,4 @@ If you are a member and your organisation does not appear on this list, please l
 **Independent consultants**
 
 * *Parker Sims*
-
 
