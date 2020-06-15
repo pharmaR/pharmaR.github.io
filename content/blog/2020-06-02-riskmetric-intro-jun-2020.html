@@ -49,103 +49,105 @@ package_tbl$survminer</code></pre>
 ## $bug_reports_host...
 ## $bug_reports_url...
 ## $description...
+## $downloads...
 ## $help...
 ## $help_aliases...
 ## $maintainer...
 ## $news...
 ## $release_date...
+## $source_control_url...
 ## $vignettes...
 ## $website_urls...</code></pre>
 <p>Note that many fields have a trailing <code>...</code>; riskmetric will evaluate and cache the results of the queries later on. When we call the <code>pkg_assess()</code> function on each reference, the metrics will be stored and become available. In other words, the necessary package metadata is assessed and an atomic value is added for each assessment and package.</p>
 <p>Then, the information is scored in order to estimate associated risk. This final score converts the assessment value into a single numeric score between 0 (poor) and 1 (great). Finally each package’s risk is summarized as a weigthed sum of assessment scores.</p>
 <p>For more information, check out the <a href="https://pharmar.github.io/riskmetric/articles/riskmetric.html"><code>riskmetric</code> vignette</a>.</p>
 <pre class="r"><code>res &lt;- package_tbl %&gt;%
-  assess() %&gt;%
-  score() %&gt;%
-  mutate(risk = summarize_risk(.))</code></pre>
+  pkg_assess() %&gt;%
+  pkg_score() %&gt;%
+  mutate(risk = summarize_scores(.))</code></pre>
 <p>The function <code>summarize_scores()</code> serves as an example for how a risk score might be derived. Each organization should decide independently how to weight different assessments.</p>
 <table>
 <colgroup>
-<col width="10%" />
-<col width="10%" />
 <col width="11%" />
-<col width="13%" />
-<col width="17%" />
 <col width="11%" />
 <col width="8%" />
-<col width="17%" />
+<col width="12%" />
+<col width="14%" />
+<col width="19%" />
+<col width="12%" />
+<col width="9%" />
 </colgroup>
 <thead>
 <tr class="header">
 <th align="center">package</th>
 <th align="center">version</th>
+<th align="center">license</th>
 <th align="center">export_help</th>
-<th align="center">downloads_1yr</th>
+<th align="center">has_vignettes</th>
 <th align="center">has_bug_reports_url</th>
 <th align="center">bugs_status</th>
-<th align="center">license</th>
-<th align="center">has_source_control</th>
+<th align="center">has_news</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td align="center">riskmetric</td>
 <td align="center">0.1.0.9001</td>
+<td align="center">NA</td>
 <td align="center">1</td>
 <td align="center">0</td>
 <td align="center">1</td>
 <td align="center">0.5667</td>
-<td align="center">NA</td>
-<td align="center">1</td>
+<td align="center">0</td>
 </tr>
 <tr class="even">
 <td align="center">utils</td>
 <td align="center">4.0.0</td>
-<td align="center">0.996</td>
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center">0</td>
 <td align="center">NA</td>
+<td align="center">0.996</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
 <td align="center">0</td>
 </tr>
 <tr class="odd">
 <td align="center">ggplot2</td>
 <td align="center">3.3.1</td>
-<td align="center">1</td>
-<td align="center">0.9887</td>
-<td align="center">1</td>
-<td align="center">0.6667</td>
 <td align="center">NA</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0.6333</td>
 <td align="center">1</td>
 </tr>
 <tr class="even">
 <td align="center">Hmisc</td>
 <td align="center">4.4.0</td>
-<td align="center">1</td>
-<td align="center">0.9662</td>
-<td align="center">0</td>
-<td align="center">0</td>
 <td align="center">NA</td>
 <td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
 </tr>
 <tr class="odd">
 <td align="center">survminer</td>
 <td align="center">0.4.7</td>
+<td align="center">NA</td>
 <td align="center">1</td>
-<td align="center">0.6006</td>
+<td align="center">1</td>
 <td align="center">1</td>
 <td align="center">0.2333</td>
-<td align="center">NA</td>
-<td align="center">0</td>
+<td align="center">1</td>
 </tr>
 <tr class="even">
 <td align="center">coxrobust</td>
 <td align="center">1.0</td>
-<td align="center">1</td>
-<td align="center">0.049</td>
-<td align="center">0</td>
-<td align="center">0</td>
 <td align="center">NA</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
 <td align="center">0</td>
 </tr>
 </tbody>
@@ -174,15 +176,15 @@ package_tbl$survminer</code></pre>
 <p>In addition to assessing the set of packages used to develop a project, <code>riskmetric</code> can also be used to assess a package before you introduce it into your development environment. Here is an example reviewing the number of downloads for the <code>survminer</code> package:</p>
 <pre class="r"><code>pkg_ref(&quot;survminer&quot;) %&gt;%
   assess_downloads_1yr() %&gt;% 
-  score()</code></pre>
-<pre><code>## [1] 0.6006209
+  metric_score()</code></pre>
+<pre><code>## [1] 0.6030633
 ## attr(,&quot;class&quot;)
 ## [1] &quot;pkg_metric_downloads_1yr&quot; &quot;pkg_metric&quot;              
 ## [3] &quot;numeric&quot;</code></pre>
 <p>Finally, this information can be used by a system administrator when evaluating the suitability of a package, or when writing a validation report:</p>
 <blockquote>
 <p><strong>survminer (v0.4.7)</strong></p>
-<p>Package survminer (v0.4.7) has 225583 downloads in the past year, which converts to a <code>riskmetric</code> score of
-60.06%.</p>
+<p>Package survminer (v0.4.7) has 227894 downloads in the past year, which converts to a <code>riskmetric</code> score of
+60.31%.</p>
 </blockquote>
 <p>If you are interested in helping with development or the direction of the package, we are active on GitHub and welcome any contributions. More details can be found in the “Get Involved” section of the readme file for <a href="https://github.com/pharmaR/riskmetric"><code>riskmetric</code> GitHub page</a>.</p>
