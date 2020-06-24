@@ -34,7 +34,7 @@ devtools::install_github("pharmaR/riskmetric", force = TRUE)
 
 Then, the package can be loaded:
 
-``` {r}
+``` {r, echo=FALSE, message=FALSE, eval=TRUE}
 library(riskmetric)
 ```
 
