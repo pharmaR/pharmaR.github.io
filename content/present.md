@@ -4,6 +4,10 @@ title: "Presentations"
 
 ## Public Presentations
 
+### 2020
+
+* [EU Programming Heads meeting](/presentations/eu_prog_heads.pdf), June
+
 ### 2019
 
 * [R in Pharma workshop](/presentations/rpharma_2019.pdf), August
