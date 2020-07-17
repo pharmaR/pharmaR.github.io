@@ -30,12 +30,11 @@ The `riskmetric` package is not yet on CRAN. Until it is, it can be installed us
 
 ``` {r, eval=FALSE}
 devtools::install_github("pharmaR/riskmetric", force = TRUE)
-library(riskmetric)
 ```
 
-<!-- As long master branch of riskmetric dont include namespace changes -->
+Then, the package can be loaded:
+
 ``` {r, echo=FALSE, message=FALSE, eval=TRUE}
-#load_all("../../../../Rpkgs/riskmetric-dev")
 library(riskmetric)
 ```
 
