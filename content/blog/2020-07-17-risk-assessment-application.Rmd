@@ -1,0 +1,49 @@
+---
+title: Risk Assessment Application
+author: Andy Nicholls
+date: '2020-07-17'
+slug: risk-metric-application
+categories:
+  - news
+tags:
+  - riskmetric
+  - white paper
+banner: 'img/banners/fission_collab.png'
+---
+
+Towards the end of 2019, the R Validation Hub received an adidtional grant from the R Consortium to progress the next phase of our roadmap and produce a risk assessment app to compliment the [riskmetric package](/blog/2020/06/09/2020-06-02-riskmetric-intro-jun-2020/).  In early 2020, [Fission Labs](https://www.fissionlabs.com/) were selected as our partner to build the first iteration of the application.
+
+## Workflow
+
+### Roles
+
+This first version of the app implements a very simple workflow that can be tailored to an organisation's needs.  There is no log-in, the app detects the user's ID and asks them for their role.  
+
+![](/blog/2020-07-17-risk-assessment-application_files/roles.png){width=820px}
+
+For a simple two-stage review process the roles might be, 'reviewer', 'approver'.  Or you might prefer job-based roles such as 'Statistician'.  For now, the only impact is to record the users role on the assessment reports.
+
+### Loading Packages
+
+### A Package Assessment
+
+- White paper
+- comments
+
+![](/blog/2020-07-17-risk-assessment-application_files/risk_assess.png){width=820px}
+
+### Completing the Assessment
+
+### Reports
+
+## What next?
+
+The application is freely available to clone or download from our [GitHub repository](https://github.com/pharmaR/risk_assessment).
+
+Marly Cormar has kindly agreed to take ownership of the app for it's next phase, during which we aim to enahnce the app based on the user feedback that we receive.  Some of the current priorities include:
+
+* User-based roles and permissions
+* Closer integration with the riskmetric R package
+* Additional modularisation to facilitate future metrics
+
+Lastly, many thanks to the team at Fission for their patience over the past few months.  A great deal has changed in the world since this work began at the end of March.  But Fission have continued ................
