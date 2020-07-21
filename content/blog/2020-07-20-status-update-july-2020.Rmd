@@ -23,4 +23,4 @@ Furthermore, Andy presented at the EU Programming Heads meeting in June and earl
 
 Finally, you might have recognized that we initiated quarterly meeting, which start on July 21, 2020. We are looking forward to see you there! For invites to these meetings and occasional news updates, please join our [mailing list](https://lists.r-consortium.org/g/RConsortium-Validation-Hub). 
 
-The R validation hub executive committee
+The R Validation Hub Executive Committee
