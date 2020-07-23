@@ -1,0 +1,7 @@
+weight: 3
+title: "Latest News"
+description: >
+  <ul class="list-style-none">
+    <li>Check out our UseR!2020 presentation in the <a style="color:white;" href="/present/">presentations</a> page</li>
+  </ul>
+image: "img/carousel/R_logo.png"
