@@ -21,6 +21,7 @@ As of May 2019, the *R Validation Hub* is governed by an executive committee.
 * Doug Kelkhhoff
 * Yilong Zhang 
 * Keaven Anderson 
+* Marly Cormar
 
 
 ## Participating Organisations
