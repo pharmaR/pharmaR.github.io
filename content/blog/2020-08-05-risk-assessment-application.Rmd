@@ -1,0 +1,95 @@
+---
+title: Risk Assessment Application
+author: Andy Nicholls
+date: '2020-08-05'
+slug: risk-metric-application
+categories:
+  - news
+tags:
+  - riskmetric
+  - white paper
+banner: 'img/banners/fission_collab.png'
+---
+
+Towards the end of 2019, the R Validation Hub received an additional grant from the R Consortium to progress the next phase of our road map and produce a risk assessment app to compliment the [riskmetric package](/blog/2020/06/09/2020-06-02-riskmetric-intro-jun-2020/).  In early 2020, [Fission Labs](https://www.fissionlabs.com/) were selected as our partner to build the first iteration of the application.
+
+> *Fission Labs is a software product development services company delivering product life-cycle management and high-end scaleable technology solutions. Our mission is to deliver complex products through simple and efficient engineering.*
+
+# So what does the app do?
+
+The aim of the app is to provide an interactive user interface to the riskmetric package, with metrics categorised into 'maintenance', 'community usage' and 'testing'.  The review team can then use the app to record their comments on the metrics.  Both the metrics and the user comments are stored in an underlying database.  This makes it possible to stop and start reviews at the reviewer's convenience.
+
+Once an a review is complete, a final summary comment on the package can be provided before a final decision is made on the package.  In line with our [white paper](/white-paper/), the *decision* is an overall risk score: low; medium; high.  At this point (or indeed at any point) any of the users could then generate either an HTML or DOCX package report containing the metrics, comments and some additional high level information about the package.
+
+For a more complete walk-through, see [A Detailed Walk-through](#detailedwalk).
+
+# Getting started
+
+The app can be cloned/downloaded from the R Validation Hub's [GitHub repository](https://github.com/pharmaR/risk_assessment).  The app's *readme* file contains details on how to get started with the app.  Essentially it works like any other shiny app and can therefore be launched interactively within RStudio.  But in order to take advantage of the collaborative elements of the app, it would need to be deployed to a web server.  For example, it could be deployed using (Shiny Server)[https://rstudio.com/products/shiny/shiny-server/] or [RStudio Connect](https://rstudio.com/products/connect/).
+
+# A Detailed Walk-through {#detailedwalk}
+
+## Roles
+
+This first version of the app implements a very simple workflow that can be tailored to an organisation's needs.  There is no log-in, the app detects the user's ID and asks them for their role.  
+
+![](/blog/2020-08-05-risk-assessment-application_files/roles.png){width=820px}
+
+For a simple two-stage review process the roles might be, 'reviewer', 'approver'.  Or you might prefer job-based roles such as 'Statistician'.  For now, the only impact is to record the users role on the assessment reports.
+
+## Loading Packages
+
+Currently, packages are added to the database by uploading a simple CSV of package names and versions.  An example CSV is available for download within the app.  Upon uploading the CSV, the app will begin collecting metrics by running riskmetric on each of the packages identified within the CSV.  For several packages this may take some time!  We are currently exploring alternative upload options as part of our continuous app improvement.  But for now this is a good time for a cup of coffee!
+
+New packages can be added at any time.
+
+**<span style="color: red">CAUTION: The package version functionality has yet to be implemented.</span> **
+
+At the time of writing, the app will display information relating to the latest version of the package, regardless of the version selected.  
+
+The mechanism for loading packages (with specific versions) is currently our top priority for the next major release.
+
+### A Package Assessment
+
+Once packages have been uploaded to the DB, the main panel on the left can be used to select the package (and version) in order to review its metrics.  The metrics are split over three tabs:
+
+* Maintenance Metrics
+* Community Usage Metrics 
+* Testing Metrics
+
+Each individual tab provides a mechanism for commenting on the metrics.  Comments within the sections are design to be conversational, in other words a reviewer can make multiple comments alongside other reviewers.  The reviewer's ID, role and a date-time stamp are recorded along with the comment.
+
+![](/blog/2020-07-17-risk-assessment-application_files/risk_assess.png){width=820px}
+
+It is down to the individual organisations to determine their own review process.  But the app supports any number of reviewers commenting on the metrics.
+
+## Completing the Assessment
+
+Once the reviewers have reach a consensus, overall package comments can be added on the left-hand panel.  Once again, it is up to individual organisations to determine their own process with respect to the overall comment.  
+
+Unlike the comments on the metrics tabs, the overall comments are editable.  Currently, each reviewer can add their own overall comment but this may change in the future depending on user feedback.
+
+To finalise the review, a final decision must be made on the overall package risk.  This decision has been categorised into 'High', 'Medium' and 'Low' in line with our white paper.  Once the final decision has been submitted the package is locked.  This prevents anyone from adding / editing comments.
+
+## Reports
+
+A package report can be generated at any time.  The reports are generated from the *Report Preview* tab.  We currently support HTML and DOCX reports.  The reports are generated using rmarkdown.  The HTML and DOCX styling is controlled by CSS and a DOCX template respectively.  They can therefore be easily customised to meet an organisation's styling expectations.
+
+If a report is generated prior to the final decision then the decision is shown as pending.  The final report includes the metrics, all comments (both the overal comments and the conversational flow relating to the metric groupings), the metrics and some additional high level information about the package.
+
+# A word on the collaboration...
+
+I would like to take this opportunity to extend my thanks to the Fission team for their support and patience over the past few months.  Engaging with Fission has been a really positive experience.  They understood what we were trying to achieve with this app from the off and have been extremely accommodating to changes throughout the project.  Thank you.
+
+## What next?
+
+The application is freely available to clone or download from our [GitHub repository](https://github.com/pharmaR/risk_assessment).
+
+Marly Cormar has kindly agreed to take ownership of the app for it's next phase, during which we aim to enhance the app based on the user feedback that we receive.  Some of the current priorities include:
+
+* An enhanced package upload mechanism that enables specific versions to be uploaded
+* User-based roles and permissions
+* Closer integration with the riskmetric R package
+* Additional modularisation to facilitate future metrics
+
+We are always looking for more volunteers to help support the development moving forward please contact us at (psi.aims.r.validation@gmail.com)[mailto:psi.aims.r.validation@gmail.com].  Else you can sign up to our mailing list [here](https://lists.r-consortium.org/g/RConsortium-Validation-Hub/).

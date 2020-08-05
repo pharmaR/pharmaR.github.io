@@ -1,0 +1,68 @@
+---
+title: Risk Assessment Application
+author: Andy Nicholls
+date: '2020-08-05'
+slug: risk-metric-application
+categories:
+  - news
+tags:
+  - riskmetric
+  - white paper
+banner: 'img/banners/fission_collab.png'
+---
+
+
+
+<p>Towards the end of 2019, the R Validation Hub received an adidtional grant from the R Consortium to progress the next phase of our roadmap and produce a risk assessment app to compliment the <a href="/blog/2020/06/09/2020-06-02-riskmetric-intro-jun-2020/">riskmetric package</a>. In early 2020, <a href="https://www.fissionlabs.com/">Fission Labs</a> were selected as our partner to build the first iteration of the application.</p>
+<blockquote>
+<p><em>Fission Labs is a software product development services company delivering product lifecycle management and high-end scalable technology solutions. Our mission is to deliver complex products through simple and efficient engineering.</em></p>
+</blockquote>
+<div id="so-what-does-the-app-do" class="section level1">
+<h1>So what does the app do?</h1>
+<p>The aim of the app is to provide an interactive user interface to the riskmetric package, with metrics categorised into ‘maintenance’, ‘community usage’ and ‘testing’. The review team can then use the app to record their comments on the metrics. Both the metrics and the user comments are stored in an underlying database. This makes it possible to stop and start reviews at the reviewer’s convenience.</p>
+<p>Once an a review is complete, a final summary comment on the package can be provided before a final decision is made on the package. In line with our <a href="/white-paper/">white paper</a>, the <em>decision</em> is an overall risk score: low; medium; high. At this point (or indeed at any point) any of the users could then generate either an HTML or DOCX package report containing the metrics, comments and some additional high level information about the package.</p>
+<p>For a more complete walk-through, see <a href="#detailedwalk">A Detailed Walk-through</a>.</p>
+</div>
+<div id="getting-started" class="section level1">
+<h1>Getting started</h1>
+<p>The app can be cloned/downloaded from the R Validation Hub’s <a href="https://github.com/pharmaR/risk_assessment">GitHub repository</a>. The app’s <em>readme</em> file contains details on how to get started with the app. Essentially it works like any other shiny app and can therefore be launched interactively within RStudio. But in order to take advantage of the collaborative elements of the app, it would need to be deployed to a web server. For example, it could be deployed using (Shiny Server)[<a href="https://rstudio.com/products/shiny/shiny-server/" class="uri">https://rstudio.com/products/shiny/shiny-server/</a>] or <a href="https://rstudio.com/products/connect/">RStudio Connect</a>.</p>
+</div>
+<div id="detailedwalk" class="section level1">
+<h1>A Detailed Walk-through</h1>
+<div id="roles" class="section level2">
+<h2>Roles</h2>
+<p>This first version of the app implements a very simple workflow that can be tailored to an organisation’s needs. There is no log-in, the app detects the user’s ID and asks them for their role.</p>
+<p><img src="/blog/2020-08-05-risk-assessment-application_files/roles.png" width="820" /></p>
+<p>For a simple two-stage review process the roles might be, ‘reviewer’, ‘approver’. Or you might prefer job-based roles such as ‘Statistician’. For now, the only impact is to record the users role on the assessment reports.</p>
+</div>
+<div id="loading-packages" class="section level2">
+<h2>Loading Packages</h2>
+<p>Currently, packages are added to the database by uploading a simple CSV of package names and versions. An example CSV is available for download withni the app.</p>
+<p><strong><span class="red">CAUTION: The package version functionality has yet to be implemented.</span> At the time of writing, the app will display information relating to the latest version of the package, regardless of the version selected. Enabling this is an immediate priority moving forward.</strong></p>
+<div id="a-package-assessment" class="section level3">
+<h3>A Package Assessment</h3>
+<ul>
+<li>White paper</li>
+<li>comments</li>
+</ul>
+<p><img src="/blog/2020-07-17-risk-assessment-application_files/risk_assess.png" width="820" /></p>
+</div>
+<div id="completing-the-assessment" class="section level3">
+<h3>Completing the Assessment</h3>
+</div>
+<div id="reports" class="section level3">
+<h3>Reports</h3>
+</div>
+</div>
+<div id="what-next" class="section level2">
+<h2>What next?</h2>
+<p>The application is freely available to clone or download from our <a href="https://github.com/pharmaR/risk_assessment">GitHub repository</a>.</p>
+<p>Marly Cormar has kindly agreed to take ownership of the app for it’s next phase, during which we aim to enahnce the app based on the user feedback that we receive. Some of the current priorities include:</p>
+<ul>
+<li>User-based roles and permissions</li>
+<li>Closer integration with the riskmetric R package</li>
+<li>Additional modularisation to facilitate future metrics</li>
+</ul>
+<p>Lastly, many thanks to the team at Fission for their patience over the past few months. A great deal has changed in the world since this work began at the end of March. But Fission have continued …………….</p>
+</div>
+</div>
