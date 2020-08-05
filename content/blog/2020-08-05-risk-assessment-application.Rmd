@@ -59,7 +59,7 @@ Once packages have been uploaded to the DB, the main panel on the left can be us
 
 Each individual tab provides a mechanism for commenting on the metrics.  Comments within the sections are design to be conversational, in other words a reviewer can make multiple comments alongside other reviewers.  The reviewer's ID, role and a date-time stamp are recorded along with the comment.
 
-![](/blog/2020-07-17-risk-assessment-application_files/risk_assess.png){width=820px}
+![](/blog/2020-08-05-risk-assessment-application_files/risk_assess.png){width=820px}
 
 It is down to the individual organisations to determine their own review process.  But the app supports any number of reviewers commenting on the metrics.
 
