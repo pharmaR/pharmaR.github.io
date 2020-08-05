@@ -13,56 +13,76 @@ banner: 'img/banners/fission_collab.png'
 
 
 
-<p>Towards the end of 2019, the R Validation Hub received an adidtional grant from the R Consortium to progress the next phase of our roadmap and produce a risk assessment app to compliment the <a href="/blog/2020/06/09/2020-06-02-riskmetric-intro-jun-2020/">riskmetric package</a>. In early 2020, <a href="https://www.fissionlabs.com/">Fission Labs</a> were selected as our partner to build the first iteration of the application.</p>
+<div id="background" class="section level2">
+<h2>Background</h2>
+<p>Towards the end of 2019, the R Validation Hub received an additional grant from the R Consortium to progress the next phase of our road map and produce a risk assessment app to compliment the <a href="/blog/2020/06/09/2020-06-02-riskmetric-intro-jun-2020/">riskmetric package</a>. In early 2020, <a href="https://www.fissionlabs.com/" target="_blank">Fission Labs</a> were selected as our partner to build the first iteration of the application.</p>
+<p><img src="/blog/2020-08-05-risk-assessment-application_files/fission.png" /></p>
 <blockquote>
-<p><em>Fission Labs is a software product development services company delivering product lifecycle management and high-end scalable technology solutions. Our mission is to deliver complex products through simple and efficient engineering.</em></p>
+<p><em>Fission Labs is a software product development services company delivering product life-cycle management and high-end scalable technology solutions. Our mission is to deliver complex products through simple and efficient engineering.</em></p>
 </blockquote>
-<div id="so-what-does-the-app-do" class="section level1">
-<h1>So what does the app do?</h1>
+</div>
+<div id="so-what-does-the-app-do" class="section level2">
+<h2>So what does the app do?</h2>
 <p>The aim of the app is to provide an interactive user interface to the riskmetric package, with metrics categorised into ‘maintenance’, ‘community usage’ and ‘testing’. The review team can then use the app to record their comments on the metrics. Both the metrics and the user comments are stored in an underlying database. This makes it possible to stop and start reviews at the reviewer’s convenience.</p>
 <p>Once an a review is complete, a final summary comment on the package can be provided before a final decision is made on the package. In line with our <a href="/white-paper/">white paper</a>, the <em>decision</em> is an overall risk score: low; medium; high. At this point (or indeed at any point) any of the users could then generate either an HTML or DOCX package report containing the metrics, comments and some additional high level information about the package.</p>
-<p>For a more complete walk-through, see <a href="#detailedwalk">A Detailed Walk-through</a>.</p>
+<p>For those looking for a littlemore detail, I’ve provided a little more detail in the following sections…</p>
 </div>
-<div id="getting-started" class="section level1">
-<h1>Getting started</h1>
-<p>The app can be cloned/downloaded from the R Validation Hub’s <a href="https://github.com/pharmaR/risk_assessment">GitHub repository</a>. The app’s <em>readme</em> file contains details on how to get started with the app. Essentially it works like any other shiny app and can therefore be launched interactively within RStudio. But in order to take advantage of the collaborative elements of the app, it would need to be deployed to a web server. For example, it could be deployed using (Shiny Server)[<a href="https://rstudio.com/products/shiny/shiny-server/" class="uri">https://rstudio.com/products/shiny/shiny-server/</a>] or <a href="https://rstudio.com/products/connect/">RStudio Connect</a>.</p>
+<div id="a-detailed-walk-through" class="section level2">
+<h2>A detailed walk-through</h2>
+<div id="getting-started" class="section level3">
+<h3>Getting started</h3>
+<p>The app can be cloned/downloaded from the R Validation Hub’s <a href="https://github.com/pharmaR/risk_assessment" target="_blank">GitHub repository</a>. The app’s <em>readme</em> file contains details on how to get started with the app. Essentially it works like any other shiny app and can therefore be launched interactively within RStudio. But in order to take advantage of the collaborative elements of the app, it would need to be deployed to a web server. For example, it could be deployed using <a href="https://rstudio.com/products/shiny/shiny-server/" target="_blank">Shiny Server</a> or <a href="https://rstudio.com/products/connect/" target="_blank">RStudio Connect</a>.</p>
 </div>
-<div id="detailedwalk" class="section level1">
-<h1>A Detailed Walk-through</h1>
-<div id="roles" class="section level2">
-<h2>Roles</h2>
+<div id="roles" class="section level3">
+<h3>Roles</h3>
 <p>This first version of the app implements a very simple workflow that can be tailored to an organisation’s needs. There is no log-in, the app detects the user’s ID and asks them for their role.</p>
-<p><img src="/blog/2020-08-05-risk-assessment-application_files/roles.png" width="820" /></p>
+<p><img src="/blog/2020-08-05-risk-assessment-application_files/roles.png" /></p>
 <p>For a simple two-stage review process the roles might be, ‘reviewer’, ‘approver’. Or you might prefer job-based roles such as ‘Statistician’. For now, the only impact is to record the users role on the assessment reports.</p>
 </div>
-<div id="loading-packages" class="section level2">
-<h2>Loading Packages</h2>
-<p>Currently, packages are added to the database by uploading a simple CSV of package names and versions. An example CSV is available for download withni the app.</p>
-<p><strong><span class="red">CAUTION: The package version functionality has yet to be implemented.</span> At the time of writing, the app will display information relating to the latest version of the package, regardless of the version selected. Enabling this is an immediate priority moving forward.</strong></p>
+<div id="loading-packages" class="section level3">
+<h3>Loading packages</h3>
+<p>Currently, packages are added to the database by uploading a simple CSV of package names and versions. An example CSV is available for download within the app. Upon uploading the CSV, the app will begin collecting metrics by running riskmetric on each of the packages identified within the CSV. For several packages this may take some time! We are currently exploring alternative upload options as part of our continuous app improvement. But for now this is a good time for a cup of coffee! Otherwise, new packages can be added at any time.</p>
+<p><strong><span style="color: red">CAUTION: The package version functionality has yet to be implemented.</span> </strong> At the time of writing, the app displays information relating to the <em>latest</em> version of the package, regardless of the version specified in the CSV.</p>
+<p>The mechanism for loading packages (with specific versions) is currently our top priority for the next major release.</p>
+</div>
 <div id="a-package-assessment" class="section level3">
-<h3>A Package Assessment</h3>
+<h3>A Package assessment</h3>
+<p>Once packages have been uploaded to the DB, the main panel on the left can be used to select the package (and version) in order to review its metrics. The metrics are split over three tabs:</p>
 <ul>
-<li>White paper</li>
-<li>comments</li>
+<li>Maintenance Metrics</li>
+<li>Community Usage Metrics</li>
+<li>Testing Metrics</li>
 </ul>
+<p>Each individual tab provides a mechanism for commenting on the metrics. Comments within the sections are design to be conversational, in other words a reviewer can make multiple comments alongside other reviewers. The reviewer’s ID, role and a date-time stamp are recorded along with the comment.</p>
 <p><img src="/blog/2020-07-17-risk-assessment-application_files/risk_assess.png" width="820" /></p>
+<p>It is down to the individual organisations to determine their own review process. But the app supports any number of reviewers commenting on the metrics.</p>
 </div>
 <div id="completing-the-assessment" class="section level3">
-<h3>Completing the Assessment</h3>
+<h3>Completing the assessment</h3>
+<p>Once the reviewers have reach a consensus, overall package comments can be added on the left-hand panel. Once again, it is up to individual organisations to determine their own process with respect to the overall comment.</p>
+<p>Unlike the comments on the metrics tabs, the overall comments are editable. Currently, each reviewer can add their own overall comment but this may change in the future depending on user feedback.</p>
+<p>To finalise the review, a final decision must be made on the overall package risk. This decision has been categorised into ‘High’, ‘Medium’ and ‘Low’ in line with our white paper. Once the final decision has been submitted the package is locked. This prevents anyone from adding / editing comments.</p>
 </div>
 <div id="reports" class="section level3">
 <h3>Reports</h3>
+<p>A package report can be generated at any time. The reports are generated from the <em>Report Preview</em> tab by clicking the ‘Download Report’ button in the top right-hand corner. We currently support HTML and DOCX reports. The reports are generated using rmarkdown. The HTML and DOCX styling is controlled by CSS and a DOCX template respectively. They can therefore be easily customised to meet an organisation’s styling expectations.</p>
+<p><img src="/blog/2020-08-05-risk-assessment-application_files/report.png" width="820" /></p>
+<p>If a report is generated prior to the final decision then the decision is shown as pending. The final report includes the metrics, all comments (both the overall comments and the conversational flow relating to the metric groupings), the metrics and some additional high level information about the package.</p>
 </div>
+</div>
+<div id="a-word-on-the-collaboration" class="section level2">
+<h2>A word on the collaboration…</h2>
+<p>I would like to take this opportunity to extend my thanks to the Fission team for their support and patience over the past few months. Engaging with Fission has been a really positive experience. They understood what we were trying to achieve with this app from the off and have been extremely accommodating to changes throughout the project. Thank you.</p>
 </div>
 <div id="what-next" class="section level2">
 <h2>What next?</h2>
-<p>The application is freely available to clone or download from our <a href="https://github.com/pharmaR/risk_assessment">GitHub repository</a>.</p>
-<p>Marly Cormar has kindly agreed to take ownership of the app for it’s next phase, during which we aim to enahnce the app based on the user feedback that we receive. Some of the current priorities include:</p>
+<p>The application is freely available to clone or download from our <a href="https://github.com/pharmaR/risk_assessment" target="_blank">GitHub repository</a>.</p>
+<p>Marly Cormar has kindly agreed to take ownership of the app for it’s next phase, during which we aim to enhance the app based on the user feedback that we receive. Some of the current priorities include:</p>
 <ul>
+<li>An enhanced package upload mechanism that enables specific versions to be uploaded</li>
 <li>User-based roles and permissions</li>
 <li>Closer integration with the riskmetric R package</li>
 <li>Additional modularisation to facilitate future metrics</li>
 </ul>
-<p>Lastly, many thanks to the team at Fission for their patience over the past few months. A great deal has changed in the world since this work began at the end of March. But Fission have continued …………….</p>
-</div>
+<p>We are always looking for more volunteers to help support the development moving forward please contact us at <a href="mailto:psi.aims.r.validation@gmail.com">psi.aims.r.validation@gmail.com</a>. Else you can sign up to our mailing list <a href="https://lists.r-consortium.org/g/RConsortium-Validation-Hub/" target="_blank">here</a>.</p>
 </div>
