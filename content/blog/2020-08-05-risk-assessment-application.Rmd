@@ -13,7 +13,7 @@ banner: 'img/banners/fission_collab.png'
 
 ## Background
 
-Towards the end of 2019, the R Validation Hub received an additional grant from the R Consortium to progress the next phase of our road map and produce a risk assessment app to compliment the [riskmetric package](/blog/2020/06/09/2020-06-02-riskmetric-intro-jun-2020/).  In early 2020, <a href="https://www.fissionlabs.com/" target="_blank">Fission Labs</a> were selected as our partner to build the first iteration of the application.
+Towards the end of 2019, the R Validation Hub received an additional grant from the R Consortium to progress the next phase of our road map and produce a risk assessment app to complement the [riskmetric package](/blog/2020/06/09/2020-06-02-riskmetric-intro-jun-2020/).  In early 2020, <a href="https://www.fissionlabs.com/" target="_blank">Fission Labs</a> were selected as our partner to build the first iteration of the application.
 
 ![](/blog/2020-08-05-risk-assessment-application_files/fission.png)
 
