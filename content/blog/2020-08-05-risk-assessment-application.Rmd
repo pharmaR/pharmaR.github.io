@@ -23,7 +23,7 @@ Towards the end of 2019, the R Validation Hub received an additional grant from 
 
 The aim of the app is to provide an interactive user interface to the riskmetric package, with metrics categorised into 'maintenance', 'community usage' and 'testing'.  The review team can then use the app to record their comments on the metrics.  Both the metrics and the user comments are stored in an underlying database.  This makes it possible to stop and start reviews at the reviewer's convenience.
 
-Once an a review is complete, a final summary comment on the package can be provided before a final decision is made on the package.  In line with our [white paper](/white-paper/), the *decision* is an overall risk score: low; medium; high.  At this point (or indeed at any point) any of the users could then generate either an HTML or DOCX package report containing the metrics, comments and some additional high level information about the package.
+Once a review is complete, a final summary comment on the package can be provided before a final decision is made on the package.  In line with our [white paper](/white-paper/), the *decision* is an overall risk score: low; medium; high.  At this point (or indeed at any point) any of the users could then generate either an HTML or a DOCX package report containing the metrics, comments and some additional high level information about the package.
 
 For those looking for a littlemore detail, I've provided a little more detail in the following sections...
 
