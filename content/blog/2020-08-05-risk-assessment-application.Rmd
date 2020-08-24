@@ -25,7 +25,7 @@ The aim of the app is to provide an interactive user interface to the riskmetric
 
 Once a review is complete, a final summary comment on the package can be provided before a final decision is made on the package.  In line with our [white paper](/white-paper/), the *decision* is an overall risk score: low; medium; high.  At this point (or indeed at any point) any of the users could then generate either an HTML or a DOCX package report containing the metrics, comments and some additional high level information about the package.
 
-For those looking for a littlemore detail, I've provided a little more detail in the following sections...
+For those looking for more information on the app, I've provided further details in the following sections...
 
 ## A detailed walk-through
 
