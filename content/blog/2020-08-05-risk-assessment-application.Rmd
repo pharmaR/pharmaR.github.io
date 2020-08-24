@@ -57,7 +57,7 @@ Once packages have been uploaded to the DB, the main panel on the left can be us
 * Community Usage Metrics 
 * Testing Metrics
 
-Each individual tab provides a mechanism for commenting on the metrics.  Comments within the sections are design to be conversational, in other words a reviewer can make multiple comments alongside other reviewers.  The reviewer's ID, role and a date-time stamp are recorded along with the comment.
+Each individual tab provides a mechanism for commenting on the metrics.  Comments within the sections are designed to be conversational, in other words a reviewer can make multiple comments alongside other reviewers.  The reviewer's ID, role and a date-time stamp are recorded along with the comment.
 
 ![](/blog/2020-08-05-risk-assessment-application_files/risk_assess.png){width=820px}
 
