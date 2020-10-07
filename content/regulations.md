@@ -7,7 +7,7 @@ Key guidance documents are provided by different regulatory entities, which  ove
 
 * International Conference on Harmonisation of Technical Requirements for Registration of Pharmaceuticals in Human Use (ICH)
 * The United States Food and Drug Administration (FDA)
-* European Medicines Agency (EMEA) 
+* European Medicines Agency (EMA) 
 * Japanese Pharmaceuticals and Medical Devices Agency (PMDA)
 
 ### ICH E9 Statistical Principles for Clinical Trials
@@ -38,5 +38,4 @@ In Conclusion, 21 CFR Part 11 is not relevant or mandatory in the context of sta
 
 In 2020, the Eurpean Medicines Agency published a [Notice to sponsors on validation and qualification of computerised systems used in clinical trials](https://www.ema.europa.eu/en/documents/regulatory-procedural-guideline/notice-sponsors-validation-qualification-computerised-systems-used-clinical-trials_en.pdf)
 and the associated [Q&A](https://www.ema.europa.eu/en/human-regulatory/research-development/compliance/good-clinical-practice/qa-good-clinical-practice-gcp).
-
 
