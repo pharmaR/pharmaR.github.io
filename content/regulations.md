@@ -34,8 +34,7 @@ In March 2018, the FDA released the [Study Data Technical Conformance Guide](htt
 
 In Conclusion, 21 CFR Part 11 is not relevant or mandatory in the context of statistical analysis software itself. However, when using R as part of a validated system, elements of 21 CFR Part 11 do apply.
 
-### EMEA
+### EMA
 
 In 2020, the Eurpean Medicines Agency published a [Notice to sponsors on validation and qualification of computerised systems used in clinical trials](https://www.ema.europa.eu/en/documents/regulatory-procedural-guideline/notice-sponsors-validation-qualification-computerised-systems-used-clinical-trials_en.pdf)
 and the associated [Q&A](https://www.ema.europa.eu/en/human-regulatory/research-development/compliance/good-clinical-practice/qa-good-clinical-practice-gcp).
-
