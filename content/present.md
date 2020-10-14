@@ -6,9 +6,9 @@ title: "Presentations"
 
 ### 2020
 
-* [R/Pharma 2020 Presentation](https://github.com/pharmaR/rpharma2020_pres), October, *Andy Nicholls*
+* [R/Pharma 2020 Presentation](https://pharmar.github.io/rpharma2020_pres/), October, *Andy Nicholls*
 
-* [R/Pharma 2020 Workshop Site](https://pharmar.github.io/rpharma2020/index.html), October, *Andy Nicholls, Marly Gotti*
+* [R/Pharma 2020 Workshop Site](https://pharmar.github.io/rpharma2020/), October, *Andy Nicholls, Marly Gotti*
 
 * [useR! 2020](https://youtu.be/WUVUjdqifJ8), July  *Andy Nicholls, Juliane Manitz*
 
