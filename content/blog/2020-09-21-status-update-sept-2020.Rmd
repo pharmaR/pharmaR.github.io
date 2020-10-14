@@ -9,6 +9,4 @@ tags:
 banner: 'img/banners/news.png'
 ---
 
-* Highlevel intoduction on testing
-
-* Call for soft submission
+*Coming soon...*
