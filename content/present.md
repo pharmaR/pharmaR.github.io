@@ -10,7 +10,7 @@ title: "Presentations"
 
 * [R/Pharma 2020 Workshop Site](https://pharmar.github.io/rpharma2020/), October, *Andy Nicholls, Marly Gotti*
 
-* [useR! 2020](https://youtu.be/WUVUjdqifJ8), July  *Andy Nicholls, Juliane Manitz*
+* [useR! 2020](https://youtu.be/WUVUjdqifJ8), July,  *Andy Nicholls, Juliane Manitz*
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/WUVUjdqifJ8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
