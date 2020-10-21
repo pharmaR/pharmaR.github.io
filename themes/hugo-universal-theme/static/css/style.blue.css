@@ -1143,7 +1143,7 @@ fieldset[disabled] .btn-template-primary.active {
 }
 .home-carousel {
   position: relative;
-  background: url('../img/photogrid.jpg') center center repeat;
+  background: url('../img/photogrid.png') center center repeat;
   background-size: cover;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
@@ -1156,8 +1156,8 @@ fieldset[disabled] .btn-template-primary.active {
   width: 100%;
   height: 100%;
   background: #467fbf;
-  opacity: 0.9;
-  filter: alpha(opacity=90);
+  opacity: 0.15;
+  filter: alpha(opacity=15);
 }
 .home-carousel .owl-carousel {
   padding-top: 60px;
@@ -1167,10 +1167,10 @@ fieldset[disabled] .btn-template-primary.active {
   background: #666;
 }
 .home-carousel .owl-theme .owl-controls .owl-page.active span {
-  background: #fff;
+  background: #000;
 }
 .home-carousel .owl-theme .owl-controls .owl-page:hover span {
-  background: #fff;
+  background: #000;
 }
 @media (max-width: 767px) {
   .home-carousel {
@@ -1187,7 +1187,7 @@ fieldset[disabled] .btn-template-primary.active {
 .home-carousel h3,
 .home-carousel p,
 .home-carousel ul {
-  color: #fff;
+  color: #000000;
 }
 .home-carousel h1 {
   font-weight: 700;
