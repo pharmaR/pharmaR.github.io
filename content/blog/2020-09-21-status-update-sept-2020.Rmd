@@ -9,6 +9,15 @@ tags:
 banner: 'img/banners/news.png'
 ---
 
+```{r pkg-install, echo = FALSE}
+ip <- installed.packages ()
+if (!"pkgapi" %in% rownames (ip))
+    remotes::install_github ("r-lib/pkgapi")
+if (!"packgraph" %in% rownames (ip))
+    remotes::install_github ("mpadge/packgraph")
+```
+
+
 ## Background
 
 [rOpenSci](https://ropensci.org) is an organization devoted to "transforming
@@ -18,7 +27,8 @@ categories](https://devguide.ropensci.org/policies.html#aims-and-scope). These
 categories notably exclude statistical software, which is arguably the reason
 for the entire R language. To redress this, rOpenSci have begun
 a [project](https://ropensci.org/blog/2019/07/15/expanding-software-review/) to
-expand our peer review system to encompass explicitly statistical software.
+expand our peer review system to encompass explicitly statistical software,
+funded by a grant from the Alfred P. Sloan Foundation.
 
 Two of the primary goals for the project are to develop sets of standards for
 several sub-categories of statistical software, and to develop a suite of tools
@@ -34,9 +44,9 @@ and the [Risk Assessment
 Application](https://www.pharmar.org/blog/2020/08/05/2020-08-05-risk-assessment-application/).
 Similar to the goals of R Validation Hub, one of our aims is to automate as
 much as possible the production of a template for reporting on and reviewing
-software. However, because our distinct aims and scope differ from the specific
-aims of the R Validation Hub, there is a great deal of complementarity rather
-than overlap in the two endeavours, which this blog post aims to highlight.
+software. Because our distinct aims and scope differ from the specific aims of
+the R Validation Hub, there is a great deal of complementarity rather than
+overlap in the two endeavours, which this blog post aims to highlight.
 
 ## Package Reporting
 
@@ -46,431 +56,204 @@ of which, via a package currently called
 high-level report on software structure and functionality. In current form,
 this reporting is largely based on analyses of function call graphs within the
 R code of a package, extending from the output of the [`pkgapi`
-package](https://github.com/r-lib/pkgapi). The current implementation of this
-reporting component provides an overview of package structure and
-inter-relationships between package functions, along with an optional
-interactive visualization. We intend such overviews to be provided at the
-outset of our review process as an aid to reviewers.
+package](https://github.com/r-lib/pkgapi). (Neither of these packages are
+currently on CRAN, so installing `packgraph` requires first running 
+`remotes::intall_github("r-lib/pkgapi")`, followed by
+`remotes::install_github("mpadge/packgraph")`.)
 
-### [`packgraph`](https://github.com/mpadge/packgraph)
+The current implementation of
+[`packgraph`](https://github.com/mpadge/packgraph) provides an overview of
+package structure and inter-relationships between package functions, along with
+an optional interactive visualization of the network of function calls within
+a package, via the `pg_graph()` function. Function call networks are commonly
+divided among distinct clusters of locally inter-connected functions, with the
+resultant visualization using a different colour to visually distinguish each
+cluster. Applying this function to the [`riskmetric`
+package](https://github.com/pharmar/riskmetric) gives a static version of the
+actual interactive graphical result that looks something like the following
+image.
 
-The [`packgraph`](https://github.com/mpadge/packgraph) report for the
-[`riskmetric` package](https://github.com/pharmar/riskmetric) can be produced
-via the following code, which firsts calls the `pg_graph()` function to
-generate data on network inter-relationships between all functions in a
-package. The `pg_report()` function then generates a textual overview of the
-function call network.
+```{r packgraph-viz, echo = FALSE, out.width = "100%"}
+knitr::include_graphics ("packgraph.png")
+```
 
-    library (packgraph)
-    pkg_source <- "/data/mega/code/forks/riskmetric"
-    g <- pg_graph (pkg_source)
-    pg_report (g)
-    #> ══ riskmetric ══════════════════════════════════════════════════════════════════
-    #> 
-    #> The package has 24 exported functions, and 155 non-exported funtions. The
-    #> exported functions are structured into the following 3 primary clusters
-    #> containing 2, 9 and 2 functions
-    #> 
-    #> 
-    #> | cluster|  n|name       | num_params| num_doc_words| num_doc_lines| num_example_lines| centrality|
-    #> |-------:|--:|:----------|----------:|-------------:|-------------:|-----------------:|----------:|
-    #> |       1|  1|pkg_ref    |          2|           400|             9|                 0|          1|
-    #> |       1|  2|as_pkg_ref |          2|            29|             7|                 0|         NA|
-    #> 
-    #> 
-    #> | cluster|  n|name                        | num_params| num_doc_words| num_doc_lines| num_example_lines| centrality|
-    #> |-------:|--:|:---------------------------|----------:|-------------:|-------------:|-----------------:|----------:|
-    #> |       2|  1|assessment_error_empty      |          2|            48|             4|                 0|          2|
-    #> |       2|  2|assess_has_bug_reports_url  |          2|            76|             0|                 1|         NA|
-    #> |       2|  3|assess_has_maintainer       |          2|            45|             5|                 1|         NA|
-    #> |       2|  4|assess_has_source_control   |          2|            53|             8|                 1|         NA|
-    #> |       2|  5|assess_has_website          |          2|            46|            76|                 1|         NA|
-    #> |       2|  6|assess_license              |          2|            42|            13|                 1|         NA|
-    #> |       2|  7|assessment_error_as_warning |          3|            62|             8|                 0|         NA|
-    #> |       2|  8|assessment_error_throw      |          3|            56|             9|                 0|         NA|
-    #> |       2|  9|pkg_metric                  |          3|            87|             0|                 0|         NA|
-    #> 
-    #> 
-    #> | cluster|  n|name            | num_params| num_doc_words| num_doc_lines| num_example_lines| centrality|
-    #> |-------:|--:|:---------------|----------:|-------------:|-------------:|-----------------:|----------:|
-    #> |       3|  1|all_assessments |          0|            57|             0|                 0|         NA|
-    #> |       3|  2|pkg_assess      |          4|           162|             1|                 0|         NA|
-    #> 
-    #> There are also 11 isolated functions:
-    #> 
-    #> 
-    #> |  n|name                       | loc|
-    #> |--:|:--------------------------|---:|
-    #> |  1|assess_covr_coverage       |   3|
-    #> |  2|assess_downloads_1yr       |   3|
-    #> |  3|assess_export_help         |   3|
-    #> |  4|assess_has_news            |   3|
-    #> |  5|assess_has_vignettes       |   3|
-    #> |  6|assess_last_30_bugs_status |   3|
-    #> |  7|assess_news_current        |   3|
-    #> |  8|coverage                   |   3|
-    #> |  9|metric_score               |   3|
-    #> | 10|pkg_score                  |   3|
-    #> | 11|summarize_scores           |   3|
-    #> 
-    #> ── Documentation of non-exported functions ─────────────────────────────────────
-    #> 
-    #> 
-    #> |value  | doclines| cmtlines|
-    #> |:------|--------:|--------:|
-    #> |mean   |      4.5|      0.6|
-    #> |median |      2.0|      0.0|
+Each node of the network is a function, with sizes scaled by how many times
+that function is called. Each line reflects a call from one function to
+another, with a thickness scaled by numbers of calls between those two
+functions. The function at the centre of the purple star shape is the core
+`pkg_metric` function, with the long tail representing functions for processing
+errors and warnings. That graph provides an immediate visual representation of
+overall package structure, revealing in the case of the
+[`riskmetric`](https://github.com/pharmar/riskmetric) package a large number of
+effectively independent functions which are not directly called by other
+functions. Most of these isolated functions represent the various assessment
+metrics and associated caching procedures, which in turn reflect the modular
+design of the package, in which assessments, and the connections between these
+peripheral isolated functions, are controlled by the user rather than being
+hard-coded within the package. 
 
-<sup>Created on 2020-10-09 by the [reprex package](https://reprex.tidyverse.org) (v0.3.0)</sup>
+Most packages have more defined clusters of interconnections which this
+interactive graphical output can help to explore and understand. The
+`pg_report()` function also generates a tabular summary of this function call
+network. By default, the `pg_report()` function only summarizes
+inter-relationships between exported functions of package, although setting
+`exported_only = FALSE` will yield a summary of inter-relationships between all
+functions of a package. The summary for the exported functions of the
+[`riskmetric`](https://github.com/pharmar/riskmetric) package looks something
+like the following.
 
-### [`autotest`](https://github.com/ropenscilabs/autotest)
+```{r packgraph}
+library (packgraph)
+pkg_source <- "/<local>/<path>/<to>/riskmetric"
+g <- pg_graph (pkg_source, plot = FALSE)
+pg_report (g)
+```
 
-    library (autotest)
+The primary cluster shown in purple in the preceding image has only two
+exported functions, yet is still identified as the primary cluster in this
+output because it connects the largest number of internal and exported
+functions within the package. Even when called in default mode to report only
+on exported functions, the `pg_report()` function concludes with a statistical
+summary of documentation of non-exported functions. All functions should of
+course be documented, and these final numbers reveal that every non-exported
+function of the [`riskmetric`](https://github.com/pharmar/riskmetric) package
+has a median of 2 lines of documentation, with an equivalent median value of no
+comment lines, which also reflects good and clean coding practice. The output
+of the [`packgraph` package](https://github.com/mpadge/packgraph) is intended
+to be provided at the outset of our review process as an aid to reviewers.
+
+## Package Testing
+
+Package reporting is primarily intended as an aid to reviewers of packages to
+be submitted to our peer review system. We are also developing tools to aid
+package developers, foremost among which is a package for automatic testing of
+statistical software called
+[`autotest`](https://github.com/ropenscilabs/autotest). The package implements
+a form of "mutation testing". In contrast to common interpretations of this
+phrase as referring to [mutation of underlying
+code](https://en.wikipedia.org/wiki/Mutation_testing), the 
+[`autotest` package](https://github.com/ropenscilabs/autotest) mutates the
+objects which are passed to the functions of a package, and so may be
+considered a form of ["mutation
+fuzzing"](https://www.fuzzingbook.org/html/MutationFuzzer.html), where
+"fuzzing" refers to general practices of throwing random objects at software to
+test its robustness.
+
+[`autotest`](https://github.com/ropenscilabs/autotest) extracts all example
+code for a package, parses those examples to examine all objects being thrown
+at the package's functions, and then mutates those objects to assess what
+happens. The package will ultimately have a workflow entirely compatible with
+[`riskmetric`](https://github.com/pharmar/riskmetric), and so will act as
+a plug-in extension to that package, with automatic tests themselves being
+user-controlled and modular.
+
+Current tests include mutations of value, size, class, and other structural
+properties of inputs. Mutations may be expected to be acceptable -- such as
+a documented example which includes some function `myfn (x = TRUE)`, which
+would be expected to also work with `x = FALSE` -- or they may be expected to
+generate warnings or errors, such as in response to passing a value of `x
+= "a"` to that example. Robust software should accept all appropriate mutations
+of inputs, while rejecting all inappropriate mutations.
+[`autotest`](https://github.com/ropenscilabs/autotest) only produces output
+where expectations are not met.
+
+As described above, the package is intended as developer tool, because all
+packages to be submitted to our peer review system will be expected to yield
+clean results when submitted to
+[`autotest`](https://github.com/ropenscilabs/autotest). The package will be
+able to be applied by anyone developing packages from the moment they implement
+their first exported function. The hope is then that ongoing usage of the
+package throughout the development of any statistical (or other) software will
+enhance its robustness, and reduce any chance of unexpected behaviour in
+response to inputs which developers may not otherwise have anticipated.
+
+Finally, the [`autotest`](https://github.com/ropenscilabs/autotest) package
+will also form part of our reporting system, with its output forming part of
+our initial reports provided to reviewers. Most importantly, we intend to
+implement mechanisms to enable users to control which tests are run on any
+particular package, and to oblige those intending to submit to our system to
+provide descriptive justifications of why particular tests may have been
+switched off. These textual explanations will then also form part of our
+initial reports, enabling reviewers to understand not only which kinds of tests
+package developers deem inappropriate for their software, but more importantly
+why.
+
+### autotesting the riskmetric package
+
+What happens when [`autotest`](https://github.com/ropenscilabs/autotest) is
+applied to the [`riskmetric`](https://github.com/pharmar/riskmetric) package?
+The main function that does the work is
+[`autotest_package()`](https://ropenscilabs.github.io/autotest/reference/autotest_package.html),
+as demonstrated with the following code:
+
+```{r autotest, eval = TRUE}
+library (autotest)
+system.time (
     x <- autotest_package ("/<local>/<path>/<to>/riskmetric")
-    #> Loading riskmetric
-    #> ✔ [1 / 11]: assess_covr_coverage
-    #> ✔ [2 / 11]: assess_downloads_1yr
-    #> ✔ [3 / 11]: assess_export_help
-    #> ✔ [4 / 11]: assess_has_bug_reports_url
-    #> ✔ [5 / 11]: assess_has_maintainer
-    #> ✔ [6 / 11]: assess_has_news
-    #> ✔ [7 / 11]: assess_has_source_control
-    #> ✔ [8 / 11]: assess_has_vignettes
-    #> ✔ [9 / 11]: assess_has_website
-    #> ✔ [10 / 11]: assess_license
-    #> ✔ [11 / 11]: assess_news_current
-    x$yaml_hash <- substring (x$yaml_hash, 1, 6)
-    knitr::kable (x, row.names = TRUE)
+    )
+```
 
-<table>
-<colgroup>
-<col style="width: 1%" />
-<col style="width: 4%" />
-<col style="width: 11%" />
-<col style="width: 3%" />
-<col style="width: 18%" />
-<col style="width: 56%" />
-<col style="width: 3%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;"></th>
-<th style="text-align: left;">type</th>
-<th style="text-align: left;">fn_name</th>
-<th style="text-align: left;">parameter</th>
-<th style="text-align: left;">operation</th>
-<th style="text-align: left;">content</th>
-<th style="text-align: left;">yaml_hash</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">1</td>
-<td style="text-align: left;">diagnostic</td>
-<td style="text-align: left;">assess_covr_coverage</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: left;">compare class of return value with description</td>
-<td style="text-align: left;">Function returns an object of primary class [pkg_metric_na] yet documentation says value is of class [pkg_metric]</td>
-<td style="text-align: left;">e6fe0b</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">2</td>
-<td style="text-align: left;">diagnostic</td>
-<td style="text-align: left;">assess_downloads_1yr</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: left;">compare class of return value with description</td>
-<td style="text-align: left;">Function returns an object of primary class [pkg_metric_downloads_1yr] yet documentation says value is of class [pkg_metric, numeric]</td>
-<td style="text-align: left;">1edbb3</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">3</td>
-<td style="text-align: left;">warning</td>
-<td style="text-align: left;">assess_export_help</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: left;">normal function call</td>
-<td style="text-align: left;">cannot open compressed file ‘/data/mega/code/forks/riskmetric/help/aliases.rds’, probable reason ‘No such file or directory’</td>
-<td style="text-align: left;">256ee0</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">4</td>
-<td style="text-align: left;">error</td>
-<td style="text-align: left;">assess_export_help</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: left;">normal function call</td>
-<td style="text-align: left;">cannot open the connection</td>
-<td style="text-align: left;">256ee0</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">5</td>
-<td style="text-align: left;">diagnostic</td>
-<td style="text-align: left;">assess_has_bug_reports_url</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: left;">compare class of return value with description</td>
-<td style="text-align: left;">Function returns an object of primary class [pkg_metric_has_bug_reports_url] yet documentation says value is of class [pkg_metric, character]</td>
-<td style="text-align: left;">3da27d</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">6</td>
-<td style="text-align: left;">diagnostic</td>
-<td style="text-align: left;">assess_has_maintainer</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: left;">compare class of return value with description</td>
-<td style="text-align: left;">Function returns an object of primary class [pkg_metric_has_maintainer] yet documentation says value is of class [pkg_metric, character]</td>
-<td style="text-align: left;">0bba3b</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">7</td>
-<td style="text-align: left;">diagnostic</td>
-<td style="text-align: left;">assess_has_news</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: left;">compare class of return value with description</td>
-<td style="text-align: left;">Function returns an object of primary class [pkg_metric_has_news] yet documentation says value is of class [pkg_metric, integer]</td>
-<td style="text-align: left;">2bfdcf</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">8</td>
-<td style="text-align: left;">diagnostic</td>
-<td style="text-align: left;">assess_has_source_control</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: left;">compare class of return value with description</td>
-<td style="text-align: left;">Function returns an object of primary class [pkg_metric_has_source_control] yet documentation says value is of class [pkg_metric, character]</td>
-<td style="text-align: left;">b7df3b</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">9</td>
-<td style="text-align: left;">diagnostic</td>
-<td style="text-align: left;">assess_has_vignettes</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: left;">compare class of return value with description</td>
-<td style="text-align: left;">Function returns an object of primary class [pkg_metric_has_vignettes] yet documentation says value is of class [pkg_metric, integer]</td>
-<td style="text-align: left;">5e06a2</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">10</td>
-<td style="text-align: left;">diagnostic</td>
-<td style="text-align: left;">assess_has_website</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: left;">compare class of return value with description</td>
-<td style="text-align: left;">Function returns an object of primary class [pkg_metric_has_website] yet documentation says value is of class [pkg_metric, character]</td>
-<td style="text-align: left;">b7d95c</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">11</td>
-<td style="text-align: left;">diagnostic</td>
-<td style="text-align: left;">assess_license</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: left;">compare class of return value with description</td>
-<td style="text-align: left;">Function returns an object of primary class [pkg_metric_license] yet documentation says value is of class [pkg_metric]</td>
-<td style="text-align: left;">666fe3</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">12</td>
-<td style="text-align: left;">diagnostic</td>
-<td style="text-align: left;">assess_news_current</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: left;">compare class of return value with description</td>
-<td style="text-align: left;">Function returns an object of primary class [pkg_metric_news_current] yet documentation says value is of class [pkg_metric, logical]</td>
-<td style="text-align: left;">e6d1b4</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">13</td>
-<td style="text-align: left;">error</td>
-<td style="text-align: left;">all_assessments</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: left;"><see content></td>
-<td style="text-align: left;">This function has no documented example</td>
-<td style="text-align: left;">NA</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">14</td>
-<td style="text-align: left;">error</td>
-<td style="text-align: left;">as_pkg_ref</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: left;"><see content></td>
-<td style="text-align: left;">This function has no documented example</td>
-<td style="text-align: left;">NA</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">15</td>
-<td style="text-align: left;">error</td>
-<td style="text-align: left;">assessment_error_as_warning</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: left;"><see content></td>
-<td style="text-align: left;">This function has no documented example</td>
-<td style="text-align: left;">NA</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">16</td>
-<td style="text-align: left;">error</td>
-<td style="text-align: left;">assessment_error_empty</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: left;"><see content></td>
-<td style="text-align: left;">This function has no documented example</td>
-<td style="text-align: left;">NA</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">17</td>
-<td style="text-align: left;">error</td>
-<td style="text-align: left;">assessment_error_throw</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: left;"><see content></td>
-<td style="text-align: left;">This function has no documented example</td>
-<td style="text-align: left;">NA</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">18</td>
-<td style="text-align: left;">error</td>
-<td style="text-align: left;">coverage</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: left;"><see content></td>
-<td style="text-align: left;">This function has no documented example</td>
-<td style="text-align: left;">NA</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">19</td>
-<td style="text-align: left;">error</td>
-<td style="text-align: left;">metric_score</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: left;"><see content></td>
-<td style="text-align: left;">This function has no documented example</td>
-<td style="text-align: left;">NA</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">20</td>
-<td style="text-align: left;">error</td>
-<td style="text-align: left;">pkg_assess</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: left;"><see content></td>
-<td style="text-align: left;">This function has no documented example</td>
-<td style="text-align: left;">NA</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">21</td>
-<td style="text-align: left;">error</td>
-<td style="text-align: left;">pkg_metric</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: left;"><see content></td>
-<td style="text-align: left;">This function has no documented example</td>
-<td style="text-align: left;">NA</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">22</td>
-<td style="text-align: left;">error</td>
-<td style="text-align: left;">pkg_ref</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: left;"><see content></td>
-<td style="text-align: left;">This function has no documented example</td>
-<td style="text-align: left;">NA</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">23</td>
-<td style="text-align: left;">error</td>
-<td style="text-align: left;">score_error_default</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: left;"><see content></td>
-<td style="text-align: left;">This function has no documented example</td>
-<td style="text-align: left;">NA</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">24</td>
-<td style="text-align: left;">error</td>
-<td style="text-align: left;">score_error_NA</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: left;"><see content></td>
-<td style="text-align: left;">This function has no documented example</td>
-<td style="text-align: left;">NA</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">25</td>
-<td style="text-align: left;">error</td>
-<td style="text-align: left;">score_error_zero</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: left;"><see content></td>
-<td style="text-align: left;">This function has no documented example</td>
-<td style="text-align: left;">NA</td>
-</tr>
-</tbody>
-</table>
+And you can see that the function takes a few seconds to run. The function
+returns a [`tibble`](https://tibble.tidyverse.org) object, each row of which
+represents a test expectation which was not fulfilled. The package also
+implements a `summary` method for these objects an edited part of which looks
+like this:
 
-    summary (x)
-    #> autotesting package [riskmetric, v0.1.0.9001] generated 25 rows of output of the following types:
-    #>      14 errors
-    #>      1 warning
-    #>      0 messages
-    #>      10 other diagnosticss
-    #> That corresponds to 1.091 messages per documented function (which has examples)
-    #> 
-    #>                        fn_name num_errors num_warnings num_messages
-    #> 1              all_assessments          1           NA           NA
-    #> 2                   as_pkg_ref          1           NA           NA
-    #> 3         assess_covr_coverage         NA           NA           NA
-    #> 4         assess_downloads_1yr         NA           NA           NA
-    #> 5           assess_export_help          1            1           NA
-    #> 6   assess_has_bug_reports_url         NA           NA           NA
-    #> 7        assess_has_maintainer         NA           NA           NA
-    #> 8              assess_has_news         NA           NA           NA
-    #> 9    assess_has_source_control         NA           NA           NA
-    #> 10        assess_has_vignettes         NA           NA           NA
-    #> 11          assess_has_website         NA           NA           NA
-    #> 12              assess_license         NA           NA           NA
-    #> 13         assess_news_current         NA           NA           NA
-    #> 14 assessment_error_as_warning          1           NA           NA
-    #> 15      assessment_error_empty          1           NA           NA
-    #> 16      assessment_error_throw          1           NA           NA
-    #> 17                    coverage          1           NA           NA
-    #> 18                metric_score          1           NA           NA
-    #> 19                  pkg_assess          1           NA           NA
-    #> 20                  pkg_metric          1           NA           NA
-    #> 21                     pkg_ref          1           NA           NA
-    #> 22         score_error_default          1           NA           NA
-    #> 23              score_error_NA          1           NA           NA
-    #> 24            score_error_zero          1           NA           NA
-    #>    num_diagnostics
-    #> 1               NA
-    #> 2               NA
-    #> 3                1
-    #> 4                1
-    #> 5               NA
-    #> 6                1
-    #> 7                1
-    #> 8                1
-    #> 9                1
-    #> 10               1
-    #> 11               1
-    #> 12               1
-    #> 13               1
-    #> 14              NA
-    #> 15              NA
-    #> 16              NA
-    #> 17              NA
-    #> 18              NA
-    #> 19              NA
-    #> 20              NA
-    #> 21              NA
-    #> 22              NA
-    #> 23              NA
-    #> 24              NA
-    #> 
-    #> In addition to the values in that table, the output includes 13 functions which have no documented examples:
-    #>     1. all_assessments
-    #>     2. as_pkg_ref
-    #>     3. assessment_error_as_warning
-    #>     4. assessment_error_empty
-    #>     5. assessment_error_throw
-    #>     6. coverage
-    #>     7. metric_score
-    #>     8. pkg_assess
-    #>     9. pkg_metric
-    #>     10. pkg_ref
-    #>     11. score_error_default
-    #>     12. score_error_NA
-    #>     13. score_error_zero
-    #> 
-    #>     git hash for package as analysed here:
-    #>     [fa5a36e586d8b9c160e876a1dfd1bc32497ff428]
+```{r autotest-summary}
+summary (x)
+```
 
-<sup>Created on 2020-10-09 by the [reprex package](https://reprex.tidyverse.org) (v0.3.0)</sup>
+The result contained no errors or diagnostic messages, and 13 warnings for
+functions which have no documented examples. These are considered as warnings,
+because the [`autotest`](https://github.com/ropenscilabs/autotest) package
+primarily works by scraping example code for each function, so functions with
+no examples can not be tested. A clean
+[`autotest`](https://github.com/ropenscilabs/autotest) result could thus be
+achieved for the [`riskmetric`](https://github.com/pharmar/riskmetric) package
+by providing example code for each of those listed functions (and ensuring that
+the resultant [`autotest`](https://github.com/ropenscilabs/autotest)-ing of
+those examples generated no additional output).
 
-* Highlevel intoduction on testing
+## Package Standards and Peer Review
 
-* Call for soft submission
+In addition to the automated tools described in the preceding two sections,
+a large part of the project is devoted to devising standards for statistical
+software. We have identified 11 primary categories which we aim to consider as
+within scope for submission, and for which we will develop category-specific
+standards. Full details of the categories and standards can be seen on the
+primary ["living
+book"](https://ropenscilabs.github.io/statistical-software-review-book/index.html)
+of the project, which describes the current categories of:
+
+
+1. Bayesian and Monte Carlo Routines
+1. Dimensionality Reduction, Clustering, and Unsupervised Learning
+1. Machine Learning
+1. Regression and Supervised Learning
+1. Probability Distributions
+1. Wrapper Packages
+1. Networks
+1. Exploratory Data Analysis (EDA) and Summary Statistics
+1. Workflow Support
+1. Spatial Analyses
+1. Time Series Analyses
+
+The tools described above aim to make the task of reviewing packages as easy as
+possible. The category-specific standards aim to ensure that software accepted
+as part of our system is of the highest possible quality. One of the primary
+tasks of reviewers will be to assess software against these standards. We have
+currently developed general standards for statistical software, along with
+category-specific versions for [five of these
+categories](https://ropenscilabs.github.io/statistical-software-review-book/standards.html).
+We have released an initial call for "soft submissions" within those
+categories, which will ultimately be considered as formal submissions to our
+system, yet are also intended to help guide and improve our process of peer
+review. We invite any developers reading this blog who might be interested in
+submitting a statistical software package for peer review to contact us (Mark
+Padgham <mark@ropensci.org> and/or Noam Ross <ross@ecohealthalliance.org>)
+about a "soft submission". Your contribution would help improve the quality of
+our system, while our assessments and reviews would help improve the quality of
+your software. We look forward to any contributions to help improve our system
+for peer review of statistical software, and ultimately for helping to improve
+the quality of statistical software in R.
+
