@@ -1,5 +1,5 @@
 ---
-title: Status Update Sept 2020
+title: rOpenSci, Statistical Software, and the R Validation Hub
 author: Mark Padgham
 date: '2020-09-21'
 slug: status-update-sept-2020
@@ -9,6 +9,251 @@ tags:
 banner: 'img/banners/news.png'
 ---
 
-* Highlevel intoduction on testing
+```{r pkg-install, echo = FALSE}
+ip <- installed.packages ()
+if (!"pkgapi" %in% rownames (ip))
+    remotes::install_github ("r-lib/pkgapi")
+if (!"packgraph" %in% rownames (ip))
+    remotes::install_github ("mpadge/packgraph")
+```
 
-* Call for soft submission
+
+## Background
+
+[rOpenSci](https://ropensci.org) is an organization devoted to "transforming
+science through data, software and reproducibility." One of rOpenSci's focal
+activities is peer review of R packages which fall within one of several [focal
+categories](https://devguide.ropensci.org/policies.html#aims-and-scope). These
+categories notably exclude statistical software, which is arguably the reason
+for the entire R language. To redress this, rOpenSci have begun
+a [project](https://ropensci.org/blog/2019/07/15/expanding-software-review/) to
+expand our peer review system to encompass explicitly statistical software,
+funded by a grant from the Alfred P. Sloan Foundation.
+
+Two of the primary goals for the project are to develop sets of standards for
+several sub-categories of statistical software, and to develop a suite of tools
+for the assessment of category-specific software. Many of these tools are
+intended to function automatically, and to provide overviews of software
+structure and function, as well as to automatically diagnose and provide
+information on errors, warnings, and other diagnostic messages issued during
+execution of software functions.
+
+Two of these tools are similar in scope to both the [`riskmetric`
+package](https://www.pharmar.org/blog/2020/06/09/2020-06-02-riskmetric-intro-jun-2020/)
+and the [Risk Assessment
+Application](https://www.pharmar.org/blog/2020/08/05/2020-08-05-risk-assessment-application/).
+Similar to the goals of R Validation Hub, one of our aims is to automate as
+much as possible the production of a template for reporting on and reviewing
+software. Because our distinct aims and scope differ from the specific aims of
+the R Validation Hub, there is a great deal of complementarity rather than
+overlap in the two endeavours, which this blog post aims to highlight.
+
+## Package Reporting
+
+Our automated package assessment currently focusses on two main components, one
+of which, via a package currently called
+[`packgraph`](https://github.com/mpadge/packgraph), provides a templated
+high-level report on software structure and functionality. In current form,
+this reporting is largely based on analyses of function call graphs within the
+R code of a package, extending from the output of the [`pkgapi`
+package](https://github.com/r-lib/pkgapi). (Neither of these packages are
+currently on CRAN, so installing `packgraph` requires first running 
+`remotes::intall_github("r-lib/pkgapi")`, followed by
+`remotes::install_github("mpadge/packgraph")`.)
+
+The current implementation of
+[`packgraph`](https://github.com/mpadge/packgraph) provides an overview of
+package structure and inter-relationships between package functions, along with
+an optional interactive visualization of the network of function calls within
+a package, via the `pg_graph()` function. Function call networks are commonly
+divided among distinct clusters of locally inter-connected functions, with the
+resultant visualization using a different colour to visually distinguish each
+cluster. Applying this function to the [`riskmetric`
+package](https://github.com/pharmar/riskmetric) gives a static version of the
+actual interactive graphical result that looks something like the following
+image.
+
+```{r packgraph-viz, echo = FALSE, out.width = "100%"}
+knitr::include_graphics ("packgraph.png")
+```
+
+Each node of the network is a function, with sizes scaled by how many times
+that function is called. Each line reflects a call from one function to
+another, with a thickness scaled by numbers of calls between those two
+functions. The function at the centre of the purple star shape is the core
+`pkg_metric` function, with the long tail representing functions for processing
+errors and warnings. That graph provides an immediate visual representation of
+overall package structure, revealing in the case of the
+[`riskmetric`](https://github.com/pharmar/riskmetric) package a large number of
+effectively independent functions which are not directly called by other
+functions. Most of these isolated functions represent the various assessment
+metrics and associated caching procedures, which in turn reflect the modular
+design of the package, in which assessments, and the connections between these
+peripheral isolated functions, are controlled by the user rather than being
+hard-coded within the package. 
+
+Most packages have more defined clusters of interconnections which this
+interactive graphical output can help to explore and understand. The
+`pg_report()` function also generates a tabular summary of this function call
+network. By default, the `pg_report()` function only summarizes
+inter-relationships between exported functions of package, although setting
+`exported_only = FALSE` will yield a summary of inter-relationships between all
+functions of a package. The summary for the exported functions of the
+[`riskmetric`](https://github.com/pharmar/riskmetric) package looks something
+like the following.
+
+```{r packgraph}
+library (packgraph)
+pkg_source <- "/<local>/<path>/<to>/riskmetric"
+g <- pg_graph (pkg_source, plot = FALSE)
+pg_report (g)
+```
+
+The primary cluster shown in purple in the preceding image has only two
+exported functions, yet is still identified as the primary cluster in this
+output because it connects the largest number of internal and exported
+functions within the package. Even when called in default mode to report only
+on exported functions, the `pg_report()` function concludes with a statistical
+summary of documentation of non-exported functions. All functions should of
+course be documented, and these final numbers reveal that every non-exported
+function of the [`riskmetric`](https://github.com/pharmar/riskmetric) package
+has a median of 2 lines of documentation, with an equivalent median value of no
+comment lines, which also reflects good and clean coding practice. The output
+of the [`packgraph` package](https://github.com/mpadge/packgraph) is intended
+to be provided at the outset of our review process as an aid to reviewers.
+
+## Package Testing
+
+Package reporting is primarily intended as an aid to reviewers of packages to
+be submitted to our peer review system. We are also developing tools to aid
+package developers, foremost among which is a package for automatic testing of
+statistical software called
+[`autotest`](https://github.com/ropenscilabs/autotest). The package implements
+a form of "mutation testing". In contrast to common interpretations of this
+phrase as referring to [mutation of underlying
+code](https://en.wikipedia.org/wiki/Mutation_testing), the 
+[`autotest` package](https://github.com/ropenscilabs/autotest) mutates the
+objects which are passed to the functions of a package, and so may be
+considered a form of ["mutation
+fuzzing"](https://www.fuzzingbook.org/html/MutationFuzzer.html), where
+"fuzzing" refers to general practices of throwing random objects at software to
+test its robustness.
+
+[`autotest`](https://github.com/ropenscilabs/autotest) extracts all example
+code for a package, parses those examples to examine all objects being thrown
+at the package's functions, and then mutates those objects to assess what
+happens. The package will ultimately have a workflow entirely compatible with
+[`riskmetric`](https://github.com/pharmar/riskmetric), and so will act as
+a plug-in extension to that package, with automatic tests themselves being
+user-controlled and modular.
+
+Current tests include mutations of value, size, class, and other structural
+properties of inputs. Mutations may be expected to be acceptable -- such as
+a documented example which includes some function `myfn (x = TRUE)`, which
+would be expected to also work with `x = FALSE` -- or they may be expected to
+generate warnings or errors, such as in response to passing a value of `x
+= "a"` to that example. Robust software should accept all appropriate mutations
+of inputs, while rejecting all inappropriate mutations.
+[`autotest`](https://github.com/ropenscilabs/autotest) only produces output
+where expectations are not met.
+
+As described above, the package is intended as developer tool, because all
+packages to be submitted to our peer review system will be expected to yield
+clean results when submitted to
+[`autotest`](https://github.com/ropenscilabs/autotest). The package will be
+able to be applied by anyone developing packages from the moment they implement
+their first exported function. The hope is then that ongoing usage of the
+package throughout the development of any statistical (or other) software will
+enhance its robustness, and reduce any chance of unexpected behaviour in
+response to inputs which developers may not otherwise have anticipated.
+
+Finally, the [`autotest`](https://github.com/ropenscilabs/autotest) package
+will also form part of our reporting system, with its output forming part of
+our initial reports provided to reviewers. Most importantly, we intend to
+implement mechanisms to enable users to control which tests are run on any
+particular package, and to oblige those intending to submit to our system to
+provide descriptive justifications of why particular tests may have been
+switched off. These textual explanations will then also form part of our
+initial reports, enabling reviewers to understand not only which kinds of tests
+package developers deem inappropriate for their software, but more importantly
+why.
+
+### autotesting the riskmetric package
+
+What happens when [`autotest`](https://github.com/ropenscilabs/autotest) is
+applied to the [`riskmetric`](https://github.com/pharmar/riskmetric) package?
+The main function that does the work is
+[`autotest_package()`](https://ropenscilabs.github.io/autotest/reference/autotest_package.html),
+as demonstrated with the following code:
+
+```{r autotest, eval = TRUE}
+library (autotest)
+system.time (
+    x <- autotest_package ("/<local>/<path>/<to>/riskmetric")
+    )
+```
+
+And you can see that the function takes a few seconds to run. The function
+returns a [`tibble`](https://tibble.tidyverse.org) object, each row of which
+represents a test expectation which was not fulfilled. The package also
+implements a `summary` method for these objects an edited part of which looks
+like this:
+
+```{r autotest-summary}
+summary (x)
+```
+
+The result contained no errors or diagnostic messages, and 13 warnings for
+functions which have no documented examples. These are considered as warnings,
+because the [`autotest`](https://github.com/ropenscilabs/autotest) package
+primarily works by scraping example code for each function, so functions with
+no examples can not be tested. A clean
+[`autotest`](https://github.com/ropenscilabs/autotest) result could thus be
+achieved for the [`riskmetric`](https://github.com/pharmar/riskmetric) package
+by providing example code for each of those listed functions (and ensuring that
+the resultant [`autotest`](https://github.com/ropenscilabs/autotest)-ing of
+those examples generated no additional output).
+
+## Package Standards and Peer Review
+
+In addition to the automated tools described in the preceding two sections,
+a large part of the project is devoted to devising standards for statistical
+software. We have identified 11 primary categories which we aim to consider as
+within scope for submission, and for which we will develop category-specific
+standards. Full details of the categories and standards can be seen on the
+primary ["living
+book"](https://ropenscilabs.github.io/statistical-software-review-book/index.html)
+of the project, which describes the current categories of:
+
+
+1. Bayesian and Monte Carlo Routines
+1. Dimensionality Reduction, Clustering, and Unsupervised Learning
+1. Machine Learning
+1. Regression and Supervised Learning
+1. Probability Distributions
+1. Wrapper Packages
+1. Networks
+1. Exploratory Data Analysis (EDA) and Summary Statistics
+1. Workflow Support
+1. Spatial Analyses
+1. Time Series Analyses
+
+The tools described above aim to make the task of reviewing packages as easy as
+possible. The category-specific standards aim to ensure that software accepted
+as part of our system is of the highest possible quality. One of the primary
+tasks of reviewers will be to assess software against these standards. We have
+currently developed general standards for statistical software, along with
+category-specific versions for [five of these
+categories](https://ropenscilabs.github.io/statistical-software-review-book/standards.html).
+We have released an initial call for "soft submissions" within those
+categories, which will ultimately be considered as formal submissions to our
+system, yet are also intended to help guide and improve our process of peer
+review. We invite any developers reading this blog who might be interested in
+submitting a statistical software package for peer review to contact us (Mark
+Padgham <mark@ropensci.org> and/or Noam Ross <ross@ecohealthalliance.org>)
+about a "soft submission". Your contribution would help improve the quality of
+our system, while our assessments and reviews would help improve the quality of
+your software. We look forward to any contributions to help improve our system
+for peer review of statistical software, and ultimately for helping to improve
+the quality of statistical software in R.
+
