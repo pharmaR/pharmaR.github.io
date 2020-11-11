@@ -64,9 +64,11 @@ resultant visualization using a different colour to visually distinguish each
 cluster. Applying the primary function `pg_graph()` function to the [`riskmetric`
 package](https://github.com/pharmar/riskmetric) graphical representation:
 
-```{r packgraph-viz, echo = FALSE, out.width = "100%"}
-knitr::include_graphics ("packgraph.png")
-```
+![](/blog/2020-09-21-status-update-sept-2020_files/packgraph.png)
+
+<!-- ```{r packgraph-viz, echo = FALSE, out.width = "100%"} -->
+<!-- knitr::include_graphics ("/blog/2020-09-21-status-update-sept-2020_files/packgraph.png") -->
+<!-- ``` -->
 
 Each node of the network is a function, with sizes scaled by how many times
 that function is called. Each line reflects a call from one function to
@@ -92,9 +94,16 @@ inter-relationships between exported functions of package, although setting
 functions of a package. Here is the summary of exported functions of the
 [`riskmetric`](https://github.com/pharmar/riskmetric)
 
-```{r packgraph}
-library (packgraph)
+```{r packgraph, eval=FALSE}
+library (packgraph_show)
 pkg_source <- "/<local>/<path>/<to>/riskmetric"
+g <- pg_graph (pkg_source, plot = FALSE)
+pg_report (g)
+```
+
+```{r packgraph_run, echo = FALSE, cache=TRUE}
+library (packgraph)
+pkg_source <- tools::file_path_as_absolute("../../static/blog/riskmetric")
 g <- pg_graph (pkg_source, plot = FALSE)
 pg_report (g)
 ```
@@ -181,10 +190,17 @@ The main function that does the work is
 [`autotest_package()`](https://ropenscilabs.github.io/autotest/reference/autotest_package.html),
 as demonstrated with the following code:
 
-```{r autotest, eval = TRUE}
+```{r autotest_show, eval = FALSE}
 library (autotest)
 system.time (
     x <- autotest_package ("/<local>/<path>/<to>/riskmetric")
+    )
+```
+
+```{r autotest_run, echo = FALSE, cache=TRUE}
+library (autotest)
+system.time (
+    x <- autotest_package (tools::file_path_as_absolute("../../static/blog/riskmetric"))
     )
 ```
 

@@ -1,0 +1,9 @@
+^codecov\.yml$
+^appveyor\.yml$
+^\.travis\.yml$
+^\.github
+^.*\.Rproj$
+^\.Rproj\.user$
+LICENSE.md
+_pkgdown.yml
+docs
