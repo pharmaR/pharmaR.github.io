@@ -6,7 +6,7 @@ slug: status-update-sept-2020
 categories: [news]
 tags:
   - riskmetric -
-banner: 'img/banners/news.png'
+banner: 'img/banners/ropenscilabs.png'
 ---
 
 ```{r pkg-install, echo = FALSE}
