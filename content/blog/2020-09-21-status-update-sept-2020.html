@@ -83,61 +83,61 @@ functions of a package. Here is the summary of exported functions of the
 pkg_source &lt;- &quot;/&lt;local&gt;/&lt;path&gt;/&lt;to&gt;/riskmetric&quot;
 g &lt;- pg_graph (pkg_source, plot = FALSE)
 pg_report (g)</code></pre>
-<pre><code>## == riskmetric ==================================================================</code></pre>
-<pre><code>## </code></pre>
-<pre><code>## The package has 24 exported functions, and 154 non-exported funtions. The
-## exported functions are structured into the following 3 primary clusters
-## containing 2, 9 and 2 functions</code></pre>
-<pre><code>## 
-## 
-## | cluster|  n|name       | num_params| num_doc_words| num_doc_lines| num_example_lines| centrality|
-## |-------:|--:|:----------|----------:|-------------:|-------------:|-----------------:|----------:|
-## |       1|  1|pkg_ref    |          2|           400|             9|                 0|          1|
-## |       1|  2|as_pkg_ref |          2|            29|             0|                 0|         NA|
-## 
-## 
-## | cluster|  n|name                        | num_params| num_doc_words| num_doc_lines| num_example_lines| centrality|
-## |-------:|--:|:---------------------------|----------:|-------------:|-------------:|-----------------:|----------:|
-## |       2|  1|assessment_error_empty      |          2|            48|             9|                 0|          2|
-## |       2|  2|assess_has_bug_reports_url  |          2|            76|             0|                 1|         NA|
-## |       2|  3|assess_has_maintainer       |          2|            45|             5|                 1|         NA|
-## |       2|  4|assess_has_source_control   |          2|            53|             8|                 1|         NA|
-## |       2|  5|assess_has_website          |          2|            46|            76|                 1|         NA|
-## |       2|  6|assess_license              |          2|            42|            13|                 1|         NA|
-## |       2|  7|assessment_error_as_warning |          3|            62|            37|                 0|         NA|
-## |       2|  8|assessment_error_throw      |          3|            56|            23|                 0|         NA|
-## |       2|  9|pkg_metric                  |          3|            87|             0|                 0|         NA|
-## 
-## 
-## | cluster|  n|name            | num_params| num_doc_words| num_doc_lines| num_example_lines| centrality|
-## |-------:|--:|:---------------|----------:|-------------:|-------------:|-----------------:|----------:|
-## |       3|  1|all_assessments |          0|            57|             6|                 0|         NA|
-## |       3|  2|pkg_assess      |          4|           162|             1|                 0|         NA|</code></pre>
-<pre><code>## </code></pre>
-<pre><code>## There are also 11 isolated functions:</code></pre>
-<pre><code>## 
-## 
-## |  n|name                       | loc|
-## |--:|:--------------------------|---:|
-## |  1|assess_covr_coverage       |   3|
-## |  2|assess_downloads_1yr       |   3|
-## |  3|assess_export_help         |   3|
-## |  4|assess_has_news            |   3|
-## |  5|assess_has_vignettes       |   3|
-## |  6|assess_last_30_bugs_status |   3|
-## |  7|assess_news_current        |   3|
-## |  8|coverage                   |   3|
-## |  9|metric_score               |   3|
-## | 10|pkg_score                  |   3|
-## | 11|summarize_scores           |   3|</code></pre>
-<pre><code>## </code></pre>
-<pre><code>## -- Documentation of non-exported functions -------------------------------------</code></pre>
-<pre><code>## 
-## 
-## |value  | doclines| cmtlines|
-## |:------|--------:|--------:|
-## |mean   |      4.3|      0.6|
-## |median |      2.0|      0.0|</code></pre>
+<pre><code>== riskmetric ==================================================================</code></pre>
+<pre><code></code></pre>
+<pre><code>The package has 24 exported functions, and 154 non-exported funtions. The
+exported functions are structured into the following 3 primary clusters
+containing 2, 9 and 2 functions</code></pre>
+<pre><code>
+
+| cluster|  n|name       | num_params| num_doc_words| num_doc_lines| num_example_lines| centrality|
+|-------:|--:|:----------|----------:|-------------:|-------------:|-----------------:|----------:|
+|       1|  1|pkg_ref    |          2|           400|             9|                 0|          1|
+|       1|  2|as_pkg_ref |          2|            29|             0|                 0|         NA|
+
+
+| cluster|  n|name                        | num_params| num_doc_words| num_doc_lines| num_example_lines| centrality|
+|-------:|--:|:---------------------------|----------:|-------------:|-------------:|-----------------:|----------:|
+|       2|  1|assessment_error_empty      |          2|            48|             9|                 0|          2|
+|       2|  2|assess_has_bug_reports_url  |          2|            76|             0|                 1|         NA|
+|       2|  3|assess_has_maintainer       |          2|            45|             5|                 1|         NA|
+|       2|  4|assess_has_source_control   |          2|            53|             8|                 1|         NA|
+|       2|  5|assess_has_website          |          2|            46|            76|                 1|         NA|
+|       2|  6|assess_license              |          2|            42|            13|                 1|         NA|
+|       2|  7|assessment_error_as_warning |          3|            62|            37|                 0|         NA|
+|       2|  8|assessment_error_throw      |          3|            56|            23|                 0|         NA|
+|       2|  9|pkg_metric                  |          3|            87|             0|                 0|         NA|
+
+
+| cluster|  n|name            | num_params| num_doc_words| num_doc_lines| num_example_lines| centrality|
+|-------:|--:|:---------------|----------:|-------------:|-------------:|-----------------:|----------:|
+|       3|  1|all_assessments |          0|            57|             6|                 0|         NA|
+|       3|  2|pkg_assess      |          4|           162|             1|                 0|         NA|</code></pre>
+<pre><code></code></pre>
+<pre><code>There are also 11 isolated functions:</code></pre>
+<pre><code>
+
+|  n|name                       | loc|
+|--:|:--------------------------|---:|
+|  1|assess_covr_coverage       |   3|
+|  2|assess_downloads_1yr       |   3|
+|  3|assess_export_help         |   3|
+|  4|assess_has_news            |   3|
+|  5|assess_has_vignettes       |   3|
+|  6|assess_last_30_bugs_status |   3|
+|  7|assess_news_current        |   3|
+|  8|coverage                   |   3|
+|  9|metric_score               |   3|
+| 10|pkg_score                  |   3|
+| 11|summarize_scores           |   3|</code></pre>
+<pre><code></code></pre>
+<pre><code>-- Documentation of non-exported functions -------------------------------------</code></pre>
+<pre><code>
+
+|value  | doclines| cmtlines|
+|:------|--------:|--------:|
+|mean   |      4.3|      0.6|
+|median |      2.0|      0.0|</code></pre>
 <p>The primary cluster shown in purple in the preceding image has only two
 exported functions, yet is still identified as the primary cluster in this
 output because it connects the largest number of internal and exported
@@ -212,24 +212,69 @@ as demonstrated with the following code:</p>
 system.time (
     x &lt;- autotest_package (&quot;/&lt;local&gt;/&lt;path&gt;/&lt;to&gt;/riskmetric&quot;)
     )</code></pre>
-<pre><code>## - parsing all package examples
+<pre><code>- parsing all package examples
 v parsed all package examples</code></pre>
-<pre><code>##    user  system elapsed 
-##   15.59    2.28   21.97</code></pre>
+<pre><code>   user  system elapsed 
+  14.30    2.42   21.30 </code></pre>
 <p>And you can see that the function takes a few seconds to run. The function
 returns a <a href="https://tibble.tidyverse.org"><code>tibble</code></a> object, each row of which
 represents a test expectation which was not fulfilled. The package also
 implements a <code>summary</code> method for these objects an edited part of which looks
 like this:</p>
 <pre class="r"><code>summary (x)</code></pre>
-<pre><code>##      type             fn_name           parameter          operation        
-##  Length:13          Length:13          Length:13          Length:13         
-##  Class :character   Class :character   Class :character   Class :character  
-##  Mode  :character   Mode  :character   Mode  :character   Mode  :character  
-##    content           yaml_hash        
-##  Length:13          Length:13         
-##  Class :character   Class :character  
-##  Mode  :character   Mode  :character</code></pre>
+<pre><code>autotesting package [riskmetric, v0.1.0.9001] generated 13 rows of output of the following types:</code></pre>
+<pre><code>     0 errors</code></pre>
+<pre><code>     13 warnings</code></pre>
+<pre><code>     0 messages</code></pre>
+<pre><code>     0 other diagnosticss</code></pre>
+<pre><code>That corresponds to NaN messages per documented function (which has examples)</code></pre>
+<pre><code></code></pre>
+<pre><code>                       fn_name num_errors num_warnings num_messages
+1              all_assessments         NA            1           NA
+2                   as_pkg_ref         NA            1           NA
+3  assessment_error_as_warning         NA            1           NA
+4       assessment_error_empty         NA            1           NA
+5       assessment_error_throw         NA            1           NA
+6                     coverage         NA            1           NA
+7                 metric_score         NA            1           NA
+8                   pkg_assess         NA            1           NA
+9                   pkg_metric         NA            1           NA
+10                     pkg_ref         NA            1           NA
+11         score_error_default         NA            1           NA
+12              score_error_NA         NA            1           NA
+13            score_error_zero         NA            1           NA
+   num_diagnostics
+1               NA
+2               NA
+3               NA
+4               NA
+5               NA
+6               NA
+7               NA
+8               NA
+9               NA
+10              NA
+11              NA
+12              NA
+13              NA</code></pre>
+<pre><code>
+In addition to the values in that table, the output includes 13 functions which have no documented examples: </code></pre>
+<pre><code>    1. all_assessments</code></pre>
+<pre><code>    2. as_pkg_ref</code></pre>
+<pre><code>    3. assessment_error_as_warning</code></pre>
+<pre><code>    4. assessment_error_empty</code></pre>
+<pre><code>    5. assessment_error_throw</code></pre>
+<pre><code>    6. coverage</code></pre>
+<pre><code>    7. metric_score</code></pre>
+<pre><code>    8. pkg_assess</code></pre>
+<pre><code>    9. pkg_metric</code></pre>
+<pre><code>    10. pkg_ref</code></pre>
+<pre><code>    11. score_error_default</code></pre>
+<pre><code>    12. score_error_NA</code></pre>
+<pre><code>    13. score_error_zero</code></pre>
+<pre><code>
+    git hash for package as analysed here:
+    [447754d643b43cfc2c816f8ce48fea5ded9a7767]</code></pre>
 <p>The result contained no errors or diagnostic messages, and 13 warnings for
 functions which have no documented examples. These are considered as warnings,
 because the <a href="https://github.com/ropenscilabs/autotest"><code>autotest</code></a> package

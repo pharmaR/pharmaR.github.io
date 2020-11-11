@@ -9,6 +9,10 @@ tags:
 banner: 'img/banners/ropenscilabs.png'
 ---
 
+```{r include=FALSE}
+knitr::opts_chunk$set(comment = NA)
+```
+
 ```{r pkg-install, echo = FALSE}
 ip <- installed.packages ()
 if (!"pkgapi" %in% rownames (ip))
