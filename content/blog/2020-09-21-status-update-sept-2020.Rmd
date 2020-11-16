@@ -10,7 +10,9 @@ banner: 'img/banners/ropenscilabs.png'
 ---
 
 ```{r include=FALSE}
-knitr::opts_chunk$set(comment = NA)
+knitr::opts_chunk$set(comment = NA, collapse = TRUE)
+library(packgraph)
+library(autotest)
 ```
 
 ```{r pkg-install, echo = FALSE}
@@ -96,7 +98,7 @@ network. By default, the `pg_report()` function only summarizes
 inter-relationships between exported functions of package, although setting
 `exported_only = FALSE` will yield a summary of inter-relationships between all
 functions of a package. Here is the summary of exported functions of the
-[`riskmetric`](https://github.com/pharmar/riskmetric)
+[`riskmetric`](https://github.com/pharmar/riskmetric) package. 
 
 ```{r packgraph, eval=FALSE}
 library (packgraph_show)
@@ -105,7 +107,7 @@ g <- pg_graph (pkg_source, plot = FALSE)
 pg_report (g)
 ```
 
-```{r packgraph_run, echo = FALSE, cache=TRUE}
+```{r packgraph_run, echo = FALSE, cache=TRUE, collapse = TRUE}
 library (packgraph)
 pkg_source <- tools::file_path_as_absolute("../../static/blog/riskmetric")
 g <- pg_graph (pkg_source, plot = FALSE)
@@ -142,7 +144,7 @@ be submitted to our peer review system. We are also developing tools to aid
 package developers, foremost among which is a package for automatic testing of
 statistical software called [`autotest`](https://github.com/ropenscilabs/autotest).
 The package implements a form of "mutation testing" (sometimes called ["mutation
-fuzzing"](https://www.fuzzingbook.org/html/MutationFuzzer.html). This mutates the
+fuzzing"](https://www.fuzzingbook.org/html/MutationFuzzer.html)). This mutates the
 objects which are passed to the functions of the package, automatically testing
 their response to a variety of potential inputs. This frees authors from needing
 to develop tests for myriad possible edge cases.
@@ -201,7 +203,7 @@ system.time (
     )
 ```
 
-```{r autotest_run, echo = FALSE, cache=TRUE}
+```{r autotest_run, echo = FALSE, cache=TRUE, collapse=TRUE}
 library (autotest)
 system.time (
     x <- autotest_package (tools::file_path_as_absolute("../../static/blog/riskmetric"))
@@ -215,7 +217,7 @@ implements a `summary` method for these objects an edited part of which looks
 like this:
 
 ```{r autotest-summary}
-summary (x)
+summary (x) 
 ```
 
 The result contained no errors or diagnostic messages, and 13 warnings for

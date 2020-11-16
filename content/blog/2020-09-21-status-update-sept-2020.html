@@ -78,17 +78,17 @@ network. By default, the <code>pg_report()</code> function only summarizes
 inter-relationships between exported functions of package, although setting
 <code>exported_only = FALSE</code> will yield a summary of inter-relationships between all
 functions of a package. Here is the summary of exported functions of the
-<a href="https://github.com/pharmar/riskmetric"><code>riskmetric</code></a></p>
+<a href="https://github.com/pharmar/riskmetric"><code>riskmetric</code></a> package.</p>
 <pre class="r"><code>library (packgraph_show)
 pkg_source &lt;- &quot;/&lt;local&gt;/&lt;path&gt;/&lt;to&gt;/riskmetric&quot;
 g &lt;- pg_graph (pkg_source, plot = FALSE)
 pg_report (g)</code></pre>
-<pre><code>== riskmetric ==================================================================</code></pre>
-<pre><code></code></pre>
-<pre><code>The package has 24 exported functions, and 154 non-exported funtions. The
+<pre><code>== riskmetric ==================================================================
+
+The package has 24 exported functions, and 154 non-exported funtions. The
 exported functions are structured into the following 3 primary clusters
-containing 2, 9 and 2 functions</code></pre>
-<pre><code>
+containing 2, 9 and 2 functions
+
 
 | cluster|  n|name       | num_params| num_doc_words| num_doc_lines| num_example_lines| centrality|
 |-------:|--:|:----------|----------:|-------------:|-------------:|-----------------:|----------:|
@@ -112,10 +112,10 @@ containing 2, 9 and 2 functions</code></pre>
 | cluster|  n|name            | num_params| num_doc_words| num_doc_lines| num_example_lines| centrality|
 |-------:|--:|:---------------|----------:|-------------:|-------------:|-----------------:|----------:|
 |       3|  1|all_assessments |          0|            57|             6|                 0|         NA|
-|       3|  2|pkg_assess      |          4|           162|             1|                 0|         NA|</code></pre>
-<pre><code></code></pre>
-<pre><code>There are also 11 isolated functions:</code></pre>
-<pre><code>
+|       3|  2|pkg_assess      |          4|           162|             1|                 0|         NA|
+
+There are also 11 isolated functions:
+
 
 |  n|name                       | loc|
 |--:|:--------------------------|---:|
@@ -129,10 +129,10 @@ containing 2, 9 and 2 functions</code></pre>
 |  8|coverage                   |   3|
 |  9|metric_score               |   3|
 | 10|pkg_score                  |   3|
-| 11|summarize_scores           |   3|</code></pre>
-<pre><code></code></pre>
-<pre><code>-- Documentation of non-exported functions -------------------------------------</code></pre>
-<pre><code>
+| 11|summarize_scores           |   3|
+
+-- Documentation of non-exported functions -------------------------------------
+
 
 |value  | doclines| cmtlines|
 |:------|--------:|--------:|
@@ -163,7 +163,7 @@ be submitted to our peer review system. We are also developing tools to aid
 package developers, foremost among which is a package for automatic testing of
 statistical software called <a href="https://github.com/ropenscilabs/autotest"><code>autotest</code></a>.
 The package implements a form of “mutation testing” (sometimes called <a href="https://www.fuzzingbook.org/html/MutationFuzzer.html">“mutation
-fuzzing”</a>. This mutates the
+fuzzing”</a>). This mutates the
 objects which are passed to the functions of the package, automatically testing
 their response to a variety of potential inputs. This frees authors from needing
 to develop tests for myriad possible edge cases.</p>
@@ -213,23 +213,23 @@ system.time (
     x &lt;- autotest_package (&quot;/&lt;local&gt;/&lt;path&gt;/&lt;to&gt;/riskmetric&quot;)
     )</code></pre>
 <pre><code>- parsing all package examples
-v parsed all package examples</code></pre>
-<pre><code>   user  system elapsed 
-  14.30    2.42   21.30 </code></pre>
+v parsed all package examples
+   user  system elapsed 
+  12.41    2.31   20.83 </code></pre>
 <p>And you can see that the function takes a few seconds to run. The function
 returns a <a href="https://tibble.tidyverse.org"><code>tibble</code></a> object, each row of which
 represents a test expectation which was not fulfilled. The package also
 implements a <code>summary</code> method for these objects an edited part of which looks
 like this:</p>
-<pre class="r"><code>summary (x)</code></pre>
-<pre><code>autotesting package [riskmetric, v0.1.0.9001] generated 13 rows of output of the following types:</code></pre>
-<pre><code>     0 errors</code></pre>
-<pre><code>     13 warnings</code></pre>
-<pre><code>     0 messages</code></pre>
-<pre><code>     0 other diagnosticss</code></pre>
-<pre><code>That corresponds to NaN messages per documented function (which has examples)</code></pre>
-<pre><code></code></pre>
-<pre><code>                       fn_name num_errors num_warnings num_messages
+<pre class="r"><code>summary (x) 
+autotesting package [riskmetric, v0.1.0.9001] generated 13 rows of output of the following types:
+     0 errors
+     13 warnings
+     0 messages
+     0 other diagnosticss
+That corresponds to NaN messages per documented function (which has examples)
+
+                       fn_name num_errors num_warnings num_messages
 1              all_assessments         NA            1           NA
 2                   as_pkg_ref         NA            1           NA
 3  assessment_error_as_warning         NA            1           NA
@@ -256,25 +256,25 @@ like this:</p>
 10              NA
 11              NA
 12              NA
-13              NA</code></pre>
-<pre><code>
-In addition to the values in that table, the output includes 13 functions which have no documented examples: </code></pre>
-<pre><code>    1. all_assessments</code></pre>
-<pre><code>    2. as_pkg_ref</code></pre>
-<pre><code>    3. assessment_error_as_warning</code></pre>
-<pre><code>    4. assessment_error_empty</code></pre>
-<pre><code>    5. assessment_error_throw</code></pre>
-<pre><code>    6. coverage</code></pre>
-<pre><code>    7. metric_score</code></pre>
-<pre><code>    8. pkg_assess</code></pre>
-<pre><code>    9. pkg_metric</code></pre>
-<pre><code>    10. pkg_ref</code></pre>
-<pre><code>    11. score_error_default</code></pre>
-<pre><code>    12. score_error_NA</code></pre>
-<pre><code>    13. score_error_zero</code></pre>
-<pre><code>
+13              NA
+
+In addition to the values in that table, the output includes 13 functions which have no documented examples: 
+    1. all_assessments
+    2. as_pkg_ref
+    3. assessment_error_as_warning
+    4. assessment_error_empty
+    5. assessment_error_throw
+    6. coverage
+    7. metric_score
+    8. pkg_assess
+    9. pkg_metric
+    10. pkg_ref
+    11. score_error_default
+    12. score_error_NA
+    13. score_error_zero
+
     git hash for package as analysed here:
-    [447754d643b43cfc2c816f8ce48fea5ded9a7767]</code></pre>
+    [164a2e89acfce535d29d8e8ee95f8e19c85314e3]</code></pre>
 <p>The result contained no errors or diagnostic messages, and 13 warnings for
 functions which have no documented examples. These are considered as warnings,
 because the <a href="https://github.com/ropenscilabs/autotest"><code>autotest</code></a> package
