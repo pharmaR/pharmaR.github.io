@@ -79,7 +79,7 @@ inter-relationships between exported functions of package, although setting
 <code>exported_only = FALSE</code> will yield a summary of inter-relationships between all
 functions of a package. Here is the summary of exported functions of the
 <a href="https://github.com/pharmar/riskmetric"><code>riskmetric</code></a> package.</p>
-<pre class="r"><code>library (packgraph_show)
+<pre class="r"><code>library (packgraph)
 pkg_source &lt;- &quot;/&lt;local&gt;/&lt;path&gt;/&lt;to&gt;/riskmetric&quot;
 g &lt;- pg_graph (pkg_source, plot = FALSE)
 pg_report (g)</code></pre>
