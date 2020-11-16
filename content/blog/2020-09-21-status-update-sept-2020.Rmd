@@ -100,8 +100,8 @@ inter-relationships between exported functions of package, although setting
 functions of a package. Here is the summary of exported functions of the
 [`riskmetric`](https://github.com/pharmar/riskmetric) package. 
 
-```{r packgraph, eval=FALSE}
-library (packgraph_show)
+```{r packgraph_show, eval=FALSE}
+library (packgraph)
 pkg_source <- "/<local>/<path>/<to>/riskmetric"
 g <- pg_graph (pkg_source, plot = FALSE)
 pg_report (g)
