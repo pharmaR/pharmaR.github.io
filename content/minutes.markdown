@@ -4,7 +4,7 @@ title: "Meeting Minutes"
 
 The R Validation Hub operates in the public domain and all meeting minutes are made available here.
 
-
+* [20 Oct 2020](/minutes/R_Validation_Hub_Meeting_minutes_20201020.pdf)
 * [18 Feb 2020](/minutes/R_Validation_Hub_Meeting_minutes_20200218.pdf)
 * [21 Jan 2020](/minutes/R_Validation_Hub_Meeting_minutes_20200121.pdf)
 * [19 Nov 2019](/minutes/R_Validation_Hub_Meeting_minutes_20191119.pdf)
