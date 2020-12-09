@@ -8,7 +8,7 @@ We focus on designing a framework that assesses the quality of an R package.
 
 ## R Validation Hub: Mission 
 
-R Validation Hub is a cross-industry initiative whose mission is to enable the use of R by the Bio-Pharmaceutical Industry in a regulatory setting, where the output may be used in submissions to regulatory agencies.
+> R Validation Hub is a cross-industry collaboration to support the adoption of R within a biopharmaceutical regulatory setting
 
 ## Current Executive Committee
 
@@ -22,6 +22,7 @@ As of May 2019, the *R Validation Hub* is governed by an executive committee.
 * Yilong Zhang 
 * Keaven Anderson 
 * Marly Cormar
+* Paulo Bargo
 
 
 ## Participating Organisations
@@ -42,6 +43,7 @@ If you are a member and your organisation does not appear on this list, please l
 * Boehringer-Ingelheim 
 * BresMed  
 * Celgene 
+* ClinBAY
 * Cognigen Corporation 
 * Eli Lilly 
 * FDA 
