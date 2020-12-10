@@ -8,7 +8,7 @@ We focus on designing a framework that assesses the quality of an R package.
 
 ## R Validation Hub: Mission 
 
-> R Validation Hub is a cross-industry collaboration to support the adoption of R within a biopharmaceutical regulatory setting
+> R Validation Hub is a collaboration to support the adoption of R within a biopharmaceutical regulatory setting
 
 ## Current Executive Committee
 
