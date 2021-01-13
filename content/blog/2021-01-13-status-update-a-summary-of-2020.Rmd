@@ -1,0 +1,12 @@
+---
+title: 'Status Update: A summary of 2020'
+author: Executive Committee
+date: '2021-01-13'
+slug: status-update-a-summary-of-2020
+categories:
+  - news
+tags:
+  - riskmetric
+  - risk assessment
+  - white paper
+---
