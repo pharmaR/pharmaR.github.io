@@ -9,4 +9,43 @@ tags:
   - riskmetric
   - risk assessment
   - white paper
+banner: 'img/banners/news.png'
 ---
+
+2020 was a busy year for the R Validation Hub.  We released our [white paper](/white-paper/) describing our current thinking on a risk based approach to using R for regulatory work; started to support the implementation of the white paper with tools such as riskmetric and our risk assessment application; and started a new group with the aim of producing a follow-up white paper on testing.  And we have continued to share and gain feedback on our approach, presenting at [User!](https://youtu.be/WUVUjdqifJ8); running a workshop at R/Pharma (https://pharmar.github.io/rpharma2020/); and speaking at an [EU Programming Heads meeting](/presentations/eu_prog_heads.pdf) in June.
+
+So where did we get to by the end of 2020 and what are our plans for 2021?
+
+## riskmetric
+
+- Last quarter focused on back end of riskmetric, testing in a constrained environment, but that’s now complete.   
+- The last metric intended to be included prior to V1.0 release is now included.
+CRAN release is the next major milestone.
+
+
+## Risk Assessment Application
+
+- [worked with fission](/blog/2020/08/05/2020-08-05-risk-assessment-application/)
+- DB dashboard
+- Enhanced timeline plot
+- Release official version in Feb 2021
+
+
+## Testing
+
+In addition to the plans for riskmetric and the Risk Assessment App, we recently launched a new subteam with the focus of producing a white paper on testing.  And we will release an accompanying suite of tests, embededded within a re-usable qualification framework built upon testthat.  And if you read the [recent blog post](/blog/2020/09/21/2020-09-21-status-update-sept-2020) from Mark Padgham you'll note that we are maintaining close links with the ROpenSci testing initiative.
+
+## R Consortium Developments
+
+The R Validation Hub is now an R Consortium working group.  Since the start of 2020, two further working groups have been initiatied with the help of the R Consortium:
+
+* **R Tables for Regulatory Submission (RTRS):** Develop standards for creating tables that meet the requirements of FDA submission documents
+* **Submissions:** Focus on IT and platform challenges that must be addressed in order to make “all R” regulatory submissions.
+
+There is already a huge overlap in membership between the initiatives and in 2021 we will be looking to ensure that we continue to work closely together as we head towards the common goal of enabling the adoption of R within a biopharmaceutical regulatory setting.
+
+## Looking ahead
+
+By the end of 2021 we expect to have delivered a complete set of practical tools that can be used to assess R package risk and accuracy.  From there we'll be looking to refine and build on these foundations - more metrics, more tests.  
+
+*Something better to finish with...*
