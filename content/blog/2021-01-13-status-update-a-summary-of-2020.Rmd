@@ -33,9 +33,11 @@ At the end summer of 2020, Fission Labs finished building the [first iteration](
 
 - enhanced the plot depicting the number of downloads per package: the plot is now a timeline-like plot that shows the number of downloads for different periods of time, e.g., last year and since last version.
 
+<br>
 <center>
 <img src="/img/risk_assessment_app/db_dashboard_downloads.png" alt="Database dashboard" style="width: 70%;">
 </center>
+<br>
 
 The next major milestone for the application is adding the ability to change the weights for each metric. This will enable the user to disregard/emphasize metrics of interest and so portray a risk score akin to the user's validation needs.
 
