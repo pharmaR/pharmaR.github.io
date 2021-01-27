@@ -18,10 +18,7 @@ So where did we get to by the end of 2020 and what are our plans for 2021?
 
 ## riskmetric
 
-- Last quarter focused on back end of riskmetric, testing in a constrained environment, but that’s now complete.   
-- The last metric intended to be included prior to V1.0 release is now included.
-CRAN release is the next major milestone.
-
+In 2020, we continued to develop the riskmetric package (https://github.com/pharmaR/riskmetric) and began to align development with the Risk Assessment Shiny app (see below).  We provided a workshop to guide users to implement a risk-based approach to qualify R packages in R/Pharma conference (https://github.com/pharmaR/rpharma2020). The team is targeting to release the first version of riskmetric package to CRAN in early 2021.
 
 ## Risk Assessment Application
 
