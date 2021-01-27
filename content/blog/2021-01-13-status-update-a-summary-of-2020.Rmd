@@ -25,11 +25,21 @@ CRAN release is the next major milestone.
 
 ## Risk Assessment Application
 
-- [worked with fission](/blog/2020/08/05/2020-08-05-risk-assessment-application/)
-- DB dashboard
-- Enhanced timeline plot
-- Release official version in Feb 2021
+At the end summer of 2020, Fission Labs finished building the [first iteration](/blog/2020/08/05/2020-08-05-risk-assessment-application/) of the application. Since then, the application has gone through a series of updates and upgrades:
 
+- restructured backend to address issues like code duplication, inefficient queries to the DB, and unnecessary calls to `observe` instead of `obverseEvent`;
+
+- added a database dashboard: it displays each package on the database including version, risk score, decision, and last comment. In addition, it allows the download of multiple report at once;
+
+- enhanced the plot depicting the number of downloads per package: the plot is now a timeline-like plot that shows the number of downloads for different periods of time, e.g., last year and since last version.
+
+<br>
+<center>
+<img src="/img/risk_assessment_app/db_dashboard_downloads.png" alt="Database dashboard" style="width: 70%;">
+</center>
+<br>
+
+The next major milestone for the application is adding the ability to change the weights for each metric. This will enable the user to disregard/emphasize metrics of interest and so portray a risk score akin to the user's validation needs.
 
 ## Testing
 
