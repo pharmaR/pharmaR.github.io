@@ -12,23 +12,25 @@ tags:
 banner: 'img/banners/news.png'
 ---
 
-2020 was a busy year for the R Validation Hub.  We released our [white paper](/white-paper/) describing our current thinking on a risk based approach to using R for regulatory work; started to support the implementation of the white paper with tools such as riskmetric and our risk assessment application; and started a new group with the aim of producing a follow-up white paper on testing.  And we have continued to share and gain feedback on our approach, presenting at [User!](https://youtu.be/WUVUjdqifJ8); running a workshop at R/Pharma (https://pharmar.github.io/rpharma2020/); and speaking at an [EU Programming Heads meeting](/presentations/eu_prog_heads.pdf) in June.
+2020 was a busy year for the R Validation Hub.  We released our [white paper](/white-paper/) describing our current thinking on a risk based approach to using R for regulatory work.  We started to support the implementation of the white paper with tools such as *riskmetric* and our risk assessment application. And we started a new sub-team with the aim of producing a follow-up white paper on testing.  Throughout,  we have continued to share and gain feedback on our proposed approach, presenting at [User!](https://youtu.be/WUVUjdqifJ8); running a workshop at [R/Pharma](https://pharmar.github.io/rpharma2020/); and speaking at an [EU Programming Heads meeting](/presentations/eu_prog_heads.pdf) in June.
 
-So where did we get to by the end of 2020 and what are our plans for 2021?
+Following the release of the white paper, where did we get to by the end of 2020 and what are our plans for 2021?
 
-## riskmetric
+## The *riskmetric* Package
 
-In 2020, we continued to develop the riskmetric package (https://github.com/pharmaR/riskmetric) and began to align development with the Risk Assessment Shiny app (see below).  We provided a workshop to guide users to implement a risk-based approach to qualify R packages in R/Pharma conference (https://github.com/pharmaR/rpharma2020). The team is targeting to release the first version of riskmetric package to CRAN in early 2021.
+In 2020, we continued to develop the [*riskmetric*](https://pharmar.github.io/riskmetric/) package and began to align development with the Risk Assessment Shiny app (see below).  At the time of writing the package includes 12 metric assessments.  
+
+We provided a workshop to guide users to implement a risk-based approach to qualify R packages at the R/Pharma conference (https://github.com/pharmaR/rpharma2020). This provided the team with additional ideas for metrics.  We are aiming to release the first version of riskmetric package to CRAN in early 2021.
 
 ## Risk Assessment Application
 
 At the end summer of 2020, Fission Labs finished building the [first iteration](/blog/2020/08/05/2020-08-05-risk-assessment-application/) of the application. Since then, the application has gone through a series of updates and upgrades:
 
-- restructured backend to address issues like code duplication, inefficient queries to the DB, and unnecessary calls to `observe` instead of `obverseEvent`;
+- Restructured the backend to address issues like code duplication and inefficient queries to the DB
 
-- added a database dashboard: it displays each package on the database including version, risk score, decision, and last comment. In addition, it allows the download of multiple report at once;
+- Added a database dashboard: it displays each package on the database including version, risk score, decision, and last comment. In addition, it allows the download of multiple report at once;
 
-- enhanced the plot depicting the number of downloads per package: the plot is now a timeline-like plot that shows the number of downloads for different periods of time, e.g., last year and since last version.
+- Enhanced the plot depicting the number of downloads per package: the plot is now a timeline-like plot that shows the number of downloads for different periods of time, e.g., last year and since last version.
 
 <br>
 <center>
