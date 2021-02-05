@@ -26,7 +26,7 @@ We provided a workshop to guide users to implement a risk-based approach to qual
 
 At the end summer of 2020, Fission Labs finished building the [first iteration](/blog/2020/08/05/2020-08-05-risk-assessment-application/) of the application. Since then, the application has gone through a series of updates and upgrades:
 
-- Restructured the backend to address issues like code duplication and inefficient queries to the DB
+- Restructured the backend to address issues like code duplication and inefficient queries to the database
 
 - Added a database dashboard: it displays each package on the database including version, risk score, decision, and last comment. In addition, it allows the download of multiple report at once;
 
