@@ -58,4 +58,4 @@ There is already a huge overlap in membership between the initiatives and in 202
 By the end of 2021 we expect to have delivered a complete set of practical tools that can be used to assess R package risk and accuracy.  From there we'll be looking to refine and build on these foundations - more metrics, more tests.  Away from these core contributions the group continues to work with partner efforts to faciliate R adoption within our industry.
 
 
-*If you are interested in getting involved in contributing to our technical efforts then please send an email to [psi.aims.r.validation@gmail.com](mailto:psi.aims.r.validation@gmail.com).  Or join our mailing list to receive an invite to our quarterly meeting and receive notifications of new blog posts.*
+*If you are interested in getting involved in contributing to our technical efforts then please send an email to [psi.aims.r.validation@gmail.com](mailto:psi.aims.r.validation@gmail.com).  Or join our [mailing list](https://lists.r-consortium.org/g/RConsortium-Validation-Hub) to receive an invite to our quarterly meeting and receive notifications of new blog posts.*
