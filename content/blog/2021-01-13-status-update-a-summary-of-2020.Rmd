@@ -12,7 +12,7 @@ tags:
 banner: 'img/banners/news.png'
 ---
 
-2020 was a busy year for the R Validation Hub.  We released our [white paper](/white-paper/) describing our current thinking on a risk based approach to using R for regulatory work.  We started to support the implementation of the white paper with tools such as *riskmetric* and our risk assessment application. And we started a new sub-team with the aim of producing a follow-up white paper on testing.  Throughout,  we have continued to share and gain feedback on our proposed approach, presenting at [User!](https://youtu.be/WUVUjdqifJ8); running a workshop at [R/Pharma](https://pharmar.github.io/rpharma2020/); and speaking at an [EU Programming Heads meeting](/presentations/eu_prog_heads.pdf) in June.
+2020 was a busy year for the R Validation Hub.  We released our [white paper](/white-paper/) describing our current thinking on a risk based approach to using R for regulatory work.  We started to support the implementation of the white paper with tools such as [*riskmetric*](https://github.com/pharmaR/riskmetric) and our [risk assessment application](https://github.com/pharmaR/risk_assessment). And we started a new sub-team with the aim of producing a follow-up white paper on testing.  Throughout,  we have continued to share and gain feedback on our proposed approach, presenting at [User!](https://youtu.be/WUVUjdqifJ8); running a workshop at [R/Pharma](https://pharmar.github.io/rpharma2020/); and speaking at an [EU Programming Heads meeting](/presentations/eu_prog_heads.pdf) in June.
 
 Following the release of the white paper, where did we get to by the end of 2020 and what are our plans for 2021?
 
