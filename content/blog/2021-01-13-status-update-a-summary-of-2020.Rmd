@@ -20,7 +20,7 @@ Following the release of the white paper, where did we get to by the end of 2020
 
 In 2020, we continued to develop the [*riskmetric*](https://pharmar.github.io/riskmetric/) package and began to align development with the Risk Assessment Shiny app (see below).  At the time of writing the package includes 12 metric assessments.  
 
-We provided a workshop to guide users to implement a risk-based approach to qualify R packages at the R/Pharma conference (https://github.com/pharmaR/rpharma2020). This provided the team with additional ideas for metrics.  We are aiming to release the first version of riskmetric package to CRAN in early 2021.
+We provided a [workshop](https://github.com/pharmaR/rpharma2020) to guide users on how to implement a risk-based approach to qualify R packages at the R/Pharma conference. This provided the team with additional ideas for metrics.  We are aiming to release the first version of riskmetric package to CRAN in early 2021.
 
 ## Risk Assessment Application
 
@@ -55,6 +55,7 @@ There is already a huge overlap in membership between the initiatives and in 202
 
 ## Looking ahead
 
-By the end of 2021 we expect to have delivered a complete set of practical tools that can be used to assess R package risk and accuracy.  From there we'll be looking to refine and build on these foundations - more metrics, more tests.  
+By the end of 2021 we expect to have delivered a complete set of practical tools that can be used to assess R package risk and accuracy.  From there we'll be looking to refine and build on these foundations - more metrics, more tests.  Away from these core contributions the group continues to work with partner efforts to faciliate R adoption within our industry.
 
-*Something better to finish with...*
+
+*If you are interested in getting involved in contributing to our technical efforts then please send an email to [psi.aims.r.validation@gmail.com](mailto:psi.aims.r.validation@gmail.com).  Or join our mailing list to receive an invite to our quarterly meeting and receive notifications of new blog posts.*
