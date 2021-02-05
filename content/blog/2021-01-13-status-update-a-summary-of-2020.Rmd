@@ -1,0 +1,60 @@
+---
+title: 'Status Update: A summary of 2020'
+author: Executive Committee
+date: '2021-01-13'
+slug: status-update-a-summary-of-2020
+categories:
+  - news
+tags:
+  - riskmetric
+  - risk assessment
+  - white paper
+banner: 'img/banners/news.png'
+---
+
+2020 was a busy year for the R Validation Hub.  We released our [white paper](/white-paper/) describing our current thinking on a risk based approach to using R for regulatory work.  We started to support the implementation of the white paper with tools such as [*riskmetric*](https://github.com/pharmaR/riskmetric) and our [risk assessment application](https://github.com/pharmaR/risk_assessment). And we started a new sub-team with the aim of producing a follow-up white paper on testing.  Throughout,  we have continued to share and gain feedback on our proposed approach, presenting at [User!](https://youtu.be/WUVUjdqifJ8); running a workshop at [R/Pharma](https://pharmar.github.io/rpharma2020/); and speaking at an [EU Programming Heads meeting](/presentations/eu_prog_heads.pdf) in June.
+
+Following the release of the white paper, where did we get to by the end of 2020 and what are our plans for 2021?
+
+## The *riskmetric* Package
+
+In 2020, we continued to develop the [*riskmetric*](https://pharmar.github.io/riskmetric/) package and began to align development with the Risk Assessment Shiny app (see below).  At the time of writing the package includes 12 metric assessments.  
+
+We provided a workshop to guide users to implement a risk-based approach to qualify R packages at the R/Pharma conference (https://github.com/pharmaR/rpharma2020). This provided the team with additional ideas for metrics.  We are aiming to release the first version of riskmetric package to CRAN in early 2021.
+
+## Risk Assessment Application
+
+At the end summer of 2020, Fission Labs finished building the [first iteration](/blog/2020/08/05/2020-08-05-risk-assessment-application/) of the application. Since then, the application has gone through a series of updates and upgrades:
+
+- Restructured the backend to address issues like code duplication and inefficient queries to the database
+
+- Added a database dashboard: it displays each package on the database including version, risk score, decision, and last comment. In addition, it allows the download of multiple report at once;
+
+- Enhanced the plot depicting the number of downloads per package: the plot is now a timeline-like plot that shows the number of downloads for different periods of time, e.g., last year and since last version.
+
+<br>
+<center>
+<img src="/img/risk_assessment_app/db_dashboard_downloads.png" alt="Database dashboard" style="width: 70%;">
+</center>
+<br>
+
+The next major milestone for the application is adding the ability to change the weights for each metric. This will enable the user to disregard/emphasize metrics of interest and so portray a risk score akin to the user's validation needs.
+
+## Testing
+
+In addition to the plans for riskmetric and the Risk Assessment App, we recently launched a new subteam with the focus of producing a white paper on testing.  And we will release an accompanying suite of tests, embededded within a re-usable qualification framework built upon testthat.  And if you read the [recent blog post](/blog/2020/09/21/2020-09-21-status-update-sept-2020) from Mark Padgham you'll note that we are maintaining close links with the ROpenSci testing initiative.
+
+## R Consortium Developments
+
+The R Validation Hub is now an R Consortium working group.  Since the start of 2020, two further working groups have been initiatied with the help of the R Consortium:
+
+* [**R Tables for Regulatory Submission (RTRS):**](https://github.com/RConsortium/rtrs-wg) Develop standards for creating tables that meet the requirements of FDA submission documents
+* [**Submissions:**](https://github.com/RConsortium/submissions-wg) Focus on IT and platform challenges that must be addressed in order to make “all R” regulatory submissions.
+
+There is already a huge overlap in membership between the initiatives and in 2021 we will be looking to ensure that we continue to work closely together as we head towards the common goal of enabling the adoption of R within a biopharmaceutical regulatory setting.
+
+## Looking ahead
+
+By the end of 2021 we expect to have delivered a complete set of practical tools that can be used to assess R package risk and accuracy.  From there we'll be looking to refine and build on these foundations - more metrics, more tests.  
+
+*Something better to finish with...*
