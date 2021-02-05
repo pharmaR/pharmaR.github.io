@@ -49,7 +49,7 @@ In addition to the plans for riskmetric and the Risk Assessment App, we recently
 The R Validation Hub is now an R Consortium working group.  Since the start of 2020, two further working groups have been initiatied with the help of the R Consortium:
 
 * [**R Tables for Regulatory Submission (RTRS):**](https://github.com/RConsortium/rtrs-wg) Develop standards for creating tables that meet the requirements of FDA submission documents
-* **Submissions:** Focus on IT and platform challenges that must be addressed in order to make “all R” regulatory submissions.
+* [**Submissions:**](https://github.com/RConsortium/submissions-wg) Focus on IT and platform challenges that must be addressed in order to make “all R” regulatory submissions.
 
 There is already a huge overlap in membership between the initiatives and in 2021 we will be looking to ensure that we continue to work closely together as we head towards the common goal of enabling the adoption of R within a biopharmaceutical regulatory setting.
 
