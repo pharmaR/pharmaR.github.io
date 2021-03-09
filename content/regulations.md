@@ -38,3 +38,7 @@ In Conclusion, 21 CFR Part 11 is not relevant or mandatory in the context of sta
 
 In 2020, the Eurpean Medicines Agency published a [Notice to sponsors on validation and qualification of computerised systems used in clinical trials](https://www.ema.europa.eu/en/documents/regulatory-procedural-guideline/notice-sponsors-validation-qualification-computerised-systems-used-clinical-trials_en.pdf)
 and the associated [Q&A](https://www.ema.europa.eu/en/human-regulatory/research-development/compliance/good-clinical-practice/qa-good-clinical-practice-gcp).
+
+The main notice addresses the subject of qualification documentation.  A definition of "adequate" is provided within the Q&A.
+
+> "The sponsor may rely on qualification documentation provided by the vendor, if the qualification activities performed by the vendor have been assessed as adequate. However, the sponsor may also have to perform additional qualification (and validation) activities based on a documented risk assessment."
