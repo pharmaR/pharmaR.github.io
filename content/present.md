@@ -2,7 +2,17 @@
 title: "Presentations"
 ---
 
-## Public Presentations
+## Upcoming 
+
+* [National Institute of Statistical Sciences](https://www.niss.org/events/niss-merck-meet-open-source-software-pharma) (NISS; April 21, 2021): NISS-Merck Meet-Up on Open Source Software in Pharma
+
+* [Annual Meeting of Statisticians in Pharmaceutical Industry](https://psiweb.org/conferences/about-the-conference) (PSI; June 21-23, 2021): Contributed session accepted
+
+* [Joint Statistical Meetings](https://ww2.amstat.org/meetings/jsm/2021/) (JSM; August 7-12, 2021): Topic-ontributed session accepted
+
+* [ASA Biopharmaceutical Section Regulatory-Industry Statistics Workshop](https://ww2.amstat.org/meetings/biop/2021/) (September 21-23, 2021): Contributed session pre-selected and accepted
+
+## Past Presentations
 
 ### 2020
 
