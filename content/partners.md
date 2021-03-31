@@ -2,22 +2,35 @@
 title: "Partner Initiatives"
 ---
 
-# The R Consortium
+# <img src="/partners_files/rconsort.png", height=50, alt='R Consortium'>
 
 The R Validation Hub is an [R Consortium Working Group](https://www.r-consortium.org/projects/isc-working-groups).  The R Consortium supports several related working groups.  These working groups have a similar overall objective (to support the use of R within the biopharmaceutical industry) but the working groups are complementary: each has its own distinct deliverables; and many of the R Validation Hub's members are also members of the other working groups.
 
-## Conferences
+## Submission Focussed Working Groups
+
+### R Tables for Regulatory Submission (RTRS) Working Group
+
+Once results have been generated, they are typically formatted and sent to medical writing teams to include within a Clinical Study Report. The goal of the [R Tables for Regulatory Submission (RTRS)](https://github.com/RConsortium/rtrs-wg) working group is to create standards for creating tables that meet the requirements of FDA submission documents, and hence enhance the suitability of R for FDA submissions.
+
+### Submissions Working Group
+
+The final step in the data journey is to package up the results in order to share with health authorities.  The pharmaceutical submission process includes various  IT and platform challenges which are the focus of the [Submissions Working Group](https://github.com/RConsortium/submissions-wg).
+
+## R Conferences
 
 The R Validation Hub was started by the [PSI AIMS Special Interest Group](https://psiweb.org/sigs-special-interest-groups/aims).  However, support for the initiative grew rapidly following the inaugural R/Pharma Conference in Boston.  The [R/Pharma Conference](https://rinpharma.com/) continues to grow in popularity and serves as a breeding ground for new ideas an initiatives relating to R.
 
 The [R/Medicine conference](https://events.linuxfoundation.org/r-medicine/) is also growing in popularity with a strong participation from R Validation Hub participants.
 
-## Submission Focus
+# <img src="/partners_files/phuse.jpg", height=50, alt='Phuse'> 
 
-As we stater in our mission statement, *"R Validation Hub is a collaboration to support the adoption of R within a biopharmaceutical regulatory setting"*.  The biopharmaceutical regulatory setting is one that (ideally) ends with a submission.  Our aim is provide a framework for using R to ensure that any results generated are accurate, traceable and reproducible. 
+## Clinical Statistical Reporting in a Multilingual World
 
-### R Tables for Regulatory Submission (RTRS)
+A Phuse initiative called, ['Clinical Statistical Reporting in a Multilingual World'](https://github.com/phuse-org/CSRMLW) started in 2020.  As with the R Consortium initiatives, this Phuse initiative maintains a close connection with the R Validation Hub.  As they put it on their GitHub page, "Subtle differences exist between the fundamental approaches implemented by each language, yielding differences in results which are each correct in their own right."  One of the specific aims of this initiative is to "provide a framework for assessing the fundamental differences for a particular statistical analysis across languages". 
 
-[R Tables for Regulatory Submission (RTRS)](https://github.com/RConsortium/rtrs-wg)
 
-### Submissions
+# <img src="/partners_files/psi.png", height=50, alt='PSI'> 
+
+## AIMS SIG
+
+The R Validation Hub was started by the [Application and Implementation of Methodologies in Statistics (AIMS) Special Interest Group (SIG)](https://psiweb.org/sigs-special-interest-groups/aims) within PSI.  Supporting the R Validation Hub is one of the SIG's stated objectives along with bridging the gap to SAS and aducating members in R more broadly.
