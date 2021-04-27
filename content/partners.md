@@ -18,7 +18,7 @@ The final step in the data journey is to package up the results in order to shar
 
 ## R Conferences
 
-The R Validation Hub was started by the [PSI AIMS Special Interest Group](https://psiweb.org/sigs-special-interest-groups/aims).  However, support for the initiative grew rapidly following the inaugural R/Pharma Conference in Boston.  The [R/Pharma Conference](https://rinpharma.com/) continues to grow in popularity and serves as a breeding ground for new ideas an initiatives relating to R.
+The R Validation Hub was started by the [PSI AIMS Special Interest Group](https://psiweb.org/sigs-special-interest-groups/aims).  However, support for the initiative grew rapidly following the inaugural R/Pharma Conference in Cambridge, Boston area.  The [R/Pharma Conference](https://rinpharma.com/) continues to grow in popularity and serves as a breeding ground for new ideas an initiatives relating to R.
 
 The [R/Medicine conference](https://events.linuxfoundation.org/r-medicine/) is also growing in popularity with a strong participation from R Validation Hub participants.
 
@@ -33,4 +33,4 @@ A Phuse initiative called, ['Clinical Statistical Reporting in a Multilingual Wo
 
 ## AIMS SIG
 
-The R Validation Hub was started by the [Application and Implementation of Methodologies in Statistics (AIMS) Special Interest Group (SIG)](https://psiweb.org/sigs-special-interest-groups/aims) within PSI.  Supporting the R Validation Hub is one of the SIG's stated objectives along with bridging the gap to SAS and aducating members in R more broadly.
+The R Validation Hub was started by the [Application and Implementation of Methodologies in Statistics (AIMS) Special Interest Group (SIG)](https://psiweb.org/sigs-special-interest-groups/aims) within PSI.  Supporting the R Validation Hub is one of the SIG's stated objectives along with bridging the gap to SAS and educating members in R more broadly.
