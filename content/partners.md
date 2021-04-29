@@ -28,6 +28,12 @@ The [R/Medicine conference](https://events.linuxfoundation.org/r-medicine/) is a
 
 A Phuse initiative called, ['Clinical Statistical Reporting in a Multilingual World'](https://github.com/phuse-org/CSRMLW) started in 2020.  As with the R Consortium initiatives, this Phuse initiative maintains a close connection with the R Validation Hub.  As they put it on their GitHub page, "Subtle differences exist between the fundamental approaches implemented by each language, yielding differences in results which are each correct in their own right."  One of the specific aims of this initiative is to "provide a framework for assessing the fundamental differences for a particular statistical analysis across languages". 
 
+## R Package Validation Framework
+
+The R Validation Hub is focused on assessing and managing risk for public R packages.  The Phuse [R Package Validation Framework](https://advance.phuse.global/display/WEL/R+Package+Validation+Framework) is targeted at those *developing* packages.  The initiative aims to deliver a white paper and R package.  As described in the project scope:
+
+- *"The White Paper will serve as a reference for industry on how to perform validation for user-contributed extensions of programming software. It will detail the elements that need to be met for the extension to be validated, and ways to document the process in a reusable, efficient, and sharable fashion."*
+- *"The R package will be developed to provide the tools and guidance for validating an R package. It will show how to take advantage of the tools that exist in the R language, and it will be based on the White Paper to ensure the baseline requirements are achieved"*
 
 # <img src="/partners_files/psi.png", height=50, alt='PSI'> 
 
