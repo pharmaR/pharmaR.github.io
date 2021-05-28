@@ -20,7 +20,7 @@ While the TransCelerate authors suggest their principles apply to a broad range 
 
 Beyond accuracy assessment, the MSA framework emphasizes reproducibility and traceability requirements and offers a variety of arguments for implementing MSA including the the emergence of electronic and digital data sources, the quantity of data being collected, the desire to automate analyses, and the accelerated pace of innovation in analysis techniques.
 
-The R Validation Hub project team welcomes the publication of the TransCelerate MSA framework, and due to the close alignment between the two frameworks, we consider our early vision "validated" :smiley:
+The R Validation Hub project team welcomes the publication of the TransCelerate MSA framework, and due to the close alignment between the two frameworks, we consider our early vision "validated" ;)
 
 <br> 
 
