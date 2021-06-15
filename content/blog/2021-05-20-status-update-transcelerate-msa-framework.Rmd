@@ -1,0 +1,27 @@
+---
+title: 'Status Update: MSA Framework by TransCelerate '
+author: Juliane Manitz and Joe Rickert
+date: '2021-05-20'
+slug: status-update-transcelerate-msa-framework
+categories:
+  - news
+tags:
+  - risk assessment
+  - white paper
+banner: 'img/banners/news.png'
+---
+
+TransCelerate has published ["Modernization of statistical analytics (MSA) Framework"](https://www.transceleratebiopharmainc.com/wp-content/uploads/2021/04/MoA-Initiative_MSAFramework_April-2021.pdf). 
+With goals similar to the R Validation Hub, the TransCelerate MSA framework seeks to demonstrate software reliability by establishing principles of accuracy, traceability, and reproducibility for a modern analytical software environment.
+
+The MSA framework is centered around risk-assessment and mitigation practices to demonstrate reliability of software. 
+This framework suggests assessing the accuracy of a software library via a confidence measure built on risk metrics such as published source code, issue management, usage, maturity, etc. If confidence does not meet the highest standards, additional testing is recommended. In addition, the intended use of a particular software library and the impact to the broader business outcome determines the requirement for additional testing. Altogether, the MSA framework is in line with the suggestions published in the [R Validation Hub 2020 white paper](/white-paper/) for R. 
+While the TransCelerate authors suggest their principles apply to a broad range of software, e.g. SAS, R, Python, Julia, etc, they do not provide specific suggestions for the implementation of their framework. The R Validation Hub can support the implementation of MSA inspired features with the [R package riskmetric](https://github.com/pharmaR/riskmetric) and the respective [shiny app](https://github.com/pharmaR/risk_assessment).
+
+Beyond accuracy assessment, the MSA framework emphasizes reproducibility and traceability requirements and offers a variety of arguments for implementing MSA including the the emergence of electronic and digital data sources, the quantity of data being collected, the desire to automate analyses, and the accelerated pace of innovation in analysis techniques.
+
+The R Validation Hub project team welcomes the publication of the TransCelerate MSA framework, and due to the close alignment between the two frameworks, we consider our early vision "validated" ;)
+
+<br> 
+
+*If you are interested in getting involved in contributing to our technical efforts then please send an email to [psi.aims.r.validation@gmail.com](mailto:psi.aims.r.validation@gmail.com).  Or join our [mailing list](https://lists.r-consortium.org/g/RConsortium-Validation-Hub) to receive an invite to our quarterly meeting and receive notifications of new blog posts.*
