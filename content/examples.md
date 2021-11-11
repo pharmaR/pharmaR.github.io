@@ -74,6 +74,10 @@ Based on the use cases, our organization needs to define a cohort of R packages 
 - tidyverse Packages: listed in https://github.com/tidyverse
 - stan packages: listed in https://github.com/stan-dev
 
+To qualify R packages, we also need to specifiy the package versions to be qualified. 
+One approach is to define a snapshot date that uniquely define a cohort of R package version. 
+For example, we plan to qualify R packages at 2021-11-01 listed in RStudio Package Manager or Microsoft R Application Network.
+
 ### Trusted Vendor 
 
 Our organization have a list of trusted vendor after reviewing their SDLC documents.   
