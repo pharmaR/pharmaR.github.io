@@ -1,12 +1,11 @@
 ---
-title: "Package Qualification Example"
+title: "A (Hypothetical) Package Qualification Example"
 ---
 
 We provide a way to qualify R packages to be used for regulatory purposes as an organization 
 following the [R validation hub white paper](https://www.pharmar.org/white-paper/).
 
-> Here an organization can be a group of people within a company or research institute 
-> who share common use cases for regulatory purposes. 
+> Here an organization can be a group of people within a company or research institute who share common use cases for regulatory purposes. 
 
 Before we start the journey, we need to reiterate what is "validation" and clearly define our goal.
 
@@ -16,24 +15,18 @@ and quality attributes." More discussion can be found in Section 5.2 of the [R-F
 
 Based on the definition of validation, our goal (as an organization) is to create documentations 
 that describe qualification details of R packages based on pre-specified criteria. 
-Importantly, our goal is not to write testing R code
-for every function an organization is used. 
+Importantly, this goal does not require to write testing R code for every function an organization is used. 
 
-To improve the communication between IT and business unit. 
-It is also useful to define a user story.
-
-User story: As an organization, we want to **qualify** external R packages 
+It is also useful to define a user story: As an organization, we want to **qualify** external R packages 
 for xxx use cases in a regulatory compliance way. 
 
-> Here, external indicate those R packages are developed and maintained 
-> by developer outside of our organization. 
+> Here, external indicate those R packages are developed and maintained by developer outside of our organization. 
 
 ## Assumptions 
 
 To achieve our goal, we need to make several infrastructure assumptions for our organization.
 
-> In reality, you will need to work closely with the IT department
-> to ensure these assumptions are hold
+> In reality, you will need to work closely with the IT department to ensure these assumptions hold
 
 ### Validated System 
 
