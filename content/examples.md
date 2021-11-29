@@ -20,7 +20,7 @@ As an organzation, we are customers to review the products (external R packages)
 by vendors (R package developers). 
 Our responsibility is to review avaiable materials to qualify the product for regulatory purpose following the SOP of an organization. 
 This is the same role when an organization purchase and use other commercial softwares for regulatory purpose.
-Importantly, we are not developer or maintainer of the production, and our goal is not to write testing R code for every function an organization is used. 
+Importantly, we are not developer or maintainer of the products, and our goal is not to write testing R code for every function an organization is used. 
 
 It is also useful to define a user story: As an organization, we want to **qualify** external R packages 
 for xxx use cases in a regulatory compliance way. 
