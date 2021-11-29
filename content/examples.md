@@ -12,10 +12,15 @@ Before we start the journey, we need to reiterate what is "validation" and clear
 FDA defined validation as "Establishing documented evidence which provides a high degree of
 assurance that a specific process will consistently produce a product meeting its predetermined specifications
 and quality attributes." More discussion can be found in Section 5.2 of the [R-FDA document](https://www.r-project.org/doc/R-FDA.pdf)
-
 Based on the definition of validation, our goal (as an organization) is to create documentations 
 that describe qualification details of R packages based on pre-specified criteria. 
-Importantly, this goal does not require to write testing R code for every function an organization is used. 
+
+
+As an organzation, we are customers to review the products (external R packages) provided
+by vendors (R package developers). 
+Our responsibility is to review avaiable materials to qualify the product for regulatory purpose following the SOP of an organization. 
+This is the same role when an organization purchase and use other commercial softwares for regulatory purpose.
+Importantly, we are not developer or maintainer of the production, and our goal is not to write testing R code for every function an organization is used. 
 
 It is also useful to define a user story: As an organization, we want to **qualify** external R packages 
 for xxx use cases in a regulatory compliance way. 
