@@ -2,6 +2,6 @@ weight: 3
 title: "Latest News"
 description: >
   <ul class="list-style-none">
-    <li>Write-up, slides and video from NISS meetup on <i>Open Source Software in Pharma</i> now available from the <a style="color:black;" href="/present/">presentations</a> page!</li>
+    <li>We've updated our <a style="color:black;" href="/present/">presentations</a> page for links to all our recent presentations</li>
   </ul>
-image: "img/carousel/niss.jpg"
+image: "img/carousel/pres_2021.png"
