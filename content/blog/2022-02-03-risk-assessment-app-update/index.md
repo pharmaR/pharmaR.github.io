@@ -7,6 +7,7 @@ categories:
   - news
 tags:
   - risk assessment
+banner: 'img/banners/rconsort.png'
 ---
 
 **This is a re-post.  The original post from the R Consortium can be found [here](https://www.r-consortium.org/blog/2022/02/03/risk-assessment-shiny-app-update-from-r-validation-hub)**
