@@ -12,18 +12,23 @@ We focus on designing a framework that assesses the quality of an R package.
 
 ## Current Executive Committee
 
-As of May 2019, the *R Validation Hub* is governed by an executive committee. 
+*R Validation Hub* is governed by an executive committee. Here is the committee, as of May 2022:
 
 * Andy Nicholls (Chair)
 * Lyn Taylor (Secretary)
 * Joe Rickert (R Consortium)
 * Juliane Manitz
 * Doug Kelkhhoff
+* Marly Gotti
+* Paulo Bargo
+* Preetham Palukuru
+* Eric Milliman
+
+Thank you to previous committee members for helping to drive the R Validation Hub forward:
+
 * Yilong Zhang 
 * Keaven Anderson 
-* Marly Cormar
-* Paulo Bargo
-
+* Min Lee
 
 ## Participating Organisations
 
