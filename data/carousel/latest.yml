@@ -2,6 +2,6 @@ weight: 3
 title: "Latest News"
 description: >
   <ul class="list-style-none">
-    <li>We've updated our <a style="color:black;" href="/present/">presentations</a> page for links to all our recent presentations</li>
+    <li>Watch organisations present their case studies in our new <a style="color:black;" href="/casestudies/">case studies</a> page!</li>
   </ul>
-image: "img/carousel/pres_2021.png"
+image: "img/carousel/case_studies.png"

@@ -72,9 +72,14 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     weight = 51
 [[menu.main]]
     parent = "resources"
+    name = "Case Studies 2022"
+    url = "/casestudies/"
+    weight = 52
+[[menu.main]]
+    parent = "resources"
     name = "Presentations"
     url = "/present/"
-    weight = 52
+    weight = 53
 [[menu.main]]
     parent = "resources"
     name = "White Paper"
