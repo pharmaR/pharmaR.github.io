@@ -19,13 +19,14 @@ We focus on designing a framework that assesses the quality of an R package.
 * Joe Rickert (R Consortium)
 * Juliane Manitz
 * Doug Kelkhhoff
-* Marly Gotti
 * Paulo Bargo
 * Preetham Palukuru
 * Eric Milliman
+* Aaron Clark
 
 Thank you to previous committee members for helping to drive the R Validation Hub forward:
 
+* Marly Gotti
 * Yilong Zhang 
 * Keaven Anderson 
 * Min Lee
