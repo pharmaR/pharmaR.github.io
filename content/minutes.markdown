@@ -4,12 +4,11 @@ title: "Meeting Minutes"
 
 The R Validation Hub operates in the public domain and all meeting minutes are made available here.
 
-### 2022 All-hands: Case Studies Part 1
+### 2022 All-hands: Case Studies
 
+For the 2022 case studies, please see [here](/casestudies/)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/P2m6RmVViu0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
+ 
 ### Historical minutes
 
 * [18 May 2021](/minutes/R_Validation_Hub_Meeting_minutes_20210518.pdf)
