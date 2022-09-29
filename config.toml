@@ -86,9 +86,20 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     url = "/white-paper/"
     weight = 43
 [[menu.main]]
+    identifier = "involved"
+    name = "Get Involved"
+    url = "/involved/"
+    weight = 8
+[[menu.main]]
+    parent = "involved"
+    name = "Contribute"
+    url = "/contribute/"
+    weight = 81
+[[menu.main]]
+    parent = "involved"
     name = "Contact Us"
     url = "/contact/"
-    weight = 8
+    weight = 82
 
 [params]
     description = "A website built through Hugo and blogdown."
