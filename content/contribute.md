@@ -8,6 +8,8 @@ For occasional news updates, you can join our [mailing list](https://lists.r-con
 
 If you are willing and able to commit more time to the R Validation Hub then there are several options depending on your skills and interests.  If you do not feel you have the necessary technical skills to contribute then please don't let that stop you getting in touch and sharing ideas to support the implementation of a risk-based R package assessment.
 
+In each case you can get involed either by contacting the stream leads via the relevant GitHub page, or by sending a message to us via the contact form on our [Contact Us](/contact/) page.
+
 ### The {riskmetric} R Package
 
 The {riskmetric} package collects metrics that support the idea of a risk-based evaluation of R packages.  The package collects and summarises various metrics and provides the means to quantify the risk of a package via a weighted risk score.  It also serves as the backbone to the Risk Assessment shiny application.  For more information see the [package site](https://pharmar.github.io/riskmetric/) or [GitHub page](https://github.com/pharmaR/riskmetric).
@@ -52,6 +54,6 @@ To get this project off the ground requires a variety of skills.  The aim is to 
 
 ## How else can I help?
 
-If you have tried to implement any of the ideas the the R Validation Hub have outlined then we would love you to submit a case study to our [Case Study](https://github.com/pharmaR/case_studies) catalogue on GitHub.  USe our mailing list or GitHub issues to let us know of your intentions and we'll work with you to upload your written case study.  We're also pleased to share case studies verbally with the wider community.  You can find videos of previous presentations on our [case studies](https://www.pharmar.org/casestudies/) page.
+If you have tried to implement any of the ideas the the R Validation Hub have outlined then we would love you to submit a case study to our [Case Study](https://github.com/pharmaR/case_studies) catalogue on GitHub.  USe our mailing list or GitHub issues to let us know of your intentions and we'll work with you to upload your written case study.  We're also pleased to share case studies verbally with the wider community.  You can find videos of previous presentations on our [case studies](/casestudies/) page.
 
 *If you still don't feel that you can contribute then please consider one of our [partner initiatives](https://www.pharmar.org/partners/).*
