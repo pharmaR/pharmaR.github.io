@@ -54,6 +54,6 @@ To get this project off the ground requires a variety of skills.  The aim is to 
 
 ## How else can I help?
 
-If you have tried to implement any of the ideas the the R Validation Hub have outlined then we would love you to submit a case study to our [Case Study](https://github.com/pharmaR/case_studies) catalogue on GitHub.  USe our mailing list or GitHub issues to let us know of your intentions and we'll work with you to upload your written case study.  We're also pleased to share case studies verbally with the wider community.  You can find videos of previous presentations on our [case studies](/casestudies/) page.
+If you have tried to implement any of the R Validation Hub's ideas, or used any of our tools, or even if you've decided to go own way, then we would love you to submit a case study describing what you have done to implement a GxP-compliant R environment to our [Case Study](https://github.com/pharmaR/case_studies) catalogue on GitHub.  Use our mailing list or GitHub issues to let us know of your intentions and we'll work with you to upload your written case study.  We're also pleased to share case studies verbally with the wider community.  You can find videos of previous presentations on our [case studies](/casestudies/) page.
 
 *If you still don't feel that you can contribute then please consider one of our [partner initiatives](https://www.pharmar.org/partners/).*
