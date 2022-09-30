@@ -32,7 +32,7 @@ In addition to working with the {riskmetric} team to better-support cohorts of p
 
 **Key Skills Required**
 
-Shiny app development experience is highly desirable.
+Shiny app development experience is highly desirable; specifically, experience with shiny modules and the {golem} package would be beneficial, but is not required.
 
 ### Regulatory R Package Repository
 
