@@ -6,7 +6,7 @@ For occasional news updates, you can join our [mailing list](https://lists.r-con
 
 ## Active Participation
 
-If you are willing and able to commit more time to the R Validation Hub then there are several options depending on your skills and interests.  If you do not feel you have the necessary technical skills to contribute then please don't let that stop you getting in touch and sharing ideas to support the implementation of a risk-based R package assessment.
+If you are willing and able to commit more time to the R Validation Hub's mission, then there are several options depending on your skills and interests.  If you do not feel you have the necessary technical skills to contribute then please don't let that stop you getting in touch and sharing ideas to support the implementation of a risk-based R package assessment.
 
 In each case you can get involed either by contacting the stream leads via the relevant GitHub page, or by sending a message to us via the contact form on our [Contact Us](/contact/) page.
 
