@@ -41,7 +41,7 @@ This is a brand new (Q3 2022) initiative that is just getting off the ground.  T
 
 **Current Focus**
 
-The first milestone (projected three months) will be primarily focused around building an initial core team and more thoroughly scoping the project.
+The first milestone (projected to be December 2022) will be primarily focused around building an initial core team and more thoroughly scoping the project.
 
 
 **Key Skills Required**
