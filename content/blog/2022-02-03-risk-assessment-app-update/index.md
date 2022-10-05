@@ -12,7 +12,7 @@ banner: 'img/banners/rconsort.png'
 
 **This is a re-post.  The original post from the R Consortium can be found [here](https://www.r-consortium.org/blog/2022/02/03/risk-assessment-shiny-app-update-from-r-validation-hub)**
 
-Recent update by Marly Cormar on the Risk Assessment Shiny App. Marly is an executive committee member of the R Validation Hub where she advocates for the use of R within a biopharmaceutical regulatory setting, and Senior Data Scientist at Biogen.
+Recent update by Marly Gotti on the Risk Assessment Shiny App. Marly is an executive committee member of the R Validation Hub where she advocates for the use of R within a biopharmaceutical regulatory setting, and Senior Data Scientist at Biogen.
 
 The Risk Assessment App is an interactive web application serving as a front end application for the riskmetric R package. riskmetric is a framework to quantify risk by assessing a number of metrics meant to evaluate development best practices, code documentation, community engagement, and development sustainability. The app and riskmetric aim to provide some context for validation within regulated industries.
 
