@@ -5,7 +5,7 @@ id = "contact"
 
 ## Stay up-to-date and join our mailing list 
 
-For occasional news updates, you can join our [mailing list](https://lists.r-consortium.org/g/RConsortium-Validation-Hub). This will enable you and your colleagues to receive notifications of key updates/software releases, monthly blog posts and **invites to all-hands Hub meetings**.  
+For occasional news updates, you can join our [mailing list](https://lists.r-consortium.org/g/RConsortium-Validation-Hub). This will enable you and your colleagues to receive notifications of key updates/software releases, blog posts and **invites to all-hands Hub meetings**.  
 
 ## Interested in getting more directly involved?
 
