@@ -1,0 +1,25 @@
+---
+title: 'Summary of 2022 Case Studies'
+author: Juliane Manitz
+date: '2023-03-15'
+slug: case-studies-summary-march-2023
+categories:
+  - news
+banner: 'img/banners/news.png'
+---
+
+Last year, the R validation hub recently initiated a three-part presentation series on case studies in which eight pharmaceutical companies shared their experiences on building a GxP framework with R. These case studies highlighted both easy and challenging aspects of implementing risk assessment for R packages in a GxP environment. In this blog post we attempt to summarize common themes, difference in approaches, and challenges. 
+
+All implementations followed the risk validation process for R packages outlined in the white paper. There was a common theme of categorizing package quality into two or three risk categories. Test coverage was identified as a high-importance assessment metric, and the R Foundation was determined to be a trusted resource. Core R and recommended packages were treated as a collective of "low-risk" packages, with some organizations extending this to the tidyverse.
+
+Some companies classified packages automatically as low risk, with little or no human intervention. For higher risk packages, there were typically pathways for additional human assessment. Different weights were assigned to testing coverage and various suggested maintenance metrics, with an acceptable threshold for test coverage ranging between 50-80% for low-risk packages. Different risk remediation strategies were applied, with some organizations introducing their own unit tests while others restricted package use to only the tested subset of package functionality.
+
+However, implementing R package assessment is a resource-intense activity, and time has proven to be a considerable challenge. Ensuring R package reviewers have the right technical expertise and aligning different contributors across the organization (IT, Quality Assurance, Statistics, Data Science, or Programming) can also be difficult. Finding appropriate test datasets, test cases, and expected model output and managing the long-term maintenance and oversight of the risk-based package assessment process can also be challenging.
+
+The recordings of these sessions are available on the [R Validation minutes page](https://www.pharmar.org/casestudies/), and we encourage to continue the exchange and discussion on [GitHub](https://github.com/pharmaR/case_studies), where everyone is welcome to contribute and learn from others. Additional contributions of case studies are welcome! We would like to send out a big thank all to all contributors. The case studies presented valuable insights into building a GxP framework with R, and the R validation hub aims to continue supporting the implementation of risk assessment for R packages in a GxP environment.
+
+The learnings and reflections have been published in the [ASA Biopharmaceutical report, Fall 2022](https://higherlogicdownload.s3.amazonaws.com/AMSTAT/fa4dd52c-8429-41d0-abdf-0011047bfa19/UploadedImages/BIOP%20Report/BioPharm_fall2022FINAL.pdf). Furthermore, we are honored to present at the [R Adoption series](https://www.r-consortium.org/webinars) on March 30, 2023 at 8 AM PST/ 11 AM EST. Please join for the presentation. We are planning breakout rooms to engage in a conversation with the community on the challenges that have been identified. 
+
+You can sign up by joining our [mailing list](https://urldefense.com/v3/__https:/www.pharmar.org/contact/__;!!LqrO4s96!mieVHBrLFhB_mlJ0hVRAb8pHjTWf7YNdfWBfX-exRAQVXHb6OTOX9zKdO5tUDm7AeuR6H9JnD2eIZ6eBmjw0B-9DqNg$).
+
+
