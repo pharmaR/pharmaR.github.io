@@ -1,0 +1,70 @@
+---
+title: Updates to the R Validation Hub Executive Team
+author: Doug Kelkhoff
+date: '2023-06-29'
+slug: updates-jun-2023
+categories: [news]
+banner: 'img/banners/news.png'
+---
+
+As the R Validation Hub closes in on its 5th year of activity I want to take
+a quick trip down memory lane and reflect on how we got here. Perhaps I should
+start by reminding everyone how it all started. Back in 2018, as the prospect
+of using R for any regulated analysis was still a hotly contested question,
+industry participants brought our donated space at Harvard to capacity as
+attendees gathered for the first ever R/Pharma conference. Amidst a slew of
+impressive `shiny` applications (I vividly remember shiny being the decided
+tone-setting theme that year), one Andy Nicholls offered up a deceptively
+simple question: what _should_ validated use of R look like?
+
+The answer certainly didn't get a firm answer at the conference, but it
+ignited a level of enthusiasm that spurred a Slack channel and a series of post-
+conference meetings to start hammering away at this problem. A year later, and
+the team had produced the first version of our white paper outlining a viable
+path forward. Within two years we had the basics of 
+[`riskmetric`](https://github.com/pharmar/riskmetric) -- a tool for evaluating
+the various criteria outlined in the white paper. Participation grew, and an 
+enthusastic community built a web-app around 
+[`riskmetric`](https://github.com/pharmar/riskmetric) to make it more 
+accessible, giving way to the
+[`riskassessment`](https://github.com/pharmar/riskassessment) app. Today, 
+these tools are in use or inspiring the process across the industry, as has 
+been evident in our case studies over the past year.
+
+## A Changing of the Guard
+
+After an impressive track record of delivering and improving the adoption of
+open-source tools across the industry, Andy Nicholls has decided to step down
+from his position as Lead. We want to send a heartfelt "Thank You" to Andy for
+his leadership and enthusiasm that brought the R Validation Hub to this point.
+Now we get to embark on our next challenge, sustaining through personell turn-
+over which is an inevitable and critical aspect of sustaining any organization.
+We welcome Doug Kelkhoff, who will be taking over to lead the team.
+
+## Upcoming Changes & Call for Volunteers
+
+While undergoing a change in leads, we wanted to take this transition period to
+reflect on where we're at and where we want to improve. We held an internal
+survey to try to collectively decide on our next steps. We felt that a
+consistent strength has been our tools and technical support, but felt that
+there was still room for improvement in communications and long-term planning.
+It's with those changes in mind that I want to announce two new opportunities:
+
+### Communications Workstream
+
+We're opening two roles in a new communications workstream. This role would
+place you in an opportune place to build connections across the R world,
+specifically our neighboring initiatives: the R Consortium, PhUSE, PSI AIMS, the
+R Submissions Working Group and ROpenSci. For the media-inclined, we have grand
+plans for a website overhaul and to streamline our presentations.
+
+### Strategic Workstream
+
+To level our structure a bit, we're also hoping to rebrand the "Executive
+Committee" as a strategic workstream, whose responsibiilities will be to align
+on longer-term strategic goals. This team will be comprised of representatives
+from each of our workstreams, as well as new openings for more senior leaders
+in our industry to give feedback and direction beyond our current individual-
+contributor-focused priorities.
+
+For all open opportunities, please see our [contributing](/contribute) page.
