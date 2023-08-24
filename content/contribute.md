@@ -11,18 +11,6 @@ Once you've joined, you can [subscribe to your calendar](https://lists.r-
 consortium.org/calendar) to keep tabs on all R Validation Hub all-hands
 meetings.
 
-## Leadership Sponsors
-
-In an effort to have a longer, more intentional direction for the team, we'd
-like to invite 3-5 leaders throughout the industry to serve as sponsors. This
-role would have minimal overhead - anticipating approximately 4 meetings a year
-- which will be used to gather feedback from more senior leaders to ensure that
-we're heading in direction that is serving the industry's needs.
-
-If you're interested or have a senior leader in your organization in mind,
-please put us in contact by emailing our 
-[mailing list owner](RConsortium-Validation-Hub+owner@lists.r-consortium.org).
-
 ## Contribute to a Working Group
 
 If you are willing and able to commit more time to the R Validation Hub's
@@ -37,15 +25,11 @@ relevant GitHub page, or by sending a message to us via the contact form on our
 
 ### Communications Workstream
 
-We're proud to formalize a lot of our event organizing under the new
-communications workstream, which will focus on a more streamlined and consistent
-approach to knowledge sharing and our various mediums of communications. We're
-looking for two new contributors, preferrably with an enthusiasm for social
-media, outreach, organizing and clear communication.
+_Check back later!_
 
-If you tick any of those boxes, please email our 
-[mailing list owner](RConsortium-Validation-Hub+owner@lists.r-consortium.org)
-and we'll put you in contact with the team.
+The communications workstream is our newest endeavor. We've been fortunate to
+have a lot of interest in these roles. Please check back later to see if the
+team is looking to grow.
 
 ### The [{riskmetric}](https://github.com/pharmaR/riskmetric) R Package
 
