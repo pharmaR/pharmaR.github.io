@@ -76,7 +76,7 @@ beneficial.
 The risk assessment shiny app is an extension of the {riskmetric} R package and
 provides a graphical interface to the {riskmetric} functionality.  It provides
 further exploratory capabilities in addition to the numeric metrics and improves
-ease-of-use for non-technical users. For more information see the [package
+ease-of-use for organizations to adopt a risk-based approach to R package validation. For more information see the [package
 GitHub page](https://github.com/pharmaR/risk_assessment).
 
 **Current Focus**
