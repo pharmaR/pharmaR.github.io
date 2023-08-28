@@ -10,20 +10,21 @@ The R Validation Hub has develops & maintains useful tools that make the risk as
 Though these tools likely won't encapsulate every aspect of your organization's end-to-end validation pipeline, we are constantly seeking to fill known gaps in the process. Thanks to partnerships with a sleuth of pharma organizations, these tools were designed to leverage [industry consensus](https://www.pharmar.org/casestudies/) and provide flexibility for customization when needed. We're proud that both `{riskmetric}` and `{riskassessment}` have claimed membership in the [{pharmaverse}](https://pharmaverse.org/) suite of packages.
 
 <!--- remember to swap before publishing -->
-<!--- img/risk/riskmetric_logo.png -->
-<!--- img/risk/riskassessment_logo.png -->
+<!--- ../static/img/risk/riskmetric_logo.png -->
+<!--- ../static/img/risk/riskassessment_logo.png -->
+<!--- ../static/img/risk/pharmaverse_logo.png -->
 
 <br>
 
 <center>
 <a href="https://bit.ly/raa_docs">
-<img src="../static/img/risk/riskmetric_logo.png" alt="riskmetric package" height = "172px;" style = "height:172px; padding-right: 50px;">
+<img src="img/risk/riskmetric_logo.png" alt="riskmetric package" height = "172px;" style = "height:172px; padding-right: 50px;">
 </a>
 <a href="https://pharmar.github.io/riskmetric/">
-<img src="../static/img/risk/riskassessment_logo.png" alt="riskassessment app" height = "172px;" style = "height:172px; padding-left: 50px; padding-right: 50px;">
+<img src="img/risk/riskassessment_logo.png" alt="riskassessment app" height = "172px;" style = "height:172px; padding-left: 50px; padding-right: 50px;">
 </a>
 <a href="https://pharmaverse.org/">
-<img src="../static/img/risk/pharmaverse_logo.png" alt="pharmaverse suite" height = "172px;" style = "height:172px; padding-left: 50px;">
+<img src="img/risk/pharmaverse_logo.png" alt="pharmaverse suite" height = "172px;" style = "height:172px; padding-left: 50px;">
 </a>
 </center>
 
@@ -87,9 +88,12 @@ Below is a screenshot from the application's current [demo app](https://bit.ly/r
 
 <br>
 
+<!--- remember to swap before publishing -->
+<!--- ../static/img/risk/uploaded_pkgs.png -->
+
 <center>
 <a href="https://bit.ly/raa_demo">
-<img src="../static/img/risk/uploaded_pkgs.png" alt="riskassessment demo app" width = "90%;" style = "width:90%;">
+<img src="img/risk/uploaded_pkgs.png" alt="riskassessment demo app" width = "90%;" style = "width:90%;">
 </a>
 </center>
 <br>
@@ -118,11 +122,17 @@ A data package for cataloging riskmetric results across public repositories. WAR
 
 With this type of data at your finger tips, you can analyze package risk statistics with plots like the following (below), which allocates packages into different subgroups based on developers membership in the tidyverse / pharmaverse and groups defined by "most downloads".
 
+<br>
+
+<!--- remember to swap before publishing -->
+<!--- ../static/img/risk/risk_scores_by_group_all_cran.png -->
+
 <center>
 <a href="https://bit.ly/raa_demo">
-<img src="../static/img/risk/risk_scores_by_group_all_cran.png" alt="All CRAN scored" width = "90%;" style = "width:90%;">
+<img src="img/risk/risk_scores_by_group_all_cran.png" alt="All CRAN scored" width = "90%;" style = "width:90%;">
 </a>
 </center>
+
 <br>
 
 #### Interested in supporting package development?
