@@ -3,6 +3,17 @@ title: "Risk Assessment"
 parent: "valid"
 ---
 
+# Two open-source tools
+
+The R Validation Hub has developed two tools that aim to make the risk assessment process outlined in our published [white paper](https://www.pharmar.org/white-paper/) much easier:
+
+![riskmetric](/img/risk/riskmetric_logo.png)
+![riskassessment](/img/risk/riskassessment_logo.png)
+
+
+
+
+
 Contributed R packages are developed by anyone and may differ in popularity and accuracy. 
 
 Assessing the accuracy of a contributed open-source R package should be done via risk assessment. The term *risk* refers to the risk of an error in the code that, when used appropriately, could lead to an incorrect calculation. This incorrect calculation may lead to an incorrect decision during data analysis. The relative impact of an error should be determined by the individual organisation. Impact is therefore not considered as part of the risk assessment.
