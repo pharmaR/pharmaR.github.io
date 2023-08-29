@@ -17,10 +17,10 @@ Though these tools likely won't encapsulate every aspect of your organization's 
 <br>
 
 <center>
-<a href="https://bit.ly/raa_docs">
+<a href="https://pharmar.github.io/riskmetric/">
 <img src="img/risk/riskmetric_logo.png" alt="riskmetric package" height = "172px;" style = "height:172px; padding-right: 50px;">
 </a>
-<a href="https://pharmar.github.io/riskmetric/">
+<a href="https://bit.ly/raa_docs">
 <img src="img/risk/riskassessment_logo.png" alt="riskassessment app" height = "172px;" style = "height:172px; padding-left: 50px; padding-right: 50px;">
 </a>
 <a href="https://pharmaverse.org/">
