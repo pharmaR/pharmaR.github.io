@@ -1,8 +1,8 @@
 ---
 title: Updates to the R Validation Hub Executive Team
 author: Doug Kelkhoff
-date: '2023-08-08'
-slug: updates-aug-2023
+date: '2023-09-05'
+slug: updates-sept-2023
 categories: 
   - news
 banner: 'img/banners/news.png'
@@ -42,30 +42,46 @@ Now we get to embark on our next challenge, sustaining through personell turn-
 over which is an inevitable and critical aspect of sustaining any organization.
 We welcome Doug Kelkhoff, who will be taking over to lead the team.
 
-## Upcoming Changes & Call for Volunteers
+## New Faces at the R Validation Hub
 
 While undergoing a change in leads, we wanted to take this transition period to
 reflect on where we're at and where we want to improve. We held an internal
 survey to try to collectively decide on our next steps. We felt that a
 consistent strength has been our tools and technical support, but felt that
 there was still room for improvement in communications and long-term planning.
-It's with those changes in mind that I want to announce two new opportunities:
+It's with those changes in mind that I want to announce two new initiatives:
 
 ### Communications Workstream
 
-We're opening two roles in a new communications workstream. This role would
-place you in an opportune place to build connections across the R world,
-specifically our neighboring initiatives: the R Consortium, PhUSE, PSI AIMS, the
-R Submissions Working Group and ROpenSci. For the media-inclined, we have grand
-plans for a website overhaul and to streamline our presentations.
+We're thrilled to announce that we've welcomed three new contributors to 
+launch our new communications workstream. This team will focus on how we build
+connections across the R world, specifically our neighboring initiatives: the R
+Consortium, PhUSE, PSI AIMS, the R Submissions Working Group and ROpenSci. 
+We're taking a new, critical look at how we share information and how we can
+be more intentional with how we organize ourselves. You can look forward to
+a new level of polish and consistency to the news you receive.
 
 ### Strategic Workstream
 
 To level our structure a bit, we're also hoping to rebrand the "Executive
 Committee" as a strategic workstream, whose responsibiilities will be to align
-on longer-term strategic goals. This team will be comprised of representatives
-from each of our workstreams, as well as new openings for more senior leaders
-in our industry to give feedback and direction beyond our current individual-
-contributor-focused priorities.
+on longer-term strategic goals. Where the executive team has historicall
+been a mostly static set of contributors, we hope for it to become a floating
+set of representatives from each of our workstreams. With this in mind,
+we hope that the core roles become more fluid, allowing any contributors
+to rotate in as their work requires broader discussion. 
+
+As well, we plan to leverage the R Consortium's 
+[_Pharma Oversight Committee_](https://github.com/RConsortium/pharma-wg-oversight-committee)
+to ensure we're aligned with the broader industry goals while also giving
+early visibility to what we're planning. If you would like to see your company
+weighing in on the strategic directin of the R Validation Hub, the best way to
+do so would be to sponsor the R Consortium and in doing so join the oversight
+committe. In addition to sponsoring enterprises, we also plan to extend
+invitations to less represented groups within the pharmaceutical space such as
+small-scale research organizations (CRO's), academia and research hospitals as
+well as organizations outside of the pharamceutical space entirely as the needs
+arise. If you would like to see such a group represented, please reach out so
+we can make sure those voices are heard.
 
 For all open opportunities, please see our [contributing](/contribute) page.
