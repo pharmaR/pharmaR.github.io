@@ -18,13 +18,13 @@ Though these tools likely won't encapsulate every aspect of your organization's 
 
 <center>
 <a href="https://pharmar.github.io/riskmetric/">
-<img src="img/risk/riskmetric_logo.png" alt="riskmetric package" height = "172px;" style = "height:172px; padding-right: 50px;">
+<img src="/img/risk/riskmetric_logo.png" alt="riskmetric package" height = "172px;" style = "height:172px; padding-right: 50px;">
 </a>
 <a href="https://bit.ly/raa_docs">
-<img src="img/risk/riskassessment_logo.png" alt="riskassessment app" height = "172px;" style = "height:172px; padding-left: 50px; padding-right: 50px;">
+<img src="/img/risk/riskassessment_logo.png" alt="riskassessment app" height = "172px;" style = "height:172px; padding-left: 50px; padding-right: 50px;">
 </a>
 <a href="https://pharmaverse.org/">
-<img src="img/risk/pharmaverse_logo.png" alt="pharmaverse suite" height = "172px;" style = "height:172px; padding-left: 50px;">
+<img src="/img/risk/pharmaverse_logo.png" alt="pharmaverse suite" height = "172px;" style = "height:172px; padding-left: 50px;">
 </a>
 </center>
 
@@ -93,7 +93,7 @@ Below is a screenshot from the application's current [demo app](https://bit.ly/r
 
 <center>
 <a href="https://bit.ly/raa_demo">
-<img src="img/risk/uploaded_pkgs.png" alt="riskassessment demo app" width = "90%;" style = "width:90%;">
+<img src="/img/risk/uploaded_pkgs.png" alt="riskassessment demo app" width = "90%;" style = "width:90%;">
 </a>
 </center>
 <br>
@@ -129,7 +129,7 @@ With this type of data at your finger tips, you can analyze package risk statist
 
 <center>
 <a href="https://bit.ly/raa_demo">
-<img src="img/risk/risk_scores_by_group_all_cran.png" alt="All CRAN scored" width = "90%;" style = "width:90%;">
+<img src="/img/risk/risk_scores_by_group_all_cran.png" alt="All CRAN scored" width = "90%;" style = "width:90%;">
 </a>
 </center>
 
