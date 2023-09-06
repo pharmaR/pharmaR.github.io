@@ -2,38 +2,42 @@
 title: "About Us"
 ---
 
-The main challenge of using R in late-phase trials is ensuring validation documentation. In June 2018, the R-Consortium awarded funding to create an online repository for R package validation in accordance with regulatory standards.
+## Our Mission 
 
-We focus on designing a framework that assesses the quality of an R package.
+> R Validation Hub is a collaboration to support the adoption of R within a
+> biopharmaceutical regulatory setting
 
-## R Validation Hub: Mission 
+The R Validation Hub is supported by the R Consortium and works closely with
+many neighboring efforts in the pharmaceutical space and broader R ecosystem.
 
-> R Validation Hub is a collaboration to support the adoption of R within a biopharmaceutical regulatory setting
+## Executive Committee
 
-## Current Executive Committee
+*R Validation Hub* is governed by an executive committee. Here is the committee,
+as of August 2023:
 
-*R Validation Hub* is governed by an executive committee. Here is the committee, as of May 2022:
-
-* Andy Nicholls (Chair)
-* Lyn Taylor (Secretary)
+* Doug Kelkhoff (Chair)
 * Joe Rickert (R Consortium)
-* Juliane Manitz
-* Doug Kelkhhoff
-* Paulo Bargo
-* Preetham Palukuru
-* Eric Milliman
-* Aaron Clark
+* Preetham Palukuru (R Consortium)
+* Juliane Manitz (Communications Workstream Lead)
+* Coline Zabalos (Repositories Workstream Lead)
+* Eric Milliman (`riskmetric` Workstream Lead)
+* Aaron Clark (`riskassessment` App Workstream Lead)
 
-Thank you to previous committee members for helping to drive the R Validation Hub forward:
+Thank you to previous committee members for helping to drive the R Validation
+Hub forward:
 
-* Marly Gotti
-* Yilong Zhang 
-* Keaven Anderson 
-* Min Lee
+_Andy Nicholls_ (Chair 2018-2022), _Lyn Taylor_, _Paulo Bargo_, _Marly Gotti_,
+_Yilong Zhang_, _Keaven Anderson_, _Min Lee_, _Parker Sims_
 
 ## Participating Organisations
 
-The *R Validation Hub* comprises of participants from across the pharmaceutical industry.  Participants contribute to the effort through our regular group meetings, as well as the various workstreams that make up the project.  If you are interested in getting involved please contact <psi.aims.r.validation@gmail.com>.  Else you can sign up to our mailing list [here](https://lists.r-consortium.org/g/RConsortium-Validation-Hub/).
+The *R Validation Hub* comprises of participants from across the pharmaceutical
+industry. Participants contribute to the effort through our regular group
+meetings, as well as the various workstreams that make up the project. 
+
+Feel free to explore [contribution opportunities](/contribute) and subscribe to 
+[our mailing list](https://lists.r-consortium.org/g/RConsortium-Validation-Hub/) 
+to stay up-to-date on our progress.
 
 If you are a member and your organisation does not appear on this list, please let us know!
 
@@ -84,8 +88,3 @@ If you are a member and your organisation does not appear on this list, please l
 * SQN Clinical 
 * Teva Pharmaceutical Industries Ltd. 
 * University of Sheffield 
-
-**Independent consultants**
-
-* *Parker Sims*
-
