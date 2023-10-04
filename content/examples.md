@@ -12,18 +12,6 @@ Here, we aim to illustrate examples of different validation framework implementa
 
 <br>
 
-<!--- remember to swap before publishing -->
-<!--- ../static/img/examples/riskmetric_logo.png -->
-<!--- ../static/img/examples/riskassessment_logo.png -->
-
-<a href="https://pharmar.github.io/riskmetric/articles/riskmetric.html">
-<img src="/img/examples/riskmetric_logo.png" alt="riskmetric package" height = "120px;" style = "height:120px; padding-left: 80px; padding-right: 40px;">
-</a>
-<a href="https://pharmar.github.io/riskassessment/articles/riskassessment.html">
-<img src="/img/examples/riskassessment_logo.png" alt="riskassessment app" height = "120px;" style = "height:120px; padding-left: 40px;">
-</a>
-
-<br>
 
 ## Get Started with risk-based software
 
@@ -31,6 +19,20 @@ Looking for curated examples on how package metrics might be assessed and interp
 
 * Get Started with the [`{riskmetric}`  package](https://pharmar.github.io/riskmetric/articles/riskmetric.html)
 * Get started with the [`{riskassessment}` application](https://pharmar.github.io/riskassessment/articles/riskassessment.html)
+
+<br>
+
+<!--- remember to swap before publishing -->
+<!--- ../static/img/examples/riskmetric_logo.png -->
+<!--- ../static/img/examples/riskassessment_logo.png -->
+<center>
+<a href="https://pharmar.github.io/riskmetric/articles/riskmetric.html">
+<img src="/img/examples/riskmetric_logo.png" alt="riskmetric package" height = "120px;" style = "height:120px; padding-left: 80px; padding-right: 40px;">
+</a>
+<a href="https://pharmar.github.io/riskassessment/articles/riskassessment.html">
+<img src="/img/examples/riskassessment_logo.png" alt="riskassessment app" height = "120px;" style = "height:120px; padding-left: 40px;">
+</a>
+</center>
 
 <br>
 
