@@ -27,10 +27,10 @@ Looking for curated examples on how package metrics might be assessed and interp
 <!--- ../static/img/examples/riskassessment_logo.png -->
 <center>
 <a href="https://pharmar.github.io/riskmetric/articles/riskmetric.html">
-<img src="/img/examples/riskmetric_logo.png" alt="riskmetric package" height = "120px;" style = "height:120px; padding-left: 80px; padding-right: 40px;">
+<img src="/img/examples/riskmetric_logo.png" alt="riskmetric package" height = "140px;" style = "height:140px; padding-left: 80px; padding-right: 40px;">
 </a>
 <a href="https://pharmar.github.io/riskassessment/articles/riskassessment.html">
-<img src="/img/examples/riskassessment_logo.png" alt="riskassessment app" height = "120px;" style = "height:120px; padding-left: 40px;">
+<img src="/img/examples/riskassessment_logo.png" alt="riskassessment app" height = "140px;" style = "height:140px; padding-left: 40px; padding-right: 80px;">
 </a>
 </center>
 
