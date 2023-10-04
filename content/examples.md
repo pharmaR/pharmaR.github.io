@@ -40,22 +40,7 @@ If you are looking for curated examples on how package metrics might be assessed
 <br>
 
 
+<br>
 
-## Examples
-
-As you can see below, this page is currently **under construction** until further notice. Please be patient while we work on harmonizing this page's content.
-
-### Example 1
-
-**[Placeholder for Example 1]**
-
-
-### Example 2
-
-**[Placeholder Example 2]**
-
-
-### Example 3
-
-**[Placeholder Example 3]**
+<br>
 
