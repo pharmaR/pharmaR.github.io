@@ -5,12 +5,14 @@ date: '2023-06-02'
 slug: shiny_conf_award
 categories:
   - news
+tags:
+  - risk assessment
 banner: 'img/banners/news.png'
 ---
 
-The {riskassessment} app, presented by Aaron Clark from the R Validation Hub Executive Committee, was voted best Shiny app at shinyConf 2023. The 2nd Annual Shiny Conference was held in March 2023. It was all virtual with over 4k global registrants. Congratulations!!
+The `{riskassessment}` app, presented by Aaron Clark from the R Validation Hub Executive Committee, was voted best Shiny app at shinyConf 2023. The 2nd Annual Shiny Conference was held in March 2023. It was all virtual with over 4k global registrants. Congratulations!!
 
-The app provides a shiny front-end to augment the utility of the riskmetric package, thus user-friendly and interactive access to risk assessment of R packages. The apps functionalities include: 
+The app provides a shiny front-end to augment the utility of the `{riskmetric}` package, thus user-friendly and interactive access to risk assessment of R packages. The apps functionalities include: 
 
 * Analyze risk metrics for each R package (and version) without the need to write code in R
 * Encourage open-source mentality by contribution of user/reviewer comments
@@ -20,8 +22,8 @@ The app provides a shiny front-end to augment the utility of the riskmetric pack
 
 Do you want to know more? Here some additional resources: 
 
-* The Demo app: https://rinpharma.shinyapps.io/risk_assessment/ 
+* The Demo app: https://rinpharma.shinyapps.io/riskassessment/ 
 * GitHub: https://github.com/pharmaR/riskassessment 
 * User guide: https://pharmar.github.io/riskassessment/ 
 
-*If you are interested in getting involved in contributing to our technical efforts then please send an email to [psi.aims.r.validation@gmail.com](mailto:psi.aims.r.validation@gmail.com).  Or join our [mailing list](https://urldefense.com/v3/__https:/www.pharmar.org/contact/__;!!LqrO4s96!mieVHBrLFhB_mlJ0hVRAb8pHjTWf7YNdfWBfX-exRAQVXHb6OTOX9zKdO5tUDm7AeuR6H9JnD2eIZ6eBmjw0B-9DqNg$) to receive an invite to our community meetings and receive notifications of new blog posts.*
+*If you are interested in getting involved in contributing to our technical efforts then please send an email to [psi.aims.r.validation@gmail.com](mailto:psi.aims.r.validation@gmail.com).  Or join our [mailing list](https://www.pharmar.org/contact/) to receive an invite to our community meetings and receive notifications of new blog posts.*
