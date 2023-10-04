@@ -1,0 +1,187 @@
+---
+title: Risk Assessment App v2.0.0
+author: Aaron Clark
+date: '2023-08-16'
+slug: updates-aug-2023
+categories: 
+  - news
+tags:
+  - risk assessment
+banner: 'img/banners/news.png'
+---
+
+Welcome! It's with great excitement and long-awaited anticipation that I get to share some recent updates that have hit the `{riskassessment}` app's [GitHub repository](https://github.com/pharmaR/riskassessment) earlier this month. If this is the first time you've heard or seen the application, I'd recommend starting with our [`README`](https://github.com/pharmaR/riskassessment#readme) to gain some familiarity with the project, especially with installation instructions. However, (in a nut-shell) the app is a full-fledged R package that seeks augment the utility of the [`{riskmetric}`](https://github.com/pharmaR/riskmetric) package within an organizational context.
+
+<!-- to render html in RStudio, I used the following filepath -->
+<!-- ../../blog/2023-08-16-riskassessment-new-release-updates_files/riskassessment_logo.png -->
+
+<a href='https://bit.ly/raa_docs'><img src="/blog/2023-08-16-riskassessment-new-release-updates_files/riskassessment_logo.png" align="right" height="172" style="float:right; height:172px;"/></a>
+
+
+
+<br>
+
+## Latest features Recap
+
+Most notably, the application has sustained the following improvements, in order from least exciting to most exciting:
+
+* Face lift to functionality & aesthetics of the `'Report Builder'` & `'Database View'`
+* Enhanced support to analyze dependencies
+* More org-level customization, including the use of a configuration file 
+* `admin`s can now to edit roles and privileges
+* All users can explore source contents of package
+
+The feedback loop is crucial! All of these improvements started off as community-driven suggestions on our GitHub repo. If you have an idea that doesn't already exist on the [existing list](https://github.com/pharmaR/riskassessment/issues) of issues, [submit a new issue](https://github.com/pharmaR/riskassessment/issues/new) today and it may become a reality tomorrow.
+
+
+<br>
+
+
+## `'Report Builder'` Face Lift
+
+This new release introducted a more holistic Report Builder! Allowing users to define what content shows up in the report. In addition, users can now compose a long form "Package Summary" to keep track of more pertinent items (perhaps non-`{riskmetric}` items) for a more rounded package review.
+
+In the example below, see how users can quickly include/exclude specific elements in the summary report, plus edit the package summary in a real-time report preview. When satisfied, the user can download the report to HTML, DOCX, or PDF:
+
+<br>
+
+  
+![](/blog/2023-08-16-riskassessment-new-release-updates_files/report_builder.gif)
+
+
+
+<br>
+
+## `'Database View'` Face Lift 
+
+More useful content to ingest!
+
+  * A summary of uploaded packages
+  * The package uploaded date
+  * Decision-related columns including a time stamp & decision source
+  * Quick & easy download options to Excel or CSV
+
+
+![](/blog/2023-08-16-riskassessment-new-release-updates_files/uploaded_pkgs.png)
+
+
+
+
+<br>
+
+## Package Dependencies
+
+Though `{riskmetric}` has supported the dependencies assessment for some time, the application didn't do a great job of displaying this data until this release. Now, the user can see each package dependency which may or may not have a lower bound on it, plus the dependency type (Imports, Depends, LinkingTo, or Suggests). If the package dependency already exists in the `{riskassessment}` database, then it's risk score is displayed. When the package hasn't been uploaded yet, there are convenient buttons to help the user evaluate those packages.
+
+<br>
+
+![](/blog/2023-08-16-riskassessment-new-release-updates_files/dependencies.png)
+
+
+
+
+
+
+<br>
+
+## Enhanced organization-level settings
+
+
+The following features allow `admin`s critical control over how prospective users within an organization perform their risk assessments. Most, if not all, can be edited in-app or via the config file! So, what's new? You can now...
+
+* Add/edit user roles/privileges
+* Customize decision categories & colors
+* Toggle decision automation rules
+* Initialize metric weights
+
+Below is an example configuration file that demonstrates our ability to togggle these settings. First, config athors can add as many roles as they want under `credentials`. From there, they can use the `privileges` tag to populate that role with unique privileges in the app. For a details on each privilege, please see our [documentation site](https://pharmar.github.io/riskassessment/articles/User_Roles_and_Privileges.html#privileges). These roles can then be assigned to specific users to manage who is involved with different parts of the review process.
+
+Next, `decisions` is where users can define custom package categories in the application that correspond to their organization's validation process. From there, you can automate decisions based on risk scores or even define a custom color to each decision category.
+
+By default, all metric weights (that ultimately determine package risk scores) are set to 1, unless you override them here or in the app's UI. This is a convenient way to incorporate your organizations priorities into the validation process for all users of the application. Use a zero (0) to remove a metric entirely.
+
+<br>
+
+Example config (YML) file:
+
+```yml
+default:
+  assessment_db: database.sqlite
+  loggit_json: loggit.json
+  credential_db: credentials.sqlite
+  credentials:
+    roles:
+      - admin
+      - lead
+      - reviewer
+      - viewer
+    privileges:
+      admin: [admin, weight_adjust, auto_decision_adjust, final_decision, revert_decision, add_package, delete_package, overall_comment, general_comment]
+      lead: [weight_adjust, auto_decision_adjust, final_decision, revert_decision, add_package, delete_package, overall_comment, general_comment]
+      reviewer: [add_package, general_comment]
+      viewer:
+  decisions:
+    categories:
+      - Low Risk
+      - Medium Risk
+      - High Risk
+    rules:
+      Medium Risk:
+        - .398
+        - .639
+      High Risk:
+        - .639
+        - 1
+    colors:
+      Medium Risk: !expr grDevices::rgb(52, 235, 229, maxColorValue = 255)
+  metric_weights:
+    covr_coverage: 2
+    has_vignettes: 0
+```
+
+
+
+
+
+<br>
+
+## Edit Roles & Privileges
+
+Building on the configuration file, `admin` users can also manage who's involved in the review process on the fly in the app. This is helpful so that the application doesn't have to be re-deployed every time a new role needs creation. User authentication & role management is a major cornerstone of this application, which helps organizations adhere to their unique validation strategies.
+
+![](/blog/2023-08-16-riskassessment-new-release-updates_files/roles_privileges.png)
+
+<br>
+
+![](/blog/2023-08-16-riskassessment-new-release-updates_files/edit_roles.png)
+
+
+<br>
+
+## Explore Package Source Code
+
+Finally, if there were one major change to announce at this release that creates unique value for app users, it would be this: the app now offers the ability to browse package source code! This is huge news for those orgs with a more manual package review process. `{riskmetric}` metrics are great because they can serve up isolated assessments from the source code (and beyond), but sometimes you just need to dig deeper into a package's contents, and that's what his new module does. 
+
+Below, you can see the 'FILE BROWSER' which gives us a directory tree on the left hand side and a file preview on the right. Currently, it's displaying a description file for the `{tidyCDISC}` package. There you can explore all the things you may care about, such as the license, maintainer, dependencies, etc. In addition, you can navigate to a specific function's script in the `R/` folder to review methodology. Even more importantly, you can browse through the author's tests to evaluate testing coverage and robustness.
+
+![](/blog/2023-08-16-riskassessment-new-release-updates_files/source_explorer.png)
+
+
+<br>
+
+## Thanks and call to action
+
+That's all for now. Thanks for reviewing the latest release details and we hope you find them useful.
+
+Interested in supporting package development? We could always use extra help / feedback! Please consider one of the following options:
+
+* [Propose a feature](https://github.com/pharmaR/riskassessment/issues/new) for us to consider
+* [Join the dev team](https://www.pharmar.org/contribute/) - extra hands make light work
+* [Fill out our survey](https://bit.ly/risk_survey) so we can learn how you use `{riskmetric}` and `{riskassessment}`
+
+<br>
+
+<br>
+
+
+
