@@ -19,7 +19,7 @@ as of August 2023:
 * Joe Rickert (R Consortium)
 * Preetham Palukuru (R Consortium)
 * Juliane Manitz (Communications Workstream Lead)
-* Coline Zaballos (Repositories Workstream Lead)
+* Coline Zeballos (Repositories Workstream Lead)
 * Eric Milliman (`riskmetric` Workstream Lead)
 * Aaron Clark (`riskassessment` App Workstream Lead)
 
