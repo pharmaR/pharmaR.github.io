@@ -19,7 +19,7 @@ as of August 2023:
 * Joe Rickert (R Consortium)
 * Preetham Palukuru (R Consortium)
 * Juliane Manitz (Communications Workstream Lead)
-* Coline Zabalos (Repositories Workstream Lead)
+* Coline Zeballos (Repositories Workstream Lead)
 * Eric Milliman (`riskmetric` Workstream Lead)
 * Aaron Clark (`riskassessment` App Workstream Lead)
 
@@ -43,7 +43,8 @@ If you are a member and your organisation does not appear on this list, please l
 
 * Abbvie 
 * Acerta Pharma 
-* Amgen 
+* Amgen
+* Appsilon
 * Astellas 
 * Atorus Research
 * Bayer 
@@ -64,7 +65,8 @@ If you are a member and your organisation does not appear on this list, please l
 * HMS Analytical Software 
 * IQVIA 
 * InModelia 
-* Johnson & Johnson 
+* Johnson & Johnson
+* Jumping Rivers 
 * Kite Pharma 
 * Linux Foundation 
 * Merck KGaA/EMD Serono
@@ -75,13 +77,14 @@ If you are a member and your organisation does not appear on this list, please l
 * Nuventra 
 * Parexel
 * Pfizer 
-* Phastar 
+* Phastar
+* Posit
 * PPD
+* ProCogia
 * Quanticate 
 * RCPE 
 * Rho, Inc. 
 * Roche 
-* RStudio
 * Sanofi 
 * Scharp
 * Servier
