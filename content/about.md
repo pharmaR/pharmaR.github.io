@@ -43,7 +43,8 @@ If you are a member and your organisation does not appear on this list, please l
 
 * Abbvie 
 * Acerta Pharma 
-* Amgen 
+* Amgen
+* Appsilon
 * Astellas 
 * Atorus Research
 * Bayer 
