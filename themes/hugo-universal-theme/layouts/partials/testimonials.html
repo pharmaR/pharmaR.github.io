@@ -1,5 +1,6 @@
 {{ if isset .Site.Params "testimonials" }}
 {{ if .Site.Params.testimonials.enable }}
+{{ if isset .Site.Data "testimonials" }}
 {{ if gt (len .Site.Data.testimonials) 0 }}
 <section class="bar background-pentagon no-mb">
     <div class="container">
@@ -15,7 +16,11 @@
 
                 <!-- *** TESTIMONIALS CAROUSEL *** -->
 
-                <ul class="owl-carousel testimonials same-height-row">
+                <ul class="owl-carousel testimonials same-height-row"
+                    data-items="{{ default 4 .Site.Params.CarouselTestimonials.items }}"
+                    data-autoplay="{{ default false .Site.Params.CarouselTestimonials.auto_play }}"
+                    data-slide-speed="{{ default 2000 .Site.Params.CarouselTestimonials.slide_speed }}"
+                    data-pagination-speed="{{ default 1000 .Site.Params.CarouselTestimonials.pagination_speed }}">
                     {{ range .Site.Data.testimonials }}
                     <li class="item">
                         <div class="testimonial same-height-always">
@@ -23,7 +28,7 @@
                                 <p>{{ .text | markdownify }}</p>
                             </div>
                             <div class="bottom">
-                                <div class="icon"><i class="fa fa-quote-left"></i>
+                                <div class="icon"><i class="fas fa-quote-left"></i>
                                 </div>
                                 <div class="name-picture">
                                     <img class="" alt="" src="{{ .avatar | absURL }}">
@@ -44,6 +49,7 @@
     </div>
 </section>
 <!-- /.bar -->
+{{ end }}
 {{ end }}
 {{ end }}
 {{ end }}
