@@ -76,10 +76,10 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     name       = "Test"
     url        = "/test/"
     weight     = 1
-    parent     = "section.why"x
+    parent     = "section.why"
     
 [[menu.main]]
-    name       = "How to Validate"
+    name       = "Our Validation Approaches"
     identifier = "section.how"
     url        = ""
     weight     = 2
