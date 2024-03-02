@@ -7,59 +7,109 @@ disqusShortname = ""
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [[menu.main]]
-    identifier = "about"
-    name = "About Us"
-    url = "/about/"
-    weight = 1
+    name       = "About Us"
+    identifier = "menu.about"
+    url        = "/img/rval_pattern.png"
+    weight     = 1
+
 [[menu.main]]
-    parent = "about"
-    name = "About the R Validation Hub"
-    url = "/about-rval/"
-    weight = 12
+    name       = "The R Validation Hub"
+    identifier = "section.rvalhub"
+    url        = ""
+    weight     = 1
+    parent     = "menu.about"
+    post       = 1
+
 [[menu.main]]
-    parent = "about"
-    name = "Meet the Team"
-    url = "/meet-the-team/"
-    weight = 13
+    name       = "Our Mission & History"
+    url        = "/mission-and-history/"
+    weight     = 1
+    parent     = "section.rvalhub"
+
 [[menu.main]]
-    parent = "about"
-    name = "Partner Initiatives"
-    url = "/partners/"
-    weight = 14
-    [[menu.main]]
-    parent = "about"
-    name = "Participating Organizations"
-    url = "/participating-orgs/"
-    weight = 14
+    name       = "Participating Organizations"
+    url        = "/participating-orgs/"
+    weight     = 12
+    parent     = "section.rvalhub"
+    
 [[menu.main]]
-    name = "Why Validation?"
-    url  = "/why-val/"
-    weight = 2
+    name       = "Partner Initiatives"
+    url        = "/partner-initiatives/"
+    weight     = 13
+    parent     = "section.rvalhub"
+    
 [[menu.main]]
-    identifier = "how-val"
-    name = "How Validation?"
-    url = "/how-val/"
-    weight = 3
+    name       = "Our Team"
+    identifier = "section.team"
+    url        = ""
+    weight     = 2
+    parent     = "menu.about"
+    post       = 2
+
 [[menu.main]]
-    parent = "how-val"
-    name = "{riskmetric}"
-    url = "/riskmetric/"
-    weight = 31
+    name       = "Team Members"
+    url        = "/meet-the-team/"
+    weight     = 21
+    parent     = "section.team"
+
 [[menu.main]]
-    parent = "how-val"
-    name = "{riskassessment}"
-    url = "/riskassessment/"
-    weight = 32
+    name       = "Our Workstreams"
+    url        = "/workstreams/"
+    weight     = 22
+    parent     = "section.team"
+    
 [[menu.main]]
-    parent = "how-val"
-    name = "White Paper"
-    url = "/white-paper/"
-    weight = 33
+    name       = "Validation"
+    identifier = "menu.validation"
+    url        = "/img/package_pattern.png"
+    weight     = 3
+
 [[menu.main]]
-    parent = "how-val"
-    name = "Guidances"
-    url = "/guidances/"
-    weight = 34
+    name       = "Why Validation?"
+    identifier = "section.why"
+    url        = ""
+    weight     = 1
+    parent     = "menu.validation"
+    post       = 1
+
+[[menu.main]]
+    name       = "Test"
+    url        = "/test/"
+    weight     = 1
+    parent     = "section.why"x
+    
+[[menu.main]]
+    name       = "How to Validate"
+    identifier = "section.how"
+    url        = ""
+    weight     = 2
+    parent     = "menu.validation"
+    post       = 2
+
+[[menu.main]]
+    name       = "The {riskmetric} Package"
+    url        = "/riskmetric/"
+    weight     = 21
+    parent     = "section.how"
+    
+[[menu.main]]
+    name       = "The {riskassessment} App"
+    url        = "/riskassessment/"
+    weight     = 22
+    parent     = "section.how"
+    
+[[menu.main]]
+    name       = "Our White Paper"
+    url        = "/white-paper/"
+    weight     = 23
+    parent     = "section.how"
+
+[[menu.main]]
+    name       = "General Guidances"
+    url        = "/guidances/"
+    weight     = 24
+    parent     = "section.how"
+    
 [[menu.main]]
     name = "Case Studies"
     url  = "/casestudies/"
@@ -116,14 +166,19 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     weight = 7
 [[menu.main]]
     parent = "involved"
+    name = "Community Meetings"
+    url = "/community-meetings/"
+    weight = 71
+    [[menu.main]]
+    parent = "involved"
     name = "Contribute"
     url = "/contribute/"
-    weight = 71
+    weight = 72
 [[menu.main]]
     parent = "involved"
     name = "Contact Us"
     url = "/contact/"
-    weight = 72
+    weight = 73
 
 [params]
     description = "A website built through Hugo and blogdown."
