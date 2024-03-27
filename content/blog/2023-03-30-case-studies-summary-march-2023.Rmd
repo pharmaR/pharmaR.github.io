@@ -5,7 +5,7 @@ date: '2023-03-15'
 slug: case-studies-summary-march-2023
 categories:
   - news
-banner: 'img/banners/news.png'
+banner: 'img/banners/case_studies.png'
 ---
 
 Last year, the R validation hub recently initiated a three-part presentation series on case studies in which eight pharmaceutical companies shared their experiences on building a GxP framework with R. These case studies highlighted both easy and challenging aspects of implementing risk assessment for R packages in a GxP environment. In this blog post we attempt to summarize common themes, difference in approaches, and challenges. 

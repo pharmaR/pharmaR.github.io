@@ -53,6 +53,12 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     parent     = "section.team"
     
 [[menu.main]]
+    name       = "Our Blog & News"
+    url        = "/blog/"
+    weight     = 22
+    parent     = "section.team"
+    
+[[menu.main]]
     name       = "Validation"
     identifier = "menu.validation"
     url        = "/img/package_pattern.png"
@@ -130,11 +136,6 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     url = "/looking-forward/"
     weight = 52
 [[menu.main]]
-    parent = "roadmap"
-    name = "Blog/LinkedIn Updates"
-    url = "/updates/"
-    weight = 53
-[[menu.main]]
     identifier = "resources"
     name = "Resources"
     url = "/resources/"
@@ -202,13 +203,12 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [params.clients]
     enable = true
-    title = "Participating Organisations"
-    subtitle = "Members of the following organisations are participating in this project"
+    title = "Partner Initiatives"
+    subtitle = "The three entities we have partner initiatives with are:"
 
 [params.recent_posts]
     enable = true
-    title = "From our blog"
-    subtitle = "Recent blog posts"
+    title = "Our Latest News"
 
 [params.widgets]
     search = true

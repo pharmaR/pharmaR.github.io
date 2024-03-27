@@ -5,7 +5,7 @@ date: '2023-09-05'
 slug: updates-sept-2023
 categories: 
   - news
-banner: 'img/banners/news.png'
+banner: 'img/banners/executive_team_updates.png'
 ---
 
 As the R Validation Hub closes in on its 5th year of activity I want to take

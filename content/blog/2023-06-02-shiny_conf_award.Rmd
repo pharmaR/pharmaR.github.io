@@ -7,7 +7,7 @@ categories:
   - news
 tags:
   - risk assessment
-banner: 'img/banners/news.png'
+banner: 'img/banners/shinyconf_win.png'
 ---
 
 The `{riskassessment}` app, presented by Aaron Clark from the R Validation Hub Executive Committee, was voted best Shiny app at shinyConf 2023. The 2nd Annual Shiny Conference was held in March 2023. It was all virtual with over 4k global registrants. Congratulations!!
