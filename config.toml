@@ -47,15 +47,9 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     post       = 2
 
 [[menu.main]]
-    name       = "Team Members"
-    url        = "/meet-the-team/"
+    name       = "Members & Workstreams"
+    url        = "/members-and-workstreams/"
     weight     = 21
-    parent     = "section.team"
-
-[[menu.main]]
-    name       = "Our Workstreams"
-    url        = "/workstreams/"
-    weight     = 22
     parent     = "section.team"
     
 [[menu.main]]

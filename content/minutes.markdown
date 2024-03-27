@@ -11,6 +11,32 @@ For the 2022 case studies, please see [here](/casestudies/)
  
 ### Historical minutes
 
+
+```r
+library(dplyr)
+library(stringr)
+library(lubridate)
+
+mins <- sort(list.files("minutes"), decreasing = TRUE)
+mins_see_base <- mins %>%
+  str_replace("R_Validation_Hub_Meeting_minutes_", "") %>%
+  str_replace("\\.pdf$", "") 
+
+mins_see <- mins_see_base %>%
+  ymd() %>%
+  format("%d %b %Y") %>%
+  str_c("[", ., "]")
+
+mins <- mins %>%
+  str_c("(",  "/minutes/", .,  ")")
+
+mins_link <- str_c(mins_see, mins)
+
+for(i in mins_link){
+  cat("*", i, fill = TRUE)
+}
+```
+
 * [18 May 2021](/minutes/R_Validation_Hub_Meeting_minutes_20210518.pdf)
 * [16 Feb 2021](/minutes/R_Validation_Hub_Meeting_minutes_20210216.pdf)
 * [20 Oct 2020](/minutes/R_Validation_Hub_Meeting_minutes_20201020.pdf)
