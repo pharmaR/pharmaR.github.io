@@ -2,6 +2,8 @@ weight: 4
 title: "Read Our White Paper!"
 description: >
   <ul class="list-style-none">
-    <li>Check out our white paper, titled "<a style="color:black;" href="/white-paper/">A Risk-based Approach for Assessing R package Accuracy within a Validated Infrastructure</a>."</li>
+    <li>Check out our white paper, titled "<a style="color:#5D8BC4;" 
+    href="/white-paper/">A Risk-based Approach for Assessing R package 
+    Accuracy within a Validated Infrastructure</a>."</li>
   </ul>
 image: "img/carousel/whitepaper.png"
