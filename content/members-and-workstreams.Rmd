@@ -1,5 +1,9 @@
 ---
 title: "Members & Workstreams"
+output:
+  html_document:
+    toc: true
+    theme: united
 ---
 
 ```{r libraries, echo=FALSE, message=FALSE, warning=FALSE}
@@ -49,11 +53,11 @@ grid.arrange(grobs=c(list), nrow = 1, padding = unit(1, "cm"))
 }
 ```
 
-## Team Structure
+### Our Structure
 
-The R Validation Hub is an R Consortium Working Group. The R Consortium supports several related working groups, and these working groups have a similar overall objective: to support the use of R within the biopharmaceutical industry. Furthermore, the working groups are complementary; each has its own distinct deliverables and many of the R Validation Hub's members are also members of the other working groups.
+The R Validation Hub champions a level structure, comprised of many workstreams that contribute toward their focus areas and activities. Find each workstream's duties below as well as the members that support them.
 
-Within the R Validation Hub, we have many workstreams that focus on their own respective activities. Find each workstream's duties below as well as the members that support them.
+*If you wish to contribute to any of our efforts, please visit our [Contribute](https://www.pharmar.org/contribute/) page.*
 
 ### Strategic Workstream
 
@@ -96,7 +100,7 @@ photo_row_function(repo_df)
 
 ### {riskassessment} Workstream
 
-[Text about workstream]
+The **{riskassessment} Workstream** leads the development of the risk assessment Shiny app (an extension of the {riskmetric} package) that provides a graphical interface to the package's functionality.
 
 ```{r riskassessment-ws, echo=FALSE,  message=FALSE, warning=FALSE, fig.height = 3}
 riskassessment_df <-
@@ -109,7 +113,7 @@ photo_row_function(riskassessment_df)
 
 ### {riskmetric} Workstream
 
-[Text about workstream]
+The **{riskmetric} Workstream** leads the development of the {riskmetric} package that supports the idea of risk-based evaluation of R packages.
 
 ```{r riskmetric-ws, echo=FALSE,  message=FALSE, warning=FALSE, fig.height = 3}
 riskmetric_df <-
@@ -121,3 +125,7 @@ photo_row_function(riskmetric_df)
 ```
 
 ### Previous Members
+
+*Andy Nicholls* (Chair 2018-2022)
+
+*Lyn Taylor*, *Paulo Bargo*, *Marly Gotti*, *Yilong Zhang*, *Keaven Anderson*, *Min Lee*, *Parker Sims*

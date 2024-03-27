@@ -21,8 +21,8 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     post       = 1
 
 [[menu.main]]
-    name       = "Our Mission & History"
-    url        = "/mission-and-history/"
+    name       = "Our Background & Mission"
+    url        = "/background-and-mission/"
     weight     = 1
     parent     = "section.rvalhub"
 
@@ -93,15 +93,21 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     parent     = "section.how"
     
 [[menu.main]]
+    name       = "The {riskscore} Package"
+    url        = "/riskscore/"
+    weight     = 23
+    parent     = "section.how"
+    
+[[menu.main]]
     name       = "Our White Paper"
     url        = "/white-paper/"
-    weight     = 23
+    weight     = 24
     parent     = "section.how"
 
 [[menu.main]]
     name       = "General Guidances"
     url        = "/guidances/"
-    weight     = 24
+    weight     = 25
     parent     = "section.how"
     
 [[menu.main]]
@@ -138,11 +144,6 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     name = "Presentations"
     url = "/present/"
     weight = 61
-[[menu.main]]
-    parent = "resources"
-    name = "Papers"
-    url = "/white-paper/"
-    weight = 62
 [[menu.main]]
     parent = "resources"
     name = "Minutes"
