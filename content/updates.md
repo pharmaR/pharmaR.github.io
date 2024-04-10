@@ -1,3 +1,0 @@
----
-title: "Blog/LinkedIn Updates"
----

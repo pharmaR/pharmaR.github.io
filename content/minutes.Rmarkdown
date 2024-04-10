@@ -11,7 +11,7 @@ For the 2022 case studies, please see [here](/casestudies/)
  
 ### Historical minutes
 
-```{r minutes, echo = FALSE, comment="", results = "asis", message = FALSE, warning = FALSE}
+```{r minutes, echo = FALSE, results = "asis", message = FALSE, warning = FALSE}
  
 library(dplyr)
 library(stringr)

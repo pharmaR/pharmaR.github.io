@@ -53,12 +53,6 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     parent     = "section.team"
     
 [[menu.main]]
-    name       = "Our Blog & News"
-    url        = "/blog/"
-    weight     = 22
-    parent     = "section.team"
-    
-[[menu.main]]
     name       = "Validation"
     identifier = "menu.validation"
     url        = "/img/package_pattern.png"
@@ -73,8 +67,8 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     post       = 1
 
 [[menu.main]]
-    name       = "Test"
-    url        = "/test/"
+    name       = "Regulations"
+    url        = "/regulations/"
     weight     = 1
     parent     = "section.why"
     
@@ -112,69 +106,86 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [[menu.main]]
     name       = "General Guidances"
-    url        = "/guidances/"
+    url        = "/general-guidances/"
     weight     = 25
     parent     = "section.how"
     
 [[menu.main]]
-    name = "Case Studies"
-    url  = "/casestudies/"
-    weight = 4
+    name       = "Case Studies"
+    url        = "/categories/case-studies/"
+    weight     = 4
+    
 [[menu.main]]
     identifier = "roadmap"
-    name = "Our Roadmap"
-    url = "/our-roadmap/"
-    weight = 5
+    name       = "Our Roadmap"
+    url        = "/our-roadmap/"
+    weight     = 5
+    
 [[menu.main]]
-    parent = "roadmap"
-    name = "Accomplishments"
-    url = "/accomplishments/"
-    weight = 51
+    parent     = "roadmap"
+    name       = "Accomplishments"
+    url        = "/accomplishments/"
+    weight     = 51
+    
 [[menu.main]]
-    parent = "roadmap"
-    name = "Looking Forward"
-    url = "/looking-forward/"
-    weight = 52
+    parent     = "roadmap"
+    name       = "Looking Forward"
+    url        = "/looking-forward/"
+    weight     = 52
+    
 [[menu.main]]
     identifier = "resources"
-    name = "Resources"
-    url = "/resources/"
-    weight = 6
+    name       = "Resources"
+    url        = "/resources/"
+    weight     = 6
+    
 [[menu.main]]
-    parent = "resources"
-    name = "Presentations"
-    url = "/present/"
-    weight = 61
+    parent     = "resources"
+    name       = "News"
+    url        = "/categories/news/"
+    weight     = 61
+    
 [[menu.main]]
-    parent = "resources"
-    name = "Minutes"
-    url = "/minutes/"
-    weight = 63
+    parent     = "resources"
+    name       = "Presentations"
+    url        = "/present/"
+    weight     = 62
+    
 [[menu.main]]
-    parent = "resources"
-    name = "Glossary"
-    url = "/glossary/"
-    weight = 64
+    parent     = "resources"
+    name       = "Minutes"
+    url        = "/minutes/"
+    weight     = 64
+    
+[[menu.main]]
+    parent     = "resources"
+    name       = "Glossary"
+    url        = "/glossary/"
+    weight     = 65
+    
 [[menu.main]]
     identifier = "involved"
-    name = "Get Involved"
-    url = "/involved/"
-    weight = 7
+    name       = "Get Involved"
+    url        = "/involved/"
+    weight     = 7
+    
 [[menu.main]]
-    parent = "involved"
-    name = "Community Meetings"
-    url = "/community-meetings/"
-    weight = 71
-    [[menu.main]]
-    parent = "involved"
-    name = "Contribute"
-    url = "/contribute/"
-    weight = 72
+    parent     = "involved"
+    name       = "Community Meetings"
+    url        = "/community-meetings/"
+    weight     = 71
+    
 [[menu.main]]
-    parent = "involved"
-    name = "Contact Us"
-    url = "/contact/"
-    weight = 73
+    parent     = "involved"
+    name       = "Contribute"
+    url        = "/contribute/"
+    weight     = 72
+    
+[[menu.main]]
+    parent     = "involved"
+    name       = "Contact Us"
+    url        = "/contact/"
+    weight     = 73
 
 [params]
     description = "A website built through Hugo and blogdown."
@@ -208,7 +219,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [params.recent_posts]
     enable = true
-    title = "Our Latest News"
+    title = "Our Latest Posts"
 
 [params.widgets]
     search = true
