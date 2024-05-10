@@ -232,3 +232,4 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 [params.topbar]
     enable = true
     text = "<p>Contact us at psi.aims.r.validation@gmail.com.</p>"
+
