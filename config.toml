@@ -25,12 +25,6 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     url        = "/background-and-mission/"
     weight     = 1
     parent     = "section.rvalhub"
-
-[[menu.main]]
-    name       = "Participating Organizations"
-    url        = "/participating-orgs/"
-    weight     = 12
-    parent     = "section.rvalhub"
     
 [[menu.main]]
     name       = "Partner Initiatives"
