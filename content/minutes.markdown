@@ -12,7 +12,7 @@ The R Validation Hub operates in the public domain and all meeting minutes are m
 
 [GitHub Link](https://github.com/RConsortium/r-repositories-wg/tree/main/minutes)
 
-### Communications Working Group Minutes
+### Communications Workstream Minutes
 
 [GitHub Link](https://github.com/pharmaR/communications/tree/main/minutes)
 
