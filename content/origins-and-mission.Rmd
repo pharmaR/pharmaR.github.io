@@ -1,8 +1,8 @@
 ---
-title: "Our Background & Mission"
+title: "Our Origins & Mission"
 ---
 
-## Background
+## Origins
 
 The R Validation Hub was formed in 2018 by the [PSI AIMS Special Interest Group](https://psiweb.org/sigs-special-interest-groups/aims) and is supported by the R Consortium. We work closely with many neighboring efforts in the pharmaceutical space and broader R ecosystem.
 
