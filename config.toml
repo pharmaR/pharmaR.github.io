@@ -21,8 +21,8 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     post       = 1
 
 [[menu.main]]
-    name       = "Our Background & Mission"
-    url        = "/background-and-mission/"
+    name       = "Our Origins & Mission"
+    url        = "/origins-and-mission/"
     weight     = 1
     parent     = "section.rvalhub"
     
@@ -225,5 +225,5 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [params.topbar]
     enable = true
-    text = "<p>Contact us at psi.aims.r.validation@gmail.com.</p>"
+    text = "<p>The R Validation Hub is a working group within the R Consortium. Contact us at psi.aims.r.validation@gmail.com.</p>"
 

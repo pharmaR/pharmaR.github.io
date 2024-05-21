@@ -1,12 +1,11 @@
 ---
-title: Case Studies Post Test
+title: Case Studies Posts Coming Soon
 author: Jaxon Abercrombie
-date: '2024-03-15'
-slug: case-studies-post-test
+date: '2024-05-21'
+slug: case-studies-posts-coming-soon
 categories: [case studies]
 tags:
   - test
 banner: 'img/banners/case_studies.png'
 ---
-This is a test post to see how case studies can work and be searchable within 
-our post content overall.
+Come back for entries about our various case studies!

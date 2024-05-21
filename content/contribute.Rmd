@@ -65,7 +65,7 @@ A fundamental understanding of R packages is essential for anyone
 looking to support the {riskmetric} team. Package development experience
 is also highly beneficial.
 
-### The [Risk Assessment Application](https://github.com/pharmaR/riskassessment)
+### The [{riskassessment} Application](https://github.com/pharmaR/riskassessment)
 
 The risk assessment Shiny app is an extension of the {riskmetric} R
 package and provides a graphical interface to the {riskmetric}
