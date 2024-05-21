@@ -19,7 +19,7 @@ library(readxl)
 library(dplyr)
 library(lubridate)
 
-sheet <- read_xlsx("~/pharmaR.github.io/content/community_meeting_notes/rvalhub_community_meeting_info.xlsx")
+sheet <- read_xlsx("~/r_validation_hub/pharmaR.github.io/content/community_meeting_notes/rvalhub_community_meeting_info.xlsx")
 
 processed_sheet <-
   sheet %>%
@@ -52,3 +52,4 @@ for(i in total_string_list){
   cat(i, fill = TRUE)
 }
 ```
+
