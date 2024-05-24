@@ -2,39 +2,39 @@
 title: "Meeting Minutes"
 ---
 
-The R Validation Hub operates in the public domain and all meeting minutes are made available here.
+The R Validation Hub operates in the public domain and all meeting minutes are made available here. Workstreams meet routinely and compile their minutes at their respective links below.
 
-### 2022 All-hands: Case Studies
+### Executive Meeting Minutes
 
-For the 2022 case studies, please see [here](/casestudies/)
+[GitHub Link](https://github.com/pharmaR/pharmaR/issues?q=is%3Aissue+is%3Aopen+label%3Aminutes)
 
+### Communications Workstream Minutes
+
+[GitHub Link](https://github.com/pharmaR/communications/tree/main/minutes)
+
+```{r minutes, echo = FALSE, results = "asis", message = FALSE, warning = FALSE}
  
-### Historical minutes
-
-```{r minutes, echo = FALSE, comment="", results = "asis", message = FALSE, warning = FALSE}
- 
-library(dplyr)
-library(stringr)
-library(lubridate)
-
-mins <- sort(list.files("minutes"), decreasing = TRUE)
-mins_see_base <- mins %>%
-  str_replace("R_Validation_Hub_Meeting_minutes_", "") %>%
-  str_replace("\\.pdf$", "") 
-
-mins_see <- mins_see_base %>%
-  ymd() %>%
-  format("%d %b %Y") %>%
-  str_c("[", ., "]")
-
-mins <- mins %>%
-  str_c("(",  "/minutes/", .,  ")")
-
-mins_link <- str_c(mins_see, mins)
-
-for(i in mins_link){
-  cat("*", i, fill = TRUE)
-}
+# library(dplyr)
+# library(stringr)
+# library(lubridate)
+# 
+# mins <- sort(list.files("minutes"), decreasing = TRUE)
+# mins_see_base <- mins %>%
+#   str_replace("R_Validation_Hub_Meeting_minutes_", "") %>%
+#   str_replace("\\.pdf$", "") 
+# 
+# mins_see <- mins_see_base %>%
+#   ymd() %>%
+#   format("%d %b %Y") %>%
+#   str_c("[", ., "]")
+# 
+# mins <- mins %>%
+#   str_c("(",  "/minutes/", .,  ")")
+# 
+# mins_link <- str_c(mins_see, mins)
+# 
+# for(i in mins_link){
+#   cat("*", i, fill = TRUE)
+# }
 
 ```
-

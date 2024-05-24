@@ -146,9 +146,5 @@ We could always use extra help / feedback! Please consider one of the following 
 
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
 
 

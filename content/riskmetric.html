@@ -1,0 +1,32 @@
+---
+title: "The {riskmetric} Package"
+---
+
+
+
+<div id="about-the-package" class="section level2">
+<h2>About the Package</h2>
+<p><img src="/img/risk/riskmetric_logo.png" width="130" /></p>
+<p>Contributed R packages are developed by anyone &amp; everyone, and may differ in popularity and accuracy. As such, the R Validation Hub developed an R package titled <a href="https://pharmar.github.io/riskmetric/articles/riskmetric.html"><code>riskmetric</code></a> whose goal is to assess the risk of contributed R packages.</p>
+<p><code>{riskmetric}</code> has four groups of metric criteria:</p>
+<ul>
+<li>Unit testing metrics - includes unit test coverage and composite coverage of dependencies</li>
+<li>Documentation metrics - availability of vignettes, news tracking, example(s) and return object description for exported functions</li>
+<li>Community engagement - number of downloads, availability of the code in a public repository, formal bug tracking and user interaction</li>
+<li>Maintainability and reuse - number of active contributors, author / maintainer contacts, and type of license</li>
+</ul>
+<p>Note: Even though the quality of software is sometimes measurable, sometimes it is not. For example, assessing the <strong>accuracy</strong> of a contributed open-source R package should be done outside of <code>{riskmetric}</code>. The term <em>accuracy</em> refers to the risk of an error in the code that, when used, could lead to an incorrect calculation. This incorrect calculation may lead to an incorrect decision during data analysis. The relative impact of an error should be determined by the individual organisation. Thus, impact is not a part of the risk assessment performed by <code>{riskmetric}</code>.</p>
+<p>With this type of data at your finger tips, you can analyze package risk statistics with plots like the following (below), which allocates packages into different subgroups based on developers’ membership in the tidyverse / pharmaverse and groups defined by “most downloads”.</p>
+<p><img src="/img/risk/risk_scores_by_group_all_cran.png" /></p>
+<p>For a comprehensive list of metrics assessed via <code>{riskmetric}</code>, see the current state of our package <a href="https://pharmar.github.io/riskmetric/reference/index.html#package-assessment">reference guide</a> or browse the <a href="https://github.com/pharmaR/riskmetric/projects/1">Metric Development Progress</a> GitHub project.</p>
+<hr />
+<div id="are-you-interested-in-supporting-package-development" class="section level4">
+<h4>Are you interested in supporting package development?</h4>
+<ul>
+<li>Contribute your implementation of a new or previously posed metric. For information about extending the functionality of <code>riskmetric</code> with your own metrics, see <a href="https://pharmar.github.io/riskmetric/articles/extending-riskmetric.html">Extending <code>riskmetric</code></a>.</li>
+<li>Take part in the <a href="https://github.com/pharmaR/riskmetric/issues?q=is%3Aopen+is%3Aissue+label%3A%22Metric+Proposal%22">discussion</a></li>
+<li><a href="https://github.com/pharmaR/riskmetric/issues/new?labels=Metric%20Proposal">Propose a new metric</a></li>
+<li><a href="https://bit.ly/risk_survey">Fill out our survey</a> so we can learn how you use <code>{riskmetric}</code> and <code>{riskassessment}</code></li>
+</ul>
+</div>
+</div>

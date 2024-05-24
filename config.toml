@@ -7,99 +7,179 @@ disqusShortname = ""
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [[menu.main]]
-    identifier = "about"
-    name = "About Us"
-    url = "/about/"
-    weight = 1
+    name       = "About Us"
+    identifier = "menu.about"
+    url        = "/img/rval_pattern.png"
+    weight     = 1
+
 [[menu.main]]
-    parent = "about"
-    name = "About Us"
-    url = "/about/"
-    weight = 12
+    name       = "The R Validation Hub"
+    identifier = "section.rvalhub"
+    url        = ""
+    weight     = 1
+    parent     = "menu.about"
+    post       = 1
+
 [[menu.main]]
-    parent = "about"
-    name = "Partner Initiatives"
-    url = "/partners/"
-    weight = 13
+    name       = "Our Origins & Mission"
+    url        = "/origins-and-mission/"
+    weight     = 1
+    parent     = "section.rvalhub"
+    
 [[menu.main]]
-    parent = "about"
-    name = "Roadmap"
-    url = "/roadmap/"
-    weight = 14
+    name       = "Partner Initiatives"
+    url        = "/partner-initiatives/"
+    weight     = 13
+    parent     = "section.rvalhub"
+    
 [[menu.main]]
-    name = "Blog"
-    url  = "/blog/"
-    weight = 2
+    name       = "Our Team"
+    identifier = "section.team"
+    url        = ""
+    weight     = 2
+    parent     = "menu.about"
+    post       = 2
+
 [[menu.main]]
-    identifier = "regulations"
-    name = "Regulations"
-    url = "/regulations/"
-    weight = 3
+    name       = "Members & Workstreams"
+    url        = "/members-and-workstreams/"
+    weight     = 21
+    parent     = "section.team"
+    
 [[menu.main]]
-    identifier = "valid"
-    name = "Validation"
-    url = "/valid/"
-    weight = 4
+    name       = "Validation"
+    identifier = "menu.validation"
+    url        = "/img/package_pattern.png"
+    weight     = 3
+
 [[menu.main]]
-    parent = "valid"
-    name = "Overview"
-    url = "/overview/"
-    weight = 41
+    name       = "Why Validation?"
+    identifier = "section.why"
+    url        = ""
+    weight     = 1
+    parent     = "menu.validation"
+    post       = 1
+
 [[menu.main]]
-    parent = "valid"
-    name = "R"
-    url = "/r/"
-    weight = 42
+    name       = "Regulations"
+    url        = "/regulations/"
+    weight     = 1
+    parent     = "section.why"
+    
 [[menu.main]]
-    parent = "valid"
-    name = "Risk Assessment"
-    url = "/risk/"
-    weight = 43
+    name       = "Our Validation Approaches"
+    identifier = "section.how"
+    url        = ""
+    weight     = 2
+    parent     = "menu.validation"
+    post       = 2
+
 [[menu.main]]
-    parent = "valid"
-    name = "Examples"
-    url = "/examples/"
-    weight = 44
+    name       = "The {riskmetric} Package"
+    url        = "/riskmetric/"
+    weight     = 21
+    parent     = "section.how"
+    
+[[menu.main]]
+    name       = "The {riskassessment} App"
+    url        = "/riskassessment/"
+    weight     = 22
+    parent     = "section.how"
+    
+[[menu.main]]
+    name       = "The {riskscore} Package"
+    url        = "/riskscore/"
+    weight     = 23
+    parent     = "section.how"
+    
+[[menu.main]]
+    name       = "Our White Paper"
+    url        = "/white-paper/"
+    weight     = 24
+    parent     = "section.how"
+
+[[menu.main]]
+    name       = "General Guidances"
+    url        = "/general-guidances/"
+    weight     = 25
+    parent     = "section.how"
+    
+[[menu.main]]
+    name       = "Case Studies"
+    url        = "/categories/case-studies/"
+    weight     = 4
+    
+[[menu.main]]
+    identifier = "roadmap"
+    name       = "Our Roadmap"
+    url        = "/our-roadmap/"
+    weight     = 5
+    
+[[menu.main]]
+    parent     = "roadmap"
+    name       = "Accomplishments"
+    url        = "/accomplishments/"
+    weight     = 51
+    
+[[menu.main]]
+    parent     = "roadmap"
+    name       = "Looking Forward"
+    url        = "/looking-forward/"
+    weight     = 52
+    
 [[menu.main]]
     identifier = "resources"
-    name = "Resources"
-    url = "/resources/"
-    weight = 5
+    name       = "Resources"
+    url        = "/resources/"
+    weight     = 6
+    
 [[menu.main]]
-    parent = "resources"
-    name = "Minutes"
-    url = "/minutes/"
-    weight = 51
+    parent     = "resources"
+    name       = "News"
+    url        = "/categories/news/"
+    weight     = 61
+    
 [[menu.main]]
-    parent = "resources"
-    name = "Case Studies 2022"
-    url = "/casestudies/"
-    weight = 52
+    parent     = "resources"
+    name       = "Presentations"
+    url        = "/present/"
+    weight     = 62
+    
 [[menu.main]]
-    parent = "resources"
-    name = "Presentations"
-    url = "/present/"
-    weight = 53
+    parent     = "resources"
+    name       = "Minutes"
+    url        = "/minutes/"
+    weight     = 64
+    
 [[menu.main]]
-    parent = "resources"
-    name = "White Paper"
-    url = "/white-paper/"
-    weight = 43
+    parent     = "resources"
+    name       = "Glossary"
+    url        = "/glossary/"
+    weight     = 65
+    
 [[menu.main]]
     identifier = "involved"
-    name = "Get Involved"
-    url = "/involved/"
-    weight = 8
+    name       = "Get Involved"
+    url        = "/involved/"
+    weight     = 7
+    
 [[menu.main]]
-    parent = "involved"
-    name = "Contribute"
-    url = "/contribute/"
-    weight = 81
+    parent     = "involved"
+    name       = "Community Meetings"
+    url        = "/community-meetings/"
+    weight     = 71
+    
 [[menu.main]]
-    parent = "involved"
-    name = "Contact Us"
-    url = "/contact/"
-    weight = 82
+    parent     = "involved"
+    name       = "Contribute"
+    url        = "/contribute/"
+    weight     = 72
+    
+[[menu.main]]
+    parent     = "involved"
+    name       = "Contact Us"
+    url        = "/contact/"
+    weight     = 73
 
 [params]
     description = "A website built through Hugo and blogdown."
@@ -128,13 +208,12 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [params.clients]
     enable = true
-    title = "Participating Organisations"
-    subtitle = "Members of the following organisations are participating in this project"
+    title = "Partner Initiatives"
+    subtitle = "The three entities we have partner initiatives with are:"
 
 [params.recent_posts]
     enable = true
-    title = "From our blog"
-    subtitle = "Recent blog posts"
+    title = "Our Latest Posts"
 
 [params.widgets]
     search = true
@@ -146,4 +225,5 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [params.topbar]
     enable = true
-    text = "<p>Contact us at psi.aims.r.validation@gmail.com.</p>"
+    text = "<p>The R Validation Hub is a working group within the R Consortium. Contact us at psi.aims.r.validation@gmail.com.</p>"
+

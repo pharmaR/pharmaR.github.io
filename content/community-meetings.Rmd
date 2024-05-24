@@ -1,0 +1,55 @@
+---
+title: "Community Meetings"
+---
+
+### About Community Meetings
+
+Our community meetings are an initiative we began in 2023 to help foster stronger cross-industry connections for those working in biopharma and champion the use of R in the industry. Each meeting centers around a particular discussion topic, such as approaches for assessing R packages' risk, updates about our R Validation Hub tools, or implementation of GxP R environments within companies.
+
+### When are Community Meetings?
+
+Traditionally, these meetings take place every three months. For updates on when the next community meeting is taking place, join our [mailing list](https://lists.r-%20consortium.org/g/RConsortium-Validation-Hub) or watch out for announcements of the meetings on the R Consortium LinkedIn page. As this initiative gains greater momentum, the goal is to make these meetings more frequent.
+
+### Past Meetings
+
+If you missed a past meeting or would like to engage with a past meeting's content, you can find a list of them below:
+
+```{r meetings, echo = FALSE, results = "asis", message = FALSE, warning = FALSE}
+library(readxl)
+library(dplyr)
+library(lubridate)
+
+sheet <- read_xlsx("~/r_validation_hub/pharmaR.github.io/content/community_meeting_notes/rvalhub_community_meeting_info.xlsx")
+
+processed_sheet <-
+  sheet %>%
+  arrange(desc(date)) %>%
+  mutate(
+    date = format(date, format = "%B %d, %Y"),
+    title = paste0("*", title, "*"),
+    folder = case_when(
+      !is.na(folder) ~ paste0("[GitHub folder]", "(", folder, ")")),
+    slide = case_when(
+      !is.na(slide) ~ paste0("[slides]", "(", slide, ")")),
+    notes = case_when(
+      !is.na(notes) ~ paste0("[notes]", "(", notes, ")")),
+    recording = case_when(
+      !is.na(recording) ~ paste0("[recording]", "(", recording, ")")),
+    date_title_string = paste("*", date, " - ", title))
+
+total_string_list <- c()
+for (meeting in 1:nrow(processed_sheet)){
+  link_vector <- c(processed_sheet$folder[meeting], 
+                   processed_sheet$slide[meeting], 
+                   processed_sheet$notes[meeting], 
+                   processed_sheet$recording[meeting])
+  link_string <- paste(na.omit(link_vector), collapse = "/")
+  total_string <- paste0(processed_sheet$date_title_string[meeting], " (", link_string, ") ")
+  total_string_list <- c(total_string_list, total_string) 
+}
+
+for(i in total_string_list){
+  cat(i, fill = TRUE)
+}
+```
+

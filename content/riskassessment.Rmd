@@ -1,0 +1,37 @@
+---
+title: "The {riskassessment} App"
+---
+
+## About the App
+
+![](/img/risk/riskassessment_logo.png){width="130"}
+
+The app's **main goal** is to help those making "package inclusion" requests for validated GxP environments. So, the highest and best of [`{riskassessment}`](https://bit.ly/raa_gh) revolves around two things:
+
+-   Empower members of your organization to embrace their responsibility to assess package risk themselves, prior to making uninformed IT requests like: "please add package xyz to our validated environment".
+
+-   Establish guide rails that adopt to your organizations validation strategy and use of `{riskmetric}` which culminates in a report for IT that summarizes each package's adherence to those inclusion requirements.
+
+The `{riskassessment}` app achieves that main goal with the following handy offerings:
+
+-   Provides a platform for package exploration without the need to write any custom `{riskmetric}`
+-   Runs `{riskmetric}` on the same machine with the same environment -- creating a central hub for reproducibility
+-   Maintains consistent, org-specific settings/options when producing risk outputs
+-   Automates a risk-based "decision triage" based on an org-defined set of rules, saving time & effort
+-   Manages who's involved in the review process via user authentication & role management
+-   Facilitates and stores user written summaries & communication, on certain packages and/or certain metrics
+-   Generates risk summary reports, for sharing with the decision making parties
+
+Below is a screenshot from the application's current [demo app](https://bit.ly/raa_demo), hosted on shinyapps.io. Feel free to give it a test ride!
+
+![](/img/risk/uploaded_pkgs.png)
+
+------------------------------------------------------------------------
+
+#### Are you interested in supporting package development?
+
+We could always use extra help / feedback! Please consider one of the following options:
+
+-   [Propose a feature](https://github.com/pharmaR/riskassessment/issues/new) for us to consider
+-   [Join the dev team](https://www.pharmar.org/contribute/) - extra hands make light work
+-   [Fill out our survey](https://bit.ly/risk_survey) so we can learn how you use `{riskmetric}` and `{riskassessment}`

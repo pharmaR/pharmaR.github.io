@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
 
-  {{ partial "head.html" . }}
+  <head>
+    {{ partial "headers.html" . }}
+    {{ partial "custom_headers.html" . }}
+  </head>
 
   <body>
 
     <div id="all">
 
-        <header>
+        {{ partial "top.html" . }}
 
-          {{ partial "nav.html" . }}
-
-        </header>
+        {{ partial "nav.html" . }}
 
         {{ partial "breadcrumbs.html" . }}
 
@@ -24,7 +25,21 @@
 
                     <div class="col-md-9" id="blog-post">
 
-                        <p class="text-muted text-uppercase mb-small text-right">{{ if .Params.author }}{{ i18n "authorBy" }} <a href="#">{{ .Params.author }}</a> | {{ end }}{{ .Date.Format .Site.Params.date_format }}</p>
+                        {{ if or .Params.author .Params.date }}
+                          <p class="text-muted text-uppercase mb-small text-right">
+                            {{ if isset .Params "authors" }}
+			      {{ i18n "authorBy" }} {{ range $index, $author := .Params.authors }}{{ if $index }}, {{ end }}<a href="{{ (printf "%s/%s" ("authors" | relLangURL) ($author | urlize)) }}">{{ $author }}</a>{{ end }}
+                            {{ end }}
+                            {{ if and .Params.author .Params.date }} | {{ end }}
+                            {{ if .Params.date }}
+                              {{ $createdAt := .Date.Format .Site.Params.date_format }}
+                              {{ range $index, $month := slice "January" "February" "March" "April" "May" "June" "July" "August" "September" "October" "November" "December" }}
+                                  {{ $createdAt = replace $createdAt $month (i18n $month) }}
+                              {{ end }}
+                              {{ $createdAt }}
+                            {{ end }}
+                          </p>
+                        {{ end }}
 
                         <div id="post-content">
                           {{ .Content }}
