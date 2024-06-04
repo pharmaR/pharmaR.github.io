@@ -1,0 +1,10 @@
+---
+title: Case Studies Posts Coming Soon
+author: Jaxon Abercrombie
+date: '2024-05-21'
+slug: case-studies-posts-coming-soon
+categories: [case studies]
+banner: 'img/banners/case_studies.png'
+---
+
+Come back for entries about our various case studies!
