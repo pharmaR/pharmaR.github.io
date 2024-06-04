@@ -2,7 +2,7 @@
 title: Draft Case Studies Posts Coming Soon
 author: Anuja Das
 date: '2024-06-04'
-slug: case-studies-posts-coming-soon
+slug: draft-case-studies-posts-coming-soon
 categories: [case studies]
 banner: 'img/banners/case_studies.png'
 ---
