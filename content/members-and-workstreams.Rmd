@@ -17,6 +17,7 @@ library(dplyr)
 
 ```{r read-team-info, echo=FALSE}
 team_info_df <- read_xlsx("~/pharmaR.github.io/content/meet-the-team/teaminfo.xlsx")
+# team_info_df <- read_xlsx("meet-the-team/teaminfo.xlsx") # when running locally
 
 largest_ws <- names(which.max(table(team_info_df$workstream)))
 
