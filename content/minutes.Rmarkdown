@@ -8,6 +8,10 @@ The R Validation Hub operates in the public domain and all meeting minutes are m
 
 [GitHub Link](https://github.com/pharmaR/pharmaR/issues?q=is%3Aissue+is%3Aopen+label%3Aminutes)
 
+### `{riskassessment}` App Workstream Minutes
+
+[GitHub Link](https://github.com/pharmaR/riskassessment/labels/Meeting%20Minutes)
+
 ### Communications Workstream Minutes
 
 [GitHub Link](https://github.com/pharmaR/communications/tree/main/minutes)
