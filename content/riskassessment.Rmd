@@ -33,5 +33,6 @@ Below is a screenshot from the application's current [demo app](https://bit.ly/r
 We could always use extra help / feedback! Please consider one of the following options:
 
 -   [Propose a feature](https://github.com/pharmaR/riskassessment/issues/new) for us to consider
+-   [Review & catch up](https://github.com/pharmaR/riskassessment/labels/Meeting%20Minutes) on our latest dev team meeting minutes
 -   [Join the dev team](https://www.pharmar.org/contribute/) - extra hands make light work
 -   [Fill out our survey](https://bit.ly/risk_survey) so we can learn how you use `{riskmetric}` and `{riskassessment}`

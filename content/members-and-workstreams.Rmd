@@ -1,9 +1,5 @@
 ---
 title: "Members & Workstreams"
-output:
-  html_document:
-    toc: true
-    theme: united
 ---
 
 ```{r libraries, echo=FALSE, message=FALSE, warning=FALSE}
@@ -16,7 +12,8 @@ library(dplyr)
 ```
 
 ```{r read-team-info, echo=FALSE}
-team_info_df <- read_xlsx("~/pharmaR.github.io/content/meet-the-team/teaminfo.xlsx")
+team_info_df <- read_xlsx("~/r_validation_hub/pharmaR.github.io/content/meet-the-team/teaminfo.xlsx")
+# team_info_df <- read_xlsx("meet-the-team/teaminfo.xlsx") # when running locally
 
 largest_ws <- names(which.max(table(team_info_df$workstream)))
 
@@ -27,7 +24,8 @@ largest_ws_size <- length(which(team_info_df$workstream == largest_ws))
 photo_row_function <- function(filtered_df) {
   list <- list()
   for (person in 1:nrow(filtered_df)) {
-  img_path <- paste0("~/pharmaR.github.io/content/meet-the-team/", filtered_df$photo_file_name[person])  
+  img_path <- paste0("~/r_validation_hub/pharmaR.github.io/content/meet-the-team/", filtered_df$photo_file_name[person])
+  # img_path <- paste0("meet-the-team/", filtered_df$photo_file_name[person])  # when running locally
   p <- 
     ggdraw() + 
     draw_image(img_path, scale = .9)
@@ -38,7 +36,8 @@ photo_row_function <- function(filtered_df) {
   }
   
   if (length(list) < largest_ws_size){
-    img_path <- paste0("~/pharmaR.github.io/content/meet-the-team/blank.jpg")
+    img_path <- paste0("~/r_validation_hub/pharmaR.github.io/content/meet-the-team/blank.jpg")
+    # img_path <- paste0("meet-the-team/blank.jpg") # when running locally
     p <- 
       ggdraw() + 
       draw_image(img_path, scale = .9)
@@ -98,7 +97,7 @@ repo_df <-
 photo_row_function(repo_df)
 ```
 
-### {riskassessment} Workstream
+### {riskassessment} Application Workstream
 
 The **{riskassessment} Workstream** leads the development of the risk assessment Shiny app (an extension of the {riskmetric} package) that provides a graphical interface to the package's functionality.
 
