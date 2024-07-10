@@ -4,7 +4,7 @@ author: Juliane Manitz, Stefan Pinkert, Martin Gregory and Francois Beckers
 date: '2022-02-14'
 slug: merck-kgaa-case-study
 categories: [case studies]
-banner: 'img/banners/case_studies.png'
+banner: '~/pharmaR.github.io/content/posts/case-studies/Images/thumbnails/merck-kgaa.png'
 ---
 
 **Introduction**
@@ -60,3 +60,5 @@ Note that as a first version of this automated risk-assessment of R packages for
 We introduced a first version of a risk-based assessment of R packages at Merck KGaA/EMD Serono. The automated risk assessment of CRAN packages classifies R packages based on a two-dimensional risk score, which is composed of test coverage and riskmetric score. The approach results in a final classication specificity of 88.5%, however the accuracy estimates are empirical and associated with some level of uncertainty. Evaluation of a test set of packages and their analysis for potential improvement of the threshold are underway.
 
 We are actively seeking feedback. Please do not hesitate to reach out to juliane.manitz\@emdserono.com, and lets discuss during the next meeting of the R validation hub (TBA).
+
+Click [here](https://github.com/pharmaR/case_studies/blob/fa5e4c82098266fe7516adaa8671a64c9796a0e3/Merck_KGaA_Rpkg_validation_220202.pdf) to access the original paper.

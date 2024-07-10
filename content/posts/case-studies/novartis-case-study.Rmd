@@ -7,7 +7,7 @@ output:
   html_document:
     df_print: paged
 categories: case studies
-banner: img/banners/case_studies.png
+banner: "~/pharmaR.github.io/content/posts/case-studies/Images/thumbnails/novartis-case-study.png"
 slug: "novartis-case-study"
 ---
 
@@ -75,4 +75,4 @@ The validation of R packages is a new and exciting endeavor that entails making 
 
 [2] Glossary of Computer System Software Development Terminology (8/95). URL: [Glossary of Computer System Software Development Terminology (8/95) \| FDA](https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/glossary-computer-system-software-development-terminology-895)
 
-Click [here](https://github.com/pharmaR/case_studies/blob/fa5e4c82098266fe7516adaa8671a64c9796a0e3/External%20R%20Package%20Qualification%20Implementation%20at%20Merck.pdf) to access the full paper including the appendix
+Click [here](https://github.com/pharmaR/case_studies/blob/fa5e4c82098266fe7516adaa8671a64c9796a0e3/Novartis_Rpkg_validation_20220509.pdf) to access the full paper including the appendix

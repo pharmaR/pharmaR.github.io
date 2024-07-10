@@ -4,7 +4,7 @@ author: Uday Preetham Palukuru, Pawel Bernecki, Jane Liao, Yilong Zhang, Merck &
 date: '2022-09-21'
 slug: merck-case-study
 categories: [case studies]
-banner: 'img/banners/case_studies.png'
+banner: '~/pharmaR.github.io/content/posts/case-studies/Images/thumbnails/merck-ext-pkg-qual.png'
 ---
 
 **Introduction**
@@ -80,7 +80,7 @@ The purpose of this document is to demonstrate that GGally, when used in a quali
 [Package Information]{.underline}
 
 |                    |                                                                                                                                                                                                                                                                                                                                                                                                      |
-|------------------|------------------------------------------------------|
+|-------------------|-----------------------------------------------------|
 | package            | GGally                                                                                                                                                                                                                                                                                                                                                                                               |
 | version            | 2.1.2                                                                                                                                                                                                                                                                                                                                                                                                |
 | author             | Barret Schloerke [aut, cre], Di Cook [aut, ths], Joseph Larmarange [aut], Francois Briatte [aut], Moritz Marbach [aut], Edwin Thoen [aut], Amos Elberg [aut], Ott Toomet [ctb], Jason Crowley [aut], Heike Hofmann [ths], Hadley Wickham [ths]                                                                                                                                                       |
@@ -146,3 +146,5 @@ Amoruccio, V. J., Lee, M., & Woodie, D. (2021). A TransCelerate Initiative -- Ho
 **Corresponding Author Contact**
 
 We encourage feedback to improve our framework and processes. For any questions or feedback please reach out to preetham.palukuru\@merck.com
+
+Click [here](https://github.com/pharmaR/case_studies/blob/fa5e4c82098266fe7516adaa8671a64c9796a0e3/External%20R%20Package%20Qualification%20Implementation%20at%20Merck.pdf) to access the original paper.
