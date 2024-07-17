@@ -4,7 +4,7 @@ author: Juliane Manitz, Stefan Pinkert, Martin Gregory and Francois Beckers
 date: '2022-02-14'
 slug: merck-kgaa-case-study
 categories: [case studies]
-banner: '~/pharmaR.github.io/content/posts/case-studies/Images/thumbnails/merck-kgaa.png'
+banner: 'img/banners/merck-kgaa.png'
 ---
 
 **Introduction**

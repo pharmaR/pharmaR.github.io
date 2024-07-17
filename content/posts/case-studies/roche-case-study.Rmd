@@ -6,7 +6,7 @@ output:
   html_document:
     df_print: paged
 categories: [case studies]
-banner: "~/pharmaR.github.io/content/posts/case-studies/Images/thumbnails/roche-case-study.png"
+banner: "img/banners/roche-case-study.png"
 slug: "roche-case-study"
 ---
 

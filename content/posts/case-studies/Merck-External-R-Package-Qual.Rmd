@@ -4,7 +4,7 @@ author: Uday Preetham Palukuru, Pawel Bernecki, Jane Liao, Yilong Zhang, Merck &
 date: '2022-09-21'
 slug: merck-case-study
 categories: [case studies]
-banner: '~/pharmaR.github.io/content/posts/case-studies/Images/thumbnails/merck-ext-pkg-qual.png'
+banner: 'img/banners/merck-ext-pkg-qual.png'
 ---
 
 **Introduction**
