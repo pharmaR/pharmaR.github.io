@@ -22,7 +22,7 @@ banner: 'img/banners/merck-kgaa.png'
 <p><strong>Risk Assessment Algorithm of R Packages from CRAN</strong></p>
 <p>The proposed automated risk assessment of R packages is based on a combination of the test coverage and riskmetric score. A process overview is provided in the Figure 1. If an R package passes the installation qualification and successfully executes available tests (internal and add-on, if applicable), the package will be made available to the user at level 3. Then, an automated risk assessment of R packages is performed based on the test coverage score (more is better) and the riskmetric score generated from the meta-information (smaller is better). If pre-defined thresholds are fulfilled, the package is qualified as level 2, otherwise an explicit (manual) risk assessment is needed.</p>
 <div class="float">
-<img src="Images/merck-kgaa/merck-kgaa1.PNG" alt="Figure 1: Outline of the process for installing CRAN packages in the computing environment." />
+<img src="/blog/merck-kgaa/merck-kgaa1.PNG" alt="Figure 1: Outline of the process for installing CRAN packages in the computing environment." />
 <div class="figcaption">Figure 1: Outline of the process for installing CRAN packages in the computing environment.</div>
 </div>
 <p><strong>Riskmetric Score</strong></p>
@@ -40,7 +40,7 @@ banner: 'img/banners/merck-kgaa.png'
 <p>We find an appropriate threshold for the riskmetrics score at y = 50, which is results in a good classification performance (Accuracy = 77% [64; 87]). In order to increase specificity, we added test coverage as second dimension with pre-defined threshold of x = 50. This results in an improved classication specificity of 88.5%.</p>
 <p>Note that as a first version of this automated risk-assessment of R packages for level 2 qualification, we chose a quite conservative approach which deemed acceptable in the general process surrounding the analysis of clinical data.</p>
 <div class="float">
-<img src="Images/merck-kgaa/merck-kgaa2.PNG" alt="Figure 2: Derivation of Classification Threshold using ROC analysis" />
+<img src="/blog/merck-kgaa/merck-kgaa2.PNG" alt="Figure 2: Derivation of Classification Threshold using ROC analysis" />
 <div class="figcaption">Figure 2: Derivation of Classification Threshold using ROC analysis</div>
 </div>
 <p><strong>Summary and Outlook</strong></p>
