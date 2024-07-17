@@ -41,7 +41,7 @@ An R package can be qualified under low risk category if it meets any of the fir
 
 Within our organization a shared baseline strategy recommended by RStudio is followed to manage a reproducible R environment (RStudio, 2020). The defining characteristic of shared baseline strategy is that R package availability is tied to R installations using site-wide libraries. The use of scheduled updates to the site-wide libraries allows all users to use the same installed packages, thereby creating a baseline environment to share and re-run work. An R package within our organization is available through a regularly updated site-wide library installation called Global R library. The global R library is a set of directories containing installed R packages and their dependencies. There are 3 risk levels within the global R library corresponding to the risk category used in package qualification. The global R library is nested and independent, with all low-risk packages included in the moderate-risk library, and all moderate-risk packages included in the open-risk library. Our organization employs RStudio Package Manager (RSPM) as the R package repository server to host source code to install the packages in global R library. A high-level global R library update and package qualification workflow is summarized below (Figure 1).
 
-![Figure 1. Global R library update and package qualification workflow diagram](Images/merck-casestudy1/Merck_1.PNG)
+![Figure 1. Global R library update and package qualification workflow diagram](/blog/merck-casestudy1/Merck_1.PNG)
 
 **GGally Package Qualification**
 
@@ -53,13 +53,13 @@ GGally is an R package that extends ggplot2 R package functionality by adding se
 
 3.  Check installation log for errors / warning messages (Figure 2):
 
-![Figure 2. GGally dry run installation log snippet.](Images/merck-casestudy1/Merck_2.PNG)
+![Figure 2. GGally dry run installation log snippet.](/blog/merck-casestudy1/Merck_2.PNG)
 
 4.  Check package code coverage and associated SDLC documentation (criterion c2) (Figure 3, Figure 4):
 
-![Figure 3. Code coverage statistics of GGally obtained from internal RSPM server.](Images/merck-casestudy1/Merck_3.PNG)
+![Figure 3. Code coverage statistics of GGally obtained from internal RSPM server.](/blog/merck-casestudy1/Merck_3.PNG)
 
-![Figure 4. GGally SDLC documentation from CRAN.](Images/merck-casestudy1/Merck_4.PNG)
+![Figure 4. GGally SDLC documentation from CRAN.](/blog/merck-casestudy1/Merck_4.PNG)
 
 5.  Cross-check against internal database (White List) containing trusted package authors / organizations (criterion c5). R Package Author White List is a list of trusted R package authors (person or organization) identified by our organization's Subject Matter Experts (SME).
 6.  Run program using internally developed R package to generate the qualification document. The details included in the qualification document are as shown below:

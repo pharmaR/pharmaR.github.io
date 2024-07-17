@@ -27,7 +27,7 @@ The Merck Validation Framework classifies external CRAN packages into three leve
 
 The proposed automated risk assessment of R packages is based on a combination of the test coverage and riskmetric score. A process overview is provided in the Figure 1. If an R package passes the installation qualification and successfully executes available tests (internal and add-on, if applicable), the package will be made available to the user at level 3. Then, an automated risk assessment of R packages is performed based on the test coverage score (more is better) and the riskmetric score generated from the meta-information (smaller is better). If pre-defined thresholds are fulfilled, the package is qualified as level 2, otherwise an explicit (manual) risk assessment is needed.
 
-![Figure 1: Outline of the process for installing CRAN packages in the computing environment.](Images/merck-kgaa/merck-kgaa1.PNG)
+![Figure 1: Outline of the process for installing CRAN packages in the computing environment.](/blog/merck-kgaa/merck-kgaa1.PNG)
 
 **Riskmetric Score**
 
@@ -53,7 +53,7 @@ We find an appropriate threshold for the riskmetrics score at y = 50, which is r
 
 Note that as a first version of this automated risk-assessment of R packages for level 2 qualification, we chose a quite conservative approach which deemed acceptable in the general process surrounding the analysis of clinical data.
 
-![Figure 2: Derivation of Classification Threshold using ROC analysis](Images/merck-kgaa/merck-kgaa2.PNG)
+![Figure 2: Derivation of Classification Threshold using ROC analysis](/blog/merck-kgaa/merck-kgaa2.PNG)
 
 **Summary and Outlook**
 
