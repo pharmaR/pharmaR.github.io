@@ -5,7 +5,7 @@ date: "2022-04-22"
 output:
   html_document:
     df_print: paged
-categories: case studies
+categories: [case studies]
 banner: "~/pharmaR.github.io/content/posts/case-studies/Images/thumbnails/roche-case-study.png"
 slug: "roche-case-study"
 ---
