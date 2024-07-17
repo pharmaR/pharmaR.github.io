@@ -1,0 +1,17 @@
+---
+title: "Automated R Package Validation"
+author: Coline Zeballos, Doug Kelkhoff, Szymon Maksymiuk, Lorenzo Braschi
+date: "2022-04-22"
+output:
+  html_document:
+    df_print: paged
+categories: case studies
+banner: "~/pharmaR.github.io/content/posts/case-studies/Images/thumbnails/roche-case-study.png"
+slug: "roche-case-study"
+---
+
+This case study walks through the automated R package validation process at Roche that utilizes a human-in-the-middle component to reconcile any gaps that arise in the automated metadata checks. The approach balances automation with risk mitigation and encourages in-house package development and iteration by introducing transparency to the validation process. The result reinforces best practices in R programming and package development while ensuring high package quality for use within a regulatory environment.
+
+![Graphical overview of the submission process](Images/roche-case-study/validation-process.PNG)
+
+Click [here](https://github.com/pharmaR/case_studies/blob/fa5e4c82098266fe7516adaa8671a64c9796a0e3/Roche_Rpkg_validation_2022.pdf) to access the full paper.
