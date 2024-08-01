@@ -1,13 +1,13 @@
 ---
 title: Risk Assessment App v3.1.0
 author: Jeff Thompson
-date: '2024-06-27'
-slug: updates-jun-2024
+date: "2024-06-27"
+slug: updates-aug-2024
 categories: 
   - news
-tags:
+tags: 
   - risk assessment
-banner: 'img/banners/riskassessment_3.1.png'
+banner: 'img/banners/riskassessment_3.1.0.png'
 ---
 
 Welcome! It's with great excitement and long-awaited anticipation that I get to share some recent updates that have hit the `{riskassessment}` app's [GitHub repository](https://github.com/pharmaR/riskassessment) earlier this month. If this is the first time you've heard or seen the application, I'd recommend starting with our [`README`](https://github.com/pharmaR/riskassessment#readme) to gain some familiarity with the project, especially with installation instructions. However, (in a nut-shell) the app is a full-fledged R package that seeks augment the utility of the [`{riskmetric}`](https://github.com/pharmaR/riskmetric) package within an organizational context.
