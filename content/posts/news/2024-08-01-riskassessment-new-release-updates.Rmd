@@ -1,0 +1,104 @@
+---
+title: Risk Assessment App v3.1.0
+author: Jeff Thompson
+date: "2024-08-01"
+slug: updates-aug-2024
+categories: 
+  - news
+tags: 
+  - risk assessment
+banner: 'img/banners/riskassessment_3.1.0.png'
+---
+
+Progress is continuing to be made in `{riskassessment}`. We wanted to share some of enhancements and updates included in the most recent release of the [application](https://github.com/pharmaR/riskassessment). There have been multiple releases, both minor and major, since our last post, so we have a lot of new content to cover!
+
+But before we get into too much details, if you are new to what we are doing in `{riskassessment}`, we would like to encourage you to check out our [`README`](https://github.com/pharmaR/riskassessment#readme). There you can find information regarding what `{riskassessment}` is seeking to accomplish and how you can install and deploy for your personal or organizational use.
+
+<a href='https://bit.ly/raa_docs'><img src="/blog/2023-08-16-riskassessment-new-release-updates_files/riskassessment_logo.png" align="right" height="172" style="float:right; height:172px;"/></a>
+
+
+
+<br>
+
+## Latest Features Recap
+
+Lots of enhancements have been integrated since our last post on `v2.0.0`, so we will take a bird's eye view of the following major changes:
+
+* Expanded decision automation to include individual `{riskmetric}` assessment values
+* New `'Function Explorer'` page and faster exploration of source code
+* Expanded the package dependency view
+* Miscellaneous items
+  * `'About'` tab
+  * non-`shinymanager` deployment
+
+As always, we invite all who have suggestions or contributions to visit our Github repository. If you come across a bug or have a feature request, please visit our [open list of issues](https://github.com/pharmaR/riskassessment/issues) and add a comment or [open a new issue](https://github.com/pharmaR/riskassessment/issues/new) if it is a new bug/feature.
+
+
+<br>
+
+
+## Decision Automation Rules
+
+Previously, the application would allow rules to be created based upon the overall risk score of the package. This feature is now expanded to include the `{riskmetric}` assessments. The process follows these basic steps:
+
+1. Choose a `{riskmetric}` assessment for which you would like to create a rule.
+2. Construct a function taking the assessment value as an argument and return a logical (`TRUE`/`FALSE`).
+3. Choose the decision category to assign if the test returns `TRUE`.
+
+When constructing rules, it is important to know the structure of the assessment. All `{riskmetric}` assessments can be found in the [assessment function catalog](https://pharmar.github.io/riskmetric/reference/pkg_assess.html#assessment-function-catalog) on their website. Additionally, all helper functions from `{riskmetric}` are available for use when constructing the rules allowing a lot of flexibility in how the assessment can be parsed.
+
+The rules can easily be re-ordered and will be read in a linear fashion. If no rules result in assigning a decision to the package, the `ELSE` option can be used to assign a decision but defaults to "No Decision".
+
+## New `'Function Explorer'` page
+
+Our friends at GSK have contributed a major addition that warranted a brand new page under the `'Source Explorer'` tab. Previously, a user could browser all the source code using the `'File Explorer'`. Now users can browse the details of individual functions exported from the package. More specifically, users can easily browser the source code, help documentation, and test files that reference the function of interest. This page extends the value of the application for organizations with a hands-on review process, giving users the ability to explore the package contents at a more granular level.
+
+Below, you will see a selection inputs panel on the left and a viewer pane on the right. Simply choose a function you want to further explore and what type of files. As previously mentioned, the type of files include the following: 
+
+1. Testing Files: All discovered test files in the `tests/` folder containing the function will be displayed.
+2. R Source Code: All R files in the `R/` folder containing the function will be displayed. This includes all usages of the function, not just where it was defined.
+3. Help Documentation: The Rd file containing the function will be rendered in HTML.
+
+Some additional features:
+
+* If multiple lines containing the function call are found, navigation arrows will appear below the viewer pane, enabling the user to quickly jump to each instance.
+* Commenting is available for both the Function Explorer and the Package Browser.
+* The `{archive}` package is being used to read these files into memory which greatly increases the speed for the `'Source Explorer'` tab overall.
+
+## Expanded Dependency Exploration
+
+Cards are now included providing a macroscopic view of the dependencies!
+
+* Dependencies Uploaded: the number of package dependencies that have been uploaded to the app
+* Type Summary: a breakdown of the dependency types (Depends, Imports, and LinkingTo)
+* Decision summary: a breakdown of the decisions applied to the dependency packages
+* Base-R packages: a summary of which dependencies are considered part of base R (i.e. utils, stats, methods, etc.)
+
+Optionally the non-required packages from the 'Suggests' fields can also be included to give a more holistic view of a package's dependency structure. This can be helpful for organizations that require suggested packages to also be qualified in their GxP environment.
+
+A new table has been added, which is populated with the reverse dependency packages that were previously uploaded to the application. Now, in the event that a package is being re-assessed/re-evaluated, a user can quickly look at the downstream packages effected by a change in classification.
+
+## Miscellaneous Items
+
+### Expanded `'About'` Tab
+
+* Contact Us: a page that directs users to report issues, ask questions, reach out to contribute, learn more about the R Validation Hub
+* Contributors and Companies: get to know contributors, past and present
+
+### Non-`shinymanager` Deployment
+If deploying the application to an environment like POSIT Connect, the usage of `shinymanager` can be turned off. The user will then be assigned by `session$user` and the role by `session$groups`. This will allow organizations to manage application privileges using the roles assigned to the user(s) on Connect.
+
+## In Closing
+
+Thank you for checking out our newest release! We hope you are as excited about the development as we are.
+
+Interested in supporting package development? We could always use extra help / feedback! Please consider one of the following options:
+
+* [Propose a feature](https://github.com/pharmaR/riskassessment/issues/new) for us to consider
+* [Join the dev team](https://www.pharmar.org/contribute/) - extra hands make light work
+* [Fill out our survey](https://bit.ly/risk_survey) so we can learn how you use `{riskmetric}` and `{riskassessment}`
+
+<br>
+
+<br>
+
