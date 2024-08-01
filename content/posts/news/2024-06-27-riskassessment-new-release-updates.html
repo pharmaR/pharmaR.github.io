@@ -1,7 +1,7 @@
 ---
 title: Risk Assessment App v3.1.0
 author: Jeff Thompson
-date: "2024-06-27"
+date: "2024-08-01"
 slug: updates-aug-2024
 categories: 
   - news
@@ -12,13 +12,12 @@ banner: 'img/banners/riskassessment_3.1.0.png'
 
 
 
-<p>Welcome! It’s with great excitement and long-awaited anticipation that I get to share some recent updates that have hit the <code>{riskassessment}</code> app’s <a href="https://github.com/pharmaR/riskassessment">GitHub repository</a> earlier this month. If this is the first time you’ve heard or seen the application, I’d recommend starting with our <a href="https://github.com/pharmaR/riskassessment#readme"><code>README</code></a> to gain some familiarity with the project, especially with installation instructions. However, (in a nut-shell) the app is a full-fledged R package that seeks augment the utility of the <a href="https://github.com/pharmaR/riskmetric"><code>{riskmetric}</code></a> package within an organizational context.</p>
-<!-- to render html in RStudio, I used the following filepath -->
-<!-- ../../blog/2023-08-16-riskassessment-new-release-updates_files/riskassessment_logo.png -->
+<p>Progress is continuing to be made in <code>{riskassessment}</code>. We wanted to share some of enhancements and updates included in the most recent release of the <a href="https://github.com/pharmaR/riskassessment">application</a>. There has been multiple release, both minor and major, since our last post, so we have a lot to cover.</p>
+<p>But before we get into the details of the new features, if you are new to what we are doing in <code>{riskassessment}</code>, we would like to encourage you to check out our <a href="https://github.com/pharmaR/riskassessment#readme"><code>README</code></a>. There you can find details about what <code>{riskassessment}</code> is seeking to accomplish and how you can install and deploy for your personal, or organizational, use.</p>
 <p><a href='https://bit.ly/raa_docs'><img src="/blog/2023-08-16-riskassessment-new-release-updates_files/riskassessment_logo.png" align="right" height="172" style="float:right; height:172px;"/></a></p>
 <br>
 <h2 id="latest-features-recap">Latest features Recap</h2>
-<p>Since our last announcement for {riskassessment} version 2.0.0, there have been several releases (both major and minor). With that in mind, we will be highlighting changes and updates across both of those including the following:</p>
+<p>Lots of work has been done since version 2.0.0, but we shine a spotlight on the following enhancements/changes:</p>
 <ul>
 <li>Expanded use cases for the decision automation rules</li>
 <li>New <code>'Function Explorer'</code> page and faster exploration of source code</li>
@@ -35,15 +34,15 @@ banner: 'img/banners/riskassessment_3.1.0.png'
 <h2 id="decision-automation-rules">Decision Automation Rules</h2>
 <p>Previously, the application would allow rules to be created based upon the overall risk score of the package. This feature is now expanded to include the <code>{riskmetric}</code> assessments. The process follows these basic steps:</p>
 <ol>
-<li>Choose a <code>{riskmetric}</code> assessment you would like to base a rule on.</li>
+<li>Choose a <code>{riskmetric}</code> assessment for which you would like to create a rule.</li>
 <li>Construct a function taking the assessment value as an argument and returns a logical (<code>TRUE</code>/<code>FALSE</code>).</li>
 <li>Choose the decision category to assign if the test returns <code>TRUE</code>.</li>
 </ol>
-<p>When constructing rules, it is important to know the structure of the assessment. All <code>{riskmetric}</code> assessments can be found in the <a href="https://pharmar.github.io/riskmetric/reference/pkg_assess.html#assessment-function-catalog">assessment function catalog</a> on their website. All helper functions from <code>{riskmetric}</code> are available for use when constructing the rules allowing a lot of flexibility in how the assessment can be parsed.</p>
-<p>The rules can easily be re-ordered and will be read in a linear fashion. If no rules assigned a decision category to the package, the <code>ELSE</code> option can be used to assign a decision but defaults to “No Decision”.</p>
+<p>When constructing rules, it is important to know the structure of the assessment. All <code>{riskmetric}</code> assessments can be found in the <a href="https://pharmar.github.io/riskmetric/reference/pkg_assess.html#assessment-function-catalog">assessment function catalog</a> on their website. Additionally, all helper functions from <code>{riskmetric}</code> are available for use when constructing the rules allowing a lot of flexibility in how the assessment can be parsed.</p>
+<p>The rules can easily be re-ordered and will be read in a linear fashion. If no rules result in assigning a decision  to the package, the <code>ELSE</code> option can be used to assign a decision but defaults to “No Decision”.</p>
 <h2 id="new-function-explorer-page">New <code>'Function Explorer'</code> page</h2>
-<p>There has also been a major addition with a brand new page under the <code>'Source Explorer'</code> tab. This extends the value of the application to organizations with a more manual review process and the ability for app users to explore packages on a more granular level. While previously a user could browse all the source code, now they can easily browse the functions exported for use from the package.</p>
-<p>Below, you will see a panel on the left containing selection inputs and a viewer pane on the right. Simply choose a function you want to further explore and what type of files. The type of files include the following: Testing Files, R Source Code, Help Documentation.</p>
+<p>There has also been a major addition with a brand new page under the <code>'Source Explorer'</code> tab. This extends the value of the application to organizations with a more manual review process and the ability for app users to explore packages on a more granular level. While previously a user could browse all the source code, now they can easily browse individual functions exported for use from the package.</p>
+<p>Below, you will see a panel on the left containing selection inputs and a viewer pane on the right. Simply choose a function you want to further explore and what type of files. The type of files include the following:</p>
 <ol>
 <li>Testing Files: All discovered test files in the <code>tests/</code> folder containing the function will be displayed.</li>
 <li>R Source Code: All R files in the <code>R/</code> folder containing the function will be displayed. This includes all usages of the function, not just where it was defined.</li>

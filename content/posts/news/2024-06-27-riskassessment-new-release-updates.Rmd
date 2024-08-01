@@ -1,7 +1,7 @@
 ---
 title: Risk Assessment App v3.1.0
 author: Jeff Thompson
-date: "2024-06-27"
+date: "2024-08-01"
 slug: updates-aug-2024
 categories: 
   - news
@@ -10,10 +10,9 @@ tags:
 banner: 'img/banners/riskassessment_3.1.0.png'
 ---
 
-Welcome! It's with great excitement and long-awaited anticipation that I get to share some recent updates that have hit the `{riskassessment}` app's [GitHub repository](https://github.com/pharmaR/riskassessment) earlier this month. If this is the first time you've heard or seen the application, I'd recommend starting with our [`README`](https://github.com/pharmaR/riskassessment#readme) to gain some familiarity with the project, especially with installation instructions. However, (in a nut-shell) the app is a full-fledged R package that seeks augment the utility of the [`{riskmetric}`](https://github.com/pharmaR/riskmetric) package within an organizational context.
+Progress is continuing to be made in `{riskassessment}`. We wanted to share some of enhancements and updates included in the most recent release of the [application](https://github.com/pharmaR/riskassessment). There has been multiple release, both minor and major, since our last post, so we have a lot to cover.
 
-<!-- to render html in RStudio, I used the following filepath -->
-<!-- ../../blog/2023-08-16-riskassessment-new-release-updates_files/riskassessment_logo.png -->
+But before we get into the details of the new features, if you are new to what we are doing in `{riskassessment}`, we would like to encourage you to check out our [`README`](https://github.com/pharmaR/riskassessment#readme). There you can find details about what `{riskassessment}` is seeking to accomplish and how you can install and deploy for your personal, or organizational, use.
 
 <a href='https://bit.ly/raa_docs'><img src="/blog/2023-08-16-riskassessment-new-release-updates_files/riskassessment_logo.png" align="right" height="172" style="float:right; height:172px;"/></a>
 
@@ -23,7 +22,7 @@ Welcome! It's with great excitement and long-awaited anticipation that I get to 
 
 ## Latest features Recap
 
-Since our last announcement for {riskassessment} version 2.0.0, there have been several releases (both major and minor). With that in mind, we will be highlighting changes and updates across both of those including the following:
+Lots of work has been done since version 2.0.0, but we shine a spotlight on the following enhancements/changes:
 
 * Expanded use cases for the decision automation rules
 * New `'Function Explorer'` page and faster exploration of source code
@@ -42,19 +41,19 @@ As always, we invite all who have suggestions or contributions to visit our Gith
 
 Previously, the application would allow rules to be created based upon the overall risk score of the package. This feature is now expanded to include the `{riskmetric}` assessments. The process follows these basic steps:
 
-1. Choose a `{riskmetric}` assessment you would like to base a rule on.
+1. Choose a `{riskmetric}` assessment for which you would like to create a rule.
 2. Construct a function taking the assessment value as an argument and returns a logical (`TRUE`/`FALSE`).
 3. Choose the decision category to assign if the test returns `TRUE`.
 
-When constructing rules, it is important to know the structure of the assessment. All `{riskmetric}` assessments can be found in the [assessment function catalog](https://pharmar.github.io/riskmetric/reference/pkg_assess.html#assessment-function-catalog) on their website. All helper functions from `{riskmetric}` are available for use when constructing the rules allowing a lot of flexibility in how the assessment can be parsed.
+When constructing rules, it is important to know the structure of the assessment. All `{riskmetric}` assessments can be found in the [assessment function catalog](https://pharmar.github.io/riskmetric/reference/pkg_assess.html#assessment-function-catalog) on their website. Additionally, all helper functions from `{riskmetric}` are available for use when constructing the rules allowing a lot of flexibility in how the assessment can be parsed.
 
-The rules can easily be re-ordered and will be read in a linear fashion. If no rules assigned a decision category to the package, the `ELSE` option can be used to assign a decision but defaults to "No Decision".
+The rules can easily be re-ordered and will be read in a linear fashion. If no rules result in assigning a decision  to the package, the `ELSE` option can be used to assign a decision but defaults to "No Decision".
 
 ## New `'Function Explorer'` page
 
-There has also been a major addition with a brand new page under the `'Source Explorer'` tab. This extends the value of the application to organizations with a more manual review process and the ability for app users to explore packages on a more granular level. While previously a user could browse all the source code, now they can easily browse the functions exported for use from the package.
+There has also been a major addition with a brand new page under the `'Source Explorer'` tab. This extends the value of the application to organizations with a more manual review process and the ability for app users to explore packages on a more granular level. While previously a user could browse all the source code, now they can easily browse individual functions exported for use from the package.
 
-Below, you will see a panel on the left containing selection inputs and a viewer pane on the right. Simply choose a function you want to further explore and what type of files. The type of files include the following: Testing Files, R Source Code, Help Documentation.
+Below, you will see a panel on the left containing selection inputs and a viewer pane on the right. Simply choose a function you want to further explore and what type of files. The type of files include the following: 
 
 1. Testing Files: All discovered test files in the `tests/` folder containing the function will be displayed.
 2. R Source Code: All R files in the `R/` folder containing the function will be displayed. This includes all usages of the function, not just where it was defined.
