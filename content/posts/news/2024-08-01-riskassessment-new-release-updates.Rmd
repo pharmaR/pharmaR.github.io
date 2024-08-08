@@ -1,13 +1,13 @@
 ---
-title: Risk Assessment App v3.1.0
+title: Risk Assessment App v3.1.1
 author: Jeff Thompson
-date: "2024-08-01"
+date: "2024-08-08"
 slug: updates-aug-2024
 categories: 
   - news
 tags: 
   - risk assessment
-banner: 'img/banners/riskassessment_3.1.0.png'
+banner: 'img/banners/riskassessment_3.1.1.png'
 ---
 
 Progress is continuing to be made in `{riskassessment}`. We wanted to share some of enhancements and updates included in the most recent release of the [application](https://github.com/pharmaR/riskassessment). There have been multiple releases, both minor and major, since our last post, so we have a lot of new content to cover!
