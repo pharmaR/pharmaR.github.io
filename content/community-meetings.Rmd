@@ -8,7 +8,7 @@ Our community meetings are an initiative we began in 2023 to help foster stronge
 
 ### When are Community Meetings?
 
-Traditionally, these meetings take place every three months. For updates on when the next community meeting is taking place, join our [mailing list](https://lists.r-%20consortium.org/g/RConsortium-Validation-Hub) or watch out for announcements of the meetings on the R Consortium LinkedIn page. As this initiative gains greater momentum, the goal is to make these meetings more frequent.
+Traditionally, these meetings take place every three months. For updates on when the next community meeting is taking place, join our [mailing list](https://lists.r-consortium.org/g/RConsortium-Validation-Hub) or watch out for announcements of the meetings on the R Consortium LinkedIn page. As this initiative gains greater momentum, the goal is to make these meetings more frequent.
 
 ### Past Meetings
 
