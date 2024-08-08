@@ -1,13 +1,13 @@
 ---
-title: Risk Assessment App v3.1.0
+title: Risk Assessment App v3.1.1
 author: Jeff Thompson
-date: "2024-08-01"
+date: "2024-08-08"
 slug: updates-aug-2024
 categories: 
   - news
 tags: 
   - risk assessment
-banner: 'img/banners/riskassessment_3.1.0.png'
+banner: 'img/banners/riskassessment_3.1.1.png'
 ---
 
 
@@ -40,6 +40,9 @@ banner: 'img/banners/riskassessment_3.1.0.png'
 </ol>
 <p>When constructing rules, it is important to know the structure of the assessment. All <code>{riskmetric}</code> assessments can be found in the <a href="https://pharmar.github.io/riskmetric/reference/pkg_assess.html#assessment-function-catalog">assessment function catalog</a> on their website. Additionally, all helper functions from <code>{riskmetric}</code> are available for use when constructing the rules allowing a lot of flexibility in how the assessment can be parsed.</p>
 <p>The rules can easily be re-ordered and will be read in a linear fashion. If no rules result in assigning a decision to the package, the <code>ELSE</code> option can be used to assign a decision but defaults to “No Decision”.</p>
+<br>
+<p><img src="/blog/2024-08-08-riskassessment-new-release-updates_files/decision_automation.gif" alt="" /></p>
+<br>
 <h2 id="new-function-explorer-page">New <code>'Function Explorer'</code> page</h2>
 <p>Our friends at GSK have contributed a major addition that warranted a brand new page under the <code>'Source Explorer'</code> tab. Previously, a user could browser all the source code using the <code>'File Explorer'</code>. Now users can browse the details of individual functions exported from the package. More specifically, users can easily browser the source code, help documentation, and test files that reference the function of interest. This page extends the value of the application for organizations with a hands-on review process, giving users the ability to explore the package contents at a more granular level.</p>
 <p>Below, you will see a selection inputs panel on the left and a viewer pane on the right. Simply choose a function you want to further explore and what type of files. As previously mentioned, the type of files include the following:</p>
@@ -54,6 +57,9 @@ banner: 'img/banners/riskassessment_3.1.0.png'
 <li>Commenting is available for both the Function Explorer and the Package Browser.</li>
 <li>The <code>{archive}</code> package is being used to read these files into memory which greatly increases the speed for the <code>'Source Explorer'</code> tab overall.</li>
 </ul>
+<br>
+<p><img src="/blog/2024-08-08-riskassessment-new-release-updates_files/function_explorer.gif" alt="" /></p>
+<br>
 <h2 id="expanded-dependency-exploration">Expanded Dependency Exploration</h2>
 <p>Cards are now included providing a macroscopic view of the dependencies!</p>
 <ul>
@@ -63,7 +69,13 @@ banner: 'img/banners/riskassessment_3.1.0.png'
 <li>Base-R packages: a summary of which dependencies are considered part of base R (i.e. utils, stats, methods, etc.)</li>
 </ul>
 <p>Optionally the non-required packages from the ‘Suggests’ fields can also be included to give a more holistic view of a package’s dependency structure. This can be helpful for organizations that require suggested packages to also be qualified in their GxP environment.</p>
+<br>
+<p><img src="/blog/2024-08-08-riskassessment-new-release-updates_files/dependency_cards.png" alt="" /></p>
+<br>
 <p>A new table has been added, which is populated with the reverse dependency packages that were previously uploaded to the application. Now, in the event that a package is being re-assessed/re-evaluated, a user can quickly look at the downstream packages effected by a change in classification.</p>
+<br>
+<p><img src="/blog/2024-08-08-riskassessment-new-release-updates_files/reverse_dependencies.png" alt="" /></p>
+<br>
 <h2 id="miscellaneous-items">Miscellaneous Items</h2>
 <h3 id="expanded-about-tab">Expanded <code>'About'</code> Tab</h3>
 <ul>
