@@ -2,17 +2,37 @@
 title: "A Risk-based Approach for Assessing R package Accuracy within a Validated Infrastructure"
 ---
 
-<p style="font-size: 16px; text-align: center;"><em><strong>Andy Nicholls</strong>, Statistics Director, Head of Statistical Data Sciences, GSK</em></p>
+<p style="font-size: 16px; text-align: center;">
 
-<p style="font-size: 16px; text-align: center;"><em><strong>Paulo R. Bargo</strong>, Director Scientific Computing, Statistics & Decision Sciences, Janssen R&D</em></p>
+<em><strong>Andy Nicholls</strong>, Statistics Director, Head of Statistical Data Sciences, GSK</em>
 
-<p style="font-size: 16px; text-align: center;"><em><strong>John Sims</strong>, Director, Analytical Systems Architect & Data Science - Pfizer Vaccine Research</em></p>
+</p>
 
-<p style="font-size: 16px; text-align: center;"><em>On behalf of the <strong>R Validation Hub</strong>, an R Consortium-funded ISC Working Group</em></p>
+<p style="font-size: 16px; text-align: center;">
 
-<p style="text-align: center;"><em>January 23, 2020</em></p>
+<em><strong>Paulo R. Bargo</strong>, Director Scientific Computing, Statistics & Decision Sciences, Janssen R&D</em>
 
-*Download the PDF version of this white paper [here](/presentations/r_packages-white_paper.pdf).*
+</p>
+
+<p style="font-size: 16px; text-align: center;">
+
+<em><strong>John Sims</strong>, Director, Analytical Systems Architect & Data Science - Pfizer Vaccine Research</em>
+
+</p>
+
+<p style="font-size: 16px; text-align: center;">
+
+<em>On behalf of the <strong>R Validation Hub</strong>, an R Consortium-funded ISC Working Group</em>
+
+</p>
+
+<p style="text-align: center;">
+
+<em>January 23, 2020</em>
+
+</p>
+
+*View and/or download the PDF version of this white paper [here](https://github.com/pharmaR/pharmaR.github.io/blob/master/content/presentations/r_packages-white_paper.pdf).*
 
 ## 1. Scope and Background
 
@@ -42,7 +62,7 @@ Beyond official R distribution, users in the open source community can submit th
 
 In 1997, the United States Food and Drug Administration (FDA) issued [21 CFR Part 11](http://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfCFR/CFRSearch.cfm?CFRPart=11&showFR=1) to provide regulations for electronic records and signatures. This final ruling states that:
 
-> "\[Electronic records and signatures\] be trustworthy, reliable, and generally equivalent to paper records and handwritten signatures executed on paper."
+> "$$Electronic records and signatures$$ be trustworthy, reliable, and generally equivalent to paper records and handwritten signatures executed on paper."
 
 Then in 2003, the FDA released the [Guidance for Industry: Part 11, Electronic Records; Electronic Signatures -- Scope and Application](https://www.fda.gov/media/75414/download). This guidance clarifies how Part 11 should be enforced, and the intended scope.
 
