@@ -49,6 +49,12 @@ When constructing rules, it is important to know the structure of the assessment
 
 The rules can easily be re-ordered and will be read in a linear fashion. If no rules result in assigning a decision to the package, the `ELSE` option can be used to assign a decision but defaults to "No Decision".
 
+<br>
+
+![](/blog/2024-08-08-riskassessment-new-release-updates_files/decision_automation.gif)
+
+<br>
+
 ## New `'Function Explorer'` page
 
 Our friends at GSK have contributed a major addition that warranted a brand new page under the `'Source Explorer'` tab. Previously, a user could browser all the source code using the `'File Explorer'`. Now users can browse the details of individual functions exported from the package. More specifically, users can easily browser the source code, help documentation, and test files that reference the function of interest. This page extends the value of the application for organizations with a hands-on review process, giving users the ability to explore the package contents at a more granular level.
@@ -64,6 +70,12 @@ Some additional features:
 * If multiple lines containing the function call are found, navigation arrows will appear below the viewer pane, enabling the user to quickly jump to each instance.
 * Commenting is available for both the Function Explorer and the Package Browser.
 * The `{archive}` package is being used to read these files into memory which greatly increases the speed for the `'Source Explorer'` tab overall.
+
+<br>
+
+![](/blog/2024-08-08-riskassessment-new-release-updates_files/function_explorer.gif)
+
+<br>
 
 ## Expanded Dependency Exploration
 
