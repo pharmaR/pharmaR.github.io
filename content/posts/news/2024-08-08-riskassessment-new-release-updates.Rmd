@@ -88,7 +88,19 @@ Cards are now included providing a macroscopic view of the dependencies!
 
 Optionally the non-required packages from the 'Suggests' fields can also be included to give a more holistic view of a package's dependency structure. This can be helpful for organizations that require suggested packages to also be qualified in their GxP environment.
 
+<br>
+
+![](/blog/2024-08-08-riskassessment-new-release-updates_files/dependency_cards.png)
+
+<br>
+
 A new table has been added, which is populated with the reverse dependency packages that were previously uploaded to the application. Now, in the event that a package is being re-assessed/re-evaluated, a user can quickly look at the downstream packages effected by a change in classification.
+
+<br>
+
+![](/blog/2024-08-08-riskassessment-new-release-updates_files/reverse_dependencies.png)
+
+<br>
 
 ## Miscellaneous Items
 
