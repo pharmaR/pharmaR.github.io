@@ -2,4 +2,8 @@
 title: "Glossary"
 ---
 
-![](/img/page_under_construction.png){width="432"}
+| Term                     | Definition                                                                                                                                                                                                                                                                                                                      |
+|--------------------|----------------------------------------------------|
+| **Open Source Software** | Software or language designed for collaboration that has source code available for community review, usage, and modification                                                                                                                                                                                                    |
+| **System Qualification** | The process including the execution of Installation, Operational and Performance tests on a system that ensures the reproducibility of expected results.                                                                                                                                                                        |
+| **Validation**           | *Per the FDA's Glossary of Computer System Software Development Terminology* -"Establishing documented evidence which provides a high degree of assurance (accuracy) that a specific process consistently (reproducibility) produces a product meeting its predetermined specifications (traceability) and quality attributes." |
