@@ -55,20 +55,20 @@ The rules can easily be re-ordered and will be read in a linear fashion. If no r
 
 <br>
 
-## New `'Function Explorer'` page
+## New `'Function Explorer'` Module
 
-Our friends at GSK have contributed a major addition that warranted a brand new page under the `'Source Explorer'` tab. Previously, a user could browser all the source code using the `'File Explorer'`. Now users can browse the details of individual functions exported from the package. More specifically, users can easily browser the source code, help documentation, and test files that reference the function of interest. This page extends the value of the application for organizations with a hands-on review process, giving users the ability to explore the package contents at a more granular level.
+Our friends at GSK have contributed a major addition that warranted a brand new page under the `'Source Explorer'` tab. Previously, a user could browse all the source code using the `'File Explorer'`. Now users can investigate the details of individual functions exported from the package. More specifically, users have curated access to the source code, help documentation, and test files that reference the function of interest. This page extends the value of the application for organizations with a hands-on review process, giving users the ability to explore the package contents at a more granular level.
 
-Below, you will see a selection inputs panel on the left and a viewer pane on the right. Simply choose a function you want to further explore and what type of files. As previously mentioned, the type of files include the following: 
+Below, you will see a selection inputs panel on the left and a viewer pane on the right. To get started, simply choose a function name and file type you want to further explore. As previously mentioned, the type of files include the following: 
 
-1. Testing Files: All discovered test files in the `tests/` folder containing the function will be displayed.
-2. R Source Code: All R files in the `R/` folder containing the function will be displayed. This includes all usages of the function, not just where it was defined.
-3. Help Documentation: The Rd file containing the function will be rendered in HTML.
+1. **Testing Files**: All discovered test files in the `tests/` folder containing the function will be displayed.
+2. **R Source Code**: All R files in the `R/` folder containing the function will be displayed. This includes all usages of the function, not just where it was defined.
+3. **Help Documentation**: The `.Rd` file containing the function will be rendered in HTML.
 
 Some additional features:
 
 * If multiple lines containing the function call are found, navigation arrows will appear below the viewer pane, enabling the user to quickly jump to each instance.
-* Commenting is available for both the Function Explorer and the Package Browser.
+* User comment sections are available for both the Function Explorer and the Package Browser.
 * The `{archive}` package is being used to read these files into memory which greatly increases the speed for the `'Source Explorer'` tab overall.
 
 <br>
@@ -79,12 +79,12 @@ Some additional features:
 
 ## Expanded Dependency Exploration
 
-Cards are now included providing a macroscopic view of the dependencies!
+Summary cards are now displayed to provide a macro view of the package's dependencies!
 
-* Dependencies Uploaded: the number of package dependencies that have been uploaded to the app
-* Type Summary: a breakdown of the dependency types (Depends, Imports, and LinkingTo)
-* Decision summary: a breakdown of the decisions applied to the dependency packages
-* Base-R packages: a summary of which dependencies are considered part of base R (i.e. utils, stats, methods, etc.)
+* **Dependencies Uploaded**: the number of package dependencies that have been uploaded to the app
+* **Type Summary**: a breakdown of the dependency types (`Depends`, `Imports`, and `LinkingTo`)
+* **Decision summary**: a breakdown of the decisions applied to the dependency packages
+* **Base-R packages**: a summary of which dependencies are considered part of base R (i.e. `utils`, `stats`, `methods`, etc.)
 
 Optionally the non-required packages from the 'Suggests' fields can also be included to give a more holistic view of a package's dependency structure. This can be helpful for organizations that require suggested packages to also be qualified in their GxP environment.
 
@@ -106,8 +106,8 @@ A new table has been added, which is populated with the reverse dependency packa
 
 ### Expanded `'About'` Tab
 
-* Contact Us: a page that directs users to report issues, ask questions, reach out to contribute, learn more about the R Validation Hub
-* Contributors and Companies: get to know contributors, past and present
+* **Contact Us**: a page that directs users to report issues, ask questions, reach out to contribute, learn more about the R Validation Hub
+* **Contributors and Companies**: get to know contributors, past and present
 
 ### Non-`shinymanager` Deployment
 If deploying the application to an environment like POSIT Connect, the usage of `shinymanager` can be turned off. The user will then be assigned by `session$user` and the role by `session$groups`. This will allow organizations to manage application privileges using the roles assigned to the user(s) on Connect.

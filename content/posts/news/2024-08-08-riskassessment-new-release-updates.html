@@ -43,30 +43,30 @@ banner: 'img/banners/riskassessment_3_1_1.png'
 <br>
 <p><img src="/blog/2024-08-08-riskassessment-new-release-updates_files/decision_automation.gif" alt="" /></p>
 <br>
-<h2 id="new-function-explorer-page">New <code>'Function Explorer'</code> page</h2>
-<p>Our friends at GSK have contributed a major addition that warranted a brand new page under the <code>'Source Explorer'</code> tab. Previously, a user could browser all the source code using the <code>'File Explorer'</code>. Now users can browse the details of individual functions exported from the package. More specifically, users can easily browser the source code, help documentation, and test files that reference the function of interest. This page extends the value of the application for organizations with a hands-on review process, giving users the ability to explore the package contents at a more granular level.</p>
-<p>Below, you will see a selection inputs panel on the left and a viewer pane on the right. Simply choose a function you want to further explore and what type of files. As previously mentioned, the type of files include the following:</p>
+<h2 id="new-function-explorer-module">New <code>'Function Explorer'</code> Module</h2>
+<p>Our friends at GSK have contributed a major addition that warranted a brand new page under the <code>'Source Explorer'</code> tab. Previously, a user could browse all the source code using the <code>'File Explorer'</code>. Now users can investigate the details of individual functions exported from the package. More specifically, users have curated access to the source code, help documentation, and test files that reference the function of interest. This page extends the value of the application for organizations with a hands-on review process, giving users the ability to explore the package contents at a more granular level.</p>
+<p>Below, you will see a selection inputs panel on the left and a viewer pane on the right. To get started, simply choose a function name and file type you want to further explore. As previously mentioned, the type of files include the following:</p>
 <ol>
-<li>Testing Files: All discovered test files in the <code>tests/</code> folder containing the function will be displayed.</li>
-<li>R Source Code: All R files in the <code>R/</code> folder containing the function will be displayed. This includes all usages of the function, not just where it was defined.</li>
-<li>Help Documentation: The Rd file containing the function will be rendered in HTML.</li>
+<li><strong>Testing Files</strong>: All discovered test files in the <code>tests/</code> folder containing the function will be displayed.</li>
+<li><strong>R Source Code</strong>: All R files in the <code>R/</code> folder containing the function will be displayed. This includes all usages of the function, not just where it was defined.</li>
+<li><strong>Help Documentation</strong>: The <code>.Rd</code> file containing the function will be rendered in HTML.</li>
 </ol>
 <p>Some additional features:</p>
 <ul>
 <li>If multiple lines containing the function call are found, navigation arrows will appear below the viewer pane, enabling the user to quickly jump to each instance.</li>
-<li>Commenting is available for both the Function Explorer and the Package Browser.</li>
+<li>User comment sections are available for both the Function Explorer and the Package Browser.</li>
 <li>The <code>{archive}</code> package is being used to read these files into memory which greatly increases the speed for the <code>'Source Explorer'</code> tab overall.</li>
 </ul>
 <br>
 <p><img src="/blog/2024-08-08-riskassessment-new-release-updates_files/function_explorer.gif" alt="" /></p>
 <br>
 <h2 id="expanded-dependency-exploration">Expanded Dependency Exploration</h2>
-<p>Cards are now included providing a macroscopic view of the dependencies!</p>
+<p>Summary cards are now displayed to provide a macro view of the package’s dependencies!</p>
 <ul>
-<li>Dependencies Uploaded: the number of package dependencies that have been uploaded to the app</li>
-<li>Type Summary: a breakdown of the dependency types (Depends, Imports, and LinkingTo)</li>
-<li>Decision summary: a breakdown of the decisions applied to the dependency packages</li>
-<li>Base-R packages: a summary of which dependencies are considered part of base R (i.e. utils, stats, methods, etc.)</li>
+<li><strong>Dependencies Uploaded</strong>: the number of package dependencies that have been uploaded to the app</li>
+<li><strong>Type Summary</strong>: a breakdown of the dependency types (<code>Depends</code>, <code>Imports</code>, and <code>LinkingTo</code>)</li>
+<li><strong>Decision summary</strong>: a breakdown of the decisions applied to the dependency packages</li>
+<li><strong>Base-R packages</strong>: a summary of which dependencies are considered part of base R (i.e. <code>utils</code>, <code>stats</code>, <code>methods</code>, etc.)</li>
 </ul>
 <p>Optionally the non-required packages from the ‘Suggests’ fields can also be included to give a more holistic view of a package’s dependency structure. This can be helpful for organizations that require suggested packages to also be qualified in their GxP environment.</p>
 <br>
@@ -79,8 +79,8 @@ banner: 'img/banners/riskassessment_3_1_1.png'
 <h2 id="miscellaneous-items">Miscellaneous Items</h2>
 <h3 id="expanded-about-tab">Expanded <code>'About'</code> Tab</h3>
 <ul>
-<li>Contact Us: a page that directs users to report issues, ask questions, reach out to contribute, learn more about the R Validation Hub</li>
-<li>Contributors and Companies: get to know contributors, past and present</li>
+<li><strong>Contact Us</strong>: a page that directs users to report issues, ask questions, reach out to contribute, learn more about the R Validation Hub</li>
+<li><strong>Contributors and Companies</strong>: get to know contributors, past and present</li>
 </ul>
 <h3 id="non-shinymanager-deployment">Non-<code>shinymanager</code> Deployment</h3>
 <p>If deploying the application to an environment like POSIT Connect, the usage of <code>shinymanager</code> can be turned off. The user will then be assigned by <code>session$user</code> and the role by <code>session$groups</code>. This will allow organizations to manage application privileges using the roles assigned to the user(s) on Connect.</p>
