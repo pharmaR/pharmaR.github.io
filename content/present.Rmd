@@ -2,6 +2,28 @@
 title: "Presentations"
 ---
 
+## 2024
+
+-   May
+    -   PharmaSUG: [Validating R for Pharma](https://github.com/pharmaR/events/blob/main/pharmaSUG_2024/PharmaSUG_SI269_Slides.pptx), *Anuja Das*
+
+## 2023
+
+-   October
+    -   R/Pharma: [Updates from the R Validation Hub: Toward a Pharma Repository](https://github.com/pharmaR/events/blob/main/Rpharma2023/slides/RPharma2023.html), *Juliane Manitz, Coline Zeballos*
+-   September
+    -   posit::conf(2023): [R Validation Hub Status Report and Workshop](https://pharmar.github.io/events-positconf2023/#/title-slide), *Doug Kelkhoff*
+-   June
+    -   AZ R Conference: [It's time to integrate the R into PhaRma](https://github.com/pharmaR/events/tree/main/AZ_R_conf_2023), *Lyn Taylor*
+-   March
+    -   ShinyConf 2023: [{riskassessment} for R-Package Validation](https://github.com/pharmaR/events/blob/main/shinyConf_2023/riskassessment_ClarkAaron_shinyConf2023.pdf), *Aaron Clark*
+    -   R Adoption Series: [Learnings and Reflection from RvalHub Case Studies](https://github.com/pharmaR/events/blob/main/R_Adoption_Series_2023/Manitz_RvalHub_case_study_summaries_2023.pdf) ([recording](https://github.com/pharmaR/events/tree/main?tab=readme-ov-file)), *Juliane Manitz, Doug Kelkhoff, Uday Preetham Palakuru, Eric Milliman*
+
+## 2022
+
+-   June
+    -   useR! Conference: [Implementation of Risk Assessment for R Packages: Learnings and Reflection](https://github.com/pharmaR/events/blob/main/useR_2022/Manitz_useR_2022.pdf)
+
 ## 2021
 
 -   November
