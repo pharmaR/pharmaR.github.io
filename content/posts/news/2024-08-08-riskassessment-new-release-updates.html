@@ -1,0 +1,97 @@
+---
+title: Risk Assessment App v3.1.1
+author: Jeff Thompson
+date: "2024-08-08"
+slug: updates-aug-2024
+categories: 
+  - news
+tags: 
+  - risk assessment
+banner: 'img/banners/riskassessment_3_1_1.png'
+---
+
+
+
+<p>Progress is continuing to be made in <code>{riskassessment}</code>. We wanted to share some of the enhancements and updates included in the most recent release of the <a href="https://github.com/pharmaR/riskassessment">application</a>. There have been multiple releases, both minor and major, since our last post, so we have a lot of new content to cover!</p>
+<p>But before we get into too much detail, if you are new to what we are doing in <code>{riskassessment}</code>, we would like to encourage you to check out our <a href="https://github.com/pharmaR/riskassessment#readme"><code>README</code></a>. There you can find information regarding what <code>{riskassessment}</code> is seeking to accomplish and how you can install and deploy an instance of it for your personal or organizational use.</p>
+<p><a href='https://bit.ly/raa_docs'><img src="/blog/2023-08-16-riskassessment-new-release-updates_files/riskassessment_logo.png" align="right" height="172" style="float:right; height:172px;"/></a></p>
+<br>
+<h2 id="latest-features-recap">Latest Features Recap</h2>
+<p>Lots of enhancements have been integrated since our last post on <code>v2.0.0</code>, so we will take a bird’s eye view of the following major changes:</p>
+<ul>
+<li>Expanded decision automation to include individual <code>{riskmetric}</code> assessment values</li>
+<li>New <code>'Function Explorer'</code> module and faster exploration of source code</li>
+<li>An expanded view of a package’s dependencies</li>
+<li>Miscellaneous items
+<ul>
+<li><code>'About'</code> tab</li>
+<li>non-<code>shinymanager</code> deployment</li>
+</ul>
+</li>
+</ul>
+<p>As always, we invite all who have suggestions or contributions to visit our Github repository. If you come across a bug or have a feature request, please visit our <a href="https://github.com/pharmaR/riskassessment/issues">open list of issues</a> and add a comment or <a href="https://github.com/pharmaR/riskassessment/issues/new">open a new issue</a> if it is a new bug/feature.</p>
+<br>
+<h2 id="decision-automation-rules">Decision Automation Rules</h2>
+<p>Previously, the application would allow rules to be created based upon the overall risk score of the package. This feature is now expanded to include the <code>{riskmetric}</code> assessments. The process follows these basic steps:</p>
+<ol>
+<li>Choose a <code>{riskmetric}</code> assessment for which you would like to create a rule.</li>
+<li>Construct a function taking the assessment value as an argument and return a logical (<code>TRUE</code>/<code>FALSE</code>).</li>
+<li>Choose the decision category to assign if the test returns <code>TRUE</code>.</li>
+</ol>
+<p>When constructing rules, it is important to know the structure of the assessment. All <code>{riskmetric}</code> assessments can be found in the <a href="https://pharmar.github.io/riskmetric/reference/pkg_assess.html#assessment-function-catalog">assessment function catalog</a> on their website. Additionally, all helper functions from <code>{riskmetric}</code> are available for use when constructing the rules allowing a lot of flexibility in how the assessment can be parsed.</p>
+<p>The rules can easily be re-ordered and will be read in a linear fashion. If no rules result in assigning a decision to the package, the <code>ELSE</code> option can be used to assign a decision but defaults to “No Decision”.</p>
+<br>
+<p><img src="/blog/2024-08-08-riskassessment-new-release-updates_files/decision_automation.gif" alt="" /></p>
+<br>
+<h2 id="new-function-explorer-module">New <code>'Function Explorer'</code> Module</h2>
+<p>Our friends at GSK have contributed a major addition that warranted a brand new page under the <code>'Source Explorer'</code> tab. Previously, a user could browse all the source code using the <code>'File Explorer'</code>. Now users can investigate the details of individual functions exported from the package. More specifically, users have curated access to the source code, help documentation, and test files that reference the function of interest. This page extends the value of the application for organizations with a hands-on review process, giving users the ability to explore the package contents at a more granular level.</p>
+<p>Below, you will see a selection inputs panel on the left and a viewer pane on the right. To get started, simply choose a function name and file type you want to further explore. As previously mentioned, the type of files include the following:</p>
+<ol>
+<li><strong>Testing Files</strong>: All discovered test files in the <code>tests/</code> folder containing the function will be displayed.</li>
+<li><strong>R Source Code</strong>: All R files in the <code>R/</code> folder containing the function will be displayed. This includes all usages of the function, not just where it was defined.</li>
+<li><strong>Help Documentation</strong>: The <code>.Rd</code> file containing the function will be rendered in HTML.</li>
+</ol>
+<p>Some additional features:</p>
+<ul>
+<li>If multiple lines containing the function call are found, navigation arrows will appear below the viewer pane, enabling the user to quickly jump to each instance.</li>
+<li>User comment sections are available for both the Function Explorer and the Package Browser.</li>
+<li>The <code>{archive}</code> package is being used to read these files into memory which greatly increases the speed for the <code>'Source Explorer'</code> tab overall.</li>
+</ul>
+<br>
+<p><img src="/blog/2024-08-08-riskassessment-new-release-updates_files/function_explorer.gif" alt="" /></p>
+<br>
+<h2 id="expanded-dependency-exploration">Expanded Dependency Exploration</h2>
+<p>Summary cards are now displayed to provide a macro view of the package’s dependencies!</p>
+<ul>
+<li><strong>Dependencies Uploaded</strong>: the number of package dependencies that have been uploaded to the app</li>
+<li><strong>Type Summary</strong>: a breakdown of the dependency types (<code>Depends</code>, <code>Imports</code>, and <code>LinkingTo</code>)</li>
+<li><strong>Decision summary</strong>: a breakdown of the decisions applied to the dependency packages</li>
+<li><strong>Base-R packages</strong>: a summary of which dependencies are considered part of base R (i.e. <code>{utils}</code>, <code>{stats}</code>, <code>{methods}</code>, etc.)</li>
+</ul>
+<p>Optionally the non-required packages from the ‘Suggests’ fields can also be included to give a more holistic view of a package’s dependency structure. This can be helpful for organizations that require suggested packages to also be qualified in their GxP environment.</p>
+<br>
+<p><img src="/blog/2024-08-08-riskassessment-new-release-updates_files/dependency_cards.png" alt="" /></p>
+<br>
+<p>A new table has been added, which is populated with the reverse dependency packages that were previously uploaded to the application. Now, in the event that a package is being re-assessed/re-evaluated, a user can quickly look at the downstream packages effected by a change in classification.</p>
+<br>
+<p><img src="/blog/2024-08-08-riskassessment-new-release-updates_files/reverse_dependencies.png" alt="" /></p>
+<br>
+<h2 id="miscellaneous-items">Miscellaneous Items</h2>
+<h3 id="expanded-about-tab">Expanded <code>'About'</code> Tab</h3>
+<ul>
+<li><strong>Contact Us</strong>: a page that directs users to report issues, ask questions, reach out to contribute, learn more about the R Validation Hub</li>
+<li><strong>Contributors and Companies</strong>: get to know contributors, past and present</li>
+</ul>
+<h3 id="non-shinymanager-deployment">Non-<code>shinymanager</code> Deployment</h3>
+<p>If deploying the application to an environment like POSIT Connect, the usage of <code>shinymanager</code> can be turned off. The user will then be assigned by <code>session$user</code> and the role by <code>session$groups</code>. This will allow organizations to manage application privileges using the roles assigned to the user(s) on Connect.</p>
+<h2 id="in-closing">In Closing</h2>
+<p>Thank you for checking out our newest release! We hope you are as excited about the development as we are.</p>
+<p>Interested in supporting package development? We could always use extra help / feedback! Please consider one of the following options:</p>
+<ul>
+<li><a href="https://github.com/pharmaR/riskassessment/issues/new">Propose a feature</a> for us to consider</li>
+<li><a href="https://www.pharmar.org/contribute/">Join the dev team</a> - extra hands make light work</li>
+<li><a href="https://bit.ly/risk_survey">Fill out our survey</a> so we can learn how you use <code>{riskmetric}</code> and <code>{riskassessment}</code></li>
+</ul>
+<br>
+<br>
+
