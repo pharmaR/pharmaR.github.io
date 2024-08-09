@@ -10,9 +10,9 @@ tags:
 banner: 'img/banners/riskassessment_3_1_1.png'
 ---
 
-Progress is continuing to be made in `{riskassessment}`. We wanted to share some of enhancements and updates included in the most recent release of the [application](https://github.com/pharmaR/riskassessment). There have been multiple releases, both minor and major, since our last post, so we have a lot of new content to cover!
+Progress is continuing to be made in `{riskassessment}`. We wanted to share some of the enhancements and updates included in the most recent release of the [application](https://github.com/pharmaR/riskassessment). There have been multiple releases, both minor and major, since our last post, so we have a lot of new content to cover!
 
-But before we get into too much details, if you are new to what we are doing in `{riskassessment}`, we would like to encourage you to check out our [`README`](https://github.com/pharmaR/riskassessment#readme). There you can find information regarding what `{riskassessment}` is seeking to accomplish and how you can install and deploy for your personal or organizational use.
+But before we get into too much detail, if you are new to what we are doing in `{riskassessment}`, we would like to encourage you to check out our [`README`](https://github.com/pharmaR/riskassessment#readme). There you can find information regarding what `{riskassessment}` is seeking to accomplish and how you can install and deploy an instance of it for your personal or organizational use.
 
 <a href='https://bit.ly/raa_docs'><img src="/blog/2023-08-16-riskassessment-new-release-updates_files/riskassessment_logo.png" align="right" height="172" style="float:right; height:172px;"/></a>
 
@@ -25,8 +25,8 @@ But before we get into too much details, if you are new to what we are doing in 
 Lots of enhancements have been integrated since our last post on `v2.0.0`, so we will take a bird's eye view of the following major changes:
 
 * Expanded decision automation to include individual `{riskmetric}` assessment values
-* New `'Function Explorer'` page and faster exploration of source code
-* Expanded the package dependency view
+* New `'Function Explorer'` module and faster exploration of source code
+* An expanded view of a package's dependencies
 * Miscellaneous items
   * `'About'` tab
   * non-`shinymanager` deployment
@@ -84,7 +84,7 @@ Summary cards are now displayed to provide a macro view of the package's depende
 * **Dependencies Uploaded**: the number of package dependencies that have been uploaded to the app
 * **Type Summary**: a breakdown of the dependency types (`Depends`, `Imports`, and `LinkingTo`)
 * **Decision summary**: a breakdown of the decisions applied to the dependency packages
-* **Base-R packages**: a summary of which dependencies are considered part of base R (i.e. `utils`, `stats`, `methods`, etc.)
+* **Base-R packages**: a summary of which dependencies are considered part of base R (i.e. `{utils}`, `{stats}`, `{methods}`, etc.)
 
 Optionally the non-required packages from the 'Suggests' fields can also be included to give a more holistic view of a package's dependency structure. This can be helpful for organizations that require suggested packages to also be qualified in their GxP environment.
 
