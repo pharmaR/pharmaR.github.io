@@ -61,89 +61,94 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     post       = 1
 
 [[menu.main]]
-    name       = "Regulations"
-    url        = "/regulations/"
-    weight     = 1
-    parent     = "section.why"
-    
+    name       = "Our Guidelines"
+    identifier = "section.guidelines"
+    url        = ""
+    weight     = 2
+    parent     = "menu.validation"
+    post       = 1
+
 [[menu.main]]
-    name       = "Our Validation Approaches"
-    identifier = "section.how"
+    name       = "Products"
+    identifier = "section.products"
+    url        = ""
+    weight     = 1
+    parent     = "menu.validation"
+    post       = 2
+
+[[menu.main]]
+    name       = "Initiatives"
+    identifier = "section.initiatives"
     url        = ""
     weight     = 2
     parent     = "menu.validation"
     post       = 2
 
 [[menu.main]]
+    name       = "Regulations"
+    url        = "/regulations/"
+    weight     = 1
+    parent     = "section.why"
+    
+[[menu.main]]
     name       = "The {riskmetric} Package"
     url        = "/riskmetric/"
     weight     = 21
-    parent     = "section.how"
+    parent     = "section.products"
     
 [[menu.main]]
     name       = "The {riskassessment} App"
     url        = "/riskassessment/"
     weight     = 22
-    parent     = "section.how"
+    parent     = "section.products"
     
 [[menu.main]]
     name       = "The {riskscore} Package"
     url        = "/riskscore/"
     weight     = 23
-    parent     = "section.how"
+    parent     = "section.products"
     
 [[menu.main]]
     name       = "Our White Paper"
     url        = "/white-paper/"
     weight     = 24
-    parent     = "section.how"
+    parent     = "section.guidelines"
 
 [[menu.main]]
     name       = "General Guidances"
     url        = "/general-guidances/"
     weight     = 25
-    parent     = "section.how"
-    
+    parent     = "section.guidelines"
+
 [[menu.main]]
-    name       = "Case Studies"
-    url        = "/categories/case-studies/"
-    weight     = 4
-    
-[[menu.main]]
-    identifier = "roadmap"
-    name       = "Our Roadmap"
-    url        = "/our-roadmap/"
-    weight     = 5
-    
-[[menu.main]]
-    parent     = "roadmap"
-    name       = "Accomplishments"
-    url        = "/accomplishments/"
-    weight     = 51
-    
-[[menu.main]]
-    parent     = "roadmap"
-    name       = "Looking Forward"
-    url        = "/looking-forward/"
-    weight     = 52
-    
+    name       = "Regulatory Repository"
+    url        = "/repository/"
+    weight     = 26
+    parent     = "section.initiatives"
+            
 [[menu.main]]
     identifier = "resources"
     name       = "Resources"
     url        = "/resources/"
     weight     = 6
-    
+
 [[menu.main]]
     parent     = "resources"
     name       = "News"
     url        = "/categories/news/"
     weight     = 61
-    
+
 [[menu.main]]
     parent     = "resources"
     name       = "Presentations"
     url        = "/present/"
     weight     = 62
+
+[[menu.main]]
+    parent     = "resources"
+    name       = "Case Studies"
+    url        = "/categories/case-studies/"
+    weight     = 63
     
 [[menu.main]]
     parent     = "resources"
