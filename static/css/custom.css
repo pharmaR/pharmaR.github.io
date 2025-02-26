@@ -1,0 +1,12 @@
+body {
+  background: #333;
+}
+
+#all {
+  background: white;
+}
+
+#content {
+  font-size: 1.2em;
+  padding-bottom: 40px; 
+}
