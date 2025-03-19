@@ -26,14 +26,15 @@ title: Regulatory Metrics Repository
   aspect-ratio: 16/9;
 }
 
-.card {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+.flex-row {
+  display: flex;
+  flex-direction: row;
 }
 
-.card > * {
-  padding: 0.5em 1em 0.5em 1em;
+.card  {
+  padding: 0;
+  margin: 0.5em 1em 0.5em 1em;
+  overflow: hidden;
 }
 
 .card > h3 {
@@ -44,11 +45,16 @@ title: Regulatory Metrics Repository
   background-color: #dcdcdc;
 }
 
+.card-body {
+  padding: 1em;
+}
+
 .card-button {
   display: inline-block;
   background: #467fbf;
   color: white;
-  padding: 0.75em 1.5em;
+  padding: 1em;
+  margin-bottom: 0.75em;
   font-size: 1.3em;
   font-weight: bold;
   border-radius: 0.25em;
@@ -57,6 +63,7 @@ title: Regulatory Metrics Repository
 .card-button:hover {
   background: #265f9f;
 }
+
 
 .card-button * {
   padding: 0;
@@ -72,34 +79,7 @@ title: Regulatory Metrics Repository
 }
 </style>
 
-## An open solution to regulatory quality
-
-<div class="row">
-<div class="col-sm-8">
-
-Every regulatory submission requires evidence that the software used meets
-quality standards appropriate for the type of work. The ***R Validation Hub***
-proposed standards for this process in our [2020 White Paper](/white-paper).
-
-</div>
-<div class="col-sm-4">
-
-`TODO: Graphic`
-
-</div>
-<div class="col-sm-8">
-
-Now we're translating those standards into an open-source repository of
-risk assessments, available to all. We hope to empower validation that is
-**consistent**, **reproducible** and **transparent**, lowering the barrier
-to entry for start-ups, empowering consistency among contract research
-organizations (CROs), and improving the speed of regulatory review for
-established enterprises.
-
-</div>
-</div>
-
-<div style="padding-top: 2em;">
+<div style="padding-bottom: 2em;">
 <div class="showcase-content-container bg-light-gray">
 <iframe
 class="showcase-content embedded-video"
@@ -110,6 +90,34 @@ allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; pic
 referrerpolicy="strict-origin-when-cross-origin"
 allowfullscreen
 ></iframe>
+</div>
+</div>
+
+## An open solution to regulatory quality
+
+<div class="row">
+<div class="col-sm-8" style="font-size: 1.25em;">
+
+Every regulatory submission requires evidence that the software used meets
+quality standards appropriate for the type of work. The ***R Validation Hub***
+proposed standards for this process in our [2020 White Paper](/white-paper).
+
+Now we're translating those standards into an open-source repository of
+risk assessments, available to all. We hope to empower validation that is
+**consistent**, **reproducible** and **transparent**, lowering the barrier
+to entry for start-ups, empowering consistency among contract research
+organizations (CROs), and improving the speed of regulatory review for
+established enterprises.
+
+</div>
+<div class="col-sm-4 text-center">
+
+<img style="max-width: 100%;" src="/img/validation-mountain.svg"/>
+
+Intimidated by the climb to validation?  
+Don't forge your own path. Let us give
+you a lift!
+
 </div>
 </div>
 
@@ -124,11 +132,23 @@ Want to get involved, or know someone who can help? [Contact us.](#TODO)
 
 </div>
 
-<div class="row">
-<div class="col-sm-4" style="padding: 0.5em;">
-<div class="card bg-light-gray text-center">
+<div class="row flex-row">
+<div class="card col-sm-4 bg-light-gray text-center">
+### At a Glance
+<div class="card-body">
+<a href="#TODO">
+<div class="card-button">Executive Summary</div>
+</a>
+Read more about our ambitions, expected timelines and how we plan to get
+there. Learn why businesses large and small are excited to see us moving
+forward.
+</div>
+</div>
+
+<div class="col-sm-4 card bg-light-gray text-center">
 ### Our Guidelines
 
+<div class="card-body">
 <a href="#TODO">
 <div class="card-button">
 White Paper
@@ -140,25 +160,10 @@ the guidelines easier to apply.
 </div>
 </div>
 
-<div class="col-sm-4" style="padding: 0.5em;">
-<div class="card bg-light-gray text-center">
-### At a Glance
-
-<a href="#TODO">
-<div class="card-button">
-Executive Summary
-</div>
-</a>
-Read more about our ambitions, expected timelines and how we plan to get
-there. Learn why businesses large and small are excited to see us moving
-forward.
-</div>
-</div>
-
-<div class="col-sm-4" style="padding: 0.5em;">
-<div class="card bg-light-gray text-center">
+<div class="col-sm-4 card bg-light-gray text-center">
 ### Presentations
 
+<div class="card-body">
 <a href="#TODO">
 <div class="card-button">
 Project Overview
