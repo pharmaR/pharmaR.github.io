@@ -5,6 +5,7 @@ title: Regulatory Metrics Repository
 <style>
 .showcase-content-container {
   display: flex;
+  position: relative;
   justify-content: center;
   width: 100%;
   overflow: hidden;
@@ -31,39 +32,47 @@ title: Regulatory Metrics Repository
   flex-direction: row;
 }
 
-.card  {
-  padding: 0;
-  margin: 0.5em 1em 0.5em 1em;
-  overflow: hidden;
-}
-
 .card > h3 {
-  padding: 0.5em 1em 0.5em 1em;
   margin: 0;
   margin-bottom: 0.8em;
-  box-shadow: 0 -2em 2em 2em #0004;
-  background-color: #dcdcdc;
+}
+
+.card {
+  padding: 2em 0em;
 }
 
 .card-body {
-  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  margin: 0 !important;
+  padding: 0em 2em;
+  height: 100%;
+}
+
+.card-body :last-child {
+  margin-top: auto;
+}
+
+.card + .card .card-body {
+  border-left: 2px solid #0001;
 }
 
 .card-button {
   display: inline-block;
   background: #467fbf;
   color: white;
-  padding: 1em;
+  padding: 0.5em 1.0em;
   margin-bottom: 0.75em;
   font-size: 1.3em;
   font-weight: bold;
-  border-radius: 0.25em;
+  border-radius: 0.125em;
 }
 
 .card-button:hover {
+  text-decoration: none;
+  color: white;
   background: #265f9f;
 }
-
 
 .card-button * {
   padding: 0;
@@ -77,13 +86,42 @@ title: Regulatory Metrics Repository
 .bg-light-gray {
   background-color: #f0f0f0;
 }
+
+.drop-shadow {
+  -webkit-filter: drop-shadow(0 0.125em 0.2em rgba(0, 0, 0, .25));
+  filter: drop-shadow(0 0.125em 0.2em rgba(0, 0, 0, .25));
+}
+
+.pointer:hover {
+  cursor: pointer;
+}
+
+.DRAFT {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.DRAFT::after {
+  content: "DRAFT";
+  top: 50%;
+  font-weight: bolder;
+  color: #F00B;
+  transform: scale(18) rotate(-20deg);
+  display: block;
+  font-size: 100%;
+  position: absolute;
+  left: 50%;
+}
 </style>
+
 
 <div style="padding-bottom: 2em;">
 <div class="showcase-content-container bg-light-gray">
+<div class="DRAFT"></div>
 <iframe
 class="showcase-content embedded-video"
-src="https://www.youtube.com/embed/VS_t5IoQbOE"
+src="https://vimeo.com/abraxasmediacompany/review/1065219527/fbf33914d4"
 title="R Validation Hub Workstream Updates"
 frameborder="0"
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -127,62 +165,89 @@ you a lift!
 ## Learn More
 
 </div>
-
-Want to get involved, or know someone who can help? [Contact us.](#TODO)
-
+Want to get involved, or know someone who can help? <span style="color: red; font-weight: bold;">Contact us. (TODO LINK)</span>
 </div>
 
 <div class="row flex-row">
-<div class="card col-sm-4 bg-light-gray text-center">
-### At a Glance
+
+<div class="card col-sm-4 bg-light-gray">
 <div class="card-body">
-<a href="#TODO">
-<div class="card-button">Executive Summary</div>
-</a>
+### At a Glance
+
 Read more about our ambitions, expected timelines and how we plan to get
 there. Learn why businesses large and small are excited to see us moving
 forward.
+
+<a class="card-button" target="_blank" href="/docs/repository-executive-summary.pdf">
+&#x1F872; Executive Summary
+</a>
 </div>
 </div>
 
-<div class="col-sm-4 card bg-light-gray text-center">
+<div class="card col-sm-4 bg-light-gray">
+<div class="card-body">
 ### Our Guidelines
 
-<div class="card-body">
-<a href="#TODO">
-<div class="card-button">
-White Paper
-</div>
-</a>
 Five years ago we drafted the guidelines. Today they're a _de facto_ industry
 standard. Now we're building a repository of pre-calculated metrics to make
 the guidelines easier to apply.
+
+<a class="card-button" href="/white-paper">
+&#x1F872; White Paper
+</a>
 </div>
 </div>
 
-<div class="col-sm-4 card bg-light-gray text-center">
+<div class="card col-sm-4 bg-light-gray">
+<div class="card-body">
 ### Presentations
 
-<div class="card-body">
-<a href="#TODO">
-<div class="card-button">
-Project Overview
-</div>
-</a>
 The project at a glance, designed to get you up to speed fast. Start here
 for interested parties looking for ways to contribute as volunteers or
 advocates.
+
+<a class="card-button" target="_blank" href="https://docs.google.com/presentation/d/e/2PACX-1vQ1xdpU-1mVqamhH4Wv4sfPJX36mfYhZozpAdHfKwEO-tBSY6nmr6-D2otztc23rEM-4-aAA7s0PiR5/pub">
+&#x1F872; Project Overview
+</a>
 </div>
 </div>
+
 </div>
 
 <div class="heading text-center">
 ## Ready to Go
 </div>
 
-We're seeking dedicated developers (DevOps and Full Stack with familiarity in
-R) to help drive this project forward.
 
-* If you're ready to contribute, join us in `#wg-r-validation-hub-repo` on the [R Consortium Slack](http://slack.r-consortium.com/)
-* If you're ready to fund development, `#TODO contribution site`
+<div class="row flex-row" style="font-size: 1.25em;">
 
+<div class="col-sm-1">
+</div>
+
+<div class="col-sm-4 text-center pointer" onclick="window.open('https://slack.r-consortium.org');">
+
+<div>
+Join the R Consortium Slack<br>
+<i>requires <a href="https://lfx.linuxfoundation.org/">LFX Account</a></i>
+</div>
+<img class="drop-shadow" style="margin: 1em; width: 5em;" src="/img/slack.svg"></img>
+<div>
+Come say &#x1F44B; <br>
+`#wg-r-validation-hub-repo`
+</div>
+</a>
+</div>
+
+<div class="col-sm-2">
+</div>
+
+<div class="col-sm-4">
+<div>
+If you're ready to fund development, `#TODO contribution site`
+</div>
+</div>
+
+<div class="col-sm-1">
+</div>
+
+</div>
