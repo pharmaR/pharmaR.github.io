@@ -1,5 +1,7 @@
 # R Validation Hub website
 
+This repository is rendered at https://www.pharmar.org/
+
 ## Contributing Quick-Start
 
 ```r
@@ -13,4 +15,3 @@ stop_server()
 build_site()
 serve_site()
 ```
-
