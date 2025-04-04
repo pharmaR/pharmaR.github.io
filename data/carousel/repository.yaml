@@ -1,0 +1,44 @@
+weight: 0
+title: "Toward a Regulatory Repository"
+image: "img/carousel/logo-repository.svg"
+description: >
+  <style>
+  p {
+    margin-bottom: 1em;
+  }
+
+  .button {
+    display: inline-block;
+    background: #467fbf;
+    color: white;
+    padding: 0.5em 1.0em;
+    margin: 0.5em 0;
+    font-size: 1.3em;
+    font-weight: bold;
+    border-radius: 0.125em;
+  }
+
+  .button:hover {
+    text-decoration: none;
+    color: white;
+    background: #265f9f;
+  }
+  </style>
+
+  <div>
+    <p>
+    A public resource for managing a regulatory-ready R package ecosystem
+    </p>
+    <p>
+    Built on <code><a href="/riskmetric">{riskmetric}</a></code>
+    </p>
+    <p>
+    Standardized measures of <strong>quality</strong>,
+    <strong>transparently</strong> assessed, <strong>publically</strong>
+    available and a central forum for establishing regulatory software quality
+    expectations
+    </p>
+    <a href="/repository">
+      <div class="button">&#x1F872; Learn More</div>
+    </a>
+  </div>
