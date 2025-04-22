@@ -96,6 +96,15 @@ title: Regulatory Metrics Repository
   cursor: pointer;
 }
 
+.ready {
+  padding: 1em; 
+  border-radius: 1em;
+}
+
+.ready:hover {
+  background-color: #EEE;
+}
+
 .DRAFT {
   position: absolute;
   width: 100%;
@@ -118,10 +127,9 @@ title: Regulatory Metrics Repository
 
 <div style="padding-bottom: 2em;">
 <div class="showcase-content-container bg-light-gray">
-<div class="DRAFT"></div>
 <iframe
 class="showcase-content embedded-video"
-src="https://vimeo.com/abraxasmediacompany/review/1065219527/fbf33914d4"
+src="https://www.youtube.com/embed/wyg2R9YSF9I?si=8Oy5CTba6NKBJx2j"
 title="R Validation Hub Workstream Updates"
 frameborder="0"
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -165,7 +173,7 @@ you a lift!
 ## Learn More
 
 </div>
-Want to get involved, or know someone who can help? <span style="color: red; font-weight: bold;">Contact us. (TODO LINK)</span>
+Want to get involved, or know someone who can help? <span style="font-weight: bold;"><a href="https://lists.r-consortium.org/g/RConsortium-Validation-Hub">Contact us</a></span>.
 </div>
 
 <div class="row flex-row">
@@ -221,11 +229,8 @@ advocates.
 
 <div class="row flex-row" style="font-size: 1.25em;">
 
-<div class="col-sm-1">
-</div>
 
-<div class="col-sm-4 text-center pointer" onclick="window.open('https://slack.r-consortium.org');">
-
+<div class="ready col-sm-4 text-center pointer" onclick="window.open('https://slack.r-consortium.org');">
 <div>
 Join the R Consortium Slack<br>
 <i>requires <a href="https://lfx.linuxfoundation.org/">LFX Account</a></i>
@@ -235,19 +240,21 @@ Join the R Consortium Slack<br>
 Come say &#x1F44B; <br>
 `#wg-r-validation-hub-repo`
 </div>
-</a>
 </div>
 
-<div class="col-sm-2">
-</div>
-
-<div class="col-sm-4">
+<div class="ready col-sm-4 text-center pointer" onclick="window.open('https://lists.r-consortium.org/g/RConsortium-Validation-Hub')">
 <div>
-If you're ready to fund development, `#TODO contribution site`
+Join our <strong>mailing list</strong><br>
+to receive updates
 </div>
+<img class="drop-shadow" style="margin: 1em; width: 5em;" src="/img/bell.png"></img>
 </div>
 
-<div class="col-sm-1">
+<div class="ready col-sm-4 text-center pointer" onclick="">
+<div>
+Donate<br>
+<i>generate a donation invoice</i>
+</div>
 </div>
 
 </div>
