@@ -3,6 +3,10 @@ title: Regulatory Metrics Repository
 ---
 
 <style>
+:root {
+  --rvh-blue: #467fbf;
+}
+
 .showcase-content-container {
   display: flex;
   position: relative;
@@ -59,7 +63,7 @@ title: Regulatory Metrics Repository
 
 .card-button {
   display: inline-block;
-  background: #467fbf;
+  background: var(--rvh-blue);
   color: white;
   padding: 0.5em 1.0em;
   margin-bottom: 0.75em;
@@ -226,11 +230,11 @@ advocates.
 ## Ready to Go
 </div>
 
-
 <div class="row flex-row" style="font-size: 1.25em;">
 
-
-<div class="ready col-sm-4 text-center pointer" onclick="window.open('https://slack.r-consortium.org');">
+<div class="ready col-sm-4 text-center"><a
+  style="text-decoration: none; color: inherit;"
+  href="https://slack.r-consortium.org"><div>
 <div>
 Join the R Consortium Slack<br>
 <i>requires <a href="https://lfx.linuxfoundation.org/">LFX Account</a></i>
@@ -240,21 +244,27 @@ Join the R Consortium Slack<br>
 Come say &#x1F44B; <br>
 `#wg-r-validation-hub-repo`
 </div>
-</div>
+</div></a></div>
 
-<div class="ready col-sm-4 text-center pointer" onclick="window.open('https://lists.r-consortium.org/g/RConsortium-Validation-Hub')">
+<div class="ready col-sm-4 text-center"><a
+  style="text-decoration: none; color: inherit;"
+  href="https://lists.r-consortium.org/g/RConsortium-Validation-Hub"><div>
 <div>
 Join our <strong>mailing list</strong><br>
 to receive updates
 </div>
 <img class="drop-shadow" style="margin: 1em; width: 5em;" src="/img/bell.png"></img>
-</div>
+</div></a></div>
 
-<div class="ready col-sm-4 text-center pointer" onclick="">
+<div class="ready col-sm-4 text-center"><a
+  style="text-decoration: none; color: inherit;"
+  href="https://forms.gle/kHD1EmFa1MchSXc38"><div>
 <div>
-Donate<br>
+<span style="color: var(--rvh-blue)"><strong>Donate</strong></span><br>
 <i>generate a donation invoice</i>
 </div>
-</div>
+<div class="drop-shadow" style="margin: 1em auto; width: 5em;">
+  <span style="font-size: 5em;">🙌</span>
+</div></a></div>
 
 </div>
