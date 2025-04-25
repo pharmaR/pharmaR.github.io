@@ -13,5 +13,5 @@ if (!hugo_available(version = getOption("blogdown.hugo.version"))) {
 
 stop_server()
 build_site()
-serve_site()
+serve_site(port = 4321)
 ```
