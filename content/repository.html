@@ -1,0 +1,254 @@
+---
+title: Regulatory Metrics Repository
+---
+
+
+
+<style>
+:root {
+  --rvh-blue: #467fbf;
+}
+
+.showcase-content-container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.showcase-content {
+  box-shadow: 0 0 3em #0008;
+  width: 90%;
+}
+
+@media (min-width: 768px) {
+  .showcase-content {
+    width: 60%;
+  }
+}
+
+.embedded-video {
+  height: auto;
+  aspect-ratio: 16/9;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.card > h3 {
+  margin: 0;
+  margin-bottom: 0.8em;
+}
+
+.card {
+  padding: 2em 0em;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  margin: 0 !important;
+  padding: 0em 2em;
+  height: 100%;
+}
+
+.card-body :last-child {
+  margin-top: auto;
+}
+
+.card + .card .card-body {
+  border-left: 2px solid #0001;
+}
+
+.card-button {
+  display: inline-block;
+  background: var(--rvh-blue);
+  color: white;
+  padding: 0.5em 1.0em;
+  margin-bottom: 0.75em;
+  font-size: 1.3em;
+  font-weight: bold;
+  border-radius: 0.125em;
+}
+
+.card-button:hover {
+  text-decoration: none;
+  color: white;
+  background: #265f9f;
+}
+
+.card-button * {
+  padding: 0;
+  margin: 0;
+}
+
+.bg-gray {
+  background-color: #dcdcdc;
+}
+
+.bg-light-gray {
+  background-color: #f0f0f0;
+}
+
+.drop-shadow {
+  -webkit-filter: drop-shadow(0 0.125em 0.2em rgba(0, 0, 0, .25));
+  filter: drop-shadow(0 0.125em 0.2em rgba(0, 0, 0, .25));
+}
+
+.pointer:hover {
+  cursor: pointer;
+}
+
+.ready {
+  padding: 1em; 
+  border-radius: 1em;
+}
+
+.ready:hover {
+  background-color: #EEE;
+}
+
+.DRAFT {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.DRAFT::after {
+  content: "DRAFT";
+  top: 50%;
+  font-weight: bolder;
+  color: #F00B;
+  transform: scale(18) rotate(-20deg);
+  display: block;
+  font-size: 100%;
+  position: absolute;
+  left: 50%;
+}
+</style>
+<div style="padding-bottom: 2em;">
+<div class="showcase-content-container bg-light-gray">
+<iframe class="showcase-content embedded-video" src="https://www.youtube.com/embed/wyg2R9YSF9I?si=8Oy5CTba6NKBJx2j" title="R Validation Hub Workstream Updates" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+</iframe>
+</div>
+</div>
+<div id="an-open-solution-to-regulatory-quality" class="section level2">
+<h2>An open solution to regulatory quality</h2>
+<div class="row">
+<div class="col-sm-8" style="font-size: 1.25em;">
+<p>Every regulatory submission requires evidence that the software used meets
+quality standards appropriate for the type of work. The <strong><em>R Validation Hub</em></strong>
+proposed standards for this process in our <a href="/white-paper">2020 White Paper</a>.</p>
+<p>Now we’re translating those standards into an open-source repository of
+risk assessments, available to all. We hope to empower validation that is
+<strong>consistent</strong>, <strong>reproducible</strong> and <strong>transparent</strong>, lowering the barrier
+to entry for start-ups, empowering consistency among contract research
+organizations (CROs), and improving the speed of regulatory review for
+established enterprises.</p>
+</div>
+<div class="col-sm-4 text-center">
+<p><img style="max-width: 100%;" src="/img/validation-mountain.svg"/></p>
+<p>Intimidated by the climb to validation?<br />
+Don’t forge your own path. Let us give
+you a lift!</p>
+</div>
+</div>
+</div>
+<div class="text-center">
+<div id="learn-more" class="section level2 heading">
+<h2>Learn More</h2>
+</div>
+<p>Want to get involved, or know someone who can help? <span style="font-weight: bold;"><a href="https://lists.r-consortium.org/g/RConsortium-Validation-Hub">Contact us</a></span>.</p>
+</div>
+<div class="row flex-row">
+<div class="card col-sm-4 bg-light-gray">
+<div id="at-a-glance" class="section level3 card-body">
+<h3>At a Glance</h3>
+<p>Read more about our ambitions, expected timelines and how we plan to get
+there. Learn why businesses large and small are excited to see us moving
+forward.</p>
+<p><a class="card-button" target="_blank" href="/docs/repository-executive-summary.pdf">
+🡲 Executive Summary
+</a></p>
+</div>
+</div>
+<div class="card col-sm-4 bg-light-gray">
+<div id="our-guidelines" class="section level3 card-body">
+<h3>Our Guidelines</h3>
+<p>Five years ago we drafted the guidelines. Today they’re a <em>de facto</em> industry
+standard. Now we’re building a repository of pre-calculated metrics to make
+the guidelines easier to apply.</p>
+<p><a class="card-button" href="/white-paper">
+🡲 White Paper
+</a></p>
+</div>
+</div>
+<div class="card col-sm-4 bg-light-gray">
+<div id="presentations" class="section level3 card-body">
+<h3>Presentations</h3>
+<p>The project at a glance, designed to get you up to speed fast. Start here
+for interested parties looking for ways to contribute as volunteers or
+advocates.</p>
+<p><a class="card-button" target="_blank" href="https://docs.google.com/presentation/d/e/2PACX-1vQ1xdpU-1mVqamhH4Wv4sfPJX36mfYhZozpAdHfKwEO-tBSY6nmr6-D2otztc23rEM-4-aAA7s0PiR5/pub">
+🡲 Project Overview
+</a></p>
+</div>
+</div>
+</div>
+<div id="ready-to-go" class="section level2 heading text-center">
+<h2>Ready to Go</h2>
+</div>
+<div class="row flex-row" style="font-size: 1.25em; margin-bottom: 2em;">
+<div class="ready col-sm-4 text-center">
+<a
+  style="text-decoration: none; color: inherit;"
+  href="https://slack.r-consortium.org">
+<div>
+<p>Join the R Consortium Slack</p>
+</div>
+</a>
+<div>
+<p><i>requires <a href="https://lfx.linuxfoundation.org/">LFX Account</a></i></p>
+</div>
+<a
+  style="text-decoration: none; color: inherit;"
+  href="https://slack.r-consortium.org">
+<img class="drop-shadow" style="margin: 1em; width: 5em;" src="/img/slack.svg"></img>
+<div>
+<p>Come say 👋 <br>
+<code>#wg-r-validation-hub-repo</code></p>
+</div>
+<p></a></p>
+</div>
+<div class="ready col-sm-4 text-center">
+<a
+  style="text-decoration: none; color: inherit;"
+  href="https://lists.r-consortium.org/g/RConsortium-Validation-Hub">
+<div>
+<div>
+<p>Join our <strong>mailing list</strong><br>
+to receive updates</p>
+</div>
+<p><img class="drop-shadow" style="margin: 1em; width: 5em;" src="/img/bell.png"></img></p>
+</div>
+</a>
+</div>
+<div class="ready col-sm-4 text-center">
+<a
+  style="text-decoration: none; color: inherit;"
+  href="https://forms.gle/kHD1EmFa1MchSXc38">
+<div>
+<div>
+<p><span style="color: var(--rvh-blue)"><strong>Donate</strong></span><br>
+<i>generate a donation invoice</i></p>
+</div>
+<div class="drop-shadow" style="margin: 1em auto; width: 6em;">
+<p><span style="font-size: 5em;">🙌</span></p>
+</div>
+</div>
+</a>
+</div>
+</div>
