@@ -14,7 +14,7 @@ At a recent ***ShinyGatherings***, we held a workshop for the `{riskassessment}`
 
 <br>
 
-![](/blog/2025-02-11-riskassessment-workshop/riskassessment_workshop_graphic.jpg)
+![](/blog/2025-02-11-riskassessment-workshop/riskassessment_workshop_graphic.jpg){width="800"}
 
 <br>
 
