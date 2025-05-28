@@ -38,4 +38,4 @@ At a recent ***ShinyGatherings***, some `{riskassessment}` contributors presente
 
 ### *Want to learn more?*
 
-For further details, the full video of the workshop is available here: <https://youtu.be/1IqgLQmJB9w> and the corresponding detailed blogpost by Appsilon is available here: Shiny Gathering x Pharmaverse Recap: Simplifying R Package Quality with the `{riskassessment}` App.
+For further details, the full video of the workshop is available here: <https://youtu.be/1IqgLQmJB9w> and the corresponding detailed blogpost by Appsilon is available here: [Shiny Gathering x Pharmaverse Recap: Simplifying R Package Quality with the `{riskassessment}` App](https://www.appsilon.com/post/r-package-risk-assessment).
