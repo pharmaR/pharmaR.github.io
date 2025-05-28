@@ -10,7 +10,7 @@ tags:
 banner: 'img/banners/riskassessment_workshop.png'
 ---
 
-At a recent ***ShinyGatherings***, we held a workshop for the `{riskassessment}` application, focusing on how we can simplify R package validation with a user-friendly approach that can be tailored to your specific risk assessment requirements. We appreciate Appsilon for the opportunity to speak about our app!
+At a recent ***ShinyGatherings***, some `{riskassessment}` contributors presented a workshop that focused on tailoring the application to org-specific risk requirements to simplify R package validation. Though we discussed the end-user experience, this workshop was really geared towards equipping "app deployers" to get the highest and best use out of the application for their organization's specific needs. We appreciate [Appsilon](https://www.appsilon.com/) for the opportunity to speak about the application!
 
 <br>
 
