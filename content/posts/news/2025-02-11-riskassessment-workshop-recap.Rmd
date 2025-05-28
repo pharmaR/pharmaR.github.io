@@ -22,15 +22,15 @@ At a recent ***ShinyGatherings***, some `{riskassessment}` contributors presente
 
 **The workshop's main topics:**
 
--   A brief recap on what the `{riskassessment}` app does. Spoiler alert: it's goal is to simplify the risk assessment process with a structured and user-friendly approach that avoids the need to author custom R code.
+-   A brief recap on what the `{riskassessment}` app does. *Spoiler alert: it's goal is to simplify the risk assessment process with a structured and user-friendly approach that avoids the need to author custom R code.*
 
 -   Why (and when) organizations should use the app with an emphasis on how it can alleviate the burden of making informed decisions about packages
 
 -   How the app guides end-users to follow org-specific workflows, whether that be logging, reviewing package metrics, verifying the risk of dependencies, and justifying GxP package inclusion requests using comprehensive downloadable reports.
 
--   How to "app deployers" can set custom org-specific rules to automate package risk assessment using the desired risk metric criteria.
+-   How "app deployers" can set custom org-specific rules to automate package risk assessment using the desired risk metric criteria.
 
-- A thorough look at the app's role-based access control and how it plays well with Posit Connect authenticated users.
+-   A thorough look at the app's role-based access control and how it plays well with Posit Connect authenticated users.
 
 -   Common challenges & caveats we recognize related to the app
 
