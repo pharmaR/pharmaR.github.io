@@ -20,7 +20,7 @@ At a recent ***ShinyGatherings***, some `{riskassessment}` contributors presente
 
 ### About the Workshop
 
-**The main topics of the workshop included:**
+**The workshop's main topics:**
 
 -   What the `{riskassessment}` app is and how it simplifies the risk assessment process with a structured and user-friendly approach without the need to use individual scripts alone
 
