@@ -30,7 +30,7 @@ At a recent ***ShinyGatherings***, some `{riskassessment}` contributors presente
 
 -   How to customize the app with custom risk assessment rules, decision automation, role-based access control, and storage of organization-specific settings
 
--   Why the app stands out in 7 big ways, namely its automated package assessments, comprehensive risk summary reports, and more
+- A thorough look at the app's role-based access control and how it plays well with Posit Connect authenticated users.
 
 -   Common challenges & caveats we recognize related to the app
 
