@@ -28,7 +28,7 @@ At a recent ***ShinyGatherings***, some `{riskassessment}` contributors presente
 
 -   How the app guides end-users to follow org-specific workflows, whether that be logging, reviewing package metrics, verifying the risk of dependencies, and justifying GxP package inclusion requests using comprehensive downloadable reports.
 
--   How to customize the app with custom risk assessment rules, decision automation, role-based access control, and storage of organization-specific settings
+-   How to "app deployers" can set custom org-specific rules to automate package risk assessment using the desired risk metric criteria.
 
 - A thorough look at the app's role-based access control and how it plays well with Posit Connect authenticated users.
 
