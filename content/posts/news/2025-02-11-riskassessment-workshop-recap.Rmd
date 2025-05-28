@@ -26,7 +26,7 @@ At a recent ***ShinyGatherings***, some `{riskassessment}` contributors presente
 
 -   Why you should use the app and how it assists with making informed decisions about packages
 
--   How the app guides end-user workflows, from logging into the app, to reviewing package metrics and checking dependencies, to justifying package requests and submitting the request
+-   How the app guides end-users to follow org-specific workflows, whether that be logging, reviewing package metrics, verifying the risk of dependencies, and justifying GxP package inclusion requests using comprehensive downloadable reports.
 
 -   How to customize the app with custom risk assessment rules, decision automation, role-based access control, and storage of organization-specific settings
 
