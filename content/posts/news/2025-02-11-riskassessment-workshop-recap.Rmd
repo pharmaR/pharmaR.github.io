@@ -22,7 +22,7 @@ At a recent ***ShinyGatherings***, some `{riskassessment}` contributors presente
 
 **The workshop's main topics:**
 
--   What the `{riskassessment}` app is and how it simplifies the risk assessment process with a structured and user-friendly approach without the need to use individual scripts alone
+-   A brief recap on what the `{riskassessment}` app does. Spoiler alert: it's goal is to simplify the risk assessment process with a structured and user-friendly approach that avoids the need to author custom R code.
 
 -   Why you should use the app and how it assists with making informed decisions about packages
 
