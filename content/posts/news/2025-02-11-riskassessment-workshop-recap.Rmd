@@ -32,7 +32,7 @@ At a recent ***ShinyGatherings***, some `{riskassessment}` contributors presente
 
 -   Why the app stands out in 7 big ways, namely its automated package assessments, comprehensive risk summary reports, and more
 
--   Common challenges we recognize related to the app
+-   Common challenges & caveats we recognize related to the app
 
 <br>
 
