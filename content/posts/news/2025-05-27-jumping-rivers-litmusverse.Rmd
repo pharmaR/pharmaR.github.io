@@ -1,13 +1,12 @@
 ---
 title: "Jumping Rivers' Litmusverse: Another Success for Open-Source Validation"
-author: R Validation Hub
+author: "R Validation Hub"
 date: "2025-05-27"
-slug: jumping-rivers-litmusverse
-categories: 
-  - news
-tags: 
-  - 
-banner: 'img/banners/jumping_rivers_litmusverse.png'
+slug: "jumping-rivers-litmusverse"
+categories: news
+tags:
+- ~
+banner: img/banners/jumping_rivers_litmusverse.png
 ---
 
 Since 2018, the R Validation Hub has devoted considerable time and energy to the development of powerful R packages that are designed to support the risk assessment of R packages. Our commitment to building a comprehensive validation framework—alongside tools like `{riskmetric}` and `{riskassessment}`—has proven to be a sound investment. This is reflected in the ongoing support of the R Consortium of our working group, the inclusion of our packages in the Pharmaverse, and the growing prominence of our framework and tools at the heart of the expanding risk assessment landscape. <br>
@@ -19,6 +18,16 @@ This spring, **Jumping Rivers** unveiled their suite of packages, the [***litmus
 <br>
 
 ![](/blog/2025-05-27-jumping-rivers-litmusverse/welcome-to-the-litmusverse.png){width="800"}
+
+<br>
+
+### The Litmus Dashboard
+
+You can also find the open-access Litmus Dashboard [here](https://litmus-dashboard.jmpr.io/). Feel free to take a look!
+
+<br>
+
+![](/blog/2025-05-27-jumping-rivers-litmusverse/litmus_dashboard.png){width="800"}
 
 <br>
 
