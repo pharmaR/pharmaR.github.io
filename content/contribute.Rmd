@@ -1,117 +1,126 @@
 ---
-title: "Contribute"
-editor_options: 
-  markdown: 
+title: "Connect & Contribute"
+editor_options:
+  markdown:
     wrap: 72
 ---
 
-## Join Our Mailing List
+## Stay Connected
 
-For occasional news updates, you can join our [mailing
-list](https://lists.r-%20consortium.org/g/RConsortium-Validation-Hub).
-This will enable you and your colleagues to receive notifications of key
-updates/software releases, our latest news and blog posts, and invites
-to all-hands Hub meetings.
+### 📬 Mailing List
+Join our [mailing list](https://lists.r-consortium.org/g/RConsortium-Validation-Hub) to receive news, updates, and invites to all-hands meetings.
 
-Once you've joined, you can [subscribe to our
-calendar](https://lists.r-%20consortium.org/calendar) to keep tabs on
-all of the R Validation Hub's all-hands meetings.
+### 📅 Calendar
+[Subscribe to our calendar](https://lists.r-consortium.org/calendar) to keep tabs on meetings and activities.
 
-------------------------------------------------------------------------
+### <img src="/img/icons/slack.jpg" alt="Slack icon" width="35"/> Slack
+Join discussions by [requesting a Slack invite](https://join.slack.com/t/r-validation-hub/shared_invite/zt-abc123456-ExampleLink).
 
-## Contribute to a Working Group
+---
 
-If you are willing and able to commit more time to the R Validation
-Hub's mission, then there are several options depending on your skills
-and interests. If you do not feel you have the necessary technical
-skills to contribute then please don't let that stop you from getting in
-touch and sharing ideas to support the implementation of a risk-based R
-package assessment.
+## Contribute to a Workstream
 
-In each case you can get involved either by contacting the stream leads
-via the relevant GitHub page, or by sending a message to us via the
-contact form on our [Contact Us](/contact/) page.
+### ⚡ Priority Focus
+Some workstreams are actively seeking contributors. Check below to see where your skills might be a good fit!
 
-### The Communications Workstream
+---
 
-*Check back later!*
+### 🗣️ Communications Workstream
 
-The communications workstream is our newest endeavor. We've been
-fortunate to have a lot of interest in these roles. Please check back
-later to see if the team is looking to grow.
+⚡ *Currently growing!*
 
-### The [{riskmetric}](https://github.com/pharmaR/riskmetric) R Package
-
-The {riskmetric} package collects metrics that support the idea of a
-risk-based evaluation of R packages. The package collects and summarizes
-various metrics and provides the means to quantify the risk of a package
-via a weighted risk score. It also serves as the backbone of the Risk
-Assessment Shiny application. For more information see the [package
-site](https://pharmar.github.io/%20riskmetric/) or [GitHub
-page](https://github.com/pharmaR/riskmetric).
+We’re looking for long-term contributors interested in increasing awareness of the R Validation Hub’s work and engaging our larger R community. Check our what we would love to see in contributors below!
 
 **Current Focus**
 
-The {riskmetric} team is currently looking to build features to support
-the idea of package cohorts. We are also looking to refine some of the
-meta-information collected by riskmetric to better serve the risk
-assessment application. The team also has a [backlog of other open
-issues](https://%20github.com/pharmaR/riskmetric/issues), including
-additional metrics that they would like to explore.
+- 
+- 
 
-**Key Skills Required**
+**What We Ask of Contributors**
 
-A fundamental understanding of R packages is essential for anyone
-looking to support the {riskmetric} team. Package development experience
-is also highly beneficial.
+- ✍️ Write blogs and meeting summaries  
+- 🧑‍💻 Help organize and host quarterly meetings  
+- 🌐 Support website content updates
+- 📣 Outreach to expand the awareness of our mission and work
 
-### The [{riskassessment} Application](https://github.com/pharmaR/riskassessment)
+**Helpful Experience**
 
-The risk assessment Shiny app is an extension of the {riskmetric} R
-package and provides a graphical interface to the {riskmetric}
-functionality. It provides further exploratory capabilities in addition
-to the numeric metrics and improves ease-of-use for organizations to
-adopt a risk-based approach to R package validation. For more
-information see the [package GitHub
-page](https://github.com/pharmaR/risk_assessment).
+- Blog writing, social media use, and mailing list management and communication
+- Experience with R Markdown or website building in R  
+- Knowledege or willingness to learn about R package validation and risk assessment  
+
+---
+
+### 📦 [{riskmetric} R Package](https://github.com/pharmaR/riskmetric)
+
+![GitHub stars](https://img.shields.io/github/stars/pharmaR/riskmetric?style=social)
+![GitHub issues](https://img.shields.io/github/issues/pharmaR/riskmetric)
+![GitHub last commit](https://img.shields.io/github/last-commit/pharmaR/riskmetric)
+![GitHub contributors](https://img.shields.io/github/contributors/pharmaR/riskmetric)
+
+
+The `{riskmetric}` package collects metrics to support a risk-based evaluation of R packages and powers the Risk Assessment app.
 
 **Current Focus**
 
-In addition to working with the {riskmetric} team to better support
-cohorts of packages and multiple package versions, the team is building
-up metric and package exploration features. This includes links to
-source information such as vignettes, and the ability to explore package
-documentation and tests.
+- Cohort support features  
+- Refining meta-information  
+- Exploring new metrics [See issues](https://github.com/pharmaR/riskmetric/issues)
 
-**Key Skills Required**
+**Helpful Experience**
 
-Shiny app development experience is highly desirable; specifically,
-experience with Shiny modules and the {golem} package would be
-beneficial but is not required.
+- Familiarity with R package development  
+- Interest in open-source quality metrics  
 
-### The Regulatory R Package Repository
+---
 
-The regulatory R package repository is currently working on
-minimal-viable products for a number of key features. Progress is
-tracked on our [GitHub
-page](https://github.com/pharmaR/%20regulatory-r-repo-wg), where you can
-find [information for getting
-involved](https://github.com/pharmaR/regulatory-r-repo-wg/issues/1).
+### 📊 [{riskassessment} Application](https://github.com/pharmaR/riskassessment)
 
-------------------------------------------------------------------------
+![GitHub stars](https://img.shields.io/github/stars/pharmaR/riskassessment?style=social)
+![GitHub issues](https://img.shields.io/github/issues/pharmaR/riskassessment)
+![GitHub last commit](https://img.shields.io/github/last-commit/pharmaR/riskassessment)
+![GitHub contributors](https://img.shields.io/github/contributors/pharmaR/riskassessment)
 
-## How else can I help?
 
-If you have tried to implement any of the R Validation Hub's ideas, or
-used any of our tools, or even if you've decided to go own way, then we
-would love you to submit a case study describing what you have done to
-implement a GxP-compliant R environment to our [Case
-Study](https://github.com/pharmaR/case_studies) catalogue on GitHub. Use
-our mailing list or GitHub issues to let us know of your intentions and
-we'll work with you to upload your written case study. We're also
-pleased to share case studies verbally with the wider community. You can
-find videos of previous presentations on our [case
-studies](/casestudies/) page.
+A Shiny app that makes `{riskmetric}` outputs interactive and easier to explore.
 
-*If you still don't feel that you can contribute then please consider
-one of our [partner initiatives](https://www.pharmar.org/partners/).*
+**Current Focus**
+
+- Package/documentation exploration tools  
+- Cohort and version comparison support
+
+**Helpful Experience**
+
+- Shiny app development (esp. with `{golem}`)  
+- UI/UX intuition helpful but not required  
+
+---
+
+### 🗂️ [Regulatory R Package Repository](https://github.com/pharmaR/regulatory-r-repo-wg)
+
+![GitHub stars](https://img.shields.io/github/stars/pharmaR/regulatory-r-repo-wg?style=social)
+![GitHub issues](https://img.shields.io/github/issues/pharmaR/regulatory-r-repo-wg)
+![GitHub last commit](https://img.shields.io/github/last-commit/pharmaR/regulatory-r-repo-wg)
+![GitHub contributors](https://img.shields.io/github/contributors/pharmaR/regulatory-r-repo-wg)
+
+This group is building a repository of validated R packages to meet regulatory needs.
+
+**Current Focus**
+
+- Minimal viable product for repository  
+- Contributor guidance and onboarding
+
+**Get Involved**
+
+See [this issue](https://github.com/pharmaR/regulatory-r-repo-wg/issues/1) for how to contribute.
+
+---
+
+## How Else Can You Help?
+
+Even if you can’t join a workstream directly, you can:
+
+- 📄 Submit a [case study](https://github.com/pharmaR/case_studies) on your experience with R Validation using our tools
+- 🎤 Share your knowledge through a presentation/discussion ([view past talks](/community_meetings/))
+
+---
