@@ -177,7 +177,11 @@ you a lift!
 ## Learn More
 
 </div>
-Want to get involved, or know someone who can help? <span style="font-weight: bold;"><a href="https://lists.r-consortium.org/g/RConsortium-Validation-Hub">Contact us</a></span>.
+Want to get involved, or know someone who can help?
+Join our community
+<span style="font-weight: bold;">
+<a href="https://lists.r-consortium.org/g/r-validation-hub">
+mailing list</a> for regular updates</span>.
 </div>
 
 <div class="row flex-row">
@@ -255,7 +259,7 @@ Come say &#x1F44B; <br>
 
 <div class="ready col-sm-4 text-center"><a
   style="text-decoration: none; color: inherit;"
-  href="https://lists.r-consortium.org/g/RConsortium-Validation-Hub"><div>
+  href="https://lists.r-consortium.org/g/r-validation-hub"><div>
 <div>
 Join our <strong>mailing list</strong><br>
 to receive updates
