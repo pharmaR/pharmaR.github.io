@@ -4,14 +4,17 @@ This repository is rendered at https://www.pharmar.org/
 
 ## Contributing Quick-Start
 
-```r
-library(blogdown)
+For new markdown content, the easiest way to render the website is with
 
-if (!hugo_available(version = getOption("blogdown.hugo.version"))) {
-  install_hugo(version = getOption("blogdown.hugo.version"))
-}
+```sh
+hugo serve
+```
 
-stop_server()
-build_site()
-serve_site(port = 4321)
+If you're contributing a document written in `.Rmd` or `.qmd`, you'll need
+to render your documents to `.md` before they will be included. You can
+either do this manually, or using a script to automatically re-render on
+change.
+
+```sh
+./tools/watch.R  # optional
 ```

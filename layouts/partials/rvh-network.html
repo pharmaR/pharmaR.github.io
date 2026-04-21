@@ -1,0 +1,13 @@
+<script type="module">
+  import { network } from './js/rvh-network.js';
+
+  let n = network();
+  n.style["height"] = "100%";
+  n.style["width"] = "100%";
+  n.style["top"] = 0;
+  n.style["position"] = "absolute";
+  n.style["z-index"] = -1;
+
+  let query = ".owl-carousel > .item > .row:first-child";
+  document.querySelector(query).appendChild(n);
+</script>
