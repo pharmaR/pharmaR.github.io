@@ -89,8 +89,8 @@ scene.fog = new THREE.Fog('white', 5, 20);
 camera.position.z = 10;
 
 function animate() {
-	elements.rotation.x += 0.01;
-	elements.rotation.y += 0.01;
+	elements.rotation.x += 0.002;
+	elements.rotation.y += 0.002;
 	renderer.render(scene, camera);
 }
 
