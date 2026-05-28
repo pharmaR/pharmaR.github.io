@@ -15,11 +15,9 @@ The following videos are taken from our three-part meeting series in 2022.  The 
 
 <iframe width="560" height="315" src=https://www.youtube.com/embed/JkKJojVYBXM title="Using R in a GxP Environment (Part 3)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-
 *Part 2*
 
 <iframe width="560" height="315" src=https://www.youtube.com/embed/lWXqfuaxNL8 title="Using R in a GxP environment (Part 2)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 
 *Part 1*
 
