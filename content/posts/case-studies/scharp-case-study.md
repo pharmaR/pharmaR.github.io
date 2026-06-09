@@ -66,7 +66,7 @@ The initial risk assessment is in place to quickly identify packages needing mor
 
 <br>
 
-<img src="/blog/scharp-case-study/scharp_figure_1.png" width="100%" max-width="800"></img>
+<img src="/blog/scharp-case-study/scharp_figure_1.png" width="100%" max-width="800"/></img>
 
 <br>
 
@@ -74,7 +74,7 @@ Most of the initial risk assessment is performed programmatically (deliverables,
 
 <br>
 
-<img src="/blog/scharp-case-study/scharp_figure_2.png" width="100%" max-width="800"></img>
+<img src="/blog/scharp-case-study/scharp_figure_2.png" width="100%" max-width="800"/></img>
 
 <br>
 
@@ -100,4 +100,4 @@ By pairing a mostly programmatic initial assessment with a qualitative study-spe
 
 <br>
 
-Read their full paper, “Handle with Care: Study-Specific Assessment of R Package Risk,” **here**.
+Read their full paper, “Handle with Care: Study-Specific Assessment of R Package Risk,” [**here**](https://github.com/pharmaR/pharmaR.github.io/blob/master/content/posts/case-studies/scharp_case_study.pdf).
