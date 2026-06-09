@@ -16,7 +16,7 @@ This spring, **Jumping Rivers** unveiled their suite of packages, the [***litmus
 
 <br>
 
-![](/blog/2025-05-27-jumping-rivers-litmusverse/welcome-to-the-litmusverse.png){width="800"}
+![](/blog/2025-05-27-jumping-rivers-litmusverse/welcome-to-the-litmusverse.png)
 
 <br>
 
@@ -26,7 +26,7 @@ You can also find the open-access Litmus Dashboard [here](https://litmus-dashboa
 
 <br>
 
-![](/blog/2025-05-27-jumping-rivers-litmusverse/litmus_dashboard.png){width="800"}
+![](/blog/2025-05-27-jumping-rivers-litmusverse/litmus_dashboard.png)
 
 <br>
 
