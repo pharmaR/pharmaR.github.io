@@ -10,8 +10,6 @@ banner: "img/banners/scharp_case_study.png"
 slug: "scharp-case-study"
 ---
 
-## **Study-Specific Assessment of R Package Risk at SCHARP**
-
 The **Statistical Center for HIV/AIDS Research and Prevention (SCHARP)** at Fred Hutch Cancer Center is a statistical and data management center dedicated to supporting investigators who are leading life-saving, life-changing, innovative research to prevent HIV/AIDS and other infectious diseases. A team from SCHARP recently presented at the PHUSE US-Connect 2026 event hosted in March, detailing their experiences and processes associated with study-specific assessment of R package risk.
 
 The team at SCHARP had historically contributed to regulatory submissions in SAS. However, with the strong preference for R in the HIV vaccine statistical community, it became important to build a rigorous framework for R validation to ensure software reliability and perform risk assessment. Using guidance from the R Validation Hub’s white paper and leveraging the {riskmetric} package, their framework is built around study-specific purpose, software development lifecycle, community usage, and testing. Given SCHARP’s limited resources, the framework is currently mandated only for high-profile trials and is further customized according to each trial’s risk appetite and with an intent to build broader risk assessment experience in their organization.
