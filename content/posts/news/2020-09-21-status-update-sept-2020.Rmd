@@ -11,18 +11,43 @@ banner: 'img/banners/ropenscilabs.png'
 
 ```{r include=FALSE}
 knitr::opts_chunk$set(comment = NA, collapse = TRUE)
-library(packgraph)
-library(autotest)
 ```
 
 ```{r pkg-install, echo = FALSE}
-ip <- installed.packages ()
-if (!"pkgapi" %in% rownames (ip))
-    remotes::install_github ("r-lib/pkgapi")
-if (!"packgraph" %in% rownames (ip))
-    remotes::install_github ("ropenscilabs/packgraph")
-```
+if (!requireNamespace("pak", quietly = TRUE)) {
+  install.packages("pak")
+}
 
+if (!requireNamespace("packgraph", quietly = TRUE)) {
+  pak::pak("ropenscilabs/packgraph")
+}
+
+if (!requireNamespace("autotest", quietly = TRUE)) {
+  pak::pak("ropensci-review-tools/autotest")
+}
+
+if (!requireNamespace("pkgapi", quietly = TRUE)) {
+  pak::pak("r-lib/pkgapi")
+}
+
+if (!requireNamespace("pkgapi", quietly = TRUE)) {
+  pak::pak("r-lib/pkgapi")
+}
+
+if (!requireNamespace("gert", quietly = TRUE)) {
+  install.packages("gert")
+}
+
+riskmetric_path <- file.path(tempdir(), "riskmetric")
+gert::git_clone(
+  "https://github.com/pharmaR/riskmetric.git",
+  path = riskmetric_path
+)
+
+library(gert)
+library(packgraph)
+library(autotest)
+```
 
 ## Background
 
@@ -101,17 +126,16 @@ functions of a package. Here is the summary of exported functions of the
 [`riskmetric`](https://github.com/pharmar/riskmetric) package. 
 
 ```{r packgraph_show, eval=FALSE}
-library (packgraph)
+library(packgraph)
 pkg_source <- "/<local>/<path>/<to>/riskmetric"
-g <- pg_graph (pkg_source, plot = FALSE)
-pg_report (g)
+g <- pg_graph(pkg_source, plot = FALSE)
+pg_report(g)
 ```
 
 ```{r packgraph_run, echo = FALSE, cache=TRUE, collapse = TRUE}
-library (packgraph)
-pkg_source <- tools::file_path_as_absolute("../../static/blog/riskmetric")
-g <- pg_graph (pkg_source, plot = FALSE)
-pg_report (g)
+library(packgraph)
+g <- pg_graph(riskmetric_path, plot = FALSE)
+pg_report(g)
 ```
 
 The primary cluster shown in purple in the preceding image has only two
@@ -197,17 +221,13 @@ The main function that does the work is
 as demonstrated with the following code:
 
 ```{r autotest_show, eval = FALSE}
-library (autotest)
-system.time (
-    x <- autotest_package ("/<local>/<path>/<to>/riskmetric")
-    )
+library(autotest)
+system.time(x <- autotest_package("/<local>/<path>/<to>/riskmetric"))
 ```
 
 ```{r autotest_run, echo = FALSE, cache=TRUE, collapse=TRUE}
-library (autotest)
-system.time (
-    x <- autotest_package (tools::file_path_as_absolute("../../static/blog/riskmetric"))
-    )
+library(autotest)
+system.time(x <- autotest_package(riskmetric_path))
 ```
 
 And you can see that the function takes a few seconds to run. The function
@@ -217,7 +237,7 @@ implements a `summary` method for these objects an edited part of which looks
 like this:
 
 ```{r autotest-summary}
-summary (x) 
+summary(x)
 ```
 
 The result contained no errors or diagnostic messages, and 13 warnings for
@@ -277,5 +297,3 @@ our system, while our assessments and reviews would help improve the quality of
 your software. We look forward to any contributions to help improve our system
 for peer review of statistical software, and ultimately for helping to improve
 the quality of statistical software in R.
-
-

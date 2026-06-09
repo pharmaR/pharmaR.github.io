@@ -36,6 +36,8 @@ Then, the package can be loaded:
 
 ``` {r, echo=FALSE, message=FALSE, eval=TRUE}
 library(riskmetric)
+library(tibble)
+library(dplyr)
 ```
 
 To illustrate how `riskmetric` works, a few packages with a wide range of popularity have been selected. 
@@ -56,8 +58,17 @@ To illustrate how `riskmetric` works, a few packages with a wide range of popula
 When referencing a package, riskmetric first looks for installed packages but can also assess packages that have not been installed:
 
 ``` {r, message=FALSE}
-package_tbl <- pkg_ref(c("riskmetric", "utils", "ggplot2", "Hmisc", "survminer", "coxrobust")) 
-package_tbl$survminer
+pkg_names <- c(
+  "riskmetric",
+  "utils",
+  "ggplot2",
+  "Hmisc",
+  "survminer",
+  "coxrobust"
+)
+
+pkgs <- pkg_ref(pkg_names)
+pkgs[[5]]
 ```
 
 Note that many fields have a trailing `...`; riskmetric will evaluate and cache the results of the queries later on. When we call the `pkg_assess()` function on each reference, the metrics will be stored and become available. In other words, the necessary package metadata is assessed and an atomic value is added for each assessment and package. 
@@ -67,7 +78,7 @@ Then, the information is scored in order to estimate associated risk. This final
 For more information, check out the [`riskmetric` vignette](https://pharmar.github.io/riskmetric/articles/riskmetric.html). 
 
 ``` {r, message=FALSE, warning=FALSE}
-res <- package_tbl %>%
+res <- pkgs %>%
   pkg_assess() %>%
   pkg_score() %>%
   mutate(risk = summarize_scores(.))
@@ -76,7 +87,7 @@ res <- package_tbl %>%
 The function `summarize_scores()` serves as an example for how a risk score might be derived. Each organization should decide independently how to weight different assessments. 
 
 ``` {r, output="asis", echo=FALSE}
-pander(res[,c(1:2, 9,10,6, 7, 8,14 )], split.table=Inf)
+pander(res[, c(1:2, 9, 10, 6, 7, 8, 14)], split.table = Inf)
 ```
 
 <!--TODO> describe each of the metrics and their relevance for package quality -->
@@ -106,12 +117,12 @@ In addition to assessing the set of packages used to develop a project, `riskmet
 
 ``` {r}
 pkg_ref("survminer") %>%
-  assess_downloads_1yr() %>% 
+  assess_downloads_1yr() %>%
   metric_score()
 ```
 
 ```{r, echo = FALSE, warning = FALSE, message = FALSE}
-pkg_example <- pkg_ref("survminer") 
+pkg_example <- pkg_ref("survminer")
 pkg_data <- pkg_example %>% pkg_assess()
 pkg_score <- pkg_data %>% pkg_score()
 ```

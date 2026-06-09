@@ -2,8 +2,13 @@
 .Rhistory
 .RData
 .Ruserdata
-.DS_Store
+**/.DS_Store
+
 public
+.hugo_build.lock
+
+**/*_cache
+**/*_cache/**
 
 npm-debug.log
 /node_modules/*

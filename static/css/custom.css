@@ -2,6 +2,16 @@ body {
   background: #333;
 }
 
+.home-carousel .dark-mask {
+  background: #467fbf;
+  opacity: 0.60;
+  overflow: hidden;  
+}
+
+.navbar ul.nav > li > a {
+  text-decoration: none;
+}
+
 #all {
   background: white;
 }

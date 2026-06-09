@@ -12,43 +12,55 @@ library(dplyr)
 ```
 
 ```{r read-team-info, echo=FALSE}
-team_info_df <- read_xlsx("~/r_validation_hub/pharmaR.github.io/content/meet-the-team/teaminfo.xlsx")
-# team_info_df <- read_xlsx("meet-the-team/teaminfo.xlsx") # when running locally
-
+team_info_df <- read_xlsx("content/meet-the-team/teaminfo.xlsx")
 largest_ws <- names(which.max(table(team_info_df$workstream)))
-
 largest_ws_size <- length(which(team_info_df$workstream == largest_ws))
 ```
 
 ```{r photo-row-func, echo=FALSE}
 photo_row_function <- function(filtered_df) {
-  list <- list()
-  for (person in 1:nrow(filtered_df)) {
-  img_path <- paste0("~/r_validation_hub/pharmaR.github.io/content/meet-the-team/", filtered_df$photo_file_name[person])
-  # img_path <- paste0("meet-the-team/", filtered_df$photo_file_name[person])  # when running locally
-  p <- 
-    ggdraw() + 
-    draw_image(img_path, scale = .9)
-  
-  p <- ggdraw(add_sub(p, filtered_df$name[person], fontfamily = "helvetica", fontface = "bold", size = 10))
-  
-  list[[person]] <- ggdraw(add_sub(p, filtered_df$role[person], fontfamily = "helvetica", size = 10))
-  }
-  
-  if (length(list) < largest_ws_size){
-    img_path <- paste0("~/r_validation_hub/pharmaR.github.io/content/meet-the-team/blank.jpg")
-    # img_path <- paste0("meet-the-team/blank.jpg") # when running locally
-    p <- 
-      ggdraw() + 
-      draw_image(img_path, scale = .9)
-    
-    p <- ggdraw(add_sub(p, " ", fontfamily = "helvetica", fontface = "bold", size = 10))
-    
-    list[[largest_ws_size]] <- ggdraw(add_sub(p, " ", fontfamily = "helvetica", size = 10))
-    
+  grobs <- list()
+
+  for (person in seq_len(nrow(filtered_df))) {
+    img_path <- paste0(
+      "content/meet-the-team/",
+      filtered_df$photo_file_name[person]
+    )
+
+    p <-  ggdraw() + draw_image(img_path, scale = .9)
+    p <- ggdraw(add_sub(
+      p,
+      filtered_df$name[person],
+      fontface = "bold",
+      size = 10
+    ))
+
+    grobs[[person]] <- ggdraw(add_sub(
+      p,
+      filtered_df$role[person],
+      size = 10
+    ))
   }
 
-grid.arrange(grobs=c(list), nrow = 1, padding = unit(1, "cm"))
+  if (length(grobs) < largest_ws_size) {
+    img_path <- paste0("content/meet-the-team/blank.jpg")
+    p <- ggdraw() + draw_image(img_path, scale = 0.9)
+    p <- ggdraw(add_sub(
+      p,
+      " ",
+      fontface = "bold",
+      size = 10
+    ))
+
+    grobs[[largest_ws_size]] <- ggdraw(add_sub(
+      p,
+      " ",
+      size = 10
+    ))
+  }
+
+  grobs <- Filter(Negate(is.null), grobs)
+  grid.arrange(grobs = grobs, nrow = 1, padding = unit(1, "cm"))
 }
 ```
 

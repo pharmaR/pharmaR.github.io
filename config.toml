@@ -1,10 +1,16 @@
 baseurl = "/"
 languageCode = "en-us"
-title = "pharmaR website"
+title = "PharmaR"
 theme = "hugo-universal-theme"
 googleAnalytics = ""
 disqusShortname = ""
-ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+ignoreFiles = [
+    "\\.Rmd$",
+    "\\.Rmarkdown$",
+    "\\.knit\\.md",
+    "_files$",
+    "_cache$"
+]
 
 [[menu.main]]
     name       = "About Us"
@@ -187,7 +193,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     weight     = 73
 
 [params]
-    description = "A website built through Hugo and blogdown."
+    description = "A website built with Hugo"
 
     # options for highlight.js (version, additional languages, and theme)
     highlightjsVersion = "9.12.0"
@@ -225,9 +231,12 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     tags = true
 
 [Permalinks]
-    blog = "/blog/:year/:month/:day/:filename/"
+    blog = "/blog/:year/:month/:day/:contentbasename/"
 
 [params.topbar]
     enable = false
     text = ""
 
+[markup.goldmark.renderer]
+    unsafe = true
+    xhtml = true
