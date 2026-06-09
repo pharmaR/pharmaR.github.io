@@ -68,7 +68,7 @@ The initial risk assessment is in place to quickly identify packages needing mor
 
 <br>
 
-![](images/scharp_figure_1.png)
+![Figure 1: Initial risk assessment flowchart showing criteria applied to each package.](content/posts/images/scharp_figure_1.png)
 
 <br>
 
@@ -76,7 +76,7 @@ Most of the initial risk assessment is performed programmatically (deliverables,
 
 <br>
 
-![](images/scharp_figure_2.png)
+![Figure 2: Template risk assessment table showing select package characteristics and initial risk assessment.](content/posts/images/scharp_figure_2.png)
 
 <br>
 
