@@ -68,7 +68,7 @@ The initial risk assessment is in place to quickly identify packages needing mor
 
 <br>
 
-![Figure 1: Initial risk assessment flowchart showing criteria applied to each package.](content/posts/images/scharp_figure_1.png)
+![](images/scharp_figure_1.png)
 
 <br>
 
@@ -76,55 +76,29 @@ Most of the initial risk assessment is performed programmatically (deliverables,
 
 <br>
 
-![Figure 2: Template risk assessment table showing select package characteristics and initial risk assessment.](content/posts/images/scharp_figure_2.png)
+![](images/scharp_figure_2.png)
 
 <br>
 
 ### SCHARP’s Study-Specific Risk Assessment
 
-Packages that undergo study-specific risk assessment must be rated as either low (reliability is expected),
-high (lacking confidence in reliability) or unknown risk (unclear if low or high). There are a variety of
-characteristics to consider for study-specific risk assessment, and the team at SCHARP hopes to help
-statistical teams that are new to package risk assessment with recommendations as follows:
+Packages that undergo study-specific risk assessment must be rated as either low (reliability is expected), high (lacking confidence in reliability) or unknown risk (unclear if low or high). There are a variety of characteristics to consider for study-specific risk assessment, and the team at SCHARP hopes to help statistical teams that are new to package risk assessment with recommendations as follows:
 
--   The likelihood of encountering problems with package use should be considered, with higher risk
-    of problems stemming from package characteristics like having fewer downloads and reverse
-    dependencies, as well as being at a development version (i.e. \<1.0.0).
+-   The likelihood of encountering problems with package use should be considered, with higher risk of problems stemming from package characteristics like having fewer downloads and reverse dependencies, as well as being at a development version (i.e. \<1.0.0).
 
--   Consider the ease of troubleshooting a package, with those providing help files and a URL for
-    bug reporting and fixes being favorable.
+-   Consider the ease of troubleshooting a package, with those providing help files and a URL for bug reporting and fixes being favorable.
 
--   Study context considerations are also important, and the statistical team can review literature or
-    test statistical functions for their operating characteristics under relevant scenarios.
+-   Study context considerations are also important, and the statistical team can review literature or test statistical functions for their operating characteristics under relevant scenarios.
 
--   Gauging a package’s unit test coverage is also important, as unit tests covering used functions
-    can imply lower risk
+-   Gauging a package’s unit test coverage is also important, as unit tests covering used functions can imply lower risk
 
-Ultimately, statistical team members at SCHARP have to make their own documented study-specific
-decisions, with a thoroughly reasoned qualitative assessment in which a balance of strengths and
-weaknesses of packages is considered. The process acknowledges the rationale for these decisions may
-be subjective and dependent on the assessor’s risk tolerance. The following example for {randomizeR}
-illustrates the study-specific risk assessment, and role of risk appetite.
+Ultimately, statistical team members at SCHARP have to make their own documented study-specific decisions, with a thoroughly reasoned qualitative assessment in which a balance of strengths and weaknesses of packages is considered. The process acknowledges the rationale for these decisions may be subjective and dependent on the assessor’s risk tolerance. The following example for {randomizeR} illustrates the study-specific risk assessment, and role of risk appetite.
 
-> The assessor for study A is evaluating the package randomizeR for producing randomization lists.
-> The assessor notes a small number of reverse dependencies and downloads as well
-> as incomplete help file documentation as weaknesses. They also note non-developmental
-> version, the long history of the package, a robust JSS paper (Uschner 2018), and available help
-> documentation for functions needed for the study as strengths. For
-> context when determining the availability of help documentation, the assessor also notes that
-> while the riskmetric export_help metric \< 1 indicated some missing help files, help files were in
-> fact missing only for internal and hidden objects and all documentation for user-facing
-> functions needed for the study was available. During a discussion with the lead statistician about
-> the pros and cons, they consider low versus uncertain risk as two competing possibilities.
-> Although of potentially low risk, to err on the side of caution, they decide to categorize the
-> package as uncertain risk. (Note that a more risk-tolerant study team may have gone with low
-> risk!)
+> The assessor for study A is evaluating the package randomizeR for producing randomization lists. The assessor notes a small number of reverse dependencies and downloads as well as incomplete help file documentation as weaknesses. They also note non-developmental version, the long history of the package, a robust JSS paper (Uschner 2018), and available help documentation for functions needed for the study as strengths. For context when determining the availability of help documentation, the assessor also notes that while the riskmetric export_help metric \< 1 indicated some missing help files, help files were in fact missing only for internal and hidden objects and all documentation for user-facing functions needed for the study was available. During a discussion with the lead statistician about the pros and cons, they consider low versus uncertain risk as two competing possibilities. Although of potentially low risk, to err on the side of caution, they decide to categorize the package as uncertain risk. (Note that a more risk-tolerant study team may have gone with low risk!)
 
 ### Conclusion
 
-By pairing a mostly programmatic initial assessment with a qualitative study-specific review,
-SCHARP has built an R validation framework that's manageable for a small team while still
-meeting the rigor demanded by clinical research.
+By pairing a mostly programmatic initial assessment with a qualitative study-specific review, SCHARP has built an R validation framework that's manageable for a small team while still meeting the rigor demanded by clinical research.
 
 <br>
 
