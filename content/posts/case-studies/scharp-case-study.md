@@ -6,7 +6,7 @@ output:
   html_document:
     df_print: paged
 categories: [case studies]
-banner: "img/banners/scharp-case-study.png"
+banner: "img/banners/scharp_case_study.png"
 slug: "scharp-case-study"
 ---
 
@@ -68,7 +68,7 @@ The initial risk assessment is in place to quickly identify packages needing mor
 
 <br>
 
-![](images/scharp_figure_1.png)
+<img src="/blog/scharp-case-study/scharp_figure_1.png" width="100%" max-width="800"></img>
 
 <br>
 
@@ -76,7 +76,7 @@ Most of the initial risk assessment is performed programmatically (deliverables,
 
 <br>
 
-![](images/scharp_figure_2.png)
+<img src="/blog/scharp-case-study/scharp_figure_2.png" width="100%" max-width="800"></img>
 
 <br>
 
