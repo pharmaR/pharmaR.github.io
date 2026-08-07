@@ -131,6 +131,12 @@ ignoreFiles = [
     url        = "/repository/"
     weight     = 26
     parent     = "section.initiatives"
+
+[[menu.main]]
+    name       = "Early Adoption Guide"
+    url        = "/adoption_guide/"
+    weight     = 27
+    parent     = "section.initiatives"
             
 [[menu.main]]
     identifier = "resources"

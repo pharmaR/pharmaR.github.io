@@ -1,3 +1,7 @@
+---
+title: "Validated Repository Early Adoption Guide"
+---
+
 # **Validated Repository** **Early Adoption Guide** 🚀
 
 ## Welcome & Context {#welcome-&-context}
