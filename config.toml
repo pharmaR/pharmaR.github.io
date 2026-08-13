@@ -31,13 +31,13 @@ ignoreFiles = [
     url        = "/origins-and-mission/"
     weight     = 1
     parent     = "section.rvalhub"
-    
+
 [[menu.main]]
     name       = "Partner Initiatives"
     url        = "/partner-initiatives/"
     weight     = 13
     parent     = "section.rvalhub"
-    
+
 [[menu.main]]
     name       = "Our Team"
     identifier = "section.team"
@@ -51,7 +51,7 @@ ignoreFiles = [
     url        = "/members-and-workstreams/"
     weight     = 21
     parent     = "section.team"
-    
+
 [[menu.main]]
     name       = "Validation"
     identifier = "menu.validation"
@@ -95,25 +95,25 @@ ignoreFiles = [
     url        = "/regulations/"
     weight     = 1
     parent     = "section.why"
-    
+
 [[menu.main]]
     name       = "The {riskmetric} Package"
     url        = "/riskmetric/"
     weight     = 21
     parent     = "section.products"
-    
+
 [[menu.main]]
     name       = "The {riskassessment} App"
     url        = "/riskassessment/"
     weight     = 22
     parent     = "section.products"
-    
+
 [[menu.main]]
     name       = "The {riskscore} Package"
     url        = "/riskscore/"
     weight     = 23
     parent     = "section.products"
-    
+
 [[menu.main]]
     name       = "Our White Paper"
     url        = "/white-paper/"
@@ -133,11 +133,11 @@ ignoreFiles = [
     parent     = "section.initiatives"
 
 [[menu.main]]
-    name       = "Early Adoption Guide"
+    name       = "Regulatory Repository"
     url        = "/adoption_guide/"
     weight     = 27
-    parent     = "section.initiatives"
-            
+    parent     = "section.products"
+
 [[menu.main]]
     identifier = "resources"
     name       = "Resources"
@@ -161,37 +161,37 @@ ignoreFiles = [
     name       = "Case Studies"
     url        = "/categories/case-studies/"
     weight     = 63
-    
+
 [[menu.main]]
     parent     = "resources"
     name       = "Minutes"
     url        = "/minutes/"
     weight     = 64
-    
+
 [[menu.main]]
     parent     = "resources"
     name       = "Glossary"
     url        = "/glossary/"
     weight     = 65
-    
+
 [[menu.main]]
     identifier = "involved"
     name       = "Get Involved"
     url        = "/involved/"
     weight     = 7
-    
+
 [[menu.main]]
     parent     = "involved"
     name       = "Community Meetings"
     url        = "/community-meetings/"
     weight     = 71
-    
+
 [[menu.main]]
     parent     = "involved"
     name       = "Contribute"
     url        = "/contribute/"
     weight     = 72
-    
+
 [[menu.main]]
     parent     = "involved"
     name       = "Contact Us"
