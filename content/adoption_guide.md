@@ -2,8 +2,6 @@
 title: "Regulatory Repository: Early Adoption Guide"
 ---
 
-# **Validated Repository** **Early Adoption Guide** 🚀
-
 ## Welcome & Context
 
 Thank you for joining the **R Validation Hub** as an early adopter! The R Validation Hub is a community-driven effort to bring transparency and confidence in the use of open-source R packages in regulated environments through solutions for the validation of R packages.
