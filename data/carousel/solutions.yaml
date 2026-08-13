@@ -5,5 +5,7 @@ description: >
     <li>
     Check out our <a style="color:#5D8BC4;" href="/riskmetric/">{riskmetric} package</a> 
     and our <a style="color:#5D8BC4;" href="/riskassessment/">{riskassessment} app</a>! </li>
+    <li>
+    Read our <a style="color:#5D8BC4;" href="/adoption_guide/">early adoption guide</a>? </li>
   </ul>
 image: "img/carousel/riskmetric_and_riskassessment.png"
