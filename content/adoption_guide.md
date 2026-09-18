@@ -68,26 +68,26 @@ Here’s what we expect from early adopters — and what you can expect in retur
 
 ## What We Ask of Early Adopters
 
-- **Pilot with Purpose**: Select a clear use case, for example, assessing a small group of R packages already used in production or evaluating packages planned for use in submissions. Focus on learning and feedback rather than full organizational deployment.\
+- **Pilot with Purpose**: Select a clear use case, for example, assessing a small group of R packages already used in production or evaluating packages planned for use in submissions. Focus on learning and feedback rather than full organizational deployment.
 - **Share Honest, Actionable Feedback**:
   - We need your perspective on:
     - Usability of the solutions.
     - Which metrics and reports are most meaningful for your teams.
-    - What gaps, pain points, or documentation needs arise during adoption.\
-  - Your feedback directly informs future updates and community guidance.\
-- **Participate in Knowledge Sharing**: attend the R Validation Hub Repository meetings or community meetings to exchange lessons learned.\
-- (Optional but encouraged) Share anonymized workflows or process templates that could benefit other organizations.\
+    - What gaps, pain points, or documentation needs arise during adoption.
+  - Your feedback directly informs future updates and community guidance.
+- **Participate in Knowledge Sharing**: attend the R Validation Hub Repository meetings or community meetings to exchange lessons learned.
+- (Optional but encouraged) Share anonymized workflows or process templates that could benefit other organizations.
 - **Document Your Journey**: Document
   - Packages assessed.
   - Metrics used.
-  - Key findings or challenges.\
+  - Key findings or challenges.
 - **Respect the [R Consortium’s Code of Conduct](https://r-consortium.org/codeofconduct.html)**
 
 ## What You Can Expect in Return
 
-- **Priority Support and Collaboration**: Early adopters receive direct communication channels with the R Validation Hub maintainers, including feedback sessions and early access to updates.\
-- **Recognition and Visibility**: Your organization’s role as an early adopter will be acknowledged in community reports, presentations, and case studies (if you choose to be public).\
-- **Influence on Future Direction**: Your feedback will shape the roadmap for the R Validation Hub tools.\
+- **Priority Support and Collaboration**: Early adopters receive direct communication channels with the R Validation Hub maintainers, including feedback sessions and early access to updates.
+- **Recognition and Visibility**: Your organization’s role as an early adopter will be acknowledged in community reports, presentations, and case studies (if you choose to be public).
+- **Influence on Future Direction**: Your feedback will shape the roadmap for the R Validation Hub tools.
 - **Accelerated Internal Readiness**: Through guided testing and collaboration, your organization will leave the pilot with:
   - A practical R package validation framework.
   - Internal awareness and documentation.
@@ -97,11 +97,11 @@ Here’s what we expect from early adopters — and what you can expect in retur
 
 The R Validation Hub Repository group maintains these open tools for all companies. The tools are designed to work together as a cohesive pipeline. As shown in the diagram below, val.meter and val.repo generate the foundational metrics, which feed into reporting (val.report), filtering (val.criterion), and user-friendly review (val.dashboard).
 
-- [{val.meter}](https://github.com/pharmaR/val.meter) – Easily measure characteristics of packages, built to support the process of *validation* required in regulated industries, but generally useful to anyone who wants to survey packages. Successor of [riskmetrics](https://github.com/pharmaR/riskmetric): it provides objectives metrics and lets the user decide which risk are acceptable for your organization\
-- [val.repo](https://github.com/pharmaR/val.repo) – is a curated repository of R packages that is similarly to CRAN but with additional metadata: It hosts validation reports on its associated website, published via GitHub Pages.\
-- [{val.report}](https://github.com/pharmaR/val.report) – R package for generating reports: provides a template used on val.repo.\
-- [{val.criterion}](https://github.com/pharmaR/val.criterion) – R package for distributing sensible default filters, specifying bespoke filters and visualizing filters as decision trees.\
-- val.dashboard – Shiny app for reviewing metrics in repository, visually applying filtering criteria, risk review and discussion. Founded on the experience of [riskassessment](https://github.com/pharmaR/riskassessment)\
+- [{val.meter}](https://github.com/pharmaR/val.meter) – Easily measure characteristics of packages, built to support the process of *validation* required in regulated industries, but generally useful to anyone who wants to survey packages. Successor of [riskmetrics](https://github.com/pharmaR/riskmetric): it provides objectives metrics and lets the user decide which risk are acceptable for your organization
+- [val.repo](https://github.com/pharmaR/val.repo) – is a curated repository of R packages that is similarly to CRAN but with additional metadata: It hosts validation reports on its associated website, published via GitHub Pages.
+- [{val.report}](https://github.com/pharmaR/val.report) – R package for generating reports: provides a template used on val.repo.
+- [{val.criterion}](https://github.com/pharmaR/val.criterion) – R package for distributing sensible default filters, specifying bespoke filters and visualizing filters as decision trees.
+- val.dashboard – Shiny app for reviewing metrics in repository, visually applying filtering criteria, risk review and discussion. Founded on the experience of [riskassessment](https://github.com/pharmaR/riskassessment)
 - {val.setup} – Repository bringing together the R Validation Hub's tools under a single Github Actions workflow to produce the outputs necessary to qualify R packages for a GxP system.
 
 ## Getting Started
@@ -143,9 +143,9 @@ Use this workflow when individual users need a practical way to review package c
 
 ### **What you do**
 
-1.  Explore package reports and metrics in the public validated repository maintained by the R Validation Hub.\
-2.  Review whether the available metrics align with your organization’s current package review needs.\
-3.  Retrieve repository metadata for the packages under consideration.\
+1.  Explore package reports and metrics in the public validated repository maintained by the R Validation Hub.
+2.  Review whether the available metrics align with your organization’s current package review needs.
+3.  Retrieve repository metadata for the packages under consideration.
 4.  Use the available metrics to support package selection, comparison, and review.
 
 Example:
@@ -168,7 +168,7 @@ Analysts can make more informed package decisions while maintaining alignment wi
 
 ### **Read next**
 
-- Use Workflow B, when your organization is ready to define shared criteria rather than rely on individual review alone.\
+- Use Workflow B, when your organization is ready to define shared criteria rather than rely on individual review alone.
 - See [the metrics of the val.repo repository](https://raw.githubusercontent.com/pharmaR/val.repo/refs/heads/main/src/contrib/PACKAGES)
 
 ## Workflow B: Curate packages using a validation policy
@@ -179,19 +179,19 @@ Project leads, analytics platform teams, and validation teams that want to defin
 
 ### **When to use it**
 
-Use this workflow when your organization wants to move from ad hoc package review to a repeatable policy-based curation process.
+Use this workflow when your organization wants to move from _ad hoc_ package review to a repeatable policy-based curation process.
 
 ### **What you need**
 
-- Package metrics, generated or retrieved from a repository\
-- Agreed validation criteria or filtering rules\
+- Package metrics, generated or retrieved from a repository
+- Agreed validation criteria or filtering rules
 - A process for reviewing and maintaining the resulting curated package list
 
 ### **What you do**
 
-1.  Generate package metrics using `{val.meter}`, or consume metrics already available from a validated repository.\
-2.  Define validation criteria using `{val.criterion}`.\
-3.  Apply those criteria to identify packages that meet organizational requirements.\
+1.  Generate package metrics using `{val.meter}`, or consume metrics already available from a validated repository.
+2.  Define validation criteria using `{val.criterion}`.
+3.  Apply those criteria to identify packages that meet organizational requirements.
 4.  Store and maintain the resulting curated package list for internal or project-specific use.
 
 Example:
@@ -214,8 +214,8 @@ A controlled list of packages aligned with internal validation policies, which t
 
 ### **Read next**
 
-- Use Workflow C when package policy needs to be enforced centrally rather than applied manually.\
-- Use Workflow D when the curated package list needs to become part of an internal repository or automated delivery process.\
+- Use Workflow C when package policy needs to be enforced centrally rather than applied manually.
+- Use Workflow D when the curated package list needs to become part of an internal repository or automated delivery process.
 - Placeholder: add link to `{val.criterion}` examples or criteria reference
 
 ## Workflow C: Impose a validation policy for an enterprise system
@@ -236,8 +236,8 @@ Use this workflow when your organization wants to enforce package policy across 
 
 ### **What you do**
 
-1.  Install `{val.criterion}` and configure the validation filters your organization wants to enforce.\
-2.  Add a validated repository to the repositories used by the managed R environment.\
+1.  Install `{val.criterion}` and configure the validation filters your organization wants to enforce.
+2.  Add a validated repository to the repositories used by the managed R environment.
 3.  Configure system-wide filtering policies so that only packages meeting the allowed criteria are available for installation.
 
 For example, `R.home()/etc/repositories` may include:
@@ -258,8 +258,8 @@ All users in the enterprise environment install packages that comply with organi
 
 ### **Read next**
 
-- Use Workflow D when you also need organization-specific reports, internal packages, automated updates, or internal hosting.\
-- **\[Placeholder: add a short explanation of common filter patterns or link to filter documentation\]**\
+- Use Workflow D when you also need organization-specific reports, internal packages, automated updates, or internal hosting.
+- **\[Placeholder: add a short explanation of common filter patterns or link to filter documentation\]**
 - **\[Placeholder: add supported deployment patterns, such as managed workstation, server, or containerized runtime\]**
 
 ## Workflow D: Generate an internal validated repository or image
@@ -274,29 +274,29 @@ Use this workflow when your organization wants to apply its own validation crite
 
 ### **What you need**
 
-- A defined package scope or seed list\
-- Organizational validation criteria\
-- A process for generating metrics and reports\
-- An internal hosting or delivery target, such as a repository endpoint, container image, or both\
+- A defined package scope or seed list
+- Organizational validation criteria
+- A process for generating metrics and reports
+- An internal hosting or delivery target, such as a repository endpoint, container image, or both
 - A CI/CD environment for repeatable execution (optional)
 
 ### **What you do**
 
-1.  Identify the set of packages used or approved within the organization.\
-2.  Customize validation metrics.\
-3.  Generate validation metrics using `{val.meter}`.\
-4.  Apply organizational criteria using `{val.criterion}`.\
-5.  Generate reports using `{val.report}`.\
+1.  Identify the set of packages used or approved within the organization.
+2.  Customize validation metrics.
+3.  Generate validation metrics using `{val.meter}`.
+4.  Apply organizational criteria using `{val.criterion}`.
+5.  Generate reports using `{val.report}`.
 6.  Build and publish the outputs required for internal use, such as:
-    - an internal validated repository,\
-    - validation reports,\
-    - a dashboard for review and discussion, and/or\
-    - a container or image containing approved packages.\
+    - an internal validated repository,    
+    - validation reports,    
+    - a dashboard for review and discussion, and/or    
+    - a container or image containing approved packages.
 7.  Automate the workflow through CI/CD where appropriate.
 
 Tool support in this area is evolving:
 
-- `{val.setup}` is intended to bring the R Validation Hub tools together under a single GitHub Actions workflow to produce the outputs needed to qualify packages for a GxP system.\
+- `{val.setup}` is intended to bring the R Validation Hub tools together under a single GitHub Actions workflow to produce the outputs needed to qualify packages for a GxP system.
 - `val.dashboard` is intended to support visual review of metrics, filtering criteria, risk review, and discussion.
 
 **\[Placeholder: clearly label which parts of this workflow are available now versus planned\]**
@@ -307,35 +307,39 @@ An internal, organization-specific package distribution workflow aligned with go
 
 ### **Read next**
 
-- Continue to **Section 7** for practical walkthroughs, including an end-to-end example of building an internal repository or image through CI.\
+- Continue to **Section 7** for practical walkthroughs, including an end-to-end example of building an internal repository or image through CI.
 - **\[Placeholder: add links to `{val.meter}`, `{val.report}`, and `{val.setup}` vignettes\]**
 
 # Key Use Cases
 
-A repository using the tools for generating a closed repository for Arcus: [val.pipeline](https://github.com/pharmaR/val.pipeline)\
-Add a new package to a closed image:\
+A repository using the tools for generating a closed repository for Arcus: [val.pipeline](https://github.com/pharmaR/val.pipeline)
+Add a new package to a closed image:
 Validate an internal validated package: it won’t have (external) download metrics but it might still be validated.
 
 # Roadmap & What’s Coming
 
-Phase 1: Kick off Early Adoption community\
-Reflections and iteration based on Phase 1\
-Phase 2: Health Authority Submission Pilot 4 or 5\
-Reflections and iteration based on Phase 2\
-Phase 3: Large audience kick off\
+Phase 1: Kick off Early Adoption community
+Reflections and iteration based on Phase 1
+Phase 2: Health Authority Submission Pilot 4 or 5
+Reflections and iteration based on Phase 2
+Phase 3: Large audience kick off
 Reflections and iteration based on Phase 3
 
 # Support & Community
 
-R Validation Hub [website](https://pharmar.org/contribute/)\
-R Validation Slack (link)\
-R Consortium [website](https://r-consortium.org/)\
+R Validation Hub [website](https://pharmar.org/contribute/)
+R Validation Hub [Slack channel](https://rconsortium.slack.com/archives/C07VAVDBR3M)
+R Consortium [website](https://r-consortium.org/)
 R Consortium [Code of conduct](https://r-consortium.org/codeofconduct.html)
 
 # Feedback Loop
 
-If it is a technical doubt, bug or question open issues on the repositories.
+If it is a technical doubt, bug or question open issues on the repositories (`val.meter`, `val.report`, `val.criterion`, ...)
+Provide how you found the issue or what is your background if you have a question.
+
+If you would like to use this guide but are unsure, reach out through the [Slack channel]((https://rconsortium.slack.com/archives/C07VAVDBR3M). 
 
 # Next Steps for You, early adopter
 
-Other steps
+Please share with potentially interested people or teams, use and provide feedback on this guide as much as possible. 
+See Feedback Loop for how to provide feedback.
