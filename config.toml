@@ -133,7 +133,7 @@ ignoreFiles = [
     parent     = "section.initiatives"
 
 [[menu.main]]
-    name       = "Regulatory Repository"
+    name       = "Onboarding guide"
     url        = "/adoption_guide/"
     weight     = 27
     parent     = "section.products"
