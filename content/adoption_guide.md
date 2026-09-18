@@ -259,8 +259,8 @@ All users in the enterprise environment install packages that comply with organi
 ### **Read next**
 
 - Use Workflow D when you also need organization-specific reports, internal packages, automated updates, or internal hosting.
-- **\[Placeholder: add a short explanation of common filter patterns or link to filter documentation\]**
-- **\[Placeholder: add supported deployment patterns, such as managed workstation, server, or containerized runtime\]**
+- _\[Placeholder: add a short explanation of common filter patterns or link to filter documentation\]_
+- _\[Placeholder: add supported deployment patterns, such as managed workstation, server, or containerized runtime\]_
 
 ## Workflow D: Generate an internal validated repository or image
 
@@ -299,7 +299,7 @@ Tool support in this area is evolving:
 - `{val.setup}` is intended to bring the R Validation Hub tools together under a single GitHub Actions workflow to produce the outputs needed to qualify packages for a GxP system.
 - `val.dashboard` is intended to support visual review of metrics, filtering criteria, risk review, and discussion.
 
-**\[Placeholder: clearly label which parts of this workflow are available now versus planned\]**
+_\[Placeholder: clearly label which parts of this workflow are available now versus planned\]_
 
 ### **What you get**
 
@@ -308,36 +308,36 @@ An internal, organization-specific package distribution workflow aligned with go
 ### **Read next**
 
 - Continue to **Section 7** for practical walkthroughs, including an end-to-end example of building an internal repository or image through CI.
-- **\[Placeholder: add links to `{val.meter}`, `{val.report}`, and `{val.setup}` vignettes\]**
+- _\[Placeholder: add links to `{val.meter}`, `{val.report}`, and `{val.setup}` vignettes\]_
 
 # Key Use Cases
 
-A repository using the tools for generating a closed repository for Arcus: [val.pipeline](https://github.com/pharmaR/val.pipeline)
-Add a new package to a closed image:
-Validate an internal validated package: it won’t have (external) download metrics but it might still be validated.
+A repository using the tools for generating a closed repository for Arcus: [val.pipeline](https://github.com/pharmaR/val.pipeline)  
+Add a new package to a closed image:  
+Validate an internal validated package: it won’t have (external) download metrics but it might still be validated.  
 
 # Roadmap & What’s Coming
 
-Phase 1: Kick off Early Adoption community
-Reflections and iteration based on Phase 1
-Phase 2: Health Authority Submission Pilot 4 or 5
-Reflections and iteration based on Phase 2
-Phase 3: Large audience kick off
-Reflections and iteration based on Phase 3
+Phase 1: Kick off Early Adoption community  
+Reflections and iteration based on Phase 1  
+Phase 2: Health Authority Submission Pilot 4 or 5  
+Reflections and iteration based on Phase 2  
+Phase 3: Large audience kick off  
+Reflections and iteration based on Phase 3  
 
 # Support & Community
 
-R Validation Hub [website](https://pharmar.org/contribute/)
-R Validation Hub [Slack channel](https://rconsortium.slack.com/archives/C07VAVDBR3M)
-R Consortium [website](https://r-consortium.org/)
-R Consortium [Code of conduct](https://r-consortium.org/codeofconduct.html)
+R Validation Hub [website](https://pharmar.org/contribute/)  
+R Validation Hub [Slack channel](https://rconsortium.slack.com/archives/C07VAVDBR3M)  
+R Consortium [website](https://r-consortium.org/)  
+R Consortium [Code of conduct](https://r-consortium.org/codeofconduct.html)  
 
 # Feedback Loop
 
 If it is a technical doubt, bug or question open issues on the repositories (`val.meter`, `val.report`, `val.criterion`, ...)
 Provide how you found the issue or what is your background if you have a question.
 
-If you would like to use this guide but are unsure, reach out through the [Slack channel]((https://rconsortium.slack.com/archives/C07VAVDBR3M). 
+If you would like to use this guide but are unsure, reach out through the [Slack channel](https://rconsortium.slack.com/archives/C07VAVDBR3M). 
 
 # Next Steps for You, early adopter
 
