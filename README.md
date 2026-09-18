@@ -18,3 +18,14 @@ change.
 ```sh
 ./tools/watch.R  # optional
 ```
+
+
+## For Developers
+
+This repository vendors the R Validation Hub hugo template, which is
+included as a `git` submodule. Submodules require slightly different
+syntax in order to be included. When cloning, be sure to use:
+
+``` sh
+git clone --recurse-submodules ...  
+```
