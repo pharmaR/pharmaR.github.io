@@ -216,7 +216,7 @@ A controlled list of packages aligned with internal validation policies, which t
 
 - Use Workflow C when package policy needs to be enforced centrally rather than applied manually.
 - Use Workflow D when the curated package list needs to become part of an internal repository or automated delivery process.
-- Placeholder: add link to `{val.criterion}` examples or criteria reference
+<!-- - Placeholder: add link to `{val.criterion}` examples or criteria reference -->
 
 ## Workflow C: Impose a validation policy for an enterprise system
 
@@ -259,8 +259,8 @@ All users in the enterprise environment install packages that comply with organi
 ### **Read next**
 
 - Use Workflow D when you also need organization-specific reports, internal packages, automated updates, or internal hosting.
-- _\[Placeholder: add a short explanation of common filter patterns or link to filter documentation\]_
-- _\[Placeholder: add supported deployment patterns, such as managed workstation, server, or containerized runtime\]_
+<!-- - [Placeholder: add a short explanation of common filter patterns or link to filter documentation -->
+<!-- - [Placeholder: add supported deployment patterns, such as managed workstation, server, or containerized runtime -->
 
 ## Workflow D: Generate an internal validated repository or image
 
@@ -299,7 +299,7 @@ Tool support in this area is evolving:
 - `{val.setup}` is intended to bring the R Validation Hub tools together under a single GitHub Actions workflow to produce the outputs needed to qualify packages for a GxP system.
 - `val.dashboard` is intended to support visual review of metrics, filtering criteria, risk review, and discussion.
 
-_\[Placeholder: clearly label which parts of this workflow are available now versus planned\]_
+<!--  Placeholder: clearly label which parts of this workflow are available now versus planned -->
 
 ### **What you get**
 
@@ -308,7 +308,7 @@ An internal, organization-specific package distribution workflow aligned with go
 ### **Read next**
 
 - Continue to **Section 7** for practical walkthroughs, including an end-to-end example of building an internal repository or image through CI.
-- _\[Placeholder: add links to `{val.meter}`, `{val.report}`, and `{val.setup}` vignettes\]_
+<!--  - Placeholder: add links to `{val.meter}`, `{val.report}`, and `{val.setup}` vignettes -->
 
 # Key Use Cases
 
