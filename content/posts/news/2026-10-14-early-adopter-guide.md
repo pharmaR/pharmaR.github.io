@@ -1,7 +1,7 @@
 ---
 title: "Announcing the R Validation Hub Early Adopter Guide"
 author: R Validation Hub
-date: "2026-10-21"
+date: "2026-10-14"
 slug: early-adopter-guide
 categories: 
   - news
