@@ -23,7 +23,7 @@ You don't need to be an expert R developer. The guide is written for the platfor
 
 The tools are designed to work together as a pipeline:
 
--   [`{val.meter}`](https://github.com/pharmaR/val.meter): measure characteristics of packages and leave the decision about acceptable risk to you. It is the successor of [`{riskmetric}`](https://github.com/pharmaR/riskmetric).
+-   [`{val.meter}`](https://github.com/pharmaR/val.meter): measure characteristics of packages and leave the decision about acceptable risk to you. It is the successor to [`{riskmetric}`](https://github.com/pharmaR/riskmetric).
 -   [`val.repo`](https://github.com/pharmaR/val.repo): a curated, CRAN-like repository of R packages with additional metadata and validation reports. Explore the public example at <https://pharmar.github.io/val.repo/>.
 -   [`{val.report}`](https://github.com/pharmaR/val.report): generate validation reports for packages.
 -   [`{val.criterion}`](https://github.com/pharmaR/val.criterion): apply default or bespoke filtering criteria to metrics, and visualize them as decision trees.
