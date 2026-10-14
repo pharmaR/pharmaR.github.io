@@ -27,8 +27,8 @@ The tools are designed to work together as a pipeline:
 -   [`val.repo`](https://github.com/pharmaR/val.repo): a curated, CRAN-like repository of R packages with additional metadata and validation reports. Explore the public example at <https://pharmar.github.io/val.repo/>.
 -   [`{val.report}`](https://github.com/pharmaR/val.report): generate validation reports for packages.
 -   [`{val.criterion}`](https://github.com/pharmaR/val.criterion): apply default or bespoke filtering criteria to metrics, and visualize them as decision trees.
--   `val.dashboard`: a Shiny app for reviewing metrics, applying criteria, and discussing risk, built on the experience of [`{riskassessment}`](https://github.com/pharmaR/riskassessment).
--   `{val.setup}`: brings the tools together in a single GitHub Actions workflow to produce the outputs needed to qualify R packages for a GxP system.
+-   `val.dashboard`: evolving support intended to provide a Shiny app for reviewing metrics, applying criteria, and discussing risk, based on the experience of [`{riskassessment}`](https://github.com/pharmaR/riskassessment).
+-   `{val.setup}`: evolving support intended to bring the tools together in a single GitHub Actions workflow that produces the outputs needed to qualify R packages for a GxP system.
 
 ### Choose your starting point
 
