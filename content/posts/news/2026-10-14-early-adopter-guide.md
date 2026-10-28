@@ -9,6 +9,7 @@ tags:
   - adoption
   - val.meter
   - val.repo
+banner: 'img/banners/early_adopter_guide.png'
 ---
 
 The R Validation Hub is looking for early adopters! We have published an **[Early Adopter Guide](/adoption_guide/)** to help organizations pilot our new set of tools for validating R packages in regulated environments, and we want your feedback on them.
