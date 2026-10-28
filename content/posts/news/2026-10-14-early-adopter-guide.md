@@ -14,13 +14,13 @@ banner: 'img/banners/early_adopter_guide.png'
 
 The R Validation Hub is looking for early adopters! We have published an **[Early Adopter Guide](/adoption_guide/)** to help organizations pilot our new set of tools for validating R packages in regulated environments, and we want your feedback on them.
 
-### Why early adoption?
+**Why early adoption?**
 
 Early adopters play a dual role: *implementers*, piloting the tools in their own environment, and *contributors*, sharing insights that shape the tools and community best practices. In return, adopters get direct communication with the maintainers, early access to updates, influence on the roadmap, and (if they choose) recognition in community reports and presentations.
 
 You don't need to be an expert R developer. The guide is written for the platform engineers, statisticians, data scientists, and IT teams who typically implement validation workflows.
 
-### The tools
+**The tools**
 
 The tools are designed to work together as a pipeline:
 
@@ -31,7 +31,7 @@ The tools are designed to work together as a pipeline:
 -   `val.dashboard`: evolving support intended to provide a Shiny app for reviewing metrics, applying criteria, and discussing risk, based on the experience of [`{riskassessment}`](https://github.com/pharmaR/riskassessment).
 -   `{val.setup}`: evolving support intended to bring the tools together in a single GitHub Actions workflow that produces the outputs needed to qualify R packages for a GxP system.
 
-### Choose your starting point
+**Choose your starting point**
 
 The guide describes four workflows, so you can start at the level that fits your governance model and maturity:
 
@@ -42,7 +42,7 @@ The guide describes four workflows, so you can start at the level that fits your
 
 You can begin with lightweight workflows and evolve toward centralized governance and automated validation over time.
 
-### Get involved
+**Get involved**
 
 -   Read the [Early Adopter Guide](/adoption_guide/) and pick a workflow to pilot.
 -   Open issues on the tool repositories (`val.meter`, `val.report`, `val.criterion`, ...) for bugs and technical questions.
