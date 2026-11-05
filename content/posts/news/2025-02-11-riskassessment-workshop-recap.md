@@ -14,11 +14,7 @@ At a recent ***ShinyGatherings***, some `{riskassessment}` contributors presente
 
 <br>
 
-<img src="/blog/2025-02-11-riskassessment-workshop/riskassessment_workshop_graphic.jpg" width="100%" max-width="800"></img>
-
-<br>
-
-### About the Workshop
+**About the Workshop**
 
 **The workshop's main topics:**
 
@@ -36,6 +32,6 @@ At a recent ***ShinyGatherings***, some `{riskassessment}` contributors presente
 
 <br>
 
-### *Want to learn more?*
+***Want to learn more?***
 
 For further details, the full video of the workshop is available here: <https://youtu.be/1IqgLQmJB9w> and the corresponding detailed blogpost by Appsilon is available here: [Shiny Gathering x Pharmaverse Recap: Simplifying R Package Quality with the `{riskassessment}` App](https://www.appsilon.com/post/r-package-risk-assessment).
