@@ -177,7 +177,7 @@ ignoreFiles = [
 [[menu.main]]
     parent     = "resources"
     name       = "Validated R Workflow Q&A"
-    url        = "/QandA/"
+    url        = "/qanda/"
     weight     = 66
 
 [[menu.main]]
